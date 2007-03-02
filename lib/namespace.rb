@@ -6,6 +6,8 @@ require File.dirname(__FILE__) + '/source_parser'
 
 module YARD
   class Namespace
+    DEFAULT_YARDOC_FILE = "_Yardoc"
+    
     include Singleton
     
     class << self
@@ -47,8 +49,8 @@ module YARD
         end
       end
       
-      def load(file = "Yardoc")
-        if File.exists? file
+      def load(file = DEFAULT_YARDOC_FILE, reload = false)
+        if File.exists?(file) && !reload
           instance.namespace.replace(Marshal.load(IO.read(file)))
         else
           Find.find(".") do |path|
@@ -58,8 +60,22 @@ module YARD
         save
       end
       
-      def save
-        File.open("Yardoc", "w") {|f| Marshal.dump(instance.namespace, f) }
+      def save(file = DEFAULT_YARDOC_FILE)
+        File.open(file, "w") {|f| Marshal.dump(instance.namespace, f) }
+      end
+      
+      def find_from_path(object, name)
+        object = at(object) unless object.is_a? CodeObject
+        return object if name == 'self'
+        
+        while object
+          ["::", ""].each do |type|
+            obj = at(object.path + type + name)
+            return obj if obj
+          end
+          object = object.parent
+        end
+        nil
       end
     end
     

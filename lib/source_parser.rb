@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/hash_struct'
-require File.dirname(__FILE__) + '/ruby_lex'
+require 'stringio'
+require File.dirname(__FILE__) + '/ruby_lex' 
 require File.dirname(__FILE__) + '/namespace'
 require File.dirname(__FILE__) + '/code_object'
 require File.dirname(__FILE__) + '/handlers/all_handlers'
@@ -12,6 +12,10 @@ module YARD
     
     def self.parse(content)
       new.parse(content)
+    end
+    
+    def self.parse_string(content)
+      new.parse(StringIO.new(content))
     end
     
     attr_accessor :current_namespace
@@ -35,7 +39,11 @@ module YARD
       when StatementList
         statements = content
       else
-        raise ArgumentError, "Invalid argument for SourceParser::parse: #{content.inspect}:#{content.class}"
+        if content.respond_to? :read
+          statements = StatementList.new(content.read)
+        else
+          raise ArgumentError, "Invalid argument for SourceParser::parse: #{content.inspect}:#{content.class}"
+        end
       end
       
       top_level_parse(statements)
@@ -100,13 +108,21 @@ module YARD
         statement, block, comments = TokenList.new, nil, nil
         stmt_number, level = 0, 0
         new_statement, open_block = true, false
-        last_tk = nil
+        last_tk, before_last_tk = nil, nil
+        open_parens = 0
 
         while tk = @tokens.shift
+          #p tk.class
+          open_parens += 1 if [TkLPAREN, TkLBRACK].include? tk.class
+          open_parens -= 1 if [TkRPAREN, TkRBRACK].include?(tk.class) if open_parens > 0
+          
+#          raise block.to_s + " TOKEN #{tk.inspect}" if open_parens < 0
+
           # Get the initial comments
           if statement.empty?
             # Two new-lines in a row will destroy any comment blocks
-            if tk.class == TkNL && (last_tk.class == TkNL || last_tk.class == TkSPACE)
+            if tk.class == TkCOMMENT && last_tk.class == TkNL && 
+              (before_last_tk && (before_last_tk.class == TkNL || before_last_tk.class == TkSPACE))
               comments = nil
             elsif tk.class == TkCOMMENT
               # Remove the "#" and up to 1 space before the text
@@ -117,23 +133,22 @@ module YARD
               comments.pop if comments.size == 1 && comments.first =~ /^\s*$/
             end
           end
-          comments = comments.compact if comments
-
+                    
           # Ignore any initial comments or whitespace
           unless statement.empty? && [TkSPACE, TkNL, TkCOMMENT].include?(tk.class)
             # Decrease if end or '}' is seen
             level -= 1 if [TkEND, TkRBRACE].include?(tk.class)
 
             # If the level is greater than 0, add the code to the block text
-            # otherwise it's parse of the statement text
-            if level > 0
+            # otherwise it's part of the statement text
+            if stmt_number > 0
               block ||= TokenList.new
               block << tk
-            elsif stmt_number == 0 && tk.class != TkNL
-              statement << tk
+            elsif stmt_number == 0 && tk.class != TkNL && tk.class != TkCOMMENT
+              statement << tk 
             end
 
-  #          p "#{tk.line_no} #{level} #{tk} \t#{tk.text} #{tk.lex_state}" 
+#            puts "#{tk.line_no} #{level} #{tk} \t#{tk.text} #{tk.lex_state}" 
 
             # Increase level if we have a 'do' or block opening
             if tk.class == TkLBRACE
@@ -148,7 +163,9 @@ module YARD
             open_block = true if (new_statement || (last_tk && last_tk.lex_state == EXPR_BEG)) && @@open_block_tokens.include?(tk.class)
 
             # Check if this token creates a new statement or not
-            if [TkSEMICOLON, TkNL, TkEND_OF_SCRIPT, TkCOMMENT].include? tk.class
+            #puts "#{open_parens} open brackets for: #{statement.to_s}"
+            if open_parens == 0 && ([TkSEMICOLON, TkNL, TkEND_OF_SCRIPT].include?(tk.class) ||
+              (statement.first.class == TkDEF && tk.class == TkRPAREN))
               # Make sure we don't have any running expressions
               # This includes things like
               #
@@ -160,7 +177,7 @@ module YARD
               if [EXPR_END, EXPR_ARG].include? last_tk.lex_state
                 stmt_number += 1
                 new_statement = true
-  #              p "NEW STATEMENT"
+                #p "NEW STATEMENT #{statement.to_s}"
 
                 # The statement started with a if/while/begin, so we must go to the next level now
                 if open_block
@@ -183,11 +200,13 @@ module YARD
             break if new_statement && level == 0
           end
 
+          before_last_tk = last_tk
           last_tk = tk # Save last token
         end
 
         # Return the code block with starting token and initial comments
         # If there is no code in the block, return nil
+        comments = comments.compact if comments
         statement.empty? ? nil : Statement.new(statement, block, comments)
       end
   end

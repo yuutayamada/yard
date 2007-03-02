@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/tag_library'
+require File.dirname(__FILE__) + '/formatter'
 
 module YARD #:nodoc:  
   ## 
@@ -7,7 +8,7 @@ module YARD #:nodoc:
   # 
   # @author Loren Segal
   class CodeObject
-    attr_reader :source, :file, :line, :docstring, :attributes
+    attr_reader :source, :full_source, :file, :line, :docstring, :attributes
     
     attr_reader :name, :type
     attr_accessor :visibility, :scope 
@@ -46,13 +47,30 @@ module YARD #:nodoc:
     end
     
     ##
-    # Attaches source code to a code object with an optional file and line number location
+    # Attaches source code to a code object with an optional file location
     #
-    # @param [String] source the source code for the code object
+    # @param [Statement, String] statement the +Statement+ holding the source code
+    #                                      or the raw source as a +String+ for the 
+    #                                      definition of the code object only (not the block)
     # @param [String] file the filename the source resides in
-    # @param [Number] line the line number where the source code begins at in the +file+
-    def attach_source(source, file = nil, line = nil)
-      @source, @file, @line = source, file, line
+    def attach_source(statement, file = nil)
+      if statement.is_a? String
+        @source = statement
+      else
+        @source = statement.tokens.to_s
+        @line = statement.tokens.first.line_no
+        attach_full_source statement.tokens.to_s + (statement.block.to_s rescue "")
+      end
+      @file = file
+    end
+    
+    ##
+    # Manually attaches full source code for an object given the source
+    # as a +String+
+    # 
+    # @param [String] source the source code for the object
+    def attach_full_source(source)
+      @full_source = source
     end
     
     ##
@@ -153,6 +171,15 @@ module YARD #:nodoc:
       @tags.any? {|tag| tag.tag_name == name }
     end
     
+    ##
+    # Returns a code object formatted as a given type, defaults to html.
+    # 
+    # @param [Symbol] format the output format to generate
+    # @return [String] the code object formatted by the specified +format+
+    def format(type = :html)
+      Formatter.new.format(self, type)
+    end
+    
     private
       ##
       # Parses out comments split by newlines into a new code object
@@ -162,6 +189,7 @@ module YARD #:nodoc:
       #                                         are passed as a String, they will
       #                                         be split by newlines. 
       def parse_comments(comments)
+        return if comments.empty?
         meta_match = /^\s*@(\S+)\s*(.*)/
         comments = comments.split(/\r?\n/) if comments.is_a? String
         @tags, @docstring = [], ""
@@ -207,23 +235,69 @@ module YARD #:nodoc:
         obj[:class_methods] = {}
         obj[:constants] = {}
         obj[:class_variables] = {}
+        obj[:mixins] = []
         yield(obj) if block_given?
       end
+    end
+    
+    def inherited_class_methods
+      inherited_methods(:class)
+    end
+    
+    def inherited_instance_methods
+      inherited_methods(:instance)
+    end
+    
+    def inherited_methods(scopes = [:class, :instance])
+      [scopes].flatten.each do |scope|
+        full_mixins.inject({}) {|hash, mixin| hash.update(mixin.send(scope + "_methods")) }
+      end
+    end
+    
+    def full_mixins 
+      mixins.collect {|mixin| Namespace.find_from_path(self, mixin).path rescue mixin }
     end
   end
 
   class ModuleObject < CodeObjectWithMethods
     def initialize(name, *args)
-      super(name, :module, *args)
+      super(name, :module, *args) do |obj|
+        yield(obj) if block_given?
+      end
     end
   end
 
   class ClassObject < CodeObjectWithMethods
-    def initialize(name, superclass = "Object", *args)
+    BASE_OBJECT = "Object"
+    
+    def initialize(name, superclass = BASE_OBJECT, *args)
       super(name, :class, *args) do |obj|
         obj[:attributes] = {}
         obj[:superclass] = superclass
+        yield(obj) if block_given?
       end
+    end
+    
+    def inherited_methods(scopes = [:class, :instance])
+      inherited_methods = super
+      superobject = Namespace.find_from_path(path, superclass)
+      if superobject && superobject.path != path # avoid infinite loop
+        [scopes].flatten.each do |scope|
+          inherited_methods.update(superobject.send(scope + "_methods"))
+          inherited_methods.update(superobject.send("inherited_#{scope}_methods"))
+        end
+      end
+      inherited_methods
+    end
+    
+    def superclasses
+      superobject = Namespace.find_from_path(path, superclass)
+      return [superclass] if superobject.nil?
+      [superobject.path] + superobject.superclasses
+    end
+    
+    def inheritance_tree
+      full_mixins.reverse + superclasses
     end
   end
   
@@ -234,7 +308,8 @@ module YARD #:nodoc:
     # @param [CodeObjectWithMethods] parent the object that holds this method
     def initialize(name, visibility, scope, parent, comments = nil)
       super(name, :method, visibility, scope, parent, comments) do |obj|
-        parent["#{scope}_methods".to_sym].update(name => obj)
+        parent["#{scope}_methods".to_sym].update(name.to_s => obj)
+        yield(obj) if block_given?
       end
     end
   end
@@ -244,8 +319,21 @@ module YARD #:nodoc:
       super(name, :constant, :public, :class, parent) do |obj| 
         if statement
           obj.attach_docstring(statement.comments)
-          obj.attach_source((statement.tokens.to_s + " " + statement.block.to_s).gsub(/\r?\n/,''))
+          obj.attach_source(statement)
+          parent[:constants].update(name.to_s => obj)
+          yield(obj) if block_given?
         end
+      end
+    end
+  end
+  
+  class ClassVariableObject < CodeObject
+    def initialize(statement, parent)
+      name, value = *statement.tokens.to_s.gsub(/\r?\n/, '').split(/\s*=\s*/, 2)
+      super(name, :class_variable, :public, :class, parent) do |obj| 
+        obj.parent[:class_variables].update(name => obj)
+        obj.attach_docstring(statement.comments)
+        obj.attach_source("#{name} = #{value}")
       end
     end
   end
