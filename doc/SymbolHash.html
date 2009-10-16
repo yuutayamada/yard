@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: SymbolHash</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="glossary.html">Glossary (S)</a> :: 
+    
+    
+    SymbolHash
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: SymbolHash</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Hash</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          <ul>
+            
+              <li>Hash</li><ul>
+            
+              <li>SymbolHash</li><ul>
+            
+            </ul></ul>
+          </ul>
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/core_ext/symbol_hash.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#%5B%5D-class_method" title="+ (Object) [](*hsh) ">+ (Object) [](*hsh) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#%5B%5D-instance_method" title="- (Object) [](key) ">- (Object) [](key) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#%5B%5D%3D-instance_method" title="- (Object) []=(key, value) ">- (Object) []=(key, value) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#delete-instance_method" title="- (Object) delete(key) ">- (Object) delete(key) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#has_key%3F-instance_method" title="- (Object) has_key?(key) ">- (Object) has_key?(key) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(symbolize_value = true) ">- (Object) initialize(symbolize_value = true) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#merge-instance_method" title="- (Object) merge(hsh) ">- (Object) merge(hsh) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#update-instance_method" title="- (Object) update(hsh) ">- (Object) update(hsh) </a>
+        
+        (also: #merge!)
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(symbolize_value = true) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2
+3
+4</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 2</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id symbolize_value'>symbolize_value</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@symbolize_value</span> <span class='op'>=</span> <span class='id symbolize_value'>symbolize_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="[]-class_method">
+  
+    + (Object) [](*hsh) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id hsh'>hsh</span><span class='rparen'>)</span>
+  <span class='id obj'>obj</span> <span class='op'>=</span> <span class='id new'>new</span><span class='semicolon'>;</span>
+  <span class='kw'>if</span> <span class='id hsh'>hsh</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>&amp;&amp;</span> <span class='id hsh'>hsh</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+    <span class='id hsh'>hsh</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span><span class='op'>|</span> <span class='id obj'>obj</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span> <span class='rbrace'>}</span>
+  <span class='kw'>else</span>
+    <span class='int'>0</span><span class='period'>.</span><span class='id step'>step</span><span class='lparen'>(</span><span class='id hsh'>hsh</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id n'>n</span><span class='op'>|</span> <span class='id obj'>obj</span><span class='lbracket'>[</span><span class='id hsh'>hsh</span><span class='lbracket'>[</span><span class='id n'>n</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hsh'>hsh</span><span class='lbracket'>[</span><span class='id n'>n</span><span class='op'>+</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id obj'>obj</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="[]-instance_method">
+  
+    - (Object) [](key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id key'>key</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="[]=-instance_method">
+  
+    - (Object) []=(key, value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span> 
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id key'>key</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='comma'>,</span> <span class='id value'>value</span><span class='period'>.</span><span class='id instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@symbolize_value</span> <span class='op'>?</span> <span class='id value'>value</span><span class='period'>.</span><span class='id to_sym'>to_sym</span> <span class='op'>:</span> <span class='id value'>value</span><span class='rparen'>)</span> 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="delete-instance_method">
+  
+    - (Object) delete(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id key'>key</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="has_key?-instance_method">
+  
+    - (Object) has_key?(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id has_key?'>has_key?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id key'>key</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="merge-instance_method">
+  
+    - (Object) merge(hsh) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id merge'>merge</span><span class='lparen'>(</span><span class='id hsh'>hsh</span><span class='rparen'>)</span> <span class='id dup'>dup</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span><span class='id hsh'>hsh</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="update-instance_method">
+  
+    - (Object) update(hsh) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">merge!</span>
+    </span>
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/symbol_hash.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id update'>update</span><span class='lparen'>(</span><span class='id hsh'>hsh</span><span class='rparen'>)</span> <span class='id hsh'>hsh</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span><span class='op'>|</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span> <span class='rbrace'>}</span><span class='semicolon'>;</span> <span class='kw'>self</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

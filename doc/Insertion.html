@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: Insertion</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="glossary.html">Glossary (I)</a> :: 
+    
+    
+    Insertion
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Insertion</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/core_ext/array.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#after-instance_method" title="- (Object) after(val, ignore_subsections = true) ">- (Object) after(val, ignore_subsections = true) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#before-instance_method" title="- (Object) before(val) ">- (Object) before(val) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(list, value) ">- (Object) initialize(list, value) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(list, value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id list'>list</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span> <span class='ivar'>@list</span><span class='comma'>,</span> <span class='ivar'>@value</span> <span class='op'>=</span> <span class='id list'>list</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="after-instance_method">
+  
+    - (Object) after(val, ignore_subsections = true) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id after'>after</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='id ignore_subsections'>ignore_subsections</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='id insertion'>insertion</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id ignore_subsections'>ignore_subsections</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="before-instance_method">
+  
+    - (Object) before(val) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id before'>before</span><span class='lparen'>(</span><span class='id val'>val</span><span class='rparen'>)</span> <span class='id insertion'>insertion</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

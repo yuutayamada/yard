@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="custom.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
+
+    <title>TAGS.markdown</title>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section docstring readme">
+        <h1>Tags Architecture</h1>
+
+<p>Tags represent the metadata that can be added to documentation through the <code>@tag</code>
+style syntax:</p>
+
+<pre class="code"><span class='comment'># @tagname some data
+</span><span class='kw'>class</span> <span class='const'>Foo</span>
+<span class='kw'>end</span>
+</pre>
+
+<p>The above example adds metadata under the name <code>tagname</code> to the Foo class object.</p>
+
+<p>Tags are the best way to add arbitrary metadata when documenting an object in a
+way to access it later without having to parse the entire comment string. The
+rest of the document will describe how to access the tag metadata and how to extend
+YARD to support custom tags or override existing tags to the <tt><a href="YARD/Tags/Library.html" title="YARD::Tags::Library">YARD::Tags::Library</a></tt>
+class.</p>
+
+<h2>Accessing Tag Information</h2>
+
+<p>Tag metadata is added when a <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt> is added to a <a href="CODE_OBJECTS.markdown.html" title="code object">code object</a>
+using the <tt><a href="YARD/CodeObjects/Base.html#docstring%3D-instance_method" title="YARD::CodeObjects::Base#docstring=">YARD::CodeObjects::Base#docstring=</a></tt> attribute. In addition to adding
+conventional comments, tags are parsed and associated with the object. The easiest
+way to access tags on an object is to use the <tt><a href="YARD/CodeObjects/Base.html#tag-instance_method" title="YARD::CodeObjects::Base#tag">YARD::CodeObjects::Base#tag</a></tt> and <code>#tags</code>
+methods, for example:</p>
+
+<pre class="code"><span class='comment'># Using the Foo class object from above
+</span><span class='id obj'>obj</span><span class='period'>.</span><span class='id tags'>tags</span><span class='lparen'>(</span><span class='symbol'>:tagname</span><span class='rparen'>)</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id text'>text</span> <span class='comment'>#=&gt; &quot;some data&quot;
+</span></pre>
+
+<p>Because multiple tags can be stored with the same name, they are stored as a list
+of tags. The <code>#tag</code> method is an alias for the first item in the list of tags.
+Also note that the <code>#tag</code>, <code>#tags</code> and <code>#has_tag?</code> methods are all convenience
+methods that delegate to the <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt> object described above.</p>
+
+<h2>Adding Custom Tags</h2>
+
+<p>The <code>@tagname</code> tag used in the above examples is clearly not part of the tags
+that come with YARD. If such a tag would actually be part of documentation under
+a default install, YARD would raise a warning that the tag does not exist. It is,
+however, trivial to add this tag to be recognized by YARD.</p>
+
+<p>All tags in YARD are added to the <tt><a href="YARD/Tags/Library.html" title="tag library">tag library</a></tt> which makes
+use of a tag factory class to parse the data inside the tags. To simply add a
+tag that stores simple text like our <code>@tagname</code> tag above, use:</p>
+
+<pre class="code"><span class='const'>YARD</span><span class='op'>::</span><span class='const'>Tags</span><span class='op'>::</span><span class='const'>Library</span><span class='period'>.</span><span class='id define_tag'>define_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A Sample Tag</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:tagname</span><span class='rparen'>)</span>
+</pre>
+
+<p>This will now allow YARD to add the metadata from <code>@tagname</code> to the docstring.</p>
+
+<h1>The Tag Factory Architecture</h1>
+
+<p>Recognizing a tag is one part of the process. Parsing the tag contents is the
+second step. YARD has a tag architecture that allows developers to add or completely
+change the way tags contents can be parsed.</p>
+
+<p>The separation of registration and tag creation can be seen in the following
+class diagram:</p>
+
+<p><img src="images/tags-class-diagram.png" alt="Tags Architecture Class Diagram" /></p>
+
+<h2>DefaultFactory</h2>
+
+<p>By default, YARD has a few standard syntaxes that can be parsed for tags. These
+are all implemented by the <tt><a href="YARD/Tags/DefaultFactory.html" title="YARD::Tags::DefaultFactory">YARD::Tags::DefaultFactory</a></tt> class. These syntaxes
+are:</p>
+
+<ul>
+<li><p>Standard text: no parsing is done, but text is stripped of newlines and
+multiple spaces.</p></li>
+<li><p>Raw text: does no parsing at all, no stripping of newlines or spaces. This
+is best used for code snippets.</p></li>
+<li><p>Raw text with title: does no parsing on the text but extracts the first line
+of the metadata as the "title", useful for tags such as <code>@example</code>:</p>
+
+<pre class="code"><span class='comment'># @example Inspect an element
+</span><span class='comment'>#   myobj.inspect #=&gt; #&lt;Object:0x123525&gt;
+</span></pre></li>
+<li><p>Text with types: parses a list of types at the beginning of the text. Types
+are optional. The standard syntax is in the form <code>[type1, type2, ...]</code>,
+for example:</p>
+
+<pre class="code"><span class='comment'># @return [String, Symbol] a description here
+</span><span class='comment'># @return description here with no types
+</span></pre></li>
+<li><p>Text with types and a name: parses a list of types at the beginning of text
+followed by a name and extra descriptive text. For example:</p>
+
+<pre class="code"><span class='comment'># @param [String] str the string to reverse
+</span><span class='kw'>def</span> <span class='id reverse'>reverse</span><span class='lparen'>(</span><span class='id str'>str</span><span class='rparen'>)</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>...</span><span class='tstring_end'>'</span></span> <span class='kw'>end</span>
+</pre></li>
+</ul>
+
+
+<p>As mentioned above, this syntax is implemented by the <code>DefaultFactory</code> which can
+be swapped out for any factory. In some cases, a developer may want to change
+the type declaration syntax to be in the form:</p>
+
+<pre class="code"><span class='comment'># @tagname name &lt;Types, here&gt; description
+</span></pre>
+
+<p>This can be done by simply implementing a new factory that parses the data in
+this form.</p>
+
+<h2>Implementing a Factory</h2>
+
+<p>Factories should implement the method <code>parse_tag</code> as well as any <code>parse_tag_SUFFIX</code>
+method where SUFFIX refers to the suffix added when declaring the tag. For example,
+a tag can also be declared as follows:</p>
+
+<pre class="code"><span class='const'>YARD</span><span class='op'>::</span><span class='const'>Tags</span><span class='op'>::</span><span class='const'>Library</span><span class='period'>.</span><span class='id define_tag'>define_tag</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Parameter</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:param</span><span class='comma'>,</span> <span class='symbol'>:with_types</span>
+</pre>
+
+<p>In such a case, the factory will be called with method <code>parse_tag_with_types</code>. In
+all cases, the method should return a new <tt><a href="YARD/Tags/Tag.html" title="YARD::Tags::Tag">YARD::Tags::Tag</a></tt> object. Generally,
+the <code>parse_tag</code> methods take 2 or 3 parameters. A simple tag can be implemented
+as:</p>
+
+<pre class="code"><span class='kw'>def</span> <span class='id parse_tag'>parse_tag</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id text'>text</span><span class='rparen'>)</span>
+  <span class='const'>Tag</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id text'>text</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</pre>
+
+<p>The text parameter contains pre-parsed text with extra spaces and newlines removed.
+If required, the method could also be declared with a third parameter containing
+unmodified raw text:</p>
+
+<pre class="code"><span class='kw'>def</span> <span class='id parse_tag_with_raw_text'>parse_tag_with_raw_text</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id text'>text</span><span class='comma'>,</span> <span class='id raw_text'>raw_text</span><span class='rparen'>)</span>
+  <span class='const'>Tag</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id raw_text'>raw_text</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</pre>
+
+<p>Note that this method would be invoked for a tag declared with the <code>:with_raw_text</code>
+suffix.</p>
+
+<h2>Changing the Factory</h2>
+
+<p>To change the factory, set the <tt><a href="YARD/Tags/Library.html#default_factory-class_method" title="YARD::Tags::Library.default_factory">YARD::Tags::Library.default_factory</a></tt> attribute:</p>
+
+<pre class="code"><span class='const'>YARD</span><span class='op'>::</span><span class='const'>Tags</span><span class='op'>::</span><span class='const'>Library</span><span class='period'>.</span><span class='id default_factory'>default_factory</span> <span class='op'>=</span> <span class='const'>MyFactory</span>
+</pre>
+
+<p>This must be done before any parsing is done, or the factory will not be used.</p>
+
+<p><a name="reftags"></a></p>
+
+<h2>Reference Tags</h2>
+
+<p>Although attempt is made in YARD to leave as many of the syntax details as
+possible to the factory provider, there is a special tag syntax for referencing
+tags created in other objects so that they can be reused again. This is common
+when an object describes a return type or parameters that are passed through to
+other methods. In such a case, it is more manageable to use the reference tag
+syntax. Consider the following example:</p>
+
+<pre class="code"><span class='kw'>class</span> <span class='const'>User</span>
+  <span class='comment'># @param [String] username the nam of the user to add
+</span>  <span class='comment'># @param [Number] uid the user ID
+</span>  <span class='comment'># @param [Number] gid the group ID
+</span>  <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id username'>username</span><span class='comma'>,</span> <span class='id uid'>uid</span><span class='comma'>,</span> <span class='id gid'>gid</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>UserHelper</span>
+  <span class='comment'># @param (see User#initialize)
+</span>  <span class='kw'>def</span> <span class='id add_user'>add_user</span><span class='lparen'>(</span><span class='id username'>username</span><span class='comma'>,</span> <span class='id uid'>uid</span><span class='comma'>,</span> <span class='id gid'>gid</span><span class='rparen'>)</span>
+    <span class='const'>User</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id username'>username</span><span class='comma'>,</span> <span class='id uid'>uid</span><span class='comma'>,</span> <span class='id gid'>gid</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># @param username (see User#initialize)
+</span>  <span class='kw'>def</span> <span class='id add_root_user'>add_root_user</span><span class='lparen'>(</span><span class='id username'>username</span><span class='rparen'>)</span>
+    <span class='const'>User</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id username'>username</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</pre>
+
+<p>Because the UserHelper module methods delegate directly to <code>User.new</code>, copying
+the documentation details would be unmaintainable. In this case, the (see METHODNAME)
+syntax is used to reference the tags from the User constructor to the helper methods.
+For the first method, all <code>@param</code> tags are referenced in one shot, but the second
+method only references one of the tags by adding <code>username</code> before the reference.</p>
+
+<p>Reference tags are represented by the <tt><a href="YARD/Tags/RefTag.html" title="YARD::Tags::RefTag">YARD::Tags::RefTag</a></tt> class and are created
+directly during parsing by <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt>.</p>
+      </div>
+    </div>
+    <div id="yard_info">
+  Generated on Friday, October 16 2009 at 12:40:30 AM by 
+  <abbr class="yard" title="Yay! A Ruby Documentation Tool"><a href="http://yard.soen.ca">YARD</a></abbr> 
+  0.2.3.5 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

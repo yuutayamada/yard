@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::CodeObjects::ExtendedMethodObject</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (E)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
+     :: 
+    ExtendedMethodObject
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::CodeObjects::ExtendedMethodObject</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/code_objects/extended_method_object.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(obj) ">- (Object) initialize(obj) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#method_missing-instance_method" title="- (Object) method_missing(sym, *args, &amp;block) ">- (Object) method_missing(sym, *args, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#scope-instance_method" title="- (Object) scope ">- (Object) scope </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(obj) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/extended_method_object.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id obj'>obj</span><span class='rparen'>)</span> <span class='ivar'>@del</span> <span class='op'>=</span> <span class='id obj'>obj</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (Object) method_missing(sym, *args, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/extended_method_object.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id method_missing'>method_missing</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span> <span class='ivar'>@del</span><span class='period'>.</span><span class='id __send__'>__send__</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="scope-instance_method">
+  
+    - (Object) scope 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/extended_method_object.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id scope'>scope</span><span class='semicolon'>;</span> <span class='symbol'>:class</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

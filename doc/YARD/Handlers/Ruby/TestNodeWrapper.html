@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Handlers::Ruby::TestNodeWrapper</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (T)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Handlers.html" title="Handlers">Handlers</a> :: <a href="../Ruby.html" title="Ruby">Ruby</a>
+     :: 
+    TestNodeWrapper
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Handlers::Ruby::TestNodeWrapper</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="HandlesExtension.html" title="YARD::Handlers::Ruby::HandlesExtension">YARD::Handlers::Ruby::HandlesExtension</a></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          <ul>
+            
+              <li><a href="HandlesExtension.html" title="YARD::Handlers::Ruby::HandlesExtension">YARD::Handlers::Ruby::HandlesExtension</a></li><ul>
+            
+              <li>YARD::Handlers::Ruby::TestNodeWrapper</li><ul>
+            
+            </ul></ul>
+          </ul>
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/handlers/ruby/base.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#matches%3F-instance_method" title="- (Object) matches?(node) ">- (Object) matches?(node) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <a href="HandlesExtension.html" title="YARD::Handlers::Ruby::HandlesExtension">YARD::Handlers::Ruby::HandlesExtension</a></h3>
+  <p class="inherited"><a href="HandlesExtension.html#initialize-instance_method" title="#initialize">#initialize</a></p>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <a href="HandlesExtension.html#initialize-instance_method" title="YARD::Handlers::Ruby::HandlesExtension">YARD::Handlers::Ruby::HandlesExtension</a></p>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="matches?-instance_method">
+  
+    - (Object) matches?(node) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/ruby/base.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id matches?'>matches?</span><span class='lparen'>(</span><span class='id node'>node</span><span class='rparen'>)</span> <span class='op'>!</span><span class='id node'>node</span><span class='period'>.</span><span class='id send'>send</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>FalseClass</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

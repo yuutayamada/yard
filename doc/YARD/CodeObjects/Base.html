@@ -1,0 +1,1453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::CodeObjects::Base</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (B)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
+     :: 
+    Base
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::CodeObjects::Base</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/code_objects/base.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#docstring-instance_method" title="- (Object) docstring ">- (Object) docstring </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>docstring</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#dynamic-instance_method" title="- (Object) dynamic ">- (Object) dynamic </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>dynamic</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#files-instance_method" title="- (Object) files ">- (Object) files </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>files</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#name-instance_method" title="- (Object) name ">- (Object) name </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>name</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#namespace-instance_method" title="- (Object) namespace ">- (Object) namespace </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>namespace</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#signature-instance_method" title="- (Object) signature ">- (Object) signature </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>signature</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#source-instance_method" title="- (Object) source ">- (Object) source </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>source</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#%3D%3D%3D-class_method" title="+ (Object) ===(other) ">+ (Object) ===(other) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#new-class_method" title="+ (Object) new(namespace, name, *args, &amp;block) ">+ (Object) new(namespace, name, *args, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#%3D%3D-instance_method" title="- (Object) ==(other) ">- (Object) ==(other) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#%5B%5D-instance_method" title="- (Object) [](key) ">- (Object) [](key) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#%5B%5D%3D-instance_method" title="- (Object) []=(key, value) ">- (Object) []=(key, value) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#add_file-instance_method" title="- (Object) add_file(file, line = nil, has_comments = false) ">- (Object) add_file(file, line = nil, has_comments = false) </a>
+        
+        
+        
+          <span class="summary_desc">
+Associates a file with a code object, optionally adding the line where it
+was defined.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#dynamic%3F-instance_method" title="- (Object) dynamic? ">- (Object) dynamic? </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#file-instance_method" title="- (String) file ">- (String) file </a>
+        
+        
+        
+          <span class="summary_desc">
+Returns the filename the object was first parsed at, taking.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format-instance_method" title="- (Object) format(options = {}) ">- (Object) format(options = {}) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#has_tag%3F-instance_method" title="- (Object) has_tag?(name) ">- (Object) has_tag?(name) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(namespace, name, *args) {|_self| ... }">- (Object) initialize(namespace, name, *args) {|_self| ... }</a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#inspect-instance_method" title="- (Object) inspect ">- (Object) inspect </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#line-instance_method" title="- (Fixnum) line ">- (Fixnum) line </a>
+        
+        
+        
+          <span class="summary_desc">
+Returns the line the object was first parsed at (or nil).
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#method_missing-instance_method" title="- (Object) method_missing(meth, *args, &amp;block) ">- (Object) method_missing(meth, *args, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#path-instance_method" title="- (Object) path ">- (Object) path </a>
+        
+        (also: #to_s)
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#tag-instance_method" title="- (Object) tag(name) ">- (Object) tag(name) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#tags-instance_method" title="- (Object) tags(name = nil) ">- (Object) tags(name = nil) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#type-instance_method" title="- (Symbol) type ">- (Symbol) type </a>
+        
+        
+        
+          <span class="summary_desc">
+Default type is the lowercase class name without the &#8220;Object&#8221;
+suffix.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="docstring=-instance_method"></span>
+      <span id="docstring-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="docstring-instance_method">
+  
+    - (Object) docstring 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>docstring</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id docstring'>docstring</span>
+  <span class='ivar'>@docstring</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="dynamic=-instance_method"></span>
+      <span id="dynamic-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="dynamic-instance_method">
+  
+    - (Object) dynamic 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>dynamic</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id dynamic'>dynamic</span>
+  <span class='ivar'>@dynamic</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="files-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="files-instance_method">
+  
+    - (Object) files  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>files</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id files'>files</span>
+  <span class='ivar'>@files</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="name-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="name-instance_method">
+  
+    - (Object) name  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>name</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="namespace=-instance_method"></span>
+      <span id="namespace-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="namespace-instance_method">
+  
+    - (Object) namespace 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">parent</span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>namespace</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id namespace'>namespace</span>
+  <span class='ivar'>@namespace</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="signature=-instance_method"></span>
+      <span id="signature-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="signature-instance_method">
+  
+    - (Object) signature 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>signature</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id signature'>signature</span>
+  <span class='ivar'>@signature</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="source=-instance_method"></span>
+      <span id="source-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="source-instance_method">
+  
+    - (Object) source 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>source</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id source'>source</span>
+  <span class='ivar'>@source</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(namespace, name, *args) {|_self| ... }
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Yield Parameters:</h3>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></tt>)</span>
+      
+      
+        <span class='name'>_self</span>
+      
+      
+      
+        &mdash;
+        
+the object that the method was called on
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id namespace'>namespace</span> <span class='op'>&amp;&amp;</span> <span class='id namespace'>namespace</span> <span class='op'>!=</span> <span class='symbol'>:root</span> <span class='op'>&amp;&amp;</span> 
+      <span class='op'>!</span><span class='id namespace'>namespace</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>NamespaceObject</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id namespace'>namespace</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Proxy</span><span class='rparen'>)</span>
+    <span class='id raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid namespace object: </span><span class='embexpr_beg'>#{</span><span class='id namespace'>namespace</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@current_file_has_comments</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_sym'>to_sym</span>
+  <span class='ivar'>@tags</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@docstring</span> <span class='op'>=</span> <span class='const'>Docstring</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id namespace'>namespace</span> <span class='op'>=</span> <span class='id namespace'>namespace</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (Object) method_missing(meth, *args, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 161</span>
+
+<span class='kw'>def</span> <span class='id method_missing'>method_missing</span><span class='lparen'>(</span><span class='id meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=$</span><span class='regexp_end'>/</span></span>
+    <span class='kw'>self</span><span class='lbracket'>[</span><span class='id meth'>meth</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span>
+  <span class='kw'>elsif</span> <span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id meth'>meth</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='lbracket'>[</span><span class='id meth'>meth</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="===-class_method">
+  
+    + (Object) ===(other) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='op'>===</span><span class='lparen'>(</span><span class='id other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>self</span> <span class='op'>&gt;=</span> <span class='id other'>other</span><span class='period'>.</span><span class='id class'>class</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="new-class_method">
+  
+    + (Object) new(namespace, name, *args, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id new'>new</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>NSEP</span>
+    <span class='id name'>name</span> <span class='op'>=</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id namespace'>namespace</span> <span class='op'>=</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id root'>root</span>
+  <span class='kw'>elsif</span> <span class='id name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:</span><span class='embexpr_beg'>#{</span><span class='const'>NSEPQ</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>ISEPQ</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>CSEPQ</span><span class='rbrace'>}</span><span class='tstring_content'>)([^</span><span class='embexpr_beg'>#{</span><span class='const'>NSEPQ</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='const'>ISEPQ</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='const'>CSEPQ</span><span class='rbrace'>}</span><span class='tstring_content'>]+)$</span><span class='regexp_end'>/</span></span>
+    <span class='kw'>return</span> <span class='id new'>new</span><span class='lparen'>(</span><span class='const'>Proxy</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='backref'>$`</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='backref'>$1</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  
+  <span class='id keyname'>keyname</span> <span class='op'>=</span> <span class='id namespace'>namespace</span> <span class='op'>&amp;&amp;</span> <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:path</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>RootObject</span>
+    <span class='id keyname'>keyname</span> <span class='op'>=</span> <span class='symbol'>:root</span>
+  <span class='kw'>elsif</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>MethodObject</span>
+    <span class='id keyname'>keyname</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span> <span class='op'>&amp;&amp;</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id to_sym'>to_sym</span> <span class='op'>==</span> <span class='symbol'>:class</span> <span class='op'>?</span> <span class='const'>CSEP</span> <span class='op'>:</span> <span class='const'>ISEP</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='kw'>elsif</span> <span class='id keyname'>keyname</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id keyname'>keyname</span> <span class='op'>=</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='kw'>else</span>
+    <span class='id keyname'>keyname</span> <span class='op'>+=</span> <span class='const'>NSEP</span> <span class='op'>+</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='kw'>end</span>
+  
+  <span class='id obj'>obj</span> <span class='op'>=</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id objects'>objects</span><span class='lbracket'>[</span><span class='id keyname'>keyname</span><span class='rbracket'>]</span>
+  <span class='id obj'>obj</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id obj'>obj</span> <span class='op'>&amp;&amp;</span> <span class='id obj'>obj</span><span class='period'>.</span><span class='id class'>class</span> <span class='op'>!=</span> <span class='kw'>self</span>
+  
+  <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>!=</span> <span class='const'>RootObject</span> <span class='op'>&amp;&amp;</span> <span class='id obj'>obj</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id obj'>obj</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+    <span class='id obj'>obj</span>
+  <span class='kw'>else</span>
+    <span class='const'>Registry</span><span class='period'>.</span><span class='id objects'>objects</span><span class='lbracket'>[</span><span class='id keyname'>keyname</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="==-instance_method">
+  
+    - (Object) ==(other) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 137</span>
+
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id other'>other</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Proxy</span><span class='rparen'>)</span>
+    <span class='id path'>path</span> <span class='op'>==</span> <span class='id other'>other</span><span class='period'>.</span><span class='id path'>path</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="[]-instance_method">
+  
+    - (Object) [](key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+    <span class='id send'>send</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="[]=-instance_method">
+  
+    - (Object) []=(key, value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155
+156
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 153</span>
+
+<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="add_file-instance_method">
+  
+    - (Object) add_file(file, line = nil, has_comments = false) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Associates a file with a code object, optionally adding the line where it
+was defined. By convention, &#8217;<STDIN>&#8217; should be used to
+associate code that comes form standard input.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../String.html" title="String">String</a></tt>)</span>
+      
+      
+        <span class='name'>file</span>
+      
+      
+      
+        &mdash;
+        
+the filename (&#8217;<STDIN>&#8217; for standard input)
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Fixnum</tt>, <tt>nil</tt>)</span>
+      
+      
+        <span class='name'>line</span>
+      
+      
+      
+        &mdash;
+        
+the line number where the object lies in the file
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>has_comments</span>
+      
+      
+      
+        &mdash;
+        
+whether or not the definition has comments associated. This will allow
+<tt><a href="#file-instance_method" title="#file">#file</a></tt> to return the definition where the comments were made instead of
+any empty definitions that might have been parsed before (module namespaces
+for instance).
+
+
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id add_file'>add_file</span><span class='lparen'>(</span><span class='id file'>file</span><span class='comma'>,</span> <span class='id line'>line</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id has_comments'>has_comments</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>file cannot be nil or empty</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id file'>file</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='op'>||</span> <span class='id file'>file</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='id obj'>obj</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id file'>file</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='id line'>line</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id has_comments'>has_comments</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@current_file_has_comments</span>
+    <span class='ivar'>@current_file_has_comments</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@files</span><span class='period'>.</span><span class='id unshift'>unshift</span><span class='lparen'>(</span><span class='id obj'>obj</span><span class='rparen'>)</span> 
+  <span class='kw'>else</span>
+    <span class='ivar'>@files</span> <span class='op'>&lt;&lt;</span> <span class='id obj'>obj</span> <span class='comment'># back of the line
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="dynamic?-instance_method">
+  
+    - (Object) dynamic? 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id dynamic?'>dynamic?</span><span class='semicolon'>;</span> <span class='ivar'>@dynamic</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="file-instance_method">
+  
+    - (<a href="../../String.html" title="String">String</a>) file 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the filename the object was first parsed at, taking definitions
+with docstrings first.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../String.html" title="String">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a filename
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id file'>file</span>
+  <span class='ivar'>@files</span><span class='period'>.</span><span class='id first'>first</span> <span class='op'>?</span> <span class='ivar'>@files</span><span class='period'>.</span><span class='id first'>first</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format-instance_method">
+  
+    - (Object) format(options = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+217
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 217</span>
+
+<span class='kw'>def</span> <span class='id format'>format</span><span class='lparen'>(</span><span class='id options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id options'>options</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span><span class='symbol'>:object</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='const'>Templates</span><span class='op'>::</span><span class='const'>Engine</span><span class='period'>.</span><span class='id render'>render</span><span class='lparen'>(</span><span class='id options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="has_tag?-instance_method">
+  
+    - (Object) has_tag?(name) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id has_tag?'>has_tag?</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='ivar'>@docstring</span><span class='period'>.</span><span class='id has_tag?'>has_tag?</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="inspect-instance_method">
+  
+    - (Object) inspect 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;yardoc </span><span class='embexpr_beg'>#{</span><span class='id type'>type</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="line-instance_method">
+  
+    - (Fixnum) line 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the line the object was first parsed at (or nil)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the line where the object was first defined.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+if there is no line associated with the object
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 133</span>
+
+<span class='kw'>def</span> <span class='id line'>line</span>
+  <span class='ivar'>@files</span><span class='period'>.</span><span class='id first'>first</span> <span class='op'>?</span> <span class='ivar'>@files</span><span class='period'>.</span><span class='id first'>first</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="path-instance_method">
+  
+    - (Object) path 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">to_s</span>
+    </span>
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id path'>path</span>
+  <span class='kw'>if</span> <span class='id parent'>parent</span> <span class='op'>&amp;&amp;</span> <span class='id parent'>parent</span> <span class='op'>!=</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id root'>root</span>
+    <span class='lbracket'>[</span><span class='id parent'>parent</span><span class='period'>.</span><span class='id path'>path</span><span class='comma'>,</span> <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='id sep'>sep</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="tag-instance_method">
+  
+    - (Object) tag(name) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 243</span>
+
+<span class='kw'>def</span> <span class='id tag'>tag</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='ivar'>@docstring</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="tags-instance_method">
+  
+    - (Object) tags(name = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id tags'>tags</span><span class='lparen'>(</span><span class='id name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='ivar'>@docstring</span><span class='period'>.</span><span class='id tags'>tags</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="type-instance_method">
+  
+    - (Symbol) type 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Default type is the lowercase class name without the &#8220;Object&#8221;
+suffix
+</p>
+<p>
+Override this method to provide a custom object type
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the type of code object this represents
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/base.rb', line 204</span>
+
+<span class='kw'>def</span> <span class='id type'>type</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>NSEPQ</span><span class='rbrace'>}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Object$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id downcase'>downcase</span><span class='period'>.</span><span class='id to_sym'>to_sym</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

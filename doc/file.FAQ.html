@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="glossary.html" title="Glossary">Glossary</a> :: 
+    File: FAQ
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>FAQ</h1>
+
+<h2>(1) So, show me some cool stuff. What can YARD do?</h2>
+
+<ul>
+<li><a href="http://gnuu.org/2008/02/29/generating-class-diagrams-with-yard-and-graphviz/">Visualize with GraphViz</a> Visualize your classes and methods with GraphViz</li>
+<li><a href="http://github.com/lsegal/yard/tree/5b07d706eee6bc0d7f13d9ec1e6e0ab914d3679c/lib/yard/core_ext/string.rb">Inline RSpecs</a> In your rspec files, call the following to refer
+back to and call the inline rspecs: <code>described_in_docs "String", "camelcase"</code></li>
+<li><a href="http://github.com/lsegal/yard/tree/master/lib/yard/handlers/base.rb#L350">Inline doc testing</a> Use the 'docspec' command line tool to
+run the above tests.  This is similar to <a href="http://github.com/tablatom/rubydoctest">Ruby DocTest</a>'s inline
+irb testing.</li>
+</ul>
+
+
+<h2>(2) Why did you pick the @-symbol tags for documentation?</h2>
+
+<p>Java, C++, Python and many other languages have standard documentation tools
+that use the @tag "standard".  This has been extended to the Ruby language,
+and YARD takes advantage of this common style.</p>
+
+<h2>(3) Can I tweak it to use some other documentation standard?</h2>
+
+<p>  Yes. YARD is flexible enough to have other documentation syntaxes put into use. [TODO: Add information about customization here.]</p>
+
+<h2>(4) Why don't you use ParseTree, or sydparse?  Why did you write your own parser?</h2>
+
+<p>As of Ruby 1.9, YARD uses Ripper parser which is packaged with the standard library
+and maintained as such. The legacy parser is only being maintained for bug fixes,
+but was written because no existing parser properly supported putting comments
+into the parse tree and did not robustly support edge case scenarios.</p></div></div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

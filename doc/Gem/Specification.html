@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: Gem::Specification</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../glossary.html">Glossary (S)</a> :: 
+    Gem
+     :: 
+    Specification
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Gem::Specification</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/rubygems_plugin.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#has_yardoc%3D-class_method" title="+ (Object) has_yardoc=(value) ">+ (Object) has_yardoc=(value) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#has_rdoc%3F-instance_method" title="- (Object) has_rdoc? ">- (Object) has_rdoc? </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#has_yardoc-instance_method" title="- (Object) has_yardoc ">- (Object) has_yardoc </a>
+        
+        (also: #has_yardoc?)
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="has_yardoc=-class_method">
+  
+    + (Object) has_yardoc=(value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rubygems_plugin.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id has_yardoc='>has_yardoc=</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@has_rdoc</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>yard</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="has_rdoc?-instance_method">
+  
+    - (Object) has_rdoc? 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rubygems_plugin.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id has_rdoc?'>has_rdoc?</span>
+  <span class='ivar'>@has_rdoc</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@has_rdoc</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>yard</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="has_yardoc-instance_method">
+  
+    - (Object) has_yardoc 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">has_yardoc?</span>
+    </span>
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rubygems_plugin.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id has_yardoc'>has_yardoc</span>
+  <span class='ivar'>@has_rdoc</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>yard</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

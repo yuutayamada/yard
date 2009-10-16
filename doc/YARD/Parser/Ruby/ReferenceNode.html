@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Parser::Ruby::ReferenceNode</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (R)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Parser.html" title="Parser">Parser</a> :: <a href="../Ruby.html" title="Ruby">Ruby</a>
+     :: 
+    ReferenceNode
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Parser::Ruby::ReferenceNode</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          <ul>
+            
+              <li><a href="../../../Array.html" title="Array">Array</a></li><ul>
+            
+              <li><a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></li><ul>
+            
+              <li>YARD::Parser::Ruby::ReferenceNode</li><ul>
+            
+            </ul></ul></ul>
+          </ul>
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/parser/ruby/ast_node.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#namespace-instance_method" title="- (Object) namespace ">- (Object) namespace </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#path-instance_method" title="- (Object) path ">- (Object) path </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#ref%3F-instance_method" title="- (Object) ref? ">- (Object) ref? </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#source-instance_method" title="- (Object) source ">- (Object) source </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></h3>
+  <p class="inherited"><a href="AstNode.html#node_class_for-class_method" title="node_class_for">node_class_for</a>, <a href="AstNode.html#initialize-instance_method" title="#initialize">#initialize</a>, <a href="AstNode.html#%3D%3D-instance_method" title="#==">#==</a>, <a href="AstNode.html#show-instance_method" title="#show">#show</a>, <a href="AstNode.html#has_line%3F-instance_method" title="#has_line?">#has_line?</a>, <a href="AstNode.html#line-instance_method" title="#line">#line</a>, <a href="AstNode.html#first_line-instance_method" title="#first_line">#first_line</a>, <a href="AstNode.html#jump-instance_method" title="#jump">#jump</a>, <a href="AstNode.html#children-instance_method" title="#children">#children</a>, <a href="AstNode.html#token%3F-instance_method" title="#token?">#token?</a>, <a href="AstNode.html#literal%3F-instance_method" title="#literal?">#literal?</a>, <a href="AstNode.html#kw%3F-instance_method" title="#kw?">#kw?</a>, <a href="AstNode.html#call%3F-instance_method" title="#call?">#call?</a>, <a href="AstNode.html#condition%3F-instance_method" title="#condition?">#condition?</a>, <a href="AstNode.html#pretty_print-instance_method" title="#pretty_print">#pretty_print</a>, <a href="AstNode.html#inspect-instance_method" title="#inspect">#inspect</a>, <a href="AstNode.html#traverse-instance_method" title="#traverse">#traverse</a>, <a href="AstNode.html#reset_line_info-instance_method" title="#reset_line_info">#reset_line_info</a></p>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <a href="../../../Array.html" title="Array">Array</a></h3>
+  <p class="inherited"><a href="../../../Array.html#place-instance_method" title="#place">#place</a></p>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <a href="AstNode.html#initialize-instance_method" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></p>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="namespace-instance_method">
+  
+    - (Object) namespace 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id namespace'>namespace</span>
+  <span class='const'>Array</span><span class='period'>.</span><span class='id new'>new</span> <span class='id flatten'>flatten</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="path-instance_method">
+  
+    - (Object) path 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='id path'>path</span>
+  <span class='const'>Array</span><span class='period'>.</span><span class='id new'>new</span> <span class='id flatten'>flatten</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="ref?-instance_method">
+  
+    - (Object) ref? 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id ref?'>ref?</span><span class='semicolon'>;</span> <span class='kw'>true</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="source-instance_method">
+  
+    - (Object) source 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 206</span>
+
+<span class='kw'>def</span> <span class='id source'>source</span>
+  <span class='kw'>super</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id first'>first</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

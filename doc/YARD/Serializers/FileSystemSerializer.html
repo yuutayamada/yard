@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Serializers::FileSystemSerializer</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (F)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Serializers.html" title="Serializers">Serializers</a>
+     :: 
+    FileSystemSerializer
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Serializers::FileSystemSerializer</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="Base.html" title="YARD::Serializers::Base">YARD::Serializers::Base</a></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          <ul>
+            
+              <li><a href="Base.html" title="YARD::Serializers::Base">YARD::Serializers::Base</a></li><ul>
+            
+              <li>YARD::Serializers::FileSystemSerializer</li><ul>
+            
+            </ul></ul>
+          </ul>
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/serializers/file_system_serializer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#basepath-instance_method" title="- (Object) basepath ">- (Object) basepath </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>basepath</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#extension-instance_method" title="- (Object) extension ">- (Object) extension </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>extension</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(opts = {}) ">- (Object) initialize(opts = {}) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#serialize-instance_method" title="- (Object) serialize(object, data) ">- (Object) serialize(object, data) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#serialized_path-instance_method" title="- (Object) serialized_path(object) ">- (Object) serialized_path(object) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <a href="Base.html" title="YARD::Serializers::Base">YARD::Serializers::Base</a></h3>
+  <p class="inherited"><a href="Base.html#before_serialize-instance_method" title="#before_serialize">#before_serialize</a>, <a href="Base.html#after_serialize-instance_method" title="#after_serialize">#after_serialize</a></p>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="basepath-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="basepath-instance_method">
+  
+    - (Object) basepath  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>basepath</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/file_system_serializer.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id basepath'>basepath</span>
+  <span class='ivar'>@basepath</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="extension-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="extension-instance_method">
+  
+    - (Object) extension  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>extension</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/file_system_serializer.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id extension'>extension</span>
+  <span class='ivar'>@extension</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(opts = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/file_system_serializer.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@basepath</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:basepath</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>doc</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='ivar'>@extension</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id options'>options</span><span class='period'>.</span><span class='id has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:extension</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:extension</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="serialize-instance_method">
+  
+    - (Object) serialize(object, data) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/file_system_serializer.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='id object'>object</span><span class='comma'>,</span> <span class='id data'>data</span><span class='rparen'>)</span>
+  <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='id basepath'>basepath</span><span class='comma'>,</span> <span class='op'>*</span><span class='id serialized_path'>serialized_path</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='const'>FileUtils</span><span class='period'>.</span><span class='id mkdir_p'>mkdir_p</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span>
+  <span class='id log'>log</span><span class='period'>.</span><span class='id debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Serializing to </span><span class='embexpr_beg'>#{</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span><span class='id path'>path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span> <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span> <span class='id data'>data</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="serialized_path-instance_method">
+  
+    - (Object) serialized_path(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/file_system_serializer.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id serialized_path'>serialized_path</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id object'>object</span> <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+
+  <span class='id objname'>objname</span> <span class='op'>=</span> <span class='id object'>object</span> <span class='op'>!=</span> <span class='const'>YARD</span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id root'>root</span> <span class='op'>?</span> <span class='id object'>object</span><span class='period'>.</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>top-level-namespace</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id objname'>objname</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id object'>object</span><span class='period'>.</span><span class='id scope'>scope</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>MethodObject</span><span class='rparen'>)</span>
+  <span class='id fspath'>fspath</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id objname'>objname</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id extension'>extension</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id extension'>extension</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id namespace'>namespace</span> <span class='op'>&amp;&amp;</span> <span class='id object'>object</span><span class='period'>.</span><span class='id namespace'>namespace</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id fspath'>fspath</span><span class='period'>.</span><span class='id unshift'>unshift</span> <span class='op'>*</span><span class='id object'>object</span><span class='period'>.</span><span class='id namespace'>namespace</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>NSEP</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  
+  <span class='comment'># Don't change the filenames, it just makes it more complicated
+</span>  <span class='comment'># to figure out the original name.
+</span>  <span class='comment'>#fspath.map! do |p| 
+</span>  <span class='comment'>#  p.gsub(/([a-z])([A-Z])/, '\1_\2').downcase 
+</span>  <span class='comment'>#end
+</span>  
+  <span class='comment'># Remove special chars from filenames.
+</span>  <span class='comment'># Windows disallows \ / : * ? &quot; &lt; &gt; | but we will just remove any
+</span>  <span class='comment'># non alphanumeric (plus period, underscore and dash).
+</span>  <span class='id fspath'>fspath</span><span class='period'>.</span><span class='id map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id p'>p</span><span class='op'>|</span>
+    <span class='id p'>p</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^\w\.-]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id x'>x</span><span class='op'>|</span>
+      <span class='id encoded'>encoded</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span>
+
+      <span class='id x'>x</span><span class='period'>.</span><span class='id each_byte'>each_byte</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id b'>b</span><span class='op'>|</span> <span class='id encoded'>encoded</span> <span class='op'>&lt;&lt;</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%X</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='id b'>b</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+      <span class='id encoded'>encoded</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  
+  <span class='const'>File</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='id fspath'>fspath</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

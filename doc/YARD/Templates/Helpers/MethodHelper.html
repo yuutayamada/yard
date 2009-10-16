@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Module: YARD::Templates::Helpers::MethodHelper</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (M)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Templates.html" title="Templates">Templates</a> :: <a href="../Helpers.html" title="Helpers">Helpers</a>
+     :: 
+    MethodHelper
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Templates::Helpers::MethodHelper</h1>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/yard/templates/helpers/method_helper.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#format_args-instance_method" title="- (Object) format_args(object) ">- (Object) format_args(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_block-instance_method" title="- (Object) format_block(object) ">- (Object) format_block(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_code-instance_method" title="- (Object) format_code(object, show_lines = false) ">- (Object) format_code(object, show_lines = false) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_constant-instance_method" title="- (Object) format_constant(value) ">- (Object) format_constant(value) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_lines-instance_method" title="- (Object) format_lines(object) ">- (Object) format_lines(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_return_types-instance_method" title="- (Object) format_return_types(object) ">- (Object) format_return_types(object) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="format_args-instance_method">
+  
+    - (Object) format_args(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id format_args'>format_args</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id object'>object</span><span class='period'>.</span><span class='id parameters'>parameters</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id args'>args</span> <span class='op'>=</span> <span class='id object'>object</span><span class='period'>.</span><span class='id parameters'>parameters</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id n'>n</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span> <span class='id v'>v</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id n'>n</span><span class='rbrace'>}</span><span class='tstring_content'> = </span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='id n'>n</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id h'>h</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id args'>args</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_block-instance_method">
+  
+    - (Object) format_block(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id format_block'>format_block</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id has_tag?'>has_tag?</span><span class='lparen'>(</span><span class='symbol'>:yieldparam</span><span class='rparen'>)</span>
+    <span class='id h'>h</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{|</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id object'>object</span><span class='period'>.</span><span class='id tags'>tags</span><span class='lparen'>(</span><span class='symbol'>:yieldparam</span><span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id t'>t</span><span class='op'>|</span> <span class='id t'>t</span><span class='period'>.</span><span class='id name'>name</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>| ... }</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_code-instance_method">
+  
+    - (Object) format_code(object, show_lines = false) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id format_code'>format_code</span><span class='lparen'>(</span><span class='id object'>object</span><span class='comma'>,</span> <span class='id show_lines'>show_lines</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id i'>i</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
+  <span class='id lines'>lines</span> <span class='op'>=</span> <span class='id object'>object</span><span class='period'>.</span><span class='id source'>source</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+  <span class='id longestline'>longestline</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id object'>object</span><span class='period'>.</span><span class='id line'>line</span> <span class='op'>+</span> <span class='id lines'>lines</span><span class='period'>.</span><span class='id size'>size</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id length'>length</span>
+  <span class='id lines'>lines</span><span class='period'>.</span><span class='id map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span> 
+    <span class='id lineno'>lineno</span> <span class='op'>=</span> <span class='id object'>object</span><span class='period'>.</span><span class='id line'>line</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id i'>i</span> <span class='op'>+=</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id longestline'>longestline</span> <span class='op'>-</span> <span class='id lineno'>lineno</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id length'>length</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id lineno'>lineno</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id line'>line</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_constant-instance_method">
+  
+    - (Object) format_constant(value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id format_constant'>format_constant</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='id sp'>sp</span> <span class='op'>=</span> <span class='id value'>value</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\s+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id num'>num</span> <span class='op'>=</span> <span class='id sp'>sp</span> <span class='op'>?</span> <span class='id sp'>sp</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>:</span> <span class='int'>0</span>
+  <span class='id html_syntax_highlight'>html_syntax_highlight</span> <span class='id value'>value</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s{</span><span class='embexpr_beg'>#{</span><span class='id num'>num</span><span class='rbrace'>}</span><span class='tstring_content'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_lines-instance_method">
+  
+    - (Object) format_lines(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id format_lines'>format_lines</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id i'>i</span> <span class='op'>=</span> <span class='op'>-</span><span class='int'>1</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id source'>source</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='id object'>object</span><span class='period'>.</span><span class='id line'>line</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id i'>i</span> <span class='op'>+=</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_return_types-instance_method">
+  
+    - (Object) format_return_types(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/method_helper.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id format_return_types'>format_return_types</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id object'>object</span><span class='period'>.</span><span class='id has_tag?'>has_tag?</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id object'>object</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span><span class='period'>.</span><span class='id types'>types</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span><span class='period'>.</span><span class='id types'>types</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+  <span class='id format_types'>format_types</span> <span class='lbracket'>[</span><span class='id object'>object</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span><span class='period'>.</span><span class='id types'>types</span><span class='period'>.</span><span class='id first'>first</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

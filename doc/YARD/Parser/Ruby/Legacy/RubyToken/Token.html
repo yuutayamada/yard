@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Parser::Ruby::Legacy::RubyToken::Token</title>
+    <link rel="stylesheet" href="../../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../../../glossary.html">Glossary (T)</a> :: 
+    <a href="../../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../../Parser.html" title="Parser">Parser</a> :: <a href="../../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../../Legacy.html" title="Legacy">Legacy</a> :: <a href="../RubyToken.html" title="RubyToken">RubyToken</a>
+     :: 
+    Token
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Parser::Ruby::Legacy::RubyToken::Token</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/parser/ruby/legacy/ruby_lex.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="NO_TEXT-constant ">NO_TEXT =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>??</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id freeze'>freeze</span></pre></dd>
+    
+  </dl>
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#char_no-instance_method" title="- (Object) char_no ">- (Object) char_no </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>char_no</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#lex_state-instance_method" title="- (Object) lex_state ">- (Object) lex_state </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>lex_state</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#line_no-instance_method" title="- (Object) line_no ">- (Object) line_no </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>line_no</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#text-instance_method" title="- (Object) text ">- (Object) text </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>text</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(line_no, char_no) ">- (Object) initialize(line_no, char_no) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#set_text-instance_method" title="- (Object) set_text(text) ">- (Object) set_text(text) </a>
+        
+        
+        
+          <span class="summary_desc">
+Because we&#8217;re used in contexts that expect to return a token,.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="char_no-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="char_no-instance_method">
+  
+    - (Object) char_no  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>char_no</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id char_no'>char_no</span>
+  <span class='ivar'>@char_no</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="lex_state=-instance_method"></span>
+      <span id="lex_state-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="lex_state-instance_method">
+  
+    - (Object) lex_state 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>lex_state</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id lex_state'>lex_state</span>
+  <span class='ivar'>@lex_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="line_no-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="line_no-instance_method">
+  
+    - (Object) line_no  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>line_no</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id line_no'>line_no</span>
+  <span class='ivar'>@line_no</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="text-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="text-instance_method">
+  
+    - (Object) text  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>text</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id text'>text</span>
+  <span class='ivar'>@text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(line_no, char_no) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id line_no'>line_no</span><span class='comma'>,</span> <span class='id char_no'>char_no</span><span class='rparen'>)</span>
+  <span class='ivar'>@line_no</span> <span class='op'>=</span> <span class='id line_no'>line_no</span>
+  <span class='ivar'>@char_no</span> <span class='op'>=</span> <span class='id char_no'>char_no</span>
+  <span class='ivar'>@text</span>    <span class='op'>=</span> <span class='const'>NO_TEXT</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="set_text-instance_method">
+  
+    - (Object) set_text(text) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Because we&#8217;re used in contexts that expect to return a token, we set
+the text string and then return ourselves
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id set_text'>set_text</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span>
+  <span class='ivar'>@text</span> <span class='op'>=</span> <span class='id text'>text</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

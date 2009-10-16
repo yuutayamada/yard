@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Module: YARD::Parser::Ruby</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (R)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Parser.html" title="Parser">Parser</a>
+     :: 
+    Ruby
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Parser::Ruby</h1>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/yard/autoload.rb<span class="defines">,<br />
+  lib/yard/parser/ruby/ast_node.rb,<br /> lib/yard/parser/ruby/ruby_parser.rb</div>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+      <strong class="modules">Modules:</strong> <a href="Ruby/Legacy.html" title="Legacy">Legacy</a>
+    
+   
+    
+      <strong class="classes">Classes:</strong> <a href="Ruby/AstNode.html" title="AstNode">AstNode</a>, <a href="Ruby/ReferenceNode.html" title="ReferenceNode">ReferenceNode</a>, <a href="Ruby/ParameterNode.html" title="ParameterNode">ParameterNode</a>, <a href="Ruby/MethodCallNode.html" title="MethodCallNode">MethodCallNode</a>, <a href="Ruby/ConditionalNode.html" title="ConditionalNode">ConditionalNode</a>, <a href="Ruby/RubyParser.html" title="RubyParser">RubyParser</a>
+    
+  
+</p>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#s-instance_method" title="- (Object) s(*args) ">- (Object) s(*args) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="s-instance_method">
+  
+    - (Object) s(*args) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id s'>s</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='id type'>type</span> <span class='op'>=</span> <span class='const'>Symbol</span> <span class='op'>===</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span> <span class='op'>?</span> <span class='id args'>args</span><span class='period'>.</span><span class='id shift'>shift</span> <span class='op'>:</span> <span class='symbol'>:list</span>
+  <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>Hash</span> <span class='op'>===</span> <span class='id args'>args</span><span class='period'>.</span><span class='id last'>last</span> <span class='op'>?</span> <span class='id args'>args</span><span class='period'>.</span><span class='id pop'>pop</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='const'>AstNode</span><span class='period'>.</span><span class='id node_class_for'>node_class_for</span><span class='lparen'>(</span><span class='id type'>type</span><span class='rparen'>)</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id type'>type</span><span class='comma'>,</span> <span class='id args'>args</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

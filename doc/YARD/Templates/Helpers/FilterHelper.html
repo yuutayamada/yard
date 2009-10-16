@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Module: YARD::Templates::Helpers::FilterHelper</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (F)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Templates.html" title="Templates">Templates</a> :: <a href="../Helpers.html" title="Helpers">Helpers</a>
+     :: 
+    FilterHelper
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Templates::Helpers::FilterHelper</h1>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/yard/templates/helpers/filter_helper.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#is_class%3F-instance_method" title="- (Object) is_class?(object) ">- (Object) is_class?(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#is_method%3F-instance_method" title="- (Object) is_method?(object) ">- (Object) is_method?(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#is_module%3F-instance_method" title="- (Object) is_module?(object) ">- (Object) is_module?(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#is_namespace%3F-instance_method" title="- (Object) is_namespace?(object) ">- (Object) is_namespace?(object) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="is_class?-instance_method">
+  
+    - (Object) is_class?(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/filter_helper.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id is_class?'>is_class?</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>ClassObject</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="is_method?-instance_method">
+  
+    - (Object) is_method?(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/filter_helper.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id is_method?'>is_method?</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id type'>type</span> <span class='op'>==</span> <span class='symbol'>:method</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="is_module?-instance_method">
+  
+    - (Object) is_module?(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/filter_helper.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id is_module?'>is_module?</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>ModuleObject</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="is_namespace?-instance_method">
+  
+    - (Object) is_namespace?(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/filter_helper.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id is_namespace?'>is_namespace?</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>NamespaceObject</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

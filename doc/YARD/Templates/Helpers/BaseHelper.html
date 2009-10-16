@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Module: YARD::Templates::Helpers::BaseHelper</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (B)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Templates.html" title="Templates">Templates</a> :: <a href="../Helpers.html" title="Helpers">Helpers</a>
+     :: 
+    BaseHelper
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Templates::Helpers::BaseHelper</h1>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/yard/templates/helpers/base_helper.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#object-instance_method" title="- (Object) object ">- (Object) object </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>object</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#serializer-instance_method" title="- (Object) serializer ">- (Object) serializer </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>serializer</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#format_object_name_list-instance_method" title="- (Object) format_object_name_list(objects) ">- (Object) format_object_name_list(objects) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_object_title-instance_method" title="- (Object) format_object_title(object) ">- (Object) format_object_title(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_object_type-instance_method" title="- (Object) format_object_type(object) ">- (Object) format_object_type(object) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#format_types-instance_method" title="- (Object) format_types(list, brackets = true) ">- (Object) format_types(list, brackets = true) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#h-instance_method" title="- (Object) h(text) ">- (Object) h(text) </a>
+        
+        
+        
+          <span class="summary_desc">
+This is used a lot by the HtmlHelper and there should.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#link_object-instance_method" title="- (Object) link_object(object, title = nil) ">- (Object) link_object(object, title = nil) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#link_url-instance_method" title="- (Object) link_url(url) ">- (Object) link_url(url) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#linkify-instance_method" title="- (Object) linkify(*args) ">- (Object) linkify(*args) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#overloads-instance_method" title="- (Object) overloads(method) ">- (Object) overloads(method) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#run_verifier-instance_method" title="- (Object) run_verifier(list) ">- (Object) run_verifier(list) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#signature-instance_method" title="- (Object) signature(meth, link = true) ">- (Object) signature(meth, link = true) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="object=-instance_method"></span>
+      <span id="object-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="object-instance_method">
+  
+    - (Object) object 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>object</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id object'>object</span>
+  <span class='ivar'>@object</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="serializer=-instance_method"></span>
+      <span id="serializer-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="serializer-instance_method">
+  
+    - (Object) serializer 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>serializer</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id serializer'>serializer</span>
+  <span class='ivar'>@serializer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="format_object_name_list-instance_method">
+  
+    - (Object) format_object_name_list(objects) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id format_object_name_list'>format_object_name_list</span><span class='lparen'>(</span><span class='id objects'>objects</span><span class='rparen'>)</span>
+  <span class='id objects'>objects</span><span class='period'>.</span><span class='id sort_by'>sort_by</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id o'>o</span><span class='op'>|</span> <span class='id o'>o</span><span class='period'>.</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id downcase'>downcase</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_object_title-instance_method">
+  
+    - (Object) format_object_title(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id format_object_title'>format_object_title</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id object'>object</span>
+  <span class='kw'>when</span> <span class='const'>YARD</span><span class='op'>::</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>RootObject</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Top Level Namespace</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id format_object_type'>format_object_type</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id object'>object</span><span class='period'>.</span><span class='id path'>path</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_object_type-instance_method">
+  
+    - (Object) format_object_type(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id format_object_type'>format_object_type</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id object'>object</span>
+  <span class='kw'>when</span> <span class='const'>YARD</span><span class='op'>::</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>ClassObject</span>
+    <span class='id object'>object</span><span class='period'>.</span><span class='id is_exception?'>is_exception?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Exception</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Class</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id object'>object</span><span class='period'>.</span><span class='id type'>type</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id capitalize'>capitalize</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="format_types-instance_method">
+  
+    - (Object) format_types(list, brackets = true) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id format_types'>format_types</span><span class='lparen'>(</span><span class='id list'>list</span><span class='comma'>,</span> <span class='id brackets'>brackets</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id list'>list</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id brackets'>brackets</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id list'>list</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='id list'>list</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="h-instance_method">
+  
+    - (Object) h(text) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+This is used a lot by the HtmlHelper and there should be some helper to
+&#8220;clean up&#8221; text for whatever, this is it.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id h'>h</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span>
+  <span class='id text'>text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="link_object-instance_method">
+  
+    - (Object) link_object(object, title = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id link_object'>link_object</span><span class='lparen'>(</span><span class='id object'>object</span><span class='comma'>,</span> <span class='id title'>title</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id title'>title</span> <span class='kw'>if</span> <span class='id title'>title</span>
+  
+  <span class='kw'>case</span> <span class='id object'>object</span>
+  <span class='kw'>when</span> <span class='const'>YARD</span><span class='op'>::</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>Base</span><span class='comma'>,</span> <span class='const'>YARD</span><span class='op'>::</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>Proxy</span>
+    <span class='id object'>object</span><span class='period'>.</span><span class='id path'>path</span>
+  <span class='kw'>when</span> <span class='const'>String</span><span class='comma'>,</span> <span class='const'>Symbol</span>
+    <span class='const'>P</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span>
+  <span class='kw'>else</span>
+    <span class='id object'>object</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="link_url-instance_method">
+  
+    - (Object) link_url(url) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id link_url'>link_url</span><span class='lparen'>(</span><span class='id url'>url</span><span class='rparen'>)</span>
+  <span class='id url'>url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="linkify-instance_method">
+  
+    - (Object) linkify(*args) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id linkify'>linkify</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span> 
+  <span class='comment'># The :// character sequence exists in no valid object path but just about every URL scheme.
+</span>  <span class='kw'>if</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>://</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id link_url'>link_url</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id link_object'>link_object</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="overloads-instance_method">
+  
+    - (Object) overloads(method) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id overloads'>overloads</span><span class='lparen'>(</span><span class='id method'>method</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id method'>method</span><span class='period'>.</span><span class='id tags'>tags</span><span class='lparen'>(</span><span class='symbol'>:overload</span><span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>1</span>
+    <span class='id method'>method</span><span class='period'>.</span><span class='id tags'>tags</span><span class='lparen'>(</span><span class='symbol'>:overload</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='lbracket'>[</span><span class='id method'>method</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="run_verifier-instance_method">
+  
+    - (Object) run_verifier(list) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id run_verifier'>run_verifier</span><span class='lparen'>(</span><span class='id list'>list</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id list'>list</span> <span class='kw'>unless</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:verifier</span><span class='rbracket'>]</span>
+  <span class='id list'>list</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:verifier</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>FalseClass</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="signature-instance_method">
+  
+    - (Object) signature(meth, link = true) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/base_helper.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id signature'>signature</span><span class='lparen'>(</span><span class='id meth'>meth</span><span class='comma'>,</span> <span class='id link'>link</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id type'>type</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id meth'>meth</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span><span class='period'>.</span><span class='id types'>types</span> <span class='op'>?</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:return</span><span class='rparen'>)</span><span class='period'>.</span><span class='id types'>types</span><span class='period'>.</span><span class='id first'>first</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Object</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id type'>type</span> <span class='op'>=</span> <span class='id linkify'>linkify</span><span class='lparen'>(</span><span class='const'>P</span><span class='lparen'>(</span><span class='id object'>object</span><span class='period'>.</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id type'>type</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id type'>type</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id link'>link</span>
+  <span class='id scope'>scope</span> <span class='op'>=</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id scope'>scope</span> <span class='op'>==</span> <span class='symbol'>:class</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id name'>name</span> <span class='op'>=</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id name'>name</span>
+  <span class='id blk'>blk</span> <span class='op'>=</span> <span class='id format_block'>format_block</span><span class='lparen'>(</span><span class='id meth'>meth</span><span class='rparen'>)</span>
+  <span class='id args'>args</span> <span class='op'>=</span> <span class='id format_args'>format_args</span><span class='lparen'>(</span><span class='id meth'>meth</span><span class='rparen'>)</span>
+  <span class='id extras'>extras</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id extras_text'>extras_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>if</span> <span class='id rw'>rw</span> <span class='op'>=</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id namespace'>namespace</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='id meth'>meth</span><span class='period'>.</span><span class='id scope'>scope</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id meth'>meth</span><span class='period'>.</span><span class='id name'>name</span><span class='rbracket'>]</span>
+    <span class='id attname'>attname</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id rw'>rw</span><span class='lbracket'>[</span><span class='symbol'>:read</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>read</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id rw'>rw</span><span class='lbracket'>[</span><span class='symbol'>:write</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>write</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='kw'>nil</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id compact'>compact</span>
+    <span class='id attname'>attname</span> <span class='op'>=</span> <span class='id attname'>attname</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='id attname'>attname</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>only</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='kw'>nil</span>
+    <span class='id extras'>extras</span> <span class='op'>&lt;&lt;</span> <span class='id attname'>attname</span> <span class='kw'>if</span> <span class='id attname'>attname</span>
+  <span class='kw'>end</span>
+  <span class='id extras'>extras</span> <span class='op'>&lt;&lt;</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id visibility'>visibility</span> <span class='kw'>if</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id visibility'>visibility</span> <span class='op'>!=</span> <span class='symbol'>:public</span>
+  <span class='id extras_text'>extras_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> (</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id extras'>extras</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>)</span><span class='tstring_end'>'</span></span> <span class='kw'>unless</span> <span class='id extras'>extras</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+  <span class='id title'>title</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%s (%s) %s%s %s</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id scope'>scope</span><span class='comma'>,</span> <span class='id type'>type</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id args'>args</span><span class='comma'>,</span> <span class='id blk'>blk</span><span class='rbracket'>]</span>
+  <span class='lparen'>(</span><span class='id link'>link</span> <span class='op'>?</span> <span class='id linkify'>linkify</span><span class='lparen'>(</span><span class='id meth'>meth</span><span class='comma'>,</span> <span class='id title'>title</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id title'>title</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id extras_text'>extras_text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

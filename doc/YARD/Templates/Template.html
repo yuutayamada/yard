@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Module: YARD::Templates::Template</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (T)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Templates.html" title="Templates">Templates</a>
+     :: 
+    Template
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: YARD::Templates::Template</h1>
+<dl class="box">
+  
+  
+    
+  
+    
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><a href="Helpers/BaseHelper.html" title="YARD::Templates::Helpers::BaseHelper">YARD::Templates::Helpers::BaseHelper</a>, <a href="Helpers/MethodHelper.html" title="YARD::Templates::Helpers::MethodHelper">YARD::Templates::Helpers::MethodHelper</a></dd>
+      
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/templates/template.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+      <strong class="modules">Modules:</strong> <a href="Template/ClassMethods.html" title="ClassMethods">ClassMethods</a>
+    
+   
+    
+  
+</p>
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#class-instance_method" title="- (Object) class ">- (Object) class </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>class</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#options-instance_method" title="- (Object) options ">- (Object) options </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>options</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#section-instance_method" title="- (Object) section ">- (Object) section </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>section</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#sections-instance_method" title="- (Object) sections(*args) ">- (Object) sections(*args) </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>sections</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#included-class_method" title="+ (Object) included(klass) ">+ (Object) included(klass) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#T-instance_method" title="- (Object) T(*path) ">- (Object) T(*path) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#erb-instance_method" title="- (Object) erb(section, &amp;block) ">- (Object) erb(section, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#file-instance_method" title="- (Object) file(basename) ">- (Object) file(basename) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#init-instance_method" title="- (Object) init ">- (Object) init </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(opts = {}) ">- (Object) initialize(opts = {}) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#inspect-instance_method" title="- (Object) inspect ">- (Object) inspect </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#render_section-instance_method" title="- (Object) render_section(section, &amp;block) ">- (Object) render_section(section, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#run-instance_method" title="- (Object) run(opts = nil, sects = sections, &amp;block) ">- (Object) run(opts = nil, sects = sections, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#subsections-instance_method" title="- (Object) subsections ">- (Object) subsections </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#yieldall-instance_method" title="- (Object) yieldall(opts = nil, &amp;block) ">- (Object) yieldall(opts = nil, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#yieldnext-instance_method" title="- (Object) yieldnext(opts = nil, index = 0, &amp;block) ">- (Object) yieldnext(opts = nil, index = 0, &amp;block) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="Helpers/BaseHelper.html" title="YARD::Templates::Helpers::BaseHelper">YARD::Templates::Helpers::BaseHelper</a></h3>
+  <p class="inherited"><a href="Helpers/BaseHelper.html#run_verifier-instance_method" title="#run_verifier">#run_verifier</a>, <a href="Helpers/BaseHelper.html#h-instance_method" title="#h">#h</a>, <a href="Helpers/BaseHelper.html#linkify-instance_method" title="#linkify">#linkify</a>, <a href="Helpers/BaseHelper.html#link_object-instance_method" title="#link_object">#link_object</a>, <a href="Helpers/BaseHelper.html#link_url-instance_method" title="#link_url">#link_url</a>, <a href="Helpers/BaseHelper.html#format_object_name_list-instance_method" title="#format_object_name_list">#format_object_name_list</a>, <a href="Helpers/BaseHelper.html#format_types-instance_method" title="#format_types">#format_types</a>, <a href="Helpers/BaseHelper.html#format_object_type-instance_method" title="#format_object_type">#format_object_type</a>, <a href="Helpers/BaseHelper.html#format_object_title-instance_method" title="#format_object_title">#format_object_title</a>, <a href="Helpers/BaseHelper.html#overloads-instance_method" title="#overloads">#overloads</a>, <a href="Helpers/BaseHelper.html#signature-instance_method" title="#signature">#signature</a></p>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="Helpers/MethodHelper.html" title="YARD::Templates::Helpers::MethodHelper">YARD::Templates::Helpers::MethodHelper</a></h3>
+  <p class="inherited"><a href="Helpers/MethodHelper.html#format_args-instance_method" title="#format_args">#format_args</a>, <a href="Helpers/MethodHelper.html#format_return_types-instance_method" title="#format_return_types">#format_return_types</a>, <a href="Helpers/MethodHelper.html#format_block-instance_method" title="#format_block">#format_block</a>, <a href="Helpers/MethodHelper.html#format_lines-instance_method" title="#format_lines">#format_lines</a>, <a href="Helpers/MethodHelper.html#format_code-instance_method" title="#format_code">#format_code</a>, <a href="Helpers/MethodHelper.html#format_constant-instance_method" title="#format_constant">#format_constant</a></p>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="class=-instance_method"></span>
+      <span id="class-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="class-instance_method">
+  
+    - (Object) class 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>class</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='kw'>class</span>
+  <span class='ivar'>@class</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="options=-instance_method"></span>
+      <span id="options-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="options-instance_method">
+  
+    - (Object) options 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>options</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id options'>options</span>
+  <span class='ivar'>@options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="section=-instance_method"></span>
+      <span id="section-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="section-instance_method">
+  
+    - (Object) section 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>section</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id section'>section</span>
+  <span class='ivar'>@section</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="sections=-instance_method"></span>
+      <span id="sections-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="sections-instance_method">
+  
+    - (Object) sections(*args) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>sections</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id sections'>sections</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@sections</span><span class='period'>.</span><span class='id replace'>replace</span><span class='lparen'>(</span><span class='id args'>args</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id args'>args</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='ivar'>@sections</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="included-class_method">
+  
+    + (Object) included(klass) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id included'>included</span><span class='lparen'>(</span><span class='id klass'>klass</span><span class='rparen'>)</span>
+  <span class='id klass'>klass</span><span class='period'>.</span><span class='id extend'>extend</span><span class='lparen'>(</span><span class='const'>ClassMethods</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="T-instance_method">
+  
+    - (Object) T(*path) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='const'>T</span><span class='lparen'>(</span><span class='op'>*</span><span class='id path'>path</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='const'>T</span><span class='lparen'>(</span><span class='op'>*</span><span class='id path'>path</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="erb-instance_method">
+  
+    - (Object) erb(section, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id erb'>erb</span><span class='lparen'>(</span><span class='id section'>section</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='id erb'>erb</span> <span class='op'>=</span> <span class='const'>ERB</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id cache'>cache</span><span class='lparen'>(</span><span class='id section'>section</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;&gt;</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id erb'>erb</span><span class='period'>.</span><span class='id filename'>filename</span> <span class='op'>=</span> <span class='id cache_filename'>cache_filename</span><span class='lparen'>(</span><span class='id section'>section</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+  <span class='id erb'>erb</span><span class='period'>.</span><span class='id result'>result</span><span class='lparen'>(</span><span class='id binding'>binding</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="file-instance_method">
+  
+    - (Object) file(basename) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id file'>file</span><span class='lparen'>(</span><span class='id basename'>basename</span><span class='rparen'>)</span>
+  <span class='id file'>file</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id find_file'>find_file</span><span class='lparen'>(</span><span class='id basename'>basename</span><span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no file for '</span><span class='embexpr_beg'>#{</span><span class='id basename'>basename</span><span class='rbrace'>}</span><span class='tstring_content'>' in </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id file'>file</span>
+  <span class='id file'>file</span><span class='period'>.</span><span class='id read'>read</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="init-instance_method">
+  
+    - (Object) init 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id init'>init</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="inspect-instance_method">
+  
+    - (Object) inspect 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Template(</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>) [section=</span><span class='embexpr_beg'>#{</span><span class='id section'>section</span><span class='rbrace'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="render_section-instance_method">
+  
+    - (Object) render_section(section, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id render_section'>render_section</span><span class='lparen'>(</span><span class='id section'>section</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id section'>section</span>
+  <span class='kw'>when</span> <span class='const'>String</span><span class='comma'>,</span> <span class='const'>Symbol</span>
+    <span class='kw'>if</span> <span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id section'>section</span><span class='rparen'>)</span>
+      <span class='id send'>send</span><span class='lparen'>(</span><span class='id section'>section</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span> 
+    <span class='kw'>else</span>
+      <span class='id erb'>erb</span><span class='lparen'>(</span><span class='id section'>section</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='const'>Module</span><span class='comma'>,</span> <span class='const'>Template</span>
+    <span class='id section'>section</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span><span class='id options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id section'>section</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Template</span><span class='rparen'>)</span>
+  <span class='kw'>end</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="run-instance_method">
+  
+    - (Object) run(opts = nil, sects = sections, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id sects'>sects</span> <span class='op'>=</span> <span class='id sections'>sections</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id sects'>sects</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+
+  <span class='id add_options'>add_options</span><span class='lparen'>(</span><span class='id opts'>opts</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id opts'>opts</span>
+  <span class='id out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id sects'>sects</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id s'>s</span><span class='comma'>,</span> <span class='id index'>index</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='const'>Array</span> <span class='op'>===</span> <span class='id s'>s</span>
+    <span class='id subsection_index'>subsection_index</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@section_index</span> <span class='op'>=</span> <span class='id index'>index</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id section'>section</span> <span class='op'>=</span> <span class='id s'>s</span>
+    <span class='id out'>out</span> <span class='op'>&lt;&lt;</span> <span class='id render_section'>render_section</span><span class='lparen'>(</span><span class='id section'>section</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id args'>args</span><span class='op'>|</span>
+      <span class='id text'>text</span> <span class='op'>=</span> <span class='id yieldnext'>yieldnext</span><span class='lparen'>(</span><span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='comma'>,</span> <span class='id subsection_index'>subsection_index</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+      <span class='id subsection_index'>subsection_index</span> <span class='op'>+=</span> <span class='int'>1</span>
+      <span class='id text'>text</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id out'>out</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="subsections-instance_method">
+  
+    - (Object) subsections 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id subsections'>subsections</span>
+  <span class='id subsections'>subsections</span> <span class='op'>=</span> <span class='id sections'>sections</span><span class='lbracket'>[</span><span class='ivar'>@section_index</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id subsections'>subsections</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='const'>Array</span> <span class='op'>===</span> <span class='id subsections'>subsections</span>
+  <span class='id subsections'>subsections</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="yieldall-instance_method">
+  
+    - (Object) yieldall(opts = nil, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id yieldall'>yieldall</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='id sub'>sub</span> <span class='op'>=</span> <span class='id subsections'>subsections</span>
+  <span class='id raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No subsections</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id sub'>sub</span>
+  <span class='id out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id sub'>sub</span><span class='period'>.</span><span class='id count'>count</span><span class='period'>.</span><span class='id times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span>
+    <span class='id out'>out</span> <span class='op'>&lt;&lt;</span> <span class='id yieldnext'>yieldnext</span><span class='lparen'>(</span><span class='id opts'>opts</span><span class='comma'>,</span> <span class='id i'>i</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id out'>out</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="yieldnext-instance_method">
+  
+    - (Object) yieldnext(opts = nil, index = 0, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/template.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id yieldnext'>yieldnext</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id index'>index</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='id sub'>sub</span> <span class='op'>=</span> <span class='id subsections'>subsections</span>
+  <span class='id raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No subsections</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id sub'>sub</span>
+  <span class='id out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id add_options'>add_options</span><span class='lparen'>(</span><span class='id opts'>opts</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id t'>t</span> <span class='op'>=</span> <span class='ivar'>@section_index</span>
+    <span class='id out'>out</span> <span class='op'>=</span> <span class='id render_section'>render_section</span><span class='lparen'>(</span><span class='id sub'>sub</span><span class='lbracket'>[</span><span class='id index'>index</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+    <span class='ivar'>@section_index</span> <span class='op'>=</span> <span class='id t'>t</span>
+  <span class='kw'>end</span>
+  <span class='id out'>out</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

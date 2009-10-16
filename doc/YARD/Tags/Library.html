@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Tags::Library</title>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../glossary.html">Glossary (L)</a> :: 
+    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Tags.html" title="Tags">Tags</a>
+     :: 
+    Library
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Tags::Library</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/tags/library.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+      <p>
+Holds all the registered meta tags. If you want to extend YARD and add a
+new meta tag, you can do it in one of two ways.
+</p>
+<h2>Method #1</h2>
+<p>
+Use <tt><a href="#define_tag-class_method" title="Library.define_tag">Library.define_tag</a></tt> to define a new tag by passing the tag name and
+the factory method to use when creating the tag. These definitions will be
+auto expanded into ruby code similar to what is shown in method #2. If you
+do not provide a factory method to use, it will default to
+<tt><a href="DefaultFactory.html#parse_tag-instance_method" title="DefaultFactory#parse_tag">DefaultFactory#parse_tag</a></tt> Example:
+</p>
+<pre class="code">
+  <span class='id define_tag'>define_tag</span> <span class='symbol'>:param</span><span class='comma'>,</span> <span class='symbol'>:with_types_and_name</span>
+  <span class='id define_tag'>define_tag</span> <span class='symbol'>:author</span>
+</pre>
+<p>
+The first line will expand to the code:
+</p>
+<pre class="code">
+  <span class='kw'>def</span> <span class='id param_tag'>param_tag</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span> <span class='id tag_factory'>tag_factory</span><span class='period'>.</span><span class='id parse_tag_with_types_and_name'>parse_tag_with_types_and_name</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span> <span class='kw'>end</span>
+</pre>
+<p>
+The second line will expand to:
+</p>
+<pre class="code">
+  <span class='kw'>def</span> <span class='id author_tag'>author_tag</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span> <span class='id tag_factory'>tag_factory</span><span class='period'>.</span><span class='id parse_tag'>parse_tag</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span> <span class='kw'>end</span>
+</pre>
+<p>
+Note that <tt>tag_factory</tt> is the factory object used to parse tags.
+This value defaults to the <tt><a href="DefaultFactory.html" title="DefaultFactory">DefaultFactory</a></tt> class and can be set by
+changing <tt><a href="#default_factory-class_method" title="Library.default_factory">Library.default_factory</a></tt>.
+</p>
+<h2>Method #2</h2>
+<p>
+Write your own <tt>tagname_tag</tt> method that takes the raw text as a
+parameter. Example:
+</p>
+<pre class="code">
+  <span class='kw'>def</span> <span class='id mytag_tag'>mytag_tag</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span>
+    <span class='comment'># parse your tag contents here
+</span>  <span class='kw'>end</span>
+</pre>
+<p>
+This will allow you to use @mytag TEXT to add meta data to classes through
+the docstring. You can use the <tt><a href="#factory-instance_method" title="Library#factory">Library#factory</a></tt> object to help parse
+standard tag syntax.
+</p>
+<h2>Adding/Changing the Tag Syntax</h2>
+<p>
+If you have specialized tag parsing needs you can substitute the <tt><a href="#factory-instance_method" title="#factory">#factory</a></tt>
+object with your own by setting <tt><a href="#default_factory%3D-class_method" title="Library.default_factory">Library.default_factory</a></tt> to a new class with its own parsing methods before
+running YARD. This is useful if you want to change the syntax of existing
+tags (@see, @since, etc.)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+    <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="DefaultFactory.html" title="DefaultFactory">DefaultFactory</a></li>
+    
+      <li><a href="#define_tag-class_method" title="Library.define_tag">Library.define_tag</a></li>
+    
+  </ul>
+
+</div>  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#default_factory-class_method" title="+ (Object) default_factory ">+ (Object) default_factory </a>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>default_factory</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#labels-class_method" title="+ (Object) labels ">+ (Object) labels </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>labels</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#factory-instance_method" title="- (Object) factory ">- (Object) factory </a>
+        
+          <span class="summary_desc">
+A factory class to handle parsing of tags, defaults to <tt><a href="#default_factory-class_method" title="default_factory">default_factory</a></tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#define_tag-class_method" title="+ (Object) define_tag(label, tag, meth = &quot;&quot;) ">+ (Object) define_tag(label, tag, meth = &quot;&quot;) </a>
+        
+        
+        
+          <span class="summary_desc">
+Convenience method to define a new tag using one of <tt><a href="Tag.html" title="Tag">Tag</a></tt>&#8217;s factory
+methods, or the.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#sorted_labels-class_method" title="+ (Array<Symbol>) sorted_labels ">+ (Array<Symbol>) sorted_labels </a>
+        
+        
+        
+          <span class="summary_desc">
+Sorts the labels lexically by their label name, often used when displaying.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(factory = Library.default_factory) ">- (Object) initialize(factory = Library.default_factory) </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="default_factory=-class_method"></span>
+      <span id="default_factory-class_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="default_factory-class_method">
+  
+    + (Object) default_factory 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>default_factory</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id default_factory'>default_factory</span>
+  <span class='ivar'>@default_factory</span> <span class='op'>||=</span> <span class='const'>DefaultFactory</span><span class='period'>.</span><span class='id new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="labels-class_method"></span>
+      <div class="method_details">
+  <p class="signature " id="labels-class_method">
+  
+    + (Object) labels  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>labels</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id labels'>labels</span>
+  <span class='ivar'>@labels</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="factory=-instance_method"></span>
+      <span id="factory-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="factory-instance_method">
+  
+    - (Object) factory 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+A factory class to handle parsing of tags, defaults to <tt><a href="#default_factory-class_method" title="default_factory">default_factory</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id factory'>factory</span>
+  <span class='ivar'>@factory</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(factory = Library.default_factory) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='const'>Library</span><span class='period'>.</span><span class='id default_factory'>default_factory</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='id factory'>factory</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="define_tag-class_method">
+  
+    + (Object) define_tag(label, tag, meth = &quot;&quot;) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Convenience method to define a new tag using one of <tt><a href="Tag.html" title="Tag">Tag</a></tt>&#8217;s factory
+methods, or the regular <tt><a href="DefaultFactory.html#parse_tag-instance_method" title="DefaultFactory#parse_tag">DefaultFactory#parse_tag</a></tt> factory method if none
+is supplied.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>#to_s</tt>)</span>
+      
+      
+        <span class='name'>tag</span>
+      
+      
+      
+        &mdash;
+        
+the tag name to create
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>#to_s</tt>, <tt>Class&lt;<a href="Tag.html" title="Tag">Tag</a>></tt>)</span>
+      
+      
+        <span class='name'>meth</span>
+      
+      
+      
+        &mdash;
+        
+the <tt><a href="Tag.html" title="Tag">Tag</a></tt> factory method to call when creating the tag or the name of the
+class to directly create a tag for
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id define_tag'>define_tag</span><span class='lparen'>(</span><span class='id label'>label</span><span class='comma'>,</span> <span class='id tag'>tag</span><span class='comma'>,</span> <span class='id meth'>meth</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id meth'>meth</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='const'>Tag</span> <span class='op'>&gt;</span> <span class='id meth'>meth</span>
+    <span class='id class_eval'>class_eval</span> <span class='heredoc_beg'>&lt;&lt;-eof</span><span class='tstring_content'>      def </span><span class='embexpr_beg'>#{</span><span class='id tag'>tag</span><span class='rbrace'>}</span><span class='tstring_content'>_tag(text, raw_text) 
+</span><span class='embexpr_beg'>        #{</span><span class='id meth'>meth</span><span class='rbrace'>}</span><span class='tstring_content'>.new(</span><span class='embexpr_beg'>#{</span><span class='id tag'>tag</span><span class='period'>.</span><span class='id inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'>, text, raw_text) 
+      end
+</span><span class='heredoc_end'>    eof
+</span><span class='comma'>,</span> <span class='kw'>__FILE__</span><span class='comma'>,</span> <span class='kw'>__LINE__</span>
+  <span class='kw'>else</span>
+    <span class='id class_eval'>class_eval</span> <span class='heredoc_beg'>&lt;&lt;-eof</span><span class='tstring_content'>      def </span><span class='embexpr_beg'>#{</span><span class='id tag'>tag</span><span class='rbrace'>}</span><span class='tstring_content'>_tag(text, raw_text)
+</span><span class='embexpr_beg'>        send_to_factory(#{</span><span class='id tag'>tag</span><span class='period'>.</span><span class='id inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id meth'>meth</span><span class='period'>.</span><span class='id inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'>, text, raw_text)
+      end
+</span><span class='heredoc_end'>    eof
+</span><span class='comma'>,</span> <span class='kw'>__FILE__</span><span class='comma'>,</span> <span class='kw'>__LINE__</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@labels</span> <span class='op'>||=</span> <span class='const'>SymbolHash</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@labels</span><span class='period'>.</span><span class='id update'>update</span><span class='lparen'>(</span><span class='id tag'>tag</span> <span class='op'>=&gt;</span> <span class='id label'>label</span><span class='rparen'>)</span>
+  <span class='id tag'>tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="sorted_labels-class_method">
+  
+    + (Array<Symbol>) sorted_labels 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Sorts the labels lexically by their label name, often used when displaying
+the tags.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;Symbol></tt>, <tt><a href="../../String.html" title="String">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the sorted labels as an array of the tag name and label
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id sorted_labels'>sorted_labels</span>
+  <span class='id labels'>labels</span><span class='period'>.</span><span class='id sort_by'>sort_by</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id a'>a</span><span class='op'>|</span> <span class='id a'>a</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id downcase'>downcase</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

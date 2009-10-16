@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="glossary.html" title="Glossary">Glossary</a> :: 
+    File: OVERVIEW
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>Architecture Overview</h1>
+
+<p>YARD is separated in three major components, each of which allows YARD to be
+extended for a separate purpose. The split also emphasizes YARD's design choice
+to explicitly separate data gathering from HTML document generation, something
+that tools like RDoc do not do. These components are:</p>
+
+<ul>
+<li><a href="#parsing">Code Parsing &amp; Processing Component</a></li>
+<li><a href="#storage">Data Storage Component</a></li>
+<li><a href="#generators">Post Processing &amp; Output Generation Component</a></li>
+</ul>
+
+
+<p>This separation is a major goal of the project, and means that YARD is not <em>just</em>
+a tool to generate HTML output. The expectation is that any subset of YARD's
+major components may be used, extended or modified independently. YARD may be
+used just as a data gathering tool (to parse and audit code), just as as a data
+source (a webserver containing raw unformatted data about code), or just as a
+conventional HTML documentation generation tool (like RDoc).</p>
+
+<p>The important classes and dependencies of these components are shown in the
+following class diagram:</p>
+
+<p><img src="images/overview-class-diagram.png" alt="Overview Class Diagram" /></p>
+
+<p><a name="parsing"></a></p>
+
+<h2>Code Parsing &amp; Processing Component</h2>
+
+<p>This component is made up of four sub-components, each of which have separate
+tasks during the data gathering process (<em>note: the tag architecture is not</em>
+<em>shown in the class diagram</em>). These sub-components are:</p>
+
+<ul>
+<li><a href="file.PARSER.html" title="Parser Architecture">Parser Architecture</a></li>
+<li><a href="file.HANDLERS.html" title="Handler Architecture">Handler Architecture</a></li>
+<li><a href="file.CODE_OBJECTS.html" title="Code Object Architecture">Code Object Architecture</a></li>
+<li><a href="file.TAGS.html" title="Tag Architecture">Tag Architecture</a></li>
+</ul>
+
+
+<p>The parser component reads source files and converts it into a set of statements
+which the handlers then process, creating code objects which in turn create tags
+(meta-data) attached to the objects. These objects are all added to the <tt><a href="YARD/Registry.html" title="YARD::Registry">YARD::Registry</a></tt>,
+the data store component.</p>
+
+<p><a name="storage"></a></p>
+
+<h2>Data Storage Component</h2>
+
+<p>This component is currently implemented as a simple Ruby marshalled flat namespace
+of object. The implementation is found in the single class <tt><a href="YARD/Registry.html" title="YARD::Registry">YARD::Registry</a></tt>, which
+is the centralized repository for all data being parsed, stored and accessed. There
+are future plans to improve this storage mechanism to be backend agnostic and allow
+for more robust storage.</p>
+
+<p><a name="generators"></a></p>
+
+<h2>Post Processing &amp; Output Generation Component</h2>
+
+<p>This component handles processing of objects from the registry through a templating
+engine that allows output to a variety of formats. Practically speaking, this is
+where templates can be implemented to change the design, output or structure of
+the data. The next release, 0.2.4, will see a significant change in the design of
+this component, so documentation might be sparse for now.</p>
+
+<p>The current design is documented in the <a href="file.GENERATORS.html" title="Generators Architecture">Generators Architecture</a>
+document.</p></div></div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

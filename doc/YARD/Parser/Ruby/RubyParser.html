@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Parser::Ruby::RubyParser</title>
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '../../..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../glossary.html">Glossary (R)</a> :: 
+    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Parser.html" title="Parser">Parser</a> :: <a href="../Ruby.html" title="Ruby">Ruby</a>
+     :: 
+    RubyParser
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a> |
+        <a id="method_list_link" href="#">Method List</a> |
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Parser::Ruby::RubyParser</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Ripper</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          <ul>
+            
+              <li>Ripper</li><ul>
+            
+              <li>YARD::Parser::Ruby::RubyParser</li><ul>
+            
+            </ul></ul>
+          </ul>
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/parser/ruby/ruby_parser.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MAPPINGS-constant ">MAPPINGS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='symbol'>:BEGIN</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BEGIN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:END</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>END</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:alias</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alias</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:array</span> <span class='op'>=&gt;</span> <span class='symbol'>:lbracket</span><span class='comma'>,</span>
+  <span class='symbol'>:aref</span> <span class='op'>=&gt;</span> <span class='symbol'>:lbracket</span><span class='comma'>,</span>
+  <span class='symbol'>:arg_paren</span> <span class='op'>=&gt;</span> <span class='symbol'>:lparen</span><span class='comma'>,</span>
+  <span class='symbol'>:begin</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>begin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:blockarg</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:brace_block</span> <span class='op'>=&gt;</span> <span class='symbol'>:lbrace</span><span class='comma'>,</span>
+  <span class='symbol'>:break</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>break</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:case</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>case</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>class</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:def</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:defined</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>defined?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:defs</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:do_block</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>do</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:else</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>else</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:elsif</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>elsif</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:ensure</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ensure</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:for</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:hash</span> <span class='op'>=&gt;</span> <span class='symbol'>:lbrace</span><span class='comma'>,</span>
+  <span class='symbol'>:if</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>if</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:lambda</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:tlambda</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lambda</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='symbol'>:module</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>module</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:next</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>next</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:paren</span> <span class='op'>=&gt;</span> <span class='symbol'>:lparen</span><span class='comma'>,</span>
+  <span class='symbol'>:qwords_literal</span> <span class='op'>=&gt;</span> <span class='symbol'>:qwords_beg</span><span class='comma'>,</span>
+  <span class='symbol'>:redo</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>redo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:regexp_literal</span> <span class='op'>=&gt;</span> <span class='symbol'>:regexp_beg</span><span class='comma'>,</span>
+  <span class='symbol'>:rescue</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rescue</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:rest_param</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:retry</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>retry</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>return</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:return0</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>return</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:sclass</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>class</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:string_embexpr</span> <span class='op'>=&gt;</span> <span class='symbol'>:embexpr_beg</span><span class='comma'>,</span>
+  <span class='symbol'>:string_literal</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:tstring_beg</span><span class='comma'>,</span> <span class='symbol'>:heredoc_beg</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='symbol'>:super</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>super</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:symbol</span> <span class='op'>=&gt;</span> <span class='symbol'>:symbeg</span><span class='comma'>,</span>
+  <span class='symbol'>:undef</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>undef</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:unless</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unless</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:until</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>until</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:when</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>when</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:while</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>while</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:xstring_literal</span> <span class='op'>=&gt;</span> <span class='symbol'>:backtick</span><span class='comma'>,</span>
+  <span class='symbol'>:yield</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yield</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:yield0</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yield</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:zsuper</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>super</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="REV_MAPPINGS-constant ">REV_MAPPINGS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="AST_TOKENS-constant ">AST_TOKENS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:CHAR</span><span class='comma'>,</span> <span class='symbol'>:backref</span><span class='comma'>,</span> <span class='symbol'>:const</span><span class='comma'>,</span> <span class='symbol'>:cvar</span><span class='comma'>,</span> <span class='symbol'>:gvar</span><span class='comma'>,</span> <span class='symbol'>:heredoc_end</span><span class='comma'>,</span> <span class='symbol'>:ident</span><span class='comma'>,</span>
+<span class='symbol'>:int</span><span class='comma'>,</span> <span class='symbol'>:float</span><span class='comma'>,</span> <span class='symbol'>:ivar</span><span class='comma'>,</span> <span class='symbol'>:label</span><span class='comma'>,</span> <span class='symbol'>:period</span><span class='comma'>,</span> <span class='symbol'>:regexp_end</span><span class='comma'>,</span> <span class='symbol'>:tstring_content</span><span class='comma'>,</span> <span class='symbol'>:backtick</span><span class='rbracket'>]</span></pre></dd>
+    
+  </dl>
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#ast-instance_method" title="- (Object) ast ">- (Object) ast </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>ast</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#charno-instance_method" title="- (Object) charno ">- (Object) charno </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>charno</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#comments-instance_method" title="- (Object) comments ">- (Object) comments </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>comments</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#file-instance_method" title="- (Object) file ">- (Object) file </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>file</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public "><a href="#tokens-instance_method" title="- (Object) tokens ">- (Object) tokens </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+Returns the value of attribute <tt>tokens</tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#enumerator-instance_method" title="- (Object) enumerator ">- (Object) enumerator </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Object) initialize(source, filename, *args) ">- (Object) initialize(source, filename, *args) </a>
+        
+        
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#parse-instance_method" title="- (Object) parse ">- (Object) parse </a>
+        
+        
+        
+      </li>
+    
+  </ul>
+    <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="ast-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="ast-instance_method">
+  
+    - (Object) ast  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">root</span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>ast</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id ast'>ast</span>
+  <span class='ivar'>@ast</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="charno-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="charno-instance_method">
+  
+    - (Object) charno  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>charno</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id charno'>charno</span>
+  <span class='ivar'>@charno</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="comments-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="comments-instance_method">
+  
+    - (Object) comments  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>comments</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id comments'>comments</span>
+  <span class='ivar'>@comments</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="file-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="file-instance_method">
+  
+    - (Object) file  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>file</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id file'>file</span>
+  <span class='ivar'>@file</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="tokens-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="tokens-instance_method">
+  
+    - (Object) tokens  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+      <p>
+Returns the value of attribute <tt>tokens</tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id tokens'>tokens</span>
+  <span class='ivar'>@tokens</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (Object) initialize(source, filename, *args) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id source'>source</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@file</span> <span class='op'>=</span> <span class='id filename'>filename</span>
+  <span class='ivar'>@source</span> <span class='op'>=</span> <span class='id source'>source</span>
+  <span class='ivar'>@tokens</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@comments</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@map</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@ns_charno</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@charno</span> <span class='op'>=</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="enumerator-instance_method">
+  
+    - (Object) enumerator 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id enumerator'>enumerator</span>
+  <span class='id ast'>ast</span><span class='period'>.</span><span class='id children'>children</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="parse-instance_method">
+  
+    - (Object) parse 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ruby_parser.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id parse'>parse</span>
+  <span class='ivar'>@ast</span> <span class='op'>=</span> <span class='kw'>super</span>
+  <span class='ivar'>@ast</span><span class='period'>.</span><span class='id full_source'>full_source</span> <span class='op'>=</span> <span class='ivar'>@source</span>
+  <span class='ivar'>@ast</span><span class='period'>.</span><span class='id file'>file</span> <span class='op'>=</span> <span class='ivar'>@file</span>
+  <span class='id freeze_tree'>freeze_tree</span>
+  <span class='id insert_comments'>insert_comments</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>
