@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Module: YARD::Parser::Ruby::Legacy::RubyToken</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../glossary.html">Glossary (R)</a> :: 
-    <a href="../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../Parser.html" title="Parser">Parser</a> :: <a href="../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../Legacy.html" title="Legacy">Legacy</a>
-     :: 
-    RubyToken
+    <a href="../../../../_index.html">Index (R)</a> &raquo; 
+    <a href="../../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../../Ruby.html" title="Ruby">Ruby</a> &raquo; <a href="../Legacy.html" title="Legacy">Legacy</a>
+     &raquo; 
+    <span class="title">RubyToken</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -62,47 +61,48 @@
   
 </p>
   <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="EXPR_BEG-constant ">EXPR_BEG =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_BEG</span></pre></dd>
-    
-      <dt id="EXPR_MID-constant ">EXPR_MID =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_MID</span></pre></dd>
-    
-      <dt id="EXPR_END-constant ">EXPR_END =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_END</span></pre></dd>
-    
-      <dt id="EXPR_ARG-constant ">EXPR_ARG =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_ARG</span></pre></dd>
-    
-      <dt id="EXPR_FNAME-constant ">EXPR_FNAME =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_FNAME</span></pre></dd>
-    
-      <dt id="EXPR_DOT-constant ">EXPR_DOT =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_DOT</span></pre></dd>
-    
-      <dt id="EXPR_CLASS-constant ">EXPR_CLASS =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:EXPR_CLASS</span></pre></dd>
-    
-      <dt id="TokenDefinitions-constant ">TokenDefinitions =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbracket'>[</span>
+  
+    <dl class="constants">
+      
+        <dt id="EXPR_BEG-constant ">EXPR_BEG =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_BEG</span></pre></dd>
+      
+        <dt id="EXPR_MID-constant ">EXPR_MID =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_MID</span></pre></dd>
+      
+        <dt id="EXPR_END-constant ">EXPR_END =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_END</span></pre></dd>
+      
+        <dt id="EXPR_ARG-constant ">EXPR_ARG =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_ARG</span></pre></dd>
+      
+        <dt id="EXPR_FNAME-constant ">EXPR_FNAME =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_FNAME</span></pre></dd>
+      
+        <dt id="EXPR_DOT-constant ">EXPR_DOT =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_DOT</span></pre></dd>
+      
+        <dt id="EXPR_CLASS-constant ">EXPR_CLASS =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:EXPR_CLASS</span></pre></dd>
+      
+        <dt id="TokenDefinitions-constant ">TokenDefinitions =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
   <span class='lbracket'>[</span><span class='symbol'>:TkCLASS</span><span class='comma'>,</span>      <span class='const'>TkKW</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>class</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>  <span class='const'>EXPR_CLASS</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='lbracket'>[</span><span class='symbol'>:TkMODULE</span><span class='comma'>,</span>     <span class='const'>TkKW</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>module</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>EXPR_BEG</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='lbracket'>[</span><span class='symbol'>:TkDEF</span><span class='comma'>,</span>        <span class='const'>TkKW</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>    <span class='const'>EXPR_FNAME</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -229,28 +229,27 @@
   <span class='lbracket'>[</span><span class='symbol'>:TkAT</span><span class='comma'>,</span>         <span class='const'>TkUnknownChar</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='lbracket'>[</span><span class='symbol'>:TkDOLLAR</span><span class='comma'>,</span>     <span class='const'>TkUnknownChar</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\$</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='comment'>#&quot;
 </span><span class='rbracket'>]</span></pre></dd>
-    
-      <dt id="TkReading2Token-constant ">TkReading2Token =
-        
-          <span class="summary_desc">
-<tt>=> token_class</tt>.
+      
+        <dt id="TkReading2Token-constant ">TkReading2Token =
+            <span class="summary_desc">
+{ reading => token_class }.
 
 </span>
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="TkSymbol2Token-constant ">TkSymbol2Token =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="NEWLINE_TOKEN-constant ">NEWLINE_TOKEN =
-        
-      </dt>
-      <dd><pre class="code"><span class='const'>TkNL</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='rparen'>)</span></pre></dd>
-    
-  </dl>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="TkSymbol2Token-constant ">TkSymbol2Token =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="NEWLINE_TOKEN-constant ">NEWLINE_TOKEN =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='const'>TkNL</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
   <h2>Method Summary</h2>
   <ul class="summary">
     
@@ -259,6 +258,8 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
@@ -266,12 +267,16 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#set_token_position-instance_method" title="- (Object) set_token_position(line, char) ">- (Object) set_token_position(line, char) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -282,7 +287,7 @@
       <div class="method_details">
   <p class="signature first" id="def_token-class_method">
   
-    + (Object) def_token(token_n, super_token = Token, reading = nil, *opts) 
+    + (<tt>Object</tt>) def_token(token_n, super_token = Token, reading = nil, *opts) 
   
 
   
@@ -360,7 +365,7 @@
       <div class="method_details">
   <p class="signature " id="Token-instance_method">
   
-    - (Object) Token(token, value = nil) 
+    - (<tt>Object</tt>) Token(token, value = nil) 
   
 
   
@@ -422,7 +427,7 @@
       <div class="method_details">
   <p class="signature " id="set_token_position-instance_method">
   
-    - (Object) set_token_position(line, char) 
+    - (<tt>Object</tt>) set_token_position(line, char) 
   
 
   

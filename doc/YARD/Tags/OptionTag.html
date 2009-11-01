@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Tags::OptionTag</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (O)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Tags.html" title="Tags">Tags</a>
-     :: 
-    OptionTag
+    <a href="../../_index.html">Index (O)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../Tags.html" title="Tags">Tags</a>
+     &raquo; 
+    <span class="title">OptionTag</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,14 +44,11 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="Tag.html" title="YARD::Tags::Tag">YARD::Tags::Tag</a></li><ul>
-            
-              <li>YARD::Tags::OptionTag</li><ul>
-            
-            </ul></ul>
-          </ul>
+          
+            <li class="next"><a href="Tag.html" title="YARD::Tags::Tag">YARD::Tags::Tag</a></li>
+          
+            <li class="next">YARD::Tags::OptionTag</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -71,7 +67,10 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Attribute Summary</h2>
+  
+  
+  
+    <h2>Attribute Summary</h2>
   <ul class="summary">
     
       <li class="public "><a href="#pair-instance_method" title="- (Object) pair ">- (Object) pair </a>
@@ -88,9 +87,14 @@ Returns the value of attribute <tt>pair</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(tag_name, name, pair) ">- (Object) initialize(tag_name, name, pair) </a>
+        <a href="#initialize-instance_method" title="- (OptionTag) initialize(tag_name, name, pair) ">- (OptionTag) initialize(tag_name, name, pair) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>OptionTag</tt>.
+
+</span>
         
       </li>
     
@@ -102,6 +106,69 @@ Returns the value of attribute <tt>pair</tt>.
   
   <h3 class="inherited">Methods inherited from <a href="Tag.html" title="YARD::Tags::Tag">YARD::Tags::Tag</a></h3>
   <p class="inherited"><a href="Tag.html#type-instance_method" title="#type">#type</a></p>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="OptionTag">OptionTag</a></tt>) initialize(tag_name, name, pair) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>OptionTag</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="OptionTag">OptionTag</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>OptionTag</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/option_tag.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id pair'>pair</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@pair</span> <span class='op'>=</span> <span class='id pair'>pair</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
   <div id="attr_details">
     <h2>Attribute Details</h2>
     
@@ -111,16 +178,15 @@ Returns the value of attribute <tt>pair</tt>.
       <div class="method_details">
   <p class="signature first" id="pair-instance_method">
   
-    - (Object) pair 
+    - (<tt>Object</tt>) pair 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>pair</tt>
 </p>
-
 
   </div>
 </div>
@@ -148,40 +214,6 @@ Returns the value of attribute <tt>pair</tt>
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize(tag_name, name, pair) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-6
-7
-8
-9</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/tags/option_tag.rb', line 6</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id pair'>pair</span><span class='rparen'>)</span>
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='id tag_name'>tag_name</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='ivar'>@pair</span> <span class='op'>=</span> <span class='id pair'>pair</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
 </div>
     
     <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Parser::Ruby::ReferenceNode</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../glossary.html">Glossary (R)</a> :: 
-    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Parser.html" title="Parser">Parser</a> :: <a href="../Ruby.html" title="Ruby">Ruby</a>
-     :: 
-    ReferenceNode
+    <a href="../../../_index.html">Index (R)</a> &raquo; 
+    <a href="../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../Ruby.html" title="Ruby">Ruby</a>
+     &raquo; 
+    <span class="title">ReferenceNode</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,16 +44,13 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="../../../Array.html" title="Array">Array</a></li><ul>
-            
-              <li><a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></li><ul>
-            
-              <li>YARD::Parser::Ruby::ReferenceNode</li><ul>
-            
-            </ul></ul></ul>
-          </ul>
+          
+            <li class="next"><a href="../../../Array.html" title="Array">Array</a></li>
+          
+            <li class="next"><a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></li>
+          
+            <li class="next">YARD::Parser::Ruby::ReferenceNode</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -73,13 +69,26 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+  <h2>Constant Summary</h2>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants inherited from <a href="AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a></h3>
+  <p class="inherited"><a href="AstNode.html#KEYWORDS-constant" title="KEYWORDS">KEYWORDS</a></p>
+  
+  
+  
+    <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
         <a href="#namespace-instance_method" title="- (Object) namespace ">- (Object) namespace </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -88,6 +97,8 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
@@ -95,12 +106,16 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#source-instance_method" title="- (Object) source ">- (Object) source </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -131,7 +146,7 @@
       <div class="method_details">
   <p class="signature first" id="namespace-instance_method">
   
-    - (Object) namespace 
+    - (<tt>Object</tt>) namespace 
   
 
   
@@ -141,12 +156,12 @@
       <pre class="lines">
 
 
-202
-203
-204</pre>
+302
+303
+304</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 202</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 302</span>
 
 <span class='kw'>def</span> <span class='id namespace'>namespace</span>
   <span class='const'>Array</span><span class='period'>.</span><span class='id new'>new</span> <span class='id flatten'>flatten</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -159,7 +174,7 @@
       <div class="method_details">
   <p class="signature " id="path-instance_method">
   
-    - (Object) path 
+    - (<tt>Object</tt>) path 
   
 
   
@@ -169,12 +184,12 @@
       <pre class="lines">
 
 
-198
-199
-200</pre>
+298
+299
+300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='id path'>path</span>
   <span class='const'>Array</span><span class='period'>.</span><span class='id new'>new</span> <span class='id flatten'>flatten</span>
@@ -187,7 +202,7 @@
       <div class="method_details">
   <p class="signature " id="ref?-instance_method">
   
-    - (Object) ref? 
+    - (<tt>Object</tt>) ref? 
   
 
   
@@ -197,10 +212,10 @@
       <pre class="lines">
 
 
-196</pre>
+296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 296</span>
 
 <span class='kw'>def</span> <span class='id ref?'>ref?</span><span class='semicolon'>;</span> <span class='kw'>true</span> <span class='kw'>end</span></pre>
     </td>
@@ -211,7 +226,7 @@
       <div class="method_details">
   <p class="signature " id="source-instance_method">
   
-    - (Object) source 
+    - (<tt>Object</tt>) source 
   
 
   
@@ -221,12 +236,12 @@
       <pre class="lines">
 
 
-206
-207
-208</pre>
+306
+307
+308</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/ast_node.rb', line 306</span>
 
 <span class='kw'>def</span> <span class='id source'>source</span>
   <span class='kw'>super</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id first'>first</span>

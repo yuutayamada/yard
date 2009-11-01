@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>YARD 0.2.3.5 Documentation</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
     
@@ -12,21 +12,20 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="glossary.html" title="Glossary">Glossary</a> :: 
-    File: README
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: README</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -34,7 +33,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>YARD Release 0.2.3.4 (August 7th 2009)</h1>
+    <div id="content"><div id='filecontents'><h1>YARD Release 0.4.0 (November 15th 2009)</h1>
 
 <p><strong>Homepage</strong>:  <a href="http://yard.rubyforge.org">http://yard.rubyforge.org</a> <br/>
 <strong>IRC</strong>:       <strong>Join us on IRC in #yard on irc.freenode.net!</strong> <br/>
@@ -66,7 +65,7 @@ important information about objects, such as what parameters they take and what 
 they are expected to be, what type a method should return, what exceptions it can
 raise, if it is deprecated, etc.. It also allows information to be better (and more
 consistently) organized during the output generation phase. You can find a list
-of tags in the <a href="file.GETTING_STARTED.html#taglist" title="GETTING_STARTED.markdown">GETTING_STARTED.markdown</a> file.</p>
+of tags in the <a href="file.GettingStarted.html#taglist" title="GettingStarted.md">GettingStarted.md</a> file.</p>
 
 <p>YARD also supports an optional "types" declarations for certain tags. 
 This allows the developer to document type signatures for ruby methods and 
@@ -153,19 +152,56 @@ option to speed up the generation process by skipping source parsing.</p>
 
 <p>YARD will by default only document code in your public visibility. You can
 document your protected and private code by adding <code>--protected</code> or
-<code>--private</code> to the option switches.</p>
+<code>--private</code> to the option switches. In addition, you can add <code>--no-private</code>
+to also ignore any object that has the <code>@private</code> meta-tag. This is similar
+to RDoc's ":nodoc:" behaviour, though the distinction is important. RDoc
+implies that the object with :nodoc: would not be documented, whereas
+YARD still recommends documenting private objects for the private API (for
+maintainer/developer consumption).</p>
 
-<p>You can also add extra informative files with the <code>--files</code> switch,
-for example:</p>
+<p>You can also add extra informative files (README, LICENSE) by separating
+the globs and the filenames with '-'.</p>
 
-<pre class="code">$ yardoc --files FAQ,LICENSE
+<pre class="code">$ yardoc 'app/**/*.rb' - README LICENSE FAQ
 </pre>
 
-<p>Note that the README file is specified with its own <code>--readme</code> switch.</p>
+<p>If no globs preceed the '-' argument, the default glob (lib/<em>*/</em>.rb) is
+used:</p>
+
+<pre class="code">$ yardoc - README LICENSE FAQ
+</pre>
+
+<p>Note that the README file can be specified with its own <code>--readme</code> switch.</p>
 
 <p>You can also add a <code>.yardopts</code> file to your project directory which lists
 the switches separated by whitespace (newlines or space) to pass to yardoc
 whenever it is run.</p>
+
+<h4>Queries</h4>
+
+
+<p>The <code>yardoc</code> tool also supports a <code>--query</code> argument to only include objects
+that match a certain data or meta-data query. The query syntax is Ruby, though
+a few shortcuts are available. For instance, to document only objects that have
+an "@api" tag with the value "public", all of the following syntaxes would give
+the same result:</p>
+
+<pre class="code">--query '@api.text == &quot;public&quot;'
+--query 'object.has_tag?(:api) &amp;&amp; object.tag(:api).text == &quot;public&quot;'
+--query 'has_tag?(:api) &amp;&amp; tag(:api).text == &quot;public&quot;'
+</pre>
+
+<p>Note that the "@tag" syntax returns the first tag named "tag" on the object.
+To return the array of all tags named "tag", use "@@tag".</p>
+
+<p>Multiple <code>--query</code> arguments are allowed in the command line parameters. The
+following two lines both check for the existence of a return and param tag:</p>
+
+<pre class="code">--query '@return' --query '@param'
+--query '@rturn &amp;&amp; @param'
+</pre>
+
+<p>For more information about the query syntax, see the <tt><a href="YARD/Verifier.html" title="YARD::Verifier">YARD::Verifier</a></tt> class.</p>
 
 <p><strong>2. Rake Task</strong></p>
 
@@ -184,7 +220,7 @@ to add. Again, a full list of options is available by typing <code>yardoc --help
 in a shell. You can also override the options at the Rake command-line with the
 OPTS environment variable:</p>
 
-<pre class="code">$ rake yardoc OPTS='--any --extra --opts'
+<pre class="code">$ rake yard OPTS='--any --extra --opts'
 </pre>
 
 <p><strong>3. <code>yri</code> RI Implementation</strong></p>
@@ -194,8 +230,11 @@ access to your documentation. It's way faster than ri but currently does not
 work with the stdlib or core Ruby libraries, only the active project. Example:</p>
 
 <pre class="code">$ yri YARD::Handlers::Base#register
-$ yri File::relative_path
+$ yri File.relative_path
 </pre>
+
+<p>Note that class methods must not be referred to with the "::" namespace
+separator. Only modules, classes and constants should use "::".</p>
 
 <p><strong>4. <code>yard-graph</code> Graphviz Generator</strong></p>
 
@@ -239,7 +278,7 @@ RDoc. To take advantage of this plugin, set <code>has_rdoc = 'yard'</code> in yo
 .gemspec file.</li>
 </ul>
 </li>
-<li><p><strong>Jun.07.09</strong>: 0.2.3 release. See the <a href="file.WHATSNEW.html" title="WHATSNEW.markdown">WHATSNEW.markdown</a> file for a
+<li><p><strong>Jun.07.09</strong>: 0.2.3 release. See the <a href="file.WhatsNew.html" title="WhatsNew.md">WhatsNew.md</a> file for a
 list of important new features.</p></li>
 <li><p><strong>Jun.16.08</strong>: 0.2.2 release. This is the largest changset since yard's
 conception and involves a complete overhaul of the parser and API to make it

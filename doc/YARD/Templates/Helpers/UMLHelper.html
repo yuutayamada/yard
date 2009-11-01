@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Module: YARD::Templates::Helpers::UMLHelper</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../glossary.html">Glossary (U)</a> :: 
-    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Templates.html" title="Templates">Templates</a> :: <a href="../Helpers.html" title="Helpers">Helpers</a>
-     :: 
-    UMLHelper
+    <a href="../../../_index.html">Index (U)</a> &raquo; 
+    <a href="../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../Templates.html" title="Templates">Templates</a> &raquo; <a href="../Helpers.html" title="Helpers">Helpers</a>
+     &raquo; 
+    <span class="title">UMLHelper</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -55,9 +54,38 @@
   <ul class="summary">
     
       <li class="public ">
+        <a href="#format_path-instance_method" title="- (Object) format_path(object) ">- (Object) format_path(object) </a>
+        
+        
+        
+          <span class="summary_desc"></span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#h-instance_method" title="- (Object) h(text) ">- (Object) h(text) </a>
+        
+        
+        
+          <span class="summary_desc"></span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#tidy-instance_method" title="- (Object) tidy(data) ">- (Object) tidy(data) </a>
+        
+        
+        
+          <span class="summary_desc"></span>
+        
+      </li>
+    
+      <li class="public ">
         <a href="#uml_visibility-instance_method" title="- (Object) uml_visibility(object) ">- (Object) uml_visibility(object) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -66,9 +94,109 @@
     <h2>Method Details</h2>
     
       <div class="method_details">
-  <p class="signature first" id="uml_visibility-instance_method">
+  <p class="signature first" id="format_path-instance_method">
   
-    - (Object) uml_visibility(object) 
+    - (<tt>Object</tt>) format_path(object) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/uml_helper.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id format_path'>format_path</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id object'>object</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>::</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="h-instance_method">
+  
+    - (<tt>Object</tt>) h(text) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/uml_helper.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id h'>h</span><span class='lparen'>(</span><span class='id text'>text</span><span class='rparen'>)</span>
+  <span class='id text'>text</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\W)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\\\\\1</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="tidy-instance_method">
+  
+    - (<tt>Object</tt>) tidy(data) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/uml_helper.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id tidy'>tidy</span><span class='lparen'>(</span><span class='id data'>data</span><span class='rparen'>)</span>
+  <span class='id indent'>indent</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id data'>data</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span>
+    <span class='id line'>line</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s*</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id line'>line</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id indent'>indent</span> <span class='op'>-=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id line'>line</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s*\}\s*$</span><span class='regexp_end'>/</span></span>
+    <span class='id line'>line</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id indent'>indent</span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id line'>line</span>
+    <span class='id indent'>indent</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id line'>line</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\{\s*$</span><span class='regexp_end'>/</span></span>
+    <span class='id line'>line</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id compact'>compact</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details">
+  <p class="signature " id="uml_visibility-instance_method">
+  
+    - (<tt>Object</tt>) uml_visibility(object) 
   
 
   
@@ -84,22 +212,16 @@
 7
 8
 9
-10
-11
-12
-13</pre>
+10</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard/templates/helpers/uml_helper.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id uml_visibility'>uml_visibility</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id object'>object</span><span class='period'>.</span><span class='id visibility'>visibility</span>
-  <span class='kw'>when</span> <span class='symbol'>:public</span>
-    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>+</span><span class='tstring_end'>'</span></span>
-  <span class='kw'>when</span> <span class='symbol'>:protected</span>
-    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>#</span><span class='tstring_end'>'</span></span>
-  <span class='kw'>when</span> <span class='symbol'>:private</span>
-    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:public</span><span class='semicolon'>;</span>    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>+</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:protected</span><span class='semicolon'>;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>#</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:private</span><span class='semicolon'>;</span>   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>

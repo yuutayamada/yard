@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: Insertion</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="glossary.html">Glossary (I)</a> :: 
+    <a href="_index.html">Index (I)</a> &raquo; 
     
     
-    Insertion
+    <span class="title">Insertion</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -58,13 +57,36 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The Insertion class inserts a value before or after another value in a
+list.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='const'>Insertion</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span><span class='period'>.</span><span class='id before'>before</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='comment'># =&gt; [1, 2, 4, 3]</span></pre>
+    
+  </div>
+
+</div>  <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
         <a href="#after-instance_method" title="- (Object) after(val, ignore_subsections = true) ">- (Object) after(val, ignore_subsections = true) </a>
         
         
+        
+          <span class="summary_desc">
+Inserts the value after <tt>val</tt>.
+
+</span>
         
       </li>
     
@@ -73,12 +95,22 @@
         
         
         
+          <span class="summary_desc">
+Inserts the value before <tt>val</tt>.
+
+</span>
+        
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(list, value) ">- (Object) initialize(list, value) </a>
+        <a href="#initialize-instance_method" title="- (Insertion) initialize(list, value) ">- (Insertion) initialize(list, value) </a>
         
         
+        
+          <span class="summary_desc">
+Creates an insertion object on a list with a value to be.
+
+</span>
         
       </li>
     
@@ -89,20 +121,88 @@
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(list, value) 
+    - (<tt><a href="" title="Insertion">Insertion</a></tt>) initialize(list, value) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates an insertion object on a list with a value to be inserted. To
+finalize the insertion, call <tt><a href="#before-instance_method" title="#before">#before</a></tt> or <tt><a href="#after-instance_method" title="#after">#after</a></tt> on the object.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array">Array</a></tt>)</span>
+      
+      
+        <span class='name'>list</span>
+      
+      
+      
+        &mdash;
+        
+the list to perform the insertion on
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>value</span>
+      
+      
+      
+        &mdash;
+        
+the value to insert
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Insertion">Insertion</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Insertion</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-6</pre>
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id list'>list</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span> <span class='ivar'>@list</span><span class='comma'>,</span> <span class='ivar'>@value</span> <span class='op'>=</span> <span class='id list'>list</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='kw'>end</span></pre>
     </td>
@@ -117,20 +217,81 @@
       <div class="method_details">
   <p class="signature first" id="after-instance_method">
   
-    - (Object) after(val, ignore_subsections = true) 
+    - (<tt>Object</tt>) after(val, ignore_subsections = true) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Inserts the value after <tt>val</tt>.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+If subsections are ignored
+
+</h4>
+      <pre class="example code">  <span class='const'>Insertion</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:X</span><span class='rparen'>)</span><span class='period'>.</span><span class='id after'>after</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; [1, [2], :X, 3]</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>val</span>
+      
+      
+      
+        &mdash;
+        
+the object the value will be inserted after
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>ignore_subsections</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        
+treat any Array objects that follow val as associated and do not split them
+up.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-8</pre>
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id after'>after</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='id ignore_subsections'>ignore_subsections</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='id insertion'>insertion</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id ignore_subsections'>ignore_subsections</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
     </td>
@@ -141,20 +302,51 @@
       <div class="method_details">
   <p class="signature " id="before-instance_method">
   
-    - (Object) before(val) 
+    - (<tt>Object</tt>) before(val) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Inserts the value before <tt>val</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>val</span>
+      
+      
+      
+        &mdash;
+        
+the object the value will be inserted before
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-7</pre>
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id before'>before</span><span class='lparen'>(</span><span class='id val'>val</span><span class='rparen'>)</span> <span class='id insertion'>insertion</span><span class='lparen'>(</span><span class='id val'>val</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
     </td>

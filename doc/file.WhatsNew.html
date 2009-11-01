@@ -1,18 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="custom.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
-
-    <title>WHATSNEW.markdown</title>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>File: WhatsNew</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
-    <div id="content">
-      <div class="section docstring readme">
-        <h1>YARD: What's New in 0.2.3?</h1>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: WhatsNew</span>
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>What's New in 0.4.x?</h1>
+
+<ol>
+<li><strong>New templating engine and templates</strong></li>
+<li><strong>yardoc <code>--query</code> argument</strong></li>
+<li><strong>Greatly expanded API documentation</strong></li>
+</ol>
+
+
+<h2>New templating engine and templates</h2>
+
+<p>The templates were redesigned, most notably removing the ugly frameset and
+making things a little prettier. The templating engine was also completely
+redone (based on the tadpole templating library) to allow for much more
+user customization. You can read about it in <a href="file.Templates.html" title="Templates.md">Templates.md</a>.</p>
+
+<h2>yardoc <code>--query</code> argument</h2>
+
+<p>The yardoc command-line tool now supports queries to select which classes,
+modules or methods to include in documentation based on their data or meta-data.
+For instance, you can now generate documentation for your "public" API only by
+adding "@api public" to each of your public API methods/classes and using
+the following argument:</p>
+
+<pre class="code">--query '@api.text == &quot;public&quot;'
+</pre>
+
+<p>More information on queries is in the <a href="file.README.html" title="README.markdown">README.markdown</a>.</p>
+
+<h2>Greatly expanded API documentation</h2>
+
+<p>Last release focused on many how-to and architecture documents to explain
+the design of YARD, but many of the actual API classes/methods were still
+left undocumented. This release marks a focus on getting YARD's own documentation
+up to par so that it can serve as an official reference on the recommended
+conventions to use when documenting code.</p>
+
+<h1>What's New in 0.2.3.x?</h1>
 
 <ol>
 <li><strong>Full Ruby 1.9 support</strong></li>
@@ -108,14 +166,8 @@ improved in future releases.</p>
 Some tags existed but were not present in generated documentation. The templates
 were mostly fixed to add the major omitted tags. In addition to template adjustments,
 many parsing bugs were ironed out to make YARD much more stable with existing projects
-(Rails, HAML, Sinatra, Ramaze, etc.).</p>
-      </div>
-    </div>
-    <div id="yard_info">
-  Generated on Friday, October 16 2009 at 12:40:30 AM by 
-  <abbr class="yard" title="Yay! A Ruby Documentation Tool"><a href="http://yard.soen.ca">YARD</a></abbr> 
-  0.2.3.5 (ruby-1.9.1).
-</div>
-
+(Rails, HAML, Sinatra, Ramaze, etc.).</p></div></div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
   </body>
 </html>

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../../glossary.html">Glossary (B)</a> :: 
-    <a href="../../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../../Parser.html" title="Parser">Parser</a> :: <a href="../../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../../Legacy.html" title="Legacy">Legacy</a> :: <a href="../RubyLex.html" title="RubyLex">RubyLex</a>
-     :: 
-    BufferedReader
+    <a href="../../../../../_index.html">Index (B)</a> &raquo; 
+    <a href="../../../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../../../Ruby.html" title="Ruby">Ruby</a> &raquo; <a href="../../Legacy.html" title="Legacy">Legacy</a> &raquo; <a href="../RubyLex.html" title="RubyLex">RubyLex</a>
+     &raquo; 
+    <span class="title">BufferedReader</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -60,7 +59,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 ####################################################################
 </p>
 <p>
@@ -95,7 +94,6 @@ Once complete, it needs to read the rest of the original line, but then
 skip the here document body.
 </p>
 
-
   </div>
 </div>
 <div class="tags">
@@ -121,12 +119,16 @@ Returns the value of attribute <tt>line_num</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#divert_read_from-instance_method" title="- (Object) divert_read_from(reserve) ">- (Object) divert_read_from(reserve) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -135,12 +137,16 @@ Returns the value of attribute <tt>line_num</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#getc-instance_method" title="- (Object) getc ">- (Object) getc </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -149,12 +155,19 @@ Returns the value of attribute <tt>line_num</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(content) ">- (Object) initialize(content) </a>
+        <a href="#initialize-instance_method" title="- (BufferedReader) initialize(content) ">- (BufferedReader) initialize(content) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>BufferedReader</tt>.
+
+</span>
         
       </li>
     
@@ -163,12 +176,16 @@ Returns the value of attribute <tt>line_num</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#peek_equal-instance_method" title="- (Object) peek_equal(str) ">- (Object) peek_equal(str) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -177,66 +194,51 @@ Returns the value of attribute <tt>line_num</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
   </ul>
-  <div id="attr_details">
-    <h2>Attribute Details</h2>
-    
-      
-      <span id=""></span>
-      <span id="line_num-instance_method"></span>
-      <div class="method_details">
-  <p class="signature first" id="line_num-instance_method">
-  
-    - (Object) line_num  <span class="extras">(readonly)</span>
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>line_num</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-337
-338
-339</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 337</span>
-
-<span class='kw'>def</span> <span class='id line_num'>line_num</span>
-  <span class='ivar'>@line_num</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 <div id="constructor_details">
   <h2>Constructor Details</h2>
   
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(content) 
+    - (<tt><a href="" title="BufferedReader">BufferedReader</a></tt>) initialize(content) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>BufferedReader</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="BufferedReader">BufferedReader</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>BufferedReader</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -288,13 +290,58 @@ Returns the value of attribute <tt>line_num</tt>
 </div>
   
 </div>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="line_num-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="line_num-instance_method">
+  
+    - (<tt>Object</tt>) line_num  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>line_num</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 337</span>
+
+<span class='kw'>def</span> <span class='id line_num'>line_num</span>
+  <span class='ivar'>@line_num</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="column-instance_method">
   
-    - (Object) column 
+    - (<tt>Object</tt>) column 
   
 
   
@@ -322,7 +369,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="divert_read_from-instance_method">
   
-    - (Object) divert_read_from(reserve) 
+    - (<tt>Object</tt>) divert_read_from(reserve) 
   
 
   
@@ -352,7 +399,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="get_read-instance_method">
   
-    - (Object) get_read 
+    - (<tt>Object</tt>) get_read 
   
 
   
@@ -384,7 +431,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="getc-instance_method">
   
-    - (Object) getc 
+    - (<tt>Object</tt>) getc 
   
 
   
@@ -442,7 +489,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="getc_already_read-instance_method">
   
-    - (Object) getc_already_read 
+    - (<tt>Object</tt>) getc_already_read 
   
 
   
@@ -470,7 +517,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="peek-instance_method">
   
-    - (Object) peek(at) 
+    - (<tt>Object</tt>) peek(at) 
   
 
   
@@ -508,7 +555,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="peek_equal-instance_method">
   
-    - (Object) peek_equal(str) 
+    - (<tt>Object</tt>) peek_equal(str) 
   
 
   
@@ -536,7 +583,7 @@ Returns the value of attribute <tt>line_num</tt>
       <div class="method_details">
   <p class="signature " id="ungetc-instance_method">
   
-    - (Object) ungetc(ch) 
+    - (<tt>Object</tt>) ungetc(ch) 
   
 
   

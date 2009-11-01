@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Exception: YARD::Handlers::NamespaceMissingError</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (N)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Handlers.html" title="Handlers">Handlers</a>
-     :: 
-    NamespaceMissingError
+    <a href="../../_index.html">Index (N)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../Handlers.html" title="Handlers">Handlers</a>
+     &raquo; 
+    <span class="title">NamespaceMissingError</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,16 +44,13 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li>Exception</li><ul>
-            
-              <li><a href="../Parser/UndocumentableError.html" title="YARD::Parser::UndocumentableError">YARD::Parser::UndocumentableError</a></li><ul>
-            
-              <li>YARD::Handlers::NamespaceMissingError</li><ul>
-            
-            </ul></ul></ul>
-          </ul>
+          
+            <li class="next">Exception</li>
+          
+            <li class="next"><a href="../Parser/UndocumentableError.html" title="YARD::Parser::UndocumentableError">YARD::Parser::UndocumentableError</a></li>
+          
+            <li class="next">YARD::Handlers::NamespaceMissingError</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -73,13 +69,27 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Attribute Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Raised during processing phase when a handler needs to perform an operation
+on an object&#8217;s namespace but the namespace could not be resolved.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>  
+  
+  
+      <h2>Attribute Summary</h2>
   <ul class="summary">
     
-      <li class="public "><a href="#object-instance_method" title="- (Object) object ">- (Object) object </a>
+      <li class="public "><a href="#object-instance_method" title="- (CodeObjects::Base) object ">- (CodeObjects::Base) object </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>object</tt>.
+The object the error occured on.
 
 </span>
         
@@ -90,9 +100,14 @@ Returns the value of attribute <tt>object</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(object) ">- (Object) initialize(object) </a>
+        <a href="#initialize-instance_method" title="- (NamespaceMissingError) initialize(object) ">- (NamespaceMissingError) initialize(object) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>NamespaceMissingError</tt>.
+
+</span>
         
       </li>
     
@@ -101,7 +116,64 @@ Returns the value of attribute <tt>object</tt>.
   
   
   
-      <div id="attr_details">
+    <div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="NamespaceMissingError">NamespaceMissingError</a></tt>) initialize(object) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>NamespaceMissingError</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="NamespaceMissingError">NamespaceMissingError</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>NamespaceMissingError</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/base.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> <span class='ivar'>@object</span> <span class='op'>=</span> <span class='id object'>object</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="attr_details">
     <h2>Attribute Details</h2>
     
       
@@ -110,33 +182,51 @@ Returns the value of attribute <tt>object</tt>.
       <div class="method_details">
   <p class="signature first" id="object-instance_method">
   
-    - (Object) object 
+    - (<tt><a href="../CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) object 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
-Returns the value of attribute <tt>object</tt>
+    <p>
+The object the error occured on
 </p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt><a href="../CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a code object
+
+
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/base.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/base.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id object'>object</span>
   <span class='ivar'>@object</span>
@@ -147,34 +237,6 @@ Returns the value of attribute <tt>object</tt>
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize(object) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/base.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> <span class='ivar'>@object</span> <span class='op'>=</span> <span class='id object'>object</span> <span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
 </div>
     
     <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>

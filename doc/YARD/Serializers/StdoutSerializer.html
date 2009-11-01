@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Serializers::StdoutSerializer</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (S)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Serializers.html" title="Serializers">Serializers</a>
-     :: 
-    StdoutSerializer
+    <a href="../../_index.html">Index (S)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../Serializers.html" title="Serializers">Serializers</a>
+     &raquo; 
+    <span class="title">StdoutSerializer</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,14 +44,11 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="Base.html" title="YARD::Serializers::Base">YARD::Serializers::Base</a></li><ul>
-            
-              <li>YARD::Serializers::StdoutSerializer</li><ul>
-            
-            </ul></ul>
-          </ul>
+          
+            <li class="next"><a href="Base.html" title="YARD::Serializers::Base">YARD::Serializers::Base</a></li>
+          
+            <li class="next">YARD::Serializers::StdoutSerializer</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -71,13 +67,31 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+A serializer that writes data to standard output.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>  
+  
+  
+    <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(wrap = nil) ">- (Object) initialize(wrap = nil) </a>
+        <a href="#initialize-instance_method" title="- (StdoutSerializer) initialize(wrap = nil) ">- (StdoutSerializer) initialize(wrap = nil) </a>
         
         
+        
+          <span class="summary_desc">
+Creates a serializer to print text to stdout.
+
+</span>
         
       </li>
     
@@ -85,6 +99,11 @@
         <a href="#serialize-instance_method" title="- (Object) serialize(object, data) ">- (Object) serialize(object, data) </a>
         
         
+        
+          <span class="summary_desc">
+Overrides serialize behaviour to write data to standard output.
+
+</span>
         
       </li>
     
@@ -102,22 +121,75 @@
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(wrap = nil) 
+    - (<tt><a href="" title="StdoutSerializer">StdoutSerializer</a></tt>) initialize(wrap = nil) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a serializer to print text to stdout
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Fixnum</tt>, <tt>nil</tt>)</span>
+      
+      
+        <span class='name'>wrap</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        
+if wrap is a number, wraps text to <tt>wrap</tt> columns, otherwise no
+wrapping is done.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="StdoutSerializer">StdoutSerializer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>StdoutSerializer</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-4
-5
-6</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/serializers/stdout_serializer.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/stdout_serializer.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id wrap'>wrap</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@wrap</span> <span class='op'>=</span> <span class='id wrap'>wrap</span>
@@ -134,22 +206,32 @@
       <div class="method_details">
   <p class="signature first" id="serialize-instance_method">
   
-    - (Object) serialize(object, data) 
+    - (<tt>Object</tt>) serialize(object, data) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Overrides serialize behaviour to write data to standard output
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-8
-9
-10</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/serializers/stdout_serializer.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/serializers/stdout_serializer.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='id object'>object</span><span class='comma'>,</span> <span class='id data'>data</span><span class='rparen'>)</span>
   <span class='id print'>print</span><span class='lparen'>(</span><span class='ivar'>@wrap</span> <span class='op'>?</span> <span class='id word_wrap'>word_wrap</span><span class='lparen'>(</span><span class='id data'>data</span><span class='comma'>,</span> <span class='ivar'>@wrap</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id data'>data</span><span class='rparen'>)</span>

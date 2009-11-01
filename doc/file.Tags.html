@@ -1,18 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="custom.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
-
-    <title>TAGS.markdown</title>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>File: Tags</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
-    <div id="content">
-      <div class="section docstring readme">
-        <h1>Tags Architecture</h1>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: Tags</span>
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>Tags Architecture</h1>
 
 <p>Tags represent the metadata that can be added to documentation through the <code>@tag</code>
 style syntax:</p>
@@ -32,7 +53,7 @@ class.</p>
 
 <h2>Accessing Tag Information</h2>
 
-<p>Tag metadata is added when a <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt> is added to a <a href="CODE_OBJECTS.markdown.html" title="code object">code object</a>
+<p>Tag metadata is added when a <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt> is added to a <a href="file.CodeObjects.html" title="code object">code object</a>
 using the <tt><a href="YARD/CodeObjects/Base.html#docstring%3D-instance_method" title="YARD::CodeObjects::Base#docstring=">YARD::CodeObjects::Base#docstring=</a></tt> attribute. In addition to adding
 conventional comments, tags are parsed and associated with the object. The easiest
 way to access tags on an object is to use the <tt><a href="YARD/CodeObjects/Base.html#tag-instance_method" title="YARD::CodeObjects::Base#tag">YARD::CodeObjects::Base#tag</a></tt> and <code>#tags</code>
@@ -196,14 +217,8 @@ For the first method, all <code>@param</code> tags are referenced in one shot, b
 method only references one of the tags by adding <code>username</code> before the reference.</p>
 
 <p>Reference tags are represented by the <tt><a href="YARD/Tags/RefTag.html" title="YARD::Tags::RefTag">YARD::Tags::RefTag</a></tt> class and are created
-directly during parsing by <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt>.</p>
-      </div>
-    </div>
-    <div id="yard_info">
-  Generated on Friday, October 16 2009 at 12:40:30 AM by 
-  <abbr class="yard" title="Yay! A Ruby Documentation Tool"><a href="http://yard.soen.ca">YARD</a></abbr> 
-  0.2.3.5 (ruby-1.9.1).
-</div>
-
+directly during parsing by <tt><a href="YARD/Docstring.html" title="YARD::Docstring">YARD::Docstring</a></tt>.</p></div></div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
   </body>
 </html>

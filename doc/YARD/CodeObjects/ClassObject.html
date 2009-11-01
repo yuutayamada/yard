@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::CodeObjects::ClassObject</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (C)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
-     :: 
-    ClassObject
+    <a href="../../_index.html">Index (C)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
+     &raquo; 
+    <span class="title">ClassObject</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,16 +44,13 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="Base.html" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></li><ul>
-            
-              <li><a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></li><ul>
-            
-              <li>YARD::CodeObjects::ClassObject</li><ul>
-            
-            </ul></ul></ul>
-          </ul>
+          
+            <li class="next"><a href="Base.html" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></li>
+          
+            <li class="next"><a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></li>
+          
+            <li class="next">YARD::CodeObjects::ClassObject</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -73,13 +69,19 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Attribute Summary</h2>
+  
+  
+  
+    
+  
+  
+    <h2>Attribute Summary</h2>
   <ul class="summary">
     
-      <li class="public "><a href="#superclass-instance_method" title="- (Object) superclass ">- (Object) superclass </a>
+      <li class="public "><a href="#superclass-instance_method" title="- (ClassObject) superclass ">- (ClassObject) superclass </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>superclass</tt>.
+The <tt><a href="" title="ClassObject">ClassObject</a></tt> that this class object inherits from in Ruby source.
 
 </span>
         
@@ -90,51 +92,86 @@ Returns the value of attribute <tt>superclass</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#constants-instance_method" title="- (Object) constants(opts = {}) ">- (Object) constants(opts = {}) </a>
+        <a href="#constants-instance_method" title="- (Array&lt;ConstantObject&gt;) constants(opts = {}) ">- (Array&lt;ConstantObject&gt;) constants(opts = {}) </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#inheritance_tree-instance_method" title="- (Object) inheritance_tree(include_mods = false) ">- (Object) inheritance_tree(include_mods = false) </a>
-        
-        
+          <span class="summary_desc">
+Returns the list of constants matching the options hash.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#inherited_constants-instance_method" title="- (Object) inherited_constants ">- (Object) inherited_constants </a>
+        <a href="#inheritance_tree-instance_method" title="- (Array&lt;NamespaceObject&gt;) inheritance_tree(include_mods = false) ">- (Array&lt;NamespaceObject&gt;) inheritance_tree(include_mods = false) </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#inherited_meths-instance_method" title="- (Object) inherited_meths(opts = {}) ">- (Object) inherited_meths(opts = {}) </a>
-        
-        
+          <span class="summary_desc">
+Returns the inheritance tree of the object including self.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(namespace, name, *args, &amp;block) ">- (Object) initialize(namespace, name, *args, &amp;block) </a>
+        <a href="#inherited_constants-instance_method" title="- (Array&lt;ConstantObject&gt;) inherited_constants ">- (Array&lt;ConstantObject&gt;) inherited_constants </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#is_exception%3F-instance_method" title="- (Object) is_exception? ">- (Object) is_exception? </a>
-        
-        
+          <span class="summary_desc">
+Returns only the constants that were inherited.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#meths-instance_method" title="- (Object) meths(opts = {}) ">- (Object) meths(opts = {}) </a>
+        <a href="#inherited_meths-instance_method" title="- (Array&lt;MethodObject&gt;) inherited_meths(opts = {}) ">- (Array&lt;MethodObject&gt;) inherited_meths(opts = {}) </a>
         
         
+        
+          <span class="summary_desc">
+Returns only the methods that were inherited.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (ClassObject) initialize(namespace, name, *args, &amp;block) ">- (ClassObject) initialize(namespace, name, *args, &amp;block) </a>
+        
+        
+        
+          <span class="summary_desc">
+Creates a new class object in <tt>namespace</tt> with <tt>name</tt>.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#is_exception%3F-instance_method" title="- (Boolean) is_exception? ">- (Boolean) is_exception? </a>
+        
+        
+        
+          <span class="summary_desc">
+Whether or not the class is a Ruby Exception.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#meths-instance_method" title="- (Array&lt;MethodObject&gt;) meths(opts = {}) ">- (Array&lt;MethodObject&gt;) meths(opts = {}) </a>
+        
+        
+        
+          <span class="summary_desc">
+Returns the list of methods matching the options hash.
+
+</span>
         
       </li>
     
@@ -143,90 +180,76 @@ Returns the value of attribute <tt>superclass</tt>.
   
   
   
-  
-  <h3 class="inherited">Methods inherited from <a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></h3>
-  <p class="inherited"><a href="NamespaceObject.html#class_attributes-instance_method" title="#class_attributes">#class_attributes</a>, <a href="NamespaceObject.html#instance_attributes-instance_method" title="#instance_attributes">#instance_attributes</a>, <a href="NamespaceObject.html#child-instance_method" title="#child">#child</a>, <a href="NamespaceObject.html#included_meths-instance_method" title="#included_meths">#included_meths</a>, <a href="NamespaceObject.html#included_constants-instance_method" title="#included_constants">#included_constants</a>, <a href="NamespaceObject.html#mixins-instance_method" title="#mixins">#mixins</a></p>
-  
+    
   
   
   
   
   <h3 class="inherited">Methods inherited from <a href="Base.html" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></h3>
   <p class="inherited"><a href="Base.html#dynamic%3F-instance_method" title="#dynamic?">#dynamic?</a>, <a href="Base.html#new-class_method" title="new">new</a>, <a href="Base.html#%3D%3D%3D-class_method" title="===">===</a>, <a href="Base.html#add_file-instance_method" title="#add_file">#add_file</a>, <a href="Base.html#file-instance_method" title="#file">#file</a>, <a href="Base.html#line-instance_method" title="#line">#line</a>, <a href="Base.html#%3D%3D-instance_method" title="#==">#==</a>, <a href="Base.html#%5B%5D-instance_method" title="#[]">#[]</a>, <a href="Base.html#%5B%5D%3D-instance_method" title="#[]=">#[]=</a>, <a href="Base.html#method_missing-instance_method" title="#method_missing">#method_missing</a>, <a href="Base.html#type-instance_method" title="#type">#type</a>, <a href="Base.html#path-instance_method" title="#path">#path</a>, <a href="Base.html#format-instance_method" title="#format">#format</a>, <a href="Base.html#inspect-instance_method" title="#inspect">#inspect</a>, <a href="Base.html#tag-instance_method" title="#tag">#tag</a>, <a href="Base.html#tags-instance_method" title="#tags">#tags</a>, <a href="Base.html#has_tag%3F-instance_method" title="#has_tag?">#has_tag?</a>, <a href="Base.html#sep-instance_method" title="#sep">#sep</a>, <a href="Base.html#format_source-instance_method" title="#format_source">#format_source</a></p>
-  <div id="attr_details">
-    <h2>Attribute Details</h2>
-    
-      
-      <span id="superclass=-instance_method"></span>
-      <span id="superclass-instance_method"></span>
-      <div class="method_details">
-  <p class="signature first" id="superclass-instance_method">
-  
-    - (Object) superclass 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>superclass</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-3
-4
-5</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 3</span>
-
-<span class='kw'>def</span> <span class='id superclass'>superclass</span>
-  <span class='ivar'>@superclass</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 <div id="constructor_details">
   <h2>Constructor Details</h2>
   
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(namespace, name, *args, &amp;block) 
+    - (<tt><a href="" title="ClassObject">ClassObject</a></tt>) initialize(namespace, name, *args, &amp;block) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a new class object in <tt>namespace</tt> with <tt>name</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="ClassObject">ClassObject</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>ClassObject</tt>
+
+
+      
+    </li>
+  
+</ul>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li>Base#new</li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-5
-6
-7
-8
-9
 10
 11
 12
-13</pre>
+13
+14
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -245,7 +268,7 @@ Returns the value of attribute <tt>superclass</tt>
 </div>
 <div id="method_missing_details">
   <h2>Dynamic Method Handling</h2>
-  <p class="notice">
+  <p class="notice super">
     This class handles dynamic methods through the <tt>method_missing</tt> method
     
       in the class <a href="Base.html#method_missing-instance_method" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a>
@@ -253,29 +276,183 @@ Returns the value of attribute <tt>superclass</tt>
   </p>
   
 </div>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="superclass=-instance_method"></span>
+      <span id="superclass-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="superclass-instance_method">
+  
+    - (<tt><a href="" title="ClassObject">ClassObject</a></tt>) superclass 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The <tt><a href="" title="ClassObject">ClassObject</a></tt> that this class object inherits from in Ruby source.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="ClassObject">ClassObject</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a class object that is the superclass of this one
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id superclass'>superclass</span>
+  <span class='ivar'>@superclass</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="constants-instance_method">
   
-    - (Object) constants(opts = {}) 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="ConstantObject.html" title="ConstantObject">ConstantObject</a>></tt>) constants(opts = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the list of constants matching the options hash.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>opts</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        
+the options hash to match
+
+
+      
+    </li>
+  
+</ul>
+  
+    
+    
+    <h3>Options Hash (<tt>opts</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:inherited</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+whether inherited constant should be included in the list
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:included</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+whether mixed in constant should be included in the list
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="ConstantObject.html" title="ConstantObject">ConstantObject</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of constant that matched
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-48
-49
-50
-51</pre>
+82
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id constants'>constants</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>SymbolHash</span><span class='lbracket'>[</span><span class='symbol'>:inherited</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id update'>update</span><span class='lparen'>(</span><span class='id opts'>opts</span><span class='rparen'>)</span>
@@ -289,29 +466,81 @@ Returns the value of attribute <tt>superclass</tt>
       <div class="method_details">
   <p class="signature " id="inheritance_tree-instance_method">
   
-    - (Object) inheritance_tree(include_mods = false) 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="NamespaceObject.html" title="NamespaceObject">NamespaceObject</a>></tt>) inheritance_tree(include_mods = false) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the inheritance tree of the object including self.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>include_mods</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        
+whether or not to include mixins in the inheritance tree.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="NamespaceObject.html" title="NamespaceObject">NamespaceObject</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of code objects that make up the inheritance tree.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28</pre>
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id inheritance_tree'>inheritance_tree</span><span class='lparen'>(</span><span class='id include_mods'>include_mods</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id list'>list</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id include_mods'>include_mods</span> <span class='op'>?</span> <span class='id mixins'>mixins</span><span class='lparen'>(</span><span class='symbol'>:instance</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -331,30 +560,59 @@ Returns the value of attribute <tt>superclass</tt>
       <div class="method_details">
   <p class="signature " id="inherited_constants-instance_method">
   
-    - (Object) inherited_constants 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="ConstantObject.html" title="ConstantObject">ConstantObject</a>></tt>) inherited_constants 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns only the constants that were inherited.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="ConstantObject.html" title="ConstantObject">ConstantObject</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of inherited constant objects
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63</pre>
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id inherited_constants'>inherited_constants</span>
   <span class='id inheritance_tree'>inheritance_tree</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id list'>list</span><span class='comma'>,</span> <span class='id superclass'>superclass</span><span class='op'>|</span>
@@ -375,31 +633,60 @@ Returns the value of attribute <tt>superclass</tt>
       <div class="method_details">
   <p class="signature " id="inherited_meths-instance_method">
   
-    - (Object) inherited_meths(opts = {}) 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="MethodObject.html" title="MethodObject">MethodObject</a>></tt>) inherited_meths(opts = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns only the methods that were inherited.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="MethodObject.html" title="MethodObject">MethodObject</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of inherited method objects
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46</pre>
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id inherited_meths'>inherited_meths</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id inheritance_tree'>inheritance_tree</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id list'>list</span><span class='comma'>,</span> <span class='id superclass'>superclass</span><span class='op'>|</span>
@@ -421,22 +708,51 @@ Returns the value of attribute <tt>superclass</tt>
       <div class="method_details">
   <p class="signature " id="is_exception?-instance_method">
   
-    - (Object) is_exception? 
+    - (<tt>Boolean</tt>) is_exception? 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Whether or not the class is a Ruby Exception
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+whether the object represents a Ruby exception
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id is_exception?'>is_exception?</span>
   <span class='id inheritance_tree'>inheritance_tree</span><span class='period'>.</span><span class='id reverse'>reverse</span><span class='period'>.</span><span class='id any?'>any?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id o'>o</span><span class='op'>|</span> <span class='const'>BUILTIN_EXCEPTIONS_HASH</span><span class='period'>.</span><span class='id has_key?'>has_key?</span> <span class='id o'>o</span><span class='period'>.</span><span class='id path'>path</span> <span class='rbrace'>}</span>
@@ -449,23 +765,114 @@ Returns the value of attribute <tt>superclass</tt>
       <div class="method_details">
   <p class="signature " id="meths-instance_method">
   
-    - (Object) meths(opts = {}) 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="MethodObject.html" title="MethodObject">MethodObject</a>></tt>) meths(opts = {}) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the list of methods matching the options hash. Returns all methods
+if hash is empty.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>opts</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        
+the options hash to match
+
+
+      
+    </li>
+  
+</ul>
+  
+    
+    
+    <h3>Options Hash (<tt>opts</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:inherited</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+whether inherited methods should be included in the list
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:included</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+whether mixed in methods should be included in the list
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="MethodObject.html" title="MethodObject">MethodObject</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of methods that matched
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-30
-31
-32
-33</pre>
+53
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/class_object.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id meths'>meths</span><span class='lparen'>(</span><span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>SymbolHash</span><span class='lbracket'>[</span><span class='symbol'>:inherited</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id update'>update</span><span class='lparen'>(</span><span class='id opts'>opts</span><span class='rparen'>)</span>

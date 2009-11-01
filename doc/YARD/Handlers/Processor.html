@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Handlers::Processor</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (P)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Handlers.html" title="Handlers">Handlers</a>
-     :: 
-    Processor
+    <a href="../../_index.html">Index (P)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../Handlers.html" title="Handlers">Handlers</a>
+     &raquo; 
+    <span class="title">Processor</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -58,67 +57,94 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Attribute Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Iterates over all statements in a file and delegates them to the
+<tt><a href="Base.html" title="Handlers::Base">Handlers::Base</a></tt> objects that are registered to handle the statement.
+</p>
+<p>
+This class is passed to each handler and keeps overall processing state.
+For example, if the <tt><a href="#visibility-instance_method" title="#visibility">#visibility</a></tt> is set in a handler, all following
+statements will have access to this state. This allows
+&#8220;public&#8221;, &#8220;protected&#8221; and &#8220;private&#8221;
+statements to be handled in classes and modules. In addition, the
+<tt><a href="#namespace-instance_method" title="#namespace">#namespace</a></tt> can be set during parsing to control where objects are being
+created from.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="Base.html" title="Handlers::Base">Handlers::Base</a></li>
+    
+  </ul>
+
+</div>  <h2>Attribute Summary</h2>
   <ul class="summary">
     
-      <li class="public "><a href="#file-instance_method" title="- (Object) file ">- (Object) file </a>
+      <li class="public "><a href="#file-instance_method" title="- (String) file ">- (String) file </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>file</tt>.
+The filename.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#load_order_errors-instance_method" title="- (Object) load_order_errors ">- (Object) load_order_errors </a>
+      <li class="public "><a href="#load_order_errors-instance_method" title="- (Boolean) load_order_errors ">- (Boolean) load_order_errors </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>load_order_errors</tt>.
+Whether or not <tt><a href="../Parser/LoadOrderError.html" title="Parser::LoadOrderError">Parser::LoadOrderError</a></tt> is raised.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#namespace-instance_method" title="- (Object) namespace ">- (Object) namespace </a>
+      <li class="public "><a href="#namespace-instance_method" title="- (CodeObjects::NamespaceObject) namespace ">- (CodeObjects::NamespaceObject) namespace </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>namespace</tt>.
+The current namespace.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#owner-instance_method" title="- (Object) owner ">- (Object) owner </a>
+      <li class="public "><a href="#owner-instance_method" title="- (CodeObjects::Base) owner ">- (CodeObjects::Base) owner </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>owner</tt>.
+Unlike the namespace, the owner is a non-namespace object that should be
+stored between statements.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#parser_type-instance_method" title="- (Object) parser_type ">- (Object) parser_type </a>
+      <li class="public "><a href="#parser_type-instance_method" title="- (Symbol) parser_type ">- (Symbol) parser_type </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>parser_type</tt>.
+The parser type (:ruby, :ruby18 or :c).
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#scope-instance_method" title="- (Object) scope ">- (Object) scope </a>
+      <li class="public "><a href="#scope-instance_method" title="- (Symbol) scope ">- (Symbol) scope </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>scope</tt>.
+The current scope.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#visibility-instance_method" title="- (Object) visibility ">- (Object) visibility </a>
+      <li class="public "><a href="#visibility-instance_method" title="- (Symbol) visibility ">- (Symbol) visibility </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>visibility</tt>.
+The current visibility.
 
 </span>
         
@@ -129,355 +155,166 @@ Returns the value of attribute <tt>visibility</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#find_handlers-instance_method" title="- (Object) find_handlers(statement) ">- (Object) find_handlers(statement) </a>
+        <a href="#find_handlers-instance_method" title="- (Array&lt;Base&gt;) find_handlers(statement) ">- (Array&lt;Base&gt;) find_handlers(statement) </a>
         
         
+        
+          <span class="summary_desc">
+Searches for all handlers in <tt><a href="Base.html#subclasses-class_method" title="Base.subclasses">Base.subclasses</a></tt> that match the
+<tt>statement</tt>.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) ">- (Object) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) </a>
+        <a href="#initialize-instance_method" title="- (Processor) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) ">- (Processor) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) </a>
         
         
+        
+          <span class="summary_desc">
+Creates a new Processor for a <tt>file</tt>.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#process-instance_method" title="- (Object) process(statements) ">- (Object) process(statements) </a>
+        <a href="#process-instance_method" title="- (nil) process(statements) ">- (nil) process(statements) </a>
         
         
+        
+          <span class="summary_desc">
+Processes a list of statements by finding handlers to process each.
+
+</span>
         
       </li>
     
   </ul>
-  <div id="attr_details">
-    <h2>Attribute Details</h2>
-    
-      
-      <span id="file=-instance_method"></span>
-      <span id="file-instance_method"></span>
-      <div class="method_details">
-  <p class="signature first" id="file-instance_method">
-  
-    - (Object) file 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>file</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-4
-5
-6</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 4</span>
-
-<span class='kw'>def</span> <span class='id file'>file</span>
-  <span class='ivar'>@file</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="load_order_errors=-instance_method"></span>
-      <span id="load_order_errors-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="load_order_errors-instance_method">
-  
-    - (Object) load_order_errors 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>load_order_errors</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id load_order_errors'>load_order_errors</span>
-  <span class='ivar'>@load_order_errors</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="namespace=-instance_method"></span>
-      <span id="namespace-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="namespace-instance_method">
-  
-    - (Object) namespace 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>namespace</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-4
-5
-6</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 4</span>
-
-<span class='kw'>def</span> <span class='id namespace'>namespace</span>
-  <span class='ivar'>@namespace</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="owner=-instance_method"></span>
-      <span id="owner-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="owner-instance_method">
-  
-    - (Object) owner 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>owner</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id owner'>owner</span>
-  <span class='ivar'>@owner</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="parser_type=-instance_method"></span>
-      <span id="parser_type-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="parser_type-instance_method">
-  
-    - (Object) parser_type 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>parser_type</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id parser_type'>parser_type</span>
-  <span class='ivar'>@parser_type</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="scope=-instance_method"></span>
-      <span id="scope-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="scope-instance_method">
-  
-    - (Object) scope 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>scope</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id scope'>scope</span>
-  <span class='ivar'>@scope</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="visibility=-instance_method"></span>
-      <span id="visibility-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="visibility-instance_method">
-  
-    - (Object) visibility 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>visibility</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-4
-5
-6</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 4</span>
-
-<span class='kw'>def</span> <span class='id visibility'>visibility</span>
-  <span class='ivar'>@visibility</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 <div id="constructor_details">
   <h2>Constructor Details</h2>
   
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) 
+    - (<tt><a href="" title="Processor">Processor</a></tt>) initialize(file = nil, load_order_errors = false, parser_type = Parser::SourceParser.parser_type) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a new Processor for a <tt>file</tt>.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../String.html" title="String">String</a></tt>)</span>
+      
+      
+        <span class='name'>file</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        
+the name of the file that is being processed. uses &#8217;(stdin)&#8217; if
+file is nil.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>load_order_error</span>
+      
+      
+      
+        &mdash;
+        
+whether or not to raise <tt><a href="../Parser/LoadOrderError.html" title="Parser::LoadOrderError">Parser::LoadOrderError</a></tt> when a file has unresolved
+references that need to be parsed first. If these errors are raised, the
+processor will attempt to load all other files before continuing to parse
+the file.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <span class='name'>parser_type</span>
+      
+      
+        <em class="default">(defaults to: <tt>Parser::SourceParser.parser_type</tt>)</em>
+      
+      
+        &mdash;
+        
+the parser type (:ruby, :ruby18, :c) from the parser. Used to select the
+handler (since handlers are specific to a parser type).
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Processor">Processor</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Processor</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17</pre>
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id file'>file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id load_order_errors'>load_order_errors</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id parser_type'>parser_type</span> <span class='op'>=</span> <span class='const'>Parser</span><span class='op'>::</span><span class='const'>SourceParser</span><span class='period'>.</span><span class='id parser_type'>parser_type</span><span class='rparen'>)</span>
   <span class='ivar'>@file</span> <span class='op'>=</span> <span class='id file'>file</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(stdin)</span><span class='tstring_end'>&quot;</span></span>
@@ -496,32 +333,513 @@ Returns the value of attribute <tt>visibility</tt>
 </div>
   
 </div>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id="file=-instance_method"></span>
+      <span id="file-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="file-instance_method">
+  
+    - (<tt><a href="../../String.html" title="String">String</a></tt>) file 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The filename
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../String.html" title="String">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the filename
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id file'>file</span>
+  <span class='ivar'>@file</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="load_order_errors=-instance_method"></span>
+      <span id="load_order_errors-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="load_order_errors-instance_method">
+  
+    - (<tt>Boolean</tt>) load_order_errors 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Whether or not <tt><a href="../Parser/LoadOrderError.html" title="Parser::LoadOrderError">Parser::LoadOrderError</a></tt> is raised
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+whether or not <tt><a href="../Parser/LoadOrderError.html" title="Parser::LoadOrderError">Parser::LoadOrderError</a></tt> is raised
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id load_order_errors'>load_order_errors</span>
+  <span class='ivar'>@load_order_errors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="namespace=-instance_method"></span>
+      <span id="namespace-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="namespace-instance_method">
+  
+    - (<tt><a href="../CodeObjects/NamespaceObject.html" title="CodeObjects::NamespaceObject">CodeObjects::NamespaceObject</a></tt>) namespace 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current namespace
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../CodeObjects/NamespaceObject.html" title="CodeObjects::NamespaceObject">CodeObjects::NamespaceObject</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the current namespace
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id namespace'>namespace</span>
+  <span class='ivar'>@namespace</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="owner=-instance_method"></span>
+      <span id="owner-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="owner-instance_method">
+  
+    - (<tt><a href="../CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) owner 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Unlike the namespace, the owner is a non-namespace object that should be
+stored between statements. For instance, when parsing a method body, the
+<tt><a href="../CodeObjects/MethodObject.html" title="CodeObjects::MethodObject">CodeObjects::MethodObject</a></tt> is set as the owner, in case any extra method
+information is processed.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+unlike the namespace, the owner is a non-namespace object that should be
+stored between statements. For instance, when parsing a method body, the
+<tt><a href="../CodeObjects/MethodObject.html" title="CodeObjects::MethodObject">CodeObjects::MethodObject</a></tt> is set as the owner, in case any extra method
+information is processed.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id owner'>owner</span>
+  <span class='ivar'>@owner</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="parser_type=-instance_method"></span>
+      <span id="parser_type-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="parser_type-instance_method">
+  
+    - (<tt>Symbol</tt>) parser_type 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The parser type (:ruby, :ruby18 or :c)
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the parser type (:ruby, :ruby18 or :c)
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id parser_type'>parser_type</span>
+  <span class='ivar'>@parser_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="scope=-instance_method"></span>
+      <span id="scope-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="scope-instance_method">
+  
+    - (<tt>Symbol</tt>) scope 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current scope
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the current scope
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id scope'>scope</span>
+  <span class='ivar'>@scope</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="visibility=-instance_method"></span>
+      <span id="visibility-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="visibility-instance_method">
+  
+    - (<tt>Symbol</tt>) visibility 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current visibility
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the current visibility
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id visibility'>visibility</span>
+  <span class='ivar'>@visibility</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="find_handlers-instance_method">
   
-    - (Object) find_handlers(statement) 
+    - (<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="Base.html" title="Base">Base</a>></tt>) find_handlers(statement) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Searches for all handlers in <tt><a href="Base.html#subclasses-class_method" title="Base.subclasses">Base.subclasses</a></tt> that match the
+<tt>statement</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'></span>
+      
+      
+        <span class='name'>statement</span>
+      
+      
+      
+        &mdash;
+        
+the statement object to match.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a>&lt;<a href="Base.html" title="Base">Base</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of handlers to process the statement with.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-44
-45
-46
-47
-48
-49
-50</pre>
+96
+97
+98
+99
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id find_handlers'>find_handlers</span><span class='lparen'>(</span><span class='id statement'>statement</span><span class='rparen'>)</span>
   <span class='const'>Base</span><span class='period'>.</span><span class='id subclasses'>subclasses</span><span class='period'>.</span><span class='id find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id handler'>handler</span><span class='op'>|</span>
@@ -538,43 +856,87 @@ Returns the value of attribute <tt>visibility</tt>
       <div class="method_details">
   <p class="signature " id="process-instance_method">
   
-    - (Object) process(statements) 
+    - (<tt>nil</tt>) process(statements) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Processes a list of statements by finding handlers to process each one.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Array.html" title="Array">Array</a></tt>)</span>
+      
+      
+        <span class='name'>statements</span>
+      
+      
+      
+        &mdash;
+        
+a list of statements
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42</pre>
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/processor.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id process'>process</span><span class='lparen'>(</span><span class='id statements'>statements</span><span class='rparen'>)</span>
   <span class='id statements'>statements</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id stmt'>stmt</span><span class='comma'>,</span> <span class='id index'>index</span><span class='op'>|</span>

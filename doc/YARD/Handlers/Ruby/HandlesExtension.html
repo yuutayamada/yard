@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Handlers::Ruby::HandlesExtension</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../glossary.html">Glossary (H)</a> :: 
-    <a href="../../../YARD.html" title="YARD">YARD</a> :: <a href="../../Handlers.html" title="Handlers">Handlers</a> :: <a href="../Ruby.html" title="Ruby">Ruby</a>
-     :: 
-    HandlesExtension
+    <a href="../../../_index.html">Index (H)</a> &raquo; 
+    <a href="../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../Handlers.html" title="Handlers">Handlers</a> &raquo; <a href="../Ruby.html" title="Ruby">Ruby</a>
+     &raquo; 
+    <span class="title">HandlesExtension</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -58,6 +57,10 @@
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><a href="MethodCallWrapper.html" title="YARD::Handlers::Ruby::MethodCallWrapper">YARD::Handlers::Ruby::MethodCallWrapper</a>, <a href="TestNodeWrapper.html" title="YARD::Handlers::Ruby::TestNodeWrapper">YARD::Handlers::Ruby::TestNodeWrapper</a></p>
+</div>
   <h2>Attribute Summary</h2>
   <ul class="summary">
     
@@ -75,9 +78,14 @@ Returns the value of attribute <tt>name</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(name) ">- (Object) initialize(name) </a>
+        <a href="#initialize-instance_method" title="- (HandlesExtension) initialize(name) ">- (HandlesExtension) initialize(name) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>HandlesExtension</tt>.
+
+</span>
         
       </li>
     
@@ -86,9 +94,68 @@ Returns the value of attribute <tt>name</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
   </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="HandlesExtension">HandlesExtension</a></tt>) initialize(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>HandlesExtension</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="HandlesExtension">HandlesExtension</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>HandlesExtension</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/handlers/ruby/base.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id name'>name</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
   <div id="attr_details">
     <h2>Attribute Details</h2>
     
@@ -98,16 +165,15 @@ Returns the value of attribute <tt>name</tt>.
       <div class="method_details">
   <p class="signature first" id="name-instance_method">
   
-    - (Object) name  <span class="extras">(readonly)</span>
+    - (<tt>Object</tt>) name  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>name</tt>
 </p>
-
 
   </div>
 </div>
@@ -135,48 +201,19 @@ Returns the value of attribute <tt>name</tt>
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize(name) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/handlers/ruby/base.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id name'>name</span> <span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="matches?-instance_method">
   
-    - (Object) matches?(node) 
+    - (<tt>Object</tt>) matches?(node) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      
-
+    
   </div>
 </div>
 <div class="tags">

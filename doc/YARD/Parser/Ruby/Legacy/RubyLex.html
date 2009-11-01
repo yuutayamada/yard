@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Parser::Ruby::Legacy::RubyLex</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../glossary.html">Glossary (R)</a> :: 
-    <a href="../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../Parser.html" title="Parser">Parser</a> :: <a href="../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../Legacy.html" title="Legacy">Legacy</a>
-     :: 
-    RubyLex
+    <a href="../../../../_index.html">Index (R)</a> &raquo; 
+    <a href="../../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../../Ruby.html" title="Ruby">Ruby</a> &raquo; <a href="../Legacy.html" title="Legacy">Legacy</a>
+     &raquo; 
+    <span class="title">RubyLex</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -68,46 +67,44 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Lexical analyzer for Ruby source
 </p>
-
 
   </div>
 </div>
 <div class="tags">
   
 </div>  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="ENINDENT_CLAUSE-constant ">ENINDENT_CLAUSE =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbracket'>[</span>
+  
+    <dl class="constants">
+      
+        <dt id="ENINDENT_CLAUSE-constant ">ENINDENT_CLAUSE =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>case</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>class</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>do</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>if</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>module</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unless</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>until</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>while</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>begin</span><span class='tstring_end'>&quot;</span></span> <span class='comment'>#, &quot;when&quot;
 </span><span class='rbracket'>]</span></pre></dd>
-    
-      <dt id="ACCEPTS_COLON-constant ">ACCEPTS_COLON =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>if</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unless</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>until</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>while</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre></dd>
-    
-      <dt id="DEINDENT_CLAUSE-constant ">DEINDENT_CLAUSE =
-        
-          <span class="summary_desc">
+      
+        <dt id="ACCEPTS_COLON-constant ">ACCEPTS_COLON =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>if</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>for</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unless</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>until</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>while</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre></dd>
+      
+        <dt id="DEINDENT_CLAUSE-constant ">DEINDENT_CLAUSE =
+            <span class="summary_desc">
 , &#8220;when&#8221;.
 
 </span>
-        
-      </dt>
-      <dd><pre class="code"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>end</span><span class='tstring_end'>&quot;</span></span> <span class='comment'>#, &quot;when&quot;
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>end</span><span class='tstring_end'>&quot;</span></span> <span class='comment'>#, &quot;when&quot;
 </span><span class='rbracket'>]</span></pre></dd>
-    
-      <dt id="PERCENT_LTYPE-constant ">PERCENT_LTYPE =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span>
+      
+        <dt id="PERCENT_LTYPE-constant ">PERCENT_LTYPE =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>q</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\'</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\`</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -115,39 +112,46 @@ Lexical analyzer for Ruby source
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>w</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>W</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
 <span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="PERCENT_PAREN-constant ">PERCENT_PAREN =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span>
+      
+        <dt id="PERCENT_PAREN-constant ">PERCENT_PAREN =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
 <span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="Ltype2Token-constant ">Ltype2Token =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span>
+      
+        <dt id="Ltype2Token-constant ">Ltype2Token =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\'</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkSTRING</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkSTRING</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\`</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkXSTRING</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkREGEXP</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkDSTRING</span>
 <span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="DLtype2Token-constant ">DLtype2Token =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span>
+      
+        <dt id="DLtype2Token-constant ">DLtype2Token =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkDSTRING</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\`</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkDXSTRING</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'>TkDREGEXP</span><span class='comma'>,</span>
 <span class='rbrace'>}</span></pre></dd>
-    
-  </dl>
-  <h2>Attribute Summary</h2>
+      
+    </dl>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants included from <a href="RubyToken.html" title="YARD::Parser::Ruby::Legacy::RubyToken">YARD::Parser::Ruby::Legacy::RubyToken</a></h3>
+  <p class="inherited"><a href="RubyToken.html#EXPR_BEG-constant" title="EXPR_BEG">EXPR_BEG</a>, <a href="RubyToken.html#EXPR_MID-constant" title="EXPR_MID">EXPR_MID</a>, <a href="RubyToken.html#EXPR_END-constant" title="EXPR_END">EXPR_END</a>, <a href="RubyToken.html#EXPR_ARG-constant" title="EXPR_ARG">EXPR_ARG</a>, <a href="RubyToken.html#EXPR_FNAME-constant" title="EXPR_FNAME">EXPR_FNAME</a>, <a href="RubyToken.html#EXPR_DOT-constant" title="EXPR_DOT">EXPR_DOT</a>, <a href="RubyToken.html#EXPR_CLASS-constant" title="EXPR_CLASS">EXPR_CLASS</a>, <a href="RubyToken.html#TokenDefinitions-constant" title="TokenDefinitions">TokenDefinitions</a>, <a href="RubyToken.html#TkReading2Token-constant" title="TkReading2Token">TkReading2Token</a>, <a href="RubyToken.html#TkSymbol2Token-constant" title="TkSymbol2Token">TkSymbol2Token</a>, <a href="RubyToken.html#NEWLINE_TOKEN-constant" title="NEWLINE_TOKEN">NEWLINE_TOKEN</a></p>
+    <h2>Attribute Summary</h2>
   <ul class="summary">
     
       <li class="public "><a href="#continue-instance_method" title="- (Object) continue ">- (Object) continue </a> <span class="extras">(readonly)</span>
@@ -213,12 +217,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#char_no-instance_method" title="- (Object) char_no ">- (Object) char_no </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -227,12 +235,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#getc-instance_method" title="- (Object) getc ">- (Object) getc </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -241,12 +253,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#gets-instance_method" title="- (Object) gets ">- (Object) gets </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -255,12 +271,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#identify_gvar-instance_method" title="- (Object) identify_gvar ">- (Object) identify_gvar </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -269,12 +289,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#identify_identifier-instance_method" title="- (Object) identify_identifier ">- (Object) identify_identifier </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -283,12 +307,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#identify_quotation-instance_method" title="- (Object) identify_quotation(initial_char) ">- (Object) identify_quotation(initial_char) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -297,12 +325,19 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(content) ">- (Object) initialize(content) </a>
+        <a href="#initialize-instance_method" title="- (RubyLex) initialize(content) ">- (RubyLex) initialize(content) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>RubyLex</tt>.
+
+</span>
         
       </li>
     
@@ -311,6 +346,8 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
@@ -318,12 +355,16 @@ Returns the value of attribute <tt>skip_space</tt>.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#lex_int2-instance_method" title="- (Object) lex_int2 ">- (Object) lex_int2 </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -344,12 +385,16 @@ io functions.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#peek_equal%3F-instance_method" title="- (Object) peek_equal?(str) ">- (Object) peek_equal?(str) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -358,12 +403,16 @@ io functions.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#skip_inner_expression-instance_method" title="- (Object) skip_inner_expression ">- (Object) skip_inner_expression </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -372,12 +421,16 @@ io functions.
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#ungetc-instance_method" title="- (Object) ungetc(c = nil) ">- (Object) ungetc(c = nil) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -389,273 +442,46 @@ io functions.
   
   <h3 class="inherited">Methods included from <a href="RubyToken.html" title="YARD::Parser::Ruby::Legacy::RubyToken">YARD::Parser::Ruby::Legacy::RubyToken</a></h3>
   <p class="inherited"><a href="RubyToken.html#set_token_position-instance_method" title="#set_token_position">#set_token_position</a>, <a href="RubyToken.html#Token-instance_method" title="#Token">#Token</a>, <a href="RubyToken.html#def_token-class_method" title="def_token">def_token</a></p>
-    <div id="attr_details">
-    <h2>Attribute Details</h2>
-    
-      
-      <span id=""></span>
-      <span id="continue-instance_method"></span>
-      <div class="method_details">
-  <p class="signature first" id="continue-instance_method">
-  
-    - (Object) continue  <span class="extras">(readonly)</span>
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>continue</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-431
-432
-433</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 431</span>
-
-<span class='kw'>def</span> <span class='id continue'>continue</span>
-  <span class='ivar'>@continue</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="exception_on_syntax_error=-instance_method"></span>
-      <span id="exception_on_syntax_error-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="exception_on_syntax_error-instance_method">
-  
-    - (Object) exception_on_syntax_error 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>exception_on_syntax_error</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-462
-463
-464</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 462</span>
-
-<span class='kw'>def</span> <span class='id exception_on_syntax_error'>exception_on_syntax_error</span>
-  <span class='ivar'>@exception_on_syntax_error</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <span id="indent-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="indent-instance_method">
-  
-    - (Object) indent  <span class="extras">(readonly)</span>
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>indent</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-464
-465
-466</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 464</span>
-
-<span class='kw'>def</span> <span class='id indent'>indent</span>
-  <span class='ivar'>@indent</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <span id="lex_state-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="lex_state-instance_method">
-  
-    - (Object) lex_state  <span class="extras">(readonly)</span>
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>lex_state</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-432
-433
-434</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 432</span>
-
-<span class='kw'>def</span> <span class='id lex_state'>lex_state</span>
-  <span class='ivar'>@lex_state</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="read_auto_clean_up=-instance_method"></span>
-      <span id="read_auto_clean_up-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="read_auto_clean_up-instance_method">
-  
-    - (Object) read_auto_clean_up 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>read_auto_clean_up</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-461
-462
-463</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 461</span>
-
-<span class='kw'>def</span> <span class='id read_auto_clean_up'>read_auto_clean_up</span>
-  <span class='ivar'>@read_auto_clean_up</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="skip_space=-instance_method"></span>
-      <span id="skip_space-instance_method"></span>
-      <div class="method_details">
-  <p class="signature " id="skip_space-instance_method">
-  
-    - (Object) skip_space 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-      <p>
-Returns the value of attribute <tt>skip_space</tt>
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-460
-461
-462</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 460</span>
-
-<span class='kw'>def</span> <span class='id skip_space'>skip_space</span>
-  <span class='ivar'>@skip_space</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-<div id="constructor_details">
+  <div id="constructor_details">
   <h2>Constructor Details</h2>
   
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(content) 
+    - (<tt><a href="" title="RubyLex">RubyLex</a></tt>) initialize(content) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>RubyLex</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="RubyLex">RubyLex</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>RubyLex</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -713,13 +539,263 @@ Returns the value of attribute <tt>skip_space</tt>
 </div>
   
 </div>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="continue-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="continue-instance_method">
+  
+    - (<tt>Object</tt>) continue  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>continue</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 431</span>
+
+<span class='kw'>def</span> <span class='id continue'>continue</span>
+  <span class='ivar'>@continue</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="exception_on_syntax_error=-instance_method"></span>
+      <span id="exception_on_syntax_error-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="exception_on_syntax_error-instance_method">
+  
+    - (<tt>Object</tt>) exception_on_syntax_error 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>exception_on_syntax_error</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+462
+463
+464</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 462</span>
+
+<span class='kw'>def</span> <span class='id exception_on_syntax_error'>exception_on_syntax_error</span>
+  <span class='ivar'>@exception_on_syntax_error</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="indent-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="indent-instance_method">
+  
+    - (<tt>Object</tt>) indent  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>indent</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+464
+465
+466</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 464</span>
+
+<span class='kw'>def</span> <span class='id indent'>indent</span>
+  <span class='ivar'>@indent</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="lex_state-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="lex_state-instance_method">
+  
+    - (<tt>Object</tt>) lex_state  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>lex_state</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+432
+433
+434</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 432</span>
+
+<span class='kw'>def</span> <span class='id lex_state'>lex_state</span>
+  <span class='ivar'>@lex_state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="read_auto_clean_up=-instance_method"></span>
+      <span id="read_auto_clean_up-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="read_auto_clean_up-instance_method">
+  
+    - (<tt>Object</tt>) read_auto_clean_up 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>read_auto_clean_up</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+461
+462
+463</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 461</span>
+
+<span class='kw'>def</span> <span class='id read_auto_clean_up'>read_auto_clean_up</span>
+  <span class='ivar'>@read_auto_clean_up</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="skip_space=-instance_method"></span>
+      <span id="skip_space-instance_method"></span>
+      <div class="method_details">
+  <p class="signature " id="skip_space-instance_method">
+  
+    - (<tt>Object</tt>) skip_space 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute <tt>skip_space</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+460
+461
+462</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 460</span>
+
+<span class='kw'>def</span> <span class='id skip_space'>skip_space</span>
+  <span class='ivar'>@skip_space</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="debug?-class_method">
   
-    + (Object) debug? 
+    + (<tt>Object</tt>) debug? 
   
 
   
@@ -747,7 +823,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="char_no-instance_method">
   
-    - (Object) char_no 
+    - (<tt>Object</tt>) char_no 
   
 
   
@@ -775,7 +851,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="get_read-instance_method">
   
-    - (Object) get_read 
+    - (<tt>Object</tt>) get_read 
   
 
   
@@ -803,7 +879,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="getc-instance_method">
   
-    - (Object) getc 
+    - (<tt>Object</tt>) getc 
   
 
   
@@ -831,7 +907,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="getc_of_rests-instance_method">
   
-    - (Object) getc_of_rests 
+    - (<tt>Object</tt>) getc_of_rests 
   
 
   
@@ -859,7 +935,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="gets-instance_method">
   
-    - (Object) gets 
+    - (<tt>Object</tt>) gets 
   
 
   
@@ -899,7 +975,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_comment-instance_method">
   
-    - (Object) identify_comment 
+    - (<tt>Object</tt>) identify_comment 
   
 
   
@@ -965,7 +1041,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_gvar-instance_method">
   
-    - (Object) identify_gvar 
+    - (<tt>Object</tt>) identify_gvar 
   
 
   
@@ -1055,7 +1131,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_here_document-instance_method">
   
-    - (Object) identify_here_document 
+    - (<tt>Object</tt>) identify_here_document 
   
 
   
@@ -1173,7 +1249,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_identifier-instance_method">
   
-    - (Object) identify_identifier 
+    - (<tt>Object</tt>) identify_identifier 
   
 
   
@@ -1357,7 +1433,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_number-instance_method">
   
-    - (Object) identify_number(start) 
+    - (<tt>Object</tt>) identify_number(start) 
   
 
   
@@ -1501,7 +1577,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_quotation-instance_method">
   
-    - (Object) identify_quotation(initial_char) 
+    - (<tt>Object</tt>) identify_quotation(initial_char) 
   
 
   
@@ -1559,7 +1635,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="identify_string-instance_method">
   
-    - (Object) identify_string(ltype, quoted = ltype, opener = nil, initial_char = nil) 
+    - (<tt>Object</tt>) identify_string(ltype, quoted = ltype, opener = nil, initial_char = nil) 
   
 
   
@@ -1679,7 +1755,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="lex-instance_method">
   
-    - (Object) lex 
+    - (<tt>Object</tt>) lex 
   
 
   
@@ -1731,7 +1807,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="lex_init-instance_method">
   
-    - (Object) lex_init 
+    - (<tt>Object</tt>) lex_init 
   
 
   
@@ -2103,7 +2179,7 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="lex_int2-instance_method">
   
-    - (Object) lex_int2 
+    - (<tt>Object</tt>) lex_int2 
   
 
   
@@ -2499,16 +2575,15 @@ Returns the value of attribute <tt>skip_space</tt>
       <div class="method_details">
   <p class="signature " id="line_no-instance_method">
   
-    - (Object) line_no 
+    - (<tt>Object</tt>) line_no 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 io functions
 </p>
-
 
   </div>
 </div>
@@ -2538,7 +2613,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="peek-instance_method">
   
-    - (Object) peek(i = 0) 
+    - (<tt>Object</tt>) peek(i = 0) 
   
 
   
@@ -2566,7 +2641,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="peek_equal?-instance_method">
   
-    - (Object) peek_equal?(str) 
+    - (<tt>Object</tt>) peek_equal?(str) 
   
 
   
@@ -2594,7 +2669,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="read_escape-instance_method">
   
-    - (Object) read_escape 
+    - (<tt>Object</tt>) read_escape 
   
 
   
@@ -2742,7 +2817,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="skip_inner_expression-instance_method">
   
-    - (Object) skip_inner_expression 
+    - (<tt>Object</tt>) skip_inner_expression 
   
 
   
@@ -2792,7 +2867,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="token-instance_method">
   
-    - (Object) token 
+    - (<tt>Object</tt>) token 
   
 
   
@@ -2856,7 +2931,7 @@ io functions
       <div class="method_details">
   <p class="signature " id="ungetc-instance_method">
   
-    - (Object) ungetc(c = nil) 
+    - (<tt>Object</tt>) ungetc(c = nil) 
   
 
   

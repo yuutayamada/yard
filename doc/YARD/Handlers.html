@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Module: YARD::Handlers</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../glossary.html">Glossary (H)</a> :: 
+    <a href="../_index.html">Index (H)</a> &raquo; 
     <a href="../YARD.html" title="YARD">YARD</a>
-     :: 
-    Handlers
+     &raquo; 
+    <span class="title">Handlers</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -47,13 +46,25 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/yard/autoload.rb<span class="defines">,<br />
-  lib/yard/handlers/base.rb,<br /> lib/yard/handlers/processor.rb,<br /> lib/yard/handlers/ruby/base.rb,<br /> lib/yard/handlers/ruby/legacy/base.rb</div>
+  lib/yard/handlers/base.rb,<br /> lib/yard/handlers/processor.rb,<br /> lib/yard/handlers/ruby/base.rb,<br /> lib/yard/handlers/ruby/legacy/base.rb</span>
 </dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Handlers are called during the data processing part of YARD&#8217;s parsing
+phase. This allows YARD as well as any custom extension to analyze source
+and generate <tt><a href="CodeObjects.html" title="CodeObjects">CodeObjects</a></tt> to be stored for later use.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
 <p class="children">
    
     

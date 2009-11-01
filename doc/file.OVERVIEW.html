@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>File: Overview</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
     
@@ -12,21 +12,20 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="glossary.html" title="Glossary">Glossary</a> :: 
-    File: OVERVIEW
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: Overview</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -44,7 +43,7 @@ that tools like RDoc do not do. These components are:</p>
 <ul>
 <li><a href="#parsing">Code Parsing &amp; Processing Component</a></li>
 <li><a href="#storage">Data Storage Component</a></li>
-<li><a href="#generators">Post Processing &amp; Output Generation Component</a></li>
+<li><a href="#templates">Post Processing &amp; Templating System</a></li>
 </ul>
 
 
@@ -69,10 +68,10 @@ tasks during the data gathering process (<em>note: the tag architecture is not</
 <em>shown in the class diagram</em>). These sub-components are:</p>
 
 <ul>
-<li><a href="file.PARSER.html" title="Parser Architecture">Parser Architecture</a></li>
-<li><a href="file.HANDLERS.html" title="Handler Architecture">Handler Architecture</a></li>
-<li><a href="file.CODE_OBJECTS.html" title="Code Object Architecture">Code Object Architecture</a></li>
-<li><a href="file.TAGS.html" title="Tag Architecture">Tag Architecture</a></li>
+<li><a href="file.Parser.html" title="Parser Architecture">Parser Architecture</a></li>
+<li><a href="file.Handlers.html" title="Handler Architecture">Handler Architecture</a></li>
+<li><a href="file.CodeObjects.html" title="Code Object Architecture">Code Object Architecture</a></li>
+<li><a href="file.Tags.html" title="Tag Architecture">Tag Architecture</a></li>
 </ul>
 
 
@@ -91,18 +90,14 @@ is the centralized repository for all data being parsed, stored and accessed. Th
 are future plans to improve this storage mechanism to be backend agnostic and allow
 for more robust storage.</p>
 
-<p><a name="generators"></a></p>
+<p><a name="templates"></a></p>
 
-<h2>Post Processing &amp; Output Generation Component</h2>
+<h2>Post Processing &amp; Templating System</h2>
 
 <p>This component handles processing of objects from the registry through a templating
 engine that allows output to a variety of formats. Practically speaking, this is
 where templates can be implemented to change the design, output or structure of
-the data. The next release, 0.2.4, will see a significant change in the design of
-this component, so documentation might be sparse for now.</p>
-
-<p>The current design is documented in the <a href="file.GENERATORS.html" title="Generators Architecture">Generators Architecture</a>
-document.</p></div></div>
+the data. See <a href="file.Templates.html" title="Templates Architecture">Templates Architecture</a> for a complete overview.</p></div></div>
     
     <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
   </body>

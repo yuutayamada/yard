@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Parser::Ruby::Legacy::RubyToken::Token</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../../glossary.html">Glossary (T)</a> :: 
-    <a href="../../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../../Parser.html" title="Parser">Parser</a> :: <a href="../../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../../Legacy.html" title="Legacy">Legacy</a> :: <a href="../RubyToken.html" title="RubyToken">RubyToken</a>
-     :: 
-    Token
+    <a href="../../../../../_index.html">Index (T)</a> &raquo; 
+    <a href="../../../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../../../Ruby.html" title="Ruby">Ruby</a> &raquo; <a href="../../Legacy.html" title="Legacy">Legacy</a> &raquo; <a href="../RubyToken.html" title="RubyToken">RubyToken</a>
+     &raquo; 
+    <span class="title">Token</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -58,15 +57,21 @@
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><a href="TkBlockContents.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkBlockContents">YARD::Parser::Ruby::Legacy::RubyToken::TkBlockContents</a>, <a href="TkStatementEnd.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkStatementEnd">YARD::Parser::Ruby::Legacy::RubyToken::TkStatementEnd</a>, <a href="TkNode.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkNode">YARD::Parser::Ruby::Legacy::RubyToken::TkNode</a>, <a href="TkWhitespace.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkWhitespace">YARD::Parser::Ruby::Legacy::RubyToken::TkWhitespace</a>, <a href="TkId.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkId">YARD::Parser::Ruby::Legacy::RubyToken::TkId</a>, <a href="TkVal.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkVal">YARD::Parser::Ruby::Legacy::RubyToken::TkVal</a>, <a href="TkOp.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkOp">YARD::Parser::Ruby::Legacy::RubyToken::TkOp</a>, <a href="TkUnknownChar.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkUnknownChar">YARD::Parser::Ruby::Legacy::RubyToken::TkUnknownChar</a>, <a href="TkError.html" title="YARD::Parser::Ruby::Legacy::RubyToken::TkError">YARD::Parser::Ruby::Legacy::RubyToken::TkError</a></p>
+</div>
   <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="NO_TEXT-constant ">NO_TEXT =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>??</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id freeze'>freeze</span></pre></dd>
-    
-  </dl>
+  
+    <dl class="constants">
+      
+        <dt id="NO_TEXT-constant ">NO_TEXT =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>??</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
   <h2>Attribute Summary</h2>
   <ul class="summary">
     
@@ -111,9 +116,14 @@ Returns the value of attribute <tt>text</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(line_no, char_no) ">- (Object) initialize(line_no, char_no) </a>
+        <a href="#initialize-instance_method" title="- (Token) initialize(line_no, char_no) ">- (Token) initialize(line_no, char_no) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>Token</tt>.
+
+</span>
         
       </li>
     
@@ -130,6 +140,71 @@ Because we&#8217;re used in contexts that expect to return a token,.
       </li>
     
   </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Token">Token</a></tt>) initialize(line_no, char_no) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>Token</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Token">Token</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Token</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id line_no'>line_no</span><span class='comma'>,</span> <span class='id char_no'>char_no</span><span class='rparen'>)</span>
+  <span class='ivar'>@line_no</span> <span class='op'>=</span> <span class='id line_no'>line_no</span>
+  <span class='ivar'>@char_no</span> <span class='op'>=</span> <span class='id char_no'>char_no</span>
+  <span class='ivar'>@text</span>    <span class='op'>=</span> <span class='const'>NO_TEXT</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
   <div id="attr_details">
     <h2>Attribute Details</h2>
     
@@ -139,16 +214,15 @@ Because we&#8217;re used in contexts that expect to return a token,.
       <div class="method_details">
   <p class="signature first" id="char_no-instance_method">
   
-    - (Object) char_no  <span class="extras">(readonly)</span>
+    - (<tt>Object</tt>) char_no  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>char_no</tt>
 </p>
-
 
   </div>
 </div>
@@ -181,16 +255,15 @@ Returns the value of attribute <tt>char_no</tt>
       <div class="method_details">
   <p class="signature " id="lex_state-instance_method">
   
-    - (Object) lex_state 
+    - (<tt>Object</tt>) lex_state 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>lex_state</tt>
 </p>
-
 
   </div>
 </div>
@@ -223,16 +296,15 @@ Returns the value of attribute <tt>lex_state</tt>
       <div class="method_details">
   <p class="signature " id="line_no-instance_method">
   
-    - (Object) line_no  <span class="extras">(readonly)</span>
+    - (<tt>Object</tt>) line_no  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>line_no</tt>
 </p>
-
 
   </div>
 </div>
@@ -265,16 +337,15 @@ Returns the value of attribute <tt>line_no</tt>
       <div class="method_details">
   <p class="signature " id="text-instance_method">
   
-    - (Object) text  <span class="extras">(readonly)</span>
+    - (<tt>Object</tt>) text  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>text</tt>
 </p>
-
 
   </div>
 </div>
@@ -302,59 +373,22 @@ Returns the value of attribute <tt>text</tt>
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize(line_no, char_no) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-19
-20
-21
-22
-23</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/parser/ruby/legacy/ruby_lex.rb', line 19</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id line_no'>line_no</span><span class='comma'>,</span> <span class='id char_no'>char_no</span><span class='rparen'>)</span>
-  <span class='ivar'>@line_no</span> <span class='op'>=</span> <span class='id line_no'>line_no</span>
-  <span class='ivar'>@char_no</span> <span class='op'>=</span> <span class='id char_no'>char_no</span>
-  <span class='ivar'>@text</span>    <span class='op'>=</span> <span class='const'>NO_TEXT</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="set_text-instance_method">
   
-    - (Object) set_text(text) 
+    - (<tt>Object</tt>) set_text(text) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Because we&#8217;re used in contexts that expect to return a token, we set
 the text string and then return ourselves
 </p>
-
 
   </div>
 </div>

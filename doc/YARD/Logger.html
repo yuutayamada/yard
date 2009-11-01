@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Logger</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../glossary.html">Glossary (L)</a> :: 
+    <a href="../_index.html">Index (L)</a> &raquo; 
     <a href="../YARD.html" title="YARD">YARD</a>
-     :: 
-    Logger
+     &raquo; 
+    <span class="title">Logger</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,14 +44,11 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li>Logger</li><ul>
-            
-              <li>YARD::Logger</li><ul>
-            
-            </ul></ul>
-          </ul>
+          
+            <li class="next">Logger</li>
+          
+            <li class="next">YARD::Logger</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -71,13 +67,29 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Handles console logging for info, warnings and errors. Uses the stdlib
+Logger class in Ruby for all the backend logic.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>    <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
-        <a href="#instance-class_method" title="+ (Object) instance(pipe = STDERR) ">+ (Object) instance(pipe = STDERR) </a>
+        <a href="#instance-class_method" title="+ (Logger) instance(pipe = STDERR) ">+ (Logger) instance(pipe = STDERR) </a>
         
         
+        
+          <span class="summary_desc">
+The logger instance.
+
+</span>
         
       </li>
     
@@ -86,12 +98,22 @@
         
         
         
+          <span class="summary_desc">
+Changes the debug level to DEBUG if $DEBUG is set.
+
+</span>
+        
       </li>
     
       <li class="public ">
         <a href="#enter_level-instance_method" title="- (Object) enter_level(new_level = level, &amp;block) ">- (Object) enter_level(new_level = level, &amp;block) </a>
         
         
+        
+          <span class="summary_desc">
+Sets the logger level for the duration of the block.
+
+</span>
         
       </li>
     
@@ -100,12 +122,22 @@
         
         
         
+          <span class="summary_desc">
+Log format (from Logger implementation).
+
+</span>
+        
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(*args) ">- (Object) initialize(*args) </a>
+        <a href="#initialize-instance_method" title="- (Logger) initialize(*args) ">- (Logger) initialize(*args) </a>
         
         
+        
+          <span class="summary_desc">
+Creates a new logger.
+
+</span>
         
       </li>
     
@@ -116,24 +148,53 @@
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(*args) 
+    - (<tt><a href="" title="Logger">Logger</a></tt>) initialize(*args) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a new logger
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Logger">Logger</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Logger</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-9
-10
-11
-12
-13</pre>
+14
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -152,22 +213,51 @@
       <div class="method_details">
   <p class="signature first" id="instance-class_method">
   
-    + (Object) instance(pipe = STDERR) 
+    + (<tt><a href="" title="Logger">Logger</a></tt>) instance(pipe = STDERR) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The logger instance
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Logger">Logger</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the logger instance
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-5
-6
-7</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id instance'>instance</span><span class='lparen'>(</span><span class='id pipe'>pipe</span> <span class='op'>=</span> <span class='const'>STDERR</span><span class='rparen'>)</span>
   <span class='ivar'>@logger</span> <span class='op'>||=</span> <span class='id new'>new</span><span class='lparen'>(</span><span class='id pipe'>pipe</span><span class='rparen'>)</span>
@@ -180,23 +270,34 @@
       <div class="method_details">
   <p class="signature " id="debug-instance_method">
   
-    - (Object) debug(*args) 
+    - (<tt>Object</tt>) debug(*args) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Changes the debug level to DEBUG if $DEBUG is set and writes a debugging
+message.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
-18</pre>
+22
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id debug'>debug</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id level'>level</span> <span class='op'>=</span> <span class='const'>DEBUG</span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
@@ -210,32 +311,84 @@
       <div class="method_details">
   <p class="signature " id="enter_level-instance_method">
   
-    - (Object) enter_level(new_level = level, &amp;block) 
+    - (<tt>Object</tt>) enter_level(new_level = level, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      
+    <p>
+Sets the logger level for the duration of the block
+</p>
 
   </div>
 </div>
 <div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='id log'>log</span><span class='period'>.</span><span class='id enter_level'>enter_level</span><span class='lparen'>(</span><span class='const'>Logger</span><span class='op'>::</span><span class='const'>ERROR</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='const'>YARD</span><span class='period'>.</span><span class='id parse_string'>parse_string</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def x; end</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <span class='name'>new_level</span>
+      
+      
+        <em class="default">(defaults to: <tt>level</tt>)</em>
+      
+      
+        &mdash;
+        
+the logger level for the duration of the block. values can be found in
+Ruby&#8217;s Logger class.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Yields:</h3>
+<ul class="yield">
+  
+    <li>
+      
+      
+      
+      
+        
+        
+the block with the logger temporarily set to <tt>new_level</tt>
+
+
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-20
-21
-22
-23
-24</pre>
+36
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id enter_level'>enter_level</span><span class='lparen'>(</span><span class='id new_level'>new_level</span> <span class='op'>=</span> <span class='id level'>level</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span> 
   <span class='id old_level'>old_level</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id level'>level</span> <span class='op'>=</span> <span class='id level'>level</span><span class='comma'>,</span> <span class='id new_level'>new_level</span>
@@ -250,22 +403,32 @@
       <div class="method_details">
   <p class="signature " id="format_log-instance_method">
   
-    - (Object) format_log(sev, time, prog, msg) 
+    - (<tt>Object</tt>) format_log(sev, time, prog, msg) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Log format (from Logger implementation)
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-26
-27
-28</pre>
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/logging.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id format_log'>format_log</span><span class='lparen'>(</span><span class='id sev'>sev</span><span class='comma'>,</span> <span class='id time'>time</span><span class='comma'>,</span> <span class='id prog'>prog</span><span class='comma'>,</span> <span class='id msg'>msg</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id sev'>sev</span><span class='period'>.</span><span class='id downcase'>downcase</span><span class='rbrace'>}</span><span class='tstring_content'>]: </span><span class='embexpr_beg'>#{</span><span class='id msg'>msg</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>

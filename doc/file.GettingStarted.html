@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>File: GettingStarted</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
     
@@ -12,21 +12,20 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="glossary.html" title="Glossary">Glossary</a> :: 
-    File: GETTING_STARTED
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: GettingStarted</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -206,6 +205,15 @@ own tags adding metadata for such an overload.</p>
 
 <pre class="code">@param [optional, types, ...] argname description
 </pre></li>
+<li><p><code>@private</code>: Defines an object as private. This exists for classes,
+modules and constants that do not obey Ruby's visibility rules. For
+instance, an inner class might be considered "private", though Ruby
+would make no such distinction. By declaring the @private tag, the
+class can be hidden from documentation by using the <code>--no-private</code>
+command-line switch to yardoc (see <a href="file.README.html" title="README.markdown">README.markdown</a>).</p>
+
+<pre class="code"><span class='ivar'>@private</span>
+</pre></li>
 <li><p><code>@raise</code>: Describes an Exception that a method may throw</p>
 
 <pre class="code">@raise [ExceptionClass] description
@@ -259,7 +267,7 @@ names the block yields.</p>
 <p>To minimize rewriting of documentation and to ease maintenance, a special
 tag syntax is allowed to reference tags from other objects. Doing this allows
 a tag to be added as meta-data for multiple objects. A full example of this
-syntax is found in the <a href="file.TAGS.html#reftags" title="TAGS.markdown">TAGS.markdown</a> file.</p>
+syntax is found in the <a href="file.Tags.html#reftags" title="Tags">Tags</a> file.</p>
 
 <p><strong>Inter-Document Links</strong></p>
 
@@ -279,7 +287,7 @@ documentation to HTML document files. In addition to this, YARD ships with
 two more tools allowing you to quickly view <code>ri</code>-style documentation for
 a specific class or method as well as an extra tool to generate UML diagrams
 for your code using <a href="http://www.graphviz.org">Graphviz</a>. An overview of these tools can
-be found in the <a href="index.html" title="README">README</a> under the Usage section.</p>
+be found in the <a href="file.README.html" title="README">README</a> under the Usage section.</p>
 
 <p><a name="extending"></a></p>
 
@@ -288,22 +296,22 @@ be found in the <a href="index.html" title="README">README</a> under the Usage s
 <p>There are many ways to extend YARD to support non-standard Ruby syntax (DSLs),
 add new meta-data tags or programmatically access the intermediate metadata
 and documentation from code. An overview of YARD's full architecture can be
-found in the <a href="file.OVERVIEW.html" title="OVERVIEW.markdown">OVERVIEW.markdown</a> document.</p>
+found in the <a href="file.Overview.html" title="Overview.md">Overview.md</a> document.</p>
 
-<p>For information on adding support for Ruby DSLs, see the <a href="file.HANDLERS.html" title="HANDLERS.markdown">HANDLERS.markdown</a>
-and <a href="file.PARSER.html" title="PARSER.markdown">PARSER.markdown</a> architecture documents.</p>
+<p>For information on adding support for Ruby DSLs, see the <a href="file.Handlers.html" title="Handlers.md">Handlers.md</a>
+and <a href="file.Parser.html" title="Parser.md">Parser.md</a> architecture documents.</p>
 
-<p>For information on adding extra tags, see <a href="file.TAGS.html" title="TAGS.markdown">TAGS.markdown</a>.</p>
+<p>For information on adding extra tags, see <a href="file.Tags.html" title="Tags.md">Tags.md</a>.</p>
 
 <p>For information on accessing the data YARD stores about your documentation,
-look at the <a href="file.CODE_OBJECTS.html" title="CODE_OBJECTS.markdown">CODE_OBJECTS.markdown</a> architecture document.</p>
+look at the <a href="file.CodeObjects.html" title="CodeObjects.md">CodeObjects.md</a> architecture document.</p>
 
 <p><a name="templating"></a></p>
 
 <h1>Templating YARD</h1>
 
 <p>In many cases you may want to change the style of YARD's templates or add extra
-information after extending it. The <a href="file.GENERATORS.html" title="GENERATORS.markdown">GENERATORS.markdown</a> architecture
+information after extending it. The <a href="file.Templates.html" title="Templates.md">Templates.md</a> architecture
 document covers the basics of how YARD's templating system works.</p></div></div>
     
     <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>

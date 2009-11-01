@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: Array</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="glossary.html">Glossary (A)</a> :: 
+    <a href="_index.html">Index (A)</a> &raquo; 
     
     
-    Array
+    <span class="title">Array</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -58,13 +57,22 @@
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><a href="YARD/CodeObjects/CodeObjectList.html" title="YARD::CodeObjects::CodeObjectList">YARD::CodeObjects::CodeObjectList</a>, <a href="YARD/Parser/Ruby/AstNode.html" title="YARD::Parser::Ruby::AstNode">YARD::Parser::Ruby::AstNode</a>, <a href="YARD/Parser/Ruby/Legacy/StatementList.html" title="YARD::Parser::Ruby::Legacy::StatementList">YARD::Parser::Ruby::Legacy::StatementList</a>, <a href="YARD/Parser/Ruby/Legacy/TokenList.html" title="YARD::Parser::Ruby::Legacy::TokenList">YARD::Parser::Ruby::Legacy::TokenList</a></p>
+</div>
   <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
-        <a href="#place-instance_method" title="- (Object) place(a) ">- (Object) place(a) </a>
+        <a href="#place-instance_method" title="- (Insertion) place(value) ">- (Insertion) place(value) </a>
         
         
+        
+          <span class="summary_desc">
+Places a value before or after another object (by value) in.
+
+</span>
         
       </li>
     
@@ -75,22 +83,98 @@
       <div class="method_details">
   <p class="signature first" id="place-instance_method">
   
-    - (Object) place(a) 
+    - (<tt><a href="Insertion.html" title="Insertion">Insertion</a></tt>) place(value) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Places a value before or after another object (by value) in an array. This
+is used in tandem with the before and after methods of the <tt><a href="Insertion.html" title="Insertion">Insertion</a></tt>
+class.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Places an item before another
+
+</h4>
+      <pre class="example code">  <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id place'>place</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='period'>.</span><span class='id before'>before</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='comment'># =&gt; [1, 2, 4, 3]</span></pre>
+    
+      <h4>
+Places an item after another
+
+</h4>
+      <pre class="example code">  <span class='lbracket'>[</span><span class='symbol'>:a</span><span class='comma'>,</span> <span class='symbol'>:b</span><span class='comma'>,</span> <span class='symbol'>:c</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id place'>place</span><span class='lparen'>(</span><span class='symbol'>:x</span><span class='rparen'>)</span><span class='period'>.</span><span class='id after'>after</span><span class='lparen'>(</span><span class='symbol'>:a</span><span class='rparen'>)</span> <span class='comment'># =&gt; [:a, :x, :b, :c]</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>value</span>
+      
+      
+      
+        &mdash;
+        
+value to insert
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Insertion.html" title="Insertion">Insertion</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+an insertion object to
+
+
+      
+    </li>
+  
+</ul>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="Insertion.html#before-instance_method" title="Insertion#before">Insertion#before</a></li>
+    
+      <li><a href="Insertion.html#after-instance_method" title="Insertion#after">Insertion#after</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-2</pre>
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 2</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/core_ext/array.rb', line 14</span>
 
-<span class='kw'>def</span> <span class='id place'>place</span><span class='lparen'>(</span><span class='id a'>a</span><span class='rparen'>)</span> <span class='const'>Insertion</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id a'>a</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+<span class='kw'>def</span> <span class='id place'>place</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span> <span class='const'>Insertion</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

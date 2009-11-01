@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>YARD 0.2.3.5 Documentation</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
     
@@ -12,7 +12,6 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
@@ -20,13 +19,13 @@
       <div id="menu">
   
     
-    
+    <span class="title"></span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -35,7 +34,8 @@
     <iframe id="search_frame"></iframe>
     
     <div id="content"><div id="listing">
-  <h1>Glossary</h1>
+  <h1 class="noborder title">YARD 0.2.3.5 Documentation</h1>
+  <h1 class="alphaindex">Alphabetic Index</h1>
   
   
     <h2>File Listing</h2>
@@ -45,37 +45,34 @@
       <li class="r1"><a href="index.html" title="README">README</a></li>
       
     
-      <li class="r2"><a href="file.WHATSNEW.html" title="WHATSNEW">WHATSNEW</a></li>
+      <li class="r2"><a href="file.WhatsNew.html" title="WhatsNew">WhatsNew</a></li>
       
     
-      <li class="r1"><a href="file.GETTING_STARTED.html" title="GETTING_STARTED">GETTING_STARTED</a></li>
+      <li class="r1"><a href="file.GettingStarted.html" title="GettingStarted">GettingStarted</a></li>
       
     
-      <li class="r2"><a href="file.OVERVIEW.html" title="OVERVIEW">OVERVIEW</a></li>
+      <li class="r2"><a href="file.Overview.html" title="Overview">Overview</a></li>
       
     
-      <li class="r1"><a href="file.CODE_OBJECTS.html" title="CODE_OBJECTS">CODE_OBJECTS</a></li>
+      <li class="r1"><a href="file.CodeObjects.html" title="CodeObjects">CodeObjects</a></li>
       
     
-      <li class="r2"><a href="file.TAGS.html" title="TAGS">TAGS</a></li>
+      <li class="r2"><a href="file.Tags.html" title="Tags">Tags</a></li>
       
     
-      <li class="r1"><a href="file.PARSER.html" title="PARSER">PARSER</a></li>
+      <li class="r1"><a href="file.Parser.html" title="Parser">Parser</a></li>
       
     
-      <li class="r2"><a href="file.HANDLERS.html" title="HANDLERS">HANDLERS</a></li>
+      <li class="r2"><a href="file.Handlers.html" title="Handlers">Handlers</a></li>
       
     
-      <li class="r1"><a href="file.GENERATORS.html" title="GENERATORS">GENERATORS</a></li>
+      <li class="r1"><a href="file.Templates.html" title="Templates">Templates</a></li>
       
     
-      <li class="r2"><a href="file.FAQ.html" title="FAQ">FAQ</a></li>
+      <li class="r2"><a href="file.Glossary.html" title="Glossary">Glossary</a></li>
       
     
-      <li class="r1"><a href="file.GLOSSARY.html" title="GLOSSARY">GLOSSARY</a></li>
-      
-    
-      <li class="r2"><a href="file.LICENSE.html" title="LICENSE">LICENSE</a></li>
+      <li class="r1"><a href="file.LICENSE.html" title="LICENSE">LICENSE</a></li>
       
     
     </ul>
@@ -147,20 +144,6 @@
             <ul>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy/Base.html" title="Base">Base</a> 
-                  
-                    <small>(YARD::Handlers::Ruby::Legacy)</small>
-                  
-                </li>
-              
-                <li>
-                  <a href="YARD/Handlers/Base.html" title="Base">Base</a> 
-                  
-                    <small>(YARD::Handlers)</small>
-                  
-                </li>
-              
-                <li>
                   <a href="YARD/Handlers/Ruby/Base.html" title="Base">Base</a> 
                   
                     <small>(YARD::Handlers::Ruby)</small>
@@ -178,6 +161,20 @@
                   <a href="YARD/CodeObjects/Base.html" title="Base">Base</a> 
                   
                     <small>(YARD::CodeObjects)</small>
+                  
+                </li>
+              
+                <li>
+                  <a href="YARD/Handlers/Base.html" title="Base">Base</a> 
+                  
+                    <small>(YARD::Handlers)</small>
+                  
+                </li>
+              
+                <li>
+                  <a href="YARD/Handlers/Ruby/Legacy/Base.html" title="Base">Base</a> 
+                  
+                    <small>(YARD::Handlers::Ruby::Legacy)</small>
                   
                 </li>
               
@@ -218,16 +215,16 @@
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/ClassHandler.html" title="ClassHandler">ClassHandler</a> 
+                  <a href="YARD/Handlers/Ruby/Legacy/ClassHandler.html" title="ClassHandler">ClassHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD::Handlers::Ruby::Legacy)</small>
                   
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy/ClassHandler.html" title="ClassHandler">ClassHandler</a> 
+                  <a href="YARD/Handlers/Ruby/ClassHandler.html" title="ClassHandler">ClassHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby::Legacy)</small>
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
@@ -360,16 +357,16 @@
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/ExceptionHandler.html" title="ExceptionHandler">ExceptionHandler</a> 
+                  <a href="YARD/Handlers/Ruby/Legacy/ExceptionHandler.html" title="ExceptionHandler">ExceptionHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD::Handlers::Ruby::Legacy)</small>
                   
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy/ExceptionHandler.html" title="ExceptionHandler">ExceptionHandler</a> 
+                  <a href="YARD/Handlers/Ruby/ExceptionHandler.html" title="ExceptionHandler">ExceptionHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby::Legacy)</small>
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
@@ -489,16 +486,16 @@
             <ul>
               
                 <li>
-                  <a href="YARD/Parser/Ruby/Legacy.html" title="Legacy">Legacy</a> 
+                  <a href="YARD/Handlers/Ruby/Legacy.html" title="Legacy">Legacy</a> 
                   
-                    <small>(YARD::Parser::Ruby)</small>
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy.html" title="Legacy">Legacy</a> 
+                  <a href="YARD/Parser/Ruby/Legacy.html" title="Legacy">Legacy</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD::Parser::Ruby)</small>
                   
                 </li>
               
@@ -588,16 +585,16 @@
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/MixinHandler.html" title="MixinHandler">MixinHandler</a> 
+                  <a href="YARD/Handlers/Ruby/Legacy/MixinHandler.html" title="MixinHandler">MixinHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD::Handlers::Ruby::Legacy)</small>
                   
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy/MixinHandler.html" title="MixinHandler">MixinHandler</a> 
+                  <a href="YARD/Handlers/Ruby/MixinHandler.html" title="MixinHandler">MixinHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby::Legacy)</small>
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
@@ -617,6 +614,13 @@
                   <a href="YARD/Handlers/Ruby/Legacy/ModuleHandler.html" title="ModuleHandler">ModuleHandler</a> 
                   
                     <small>(YARD::Handlers::Ruby::Legacy)</small>
+                  
+                </li>
+              
+                <li>
+                  <a href="YARD/Templates/Helpers/ModuleHelper.html" title="ModuleHelper">ModuleHelper</a> 
+                  
+                    <small>(YARD::Templates::Helpers)</small>
                   
                 </li>
               
@@ -927,6 +931,13 @@
                 </li>
               
                 <li>
+                  <a href="YARD/Templates/Helpers/TextHelper.html" title="TextHelper">TextHelper</a> 
+                  
+                    <small>(YARD::Templates::Helpers)</small>
+                  
+                </li>
+              
+                <li>
                   <a href="YARD/Parser/Ruby/Legacy/RubyToken/TkBlockContents.html" title="TkBlockContents">TkBlockContents</a> 
                   
                     <small>(YARD::Parser::Ruby::Legacy::RubyToken)</small>
@@ -1048,9 +1059,9 @@
             <ul>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/VisibilityHandler.html" title="VisibilityHandler">VisibilityHandler</a> 
+                  <a href="YARD/Verifier.html" title="Verifier">Verifier</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD)</small>
                   
                 </li>
               
@@ -1058,6 +1069,13 @@
                   <a href="YARD/Handlers/Ruby/Legacy/VisibilityHandler.html" title="VisibilityHandler">VisibilityHandler</a> 
                   
                     <small>(YARD::Handlers::Ruby::Legacy)</small>
+                  
+                </li>
+              
+                <li>
+                  <a href="YARD/Handlers/Ruby/VisibilityHandler.html" title="VisibilityHandler">VisibilityHandler</a> 
+                  
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
@@ -1096,16 +1114,16 @@
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/Legacy/YieldHandler.html" title="YieldHandler">YieldHandler</a> 
+                  <a href="YARD/Handlers/Ruby/YieldHandler.html" title="YieldHandler">YieldHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby::Legacy)</small>
+                    <small>(YARD::Handlers::Ruby)</small>
                   
                 </li>
               
                 <li>
-                  <a href="YARD/Handlers/Ruby/YieldHandler.html" title="YieldHandler">YieldHandler</a> 
+                  <a href="YARD/Handlers/Ruby/Legacy/YieldHandler.html" title="YieldHandler">YieldHandler</a> 
                   
-                    <small>(YARD::Handlers::Ruby)</small>
+                    <small>(YARD::Handlers::Ruby::Legacy)</small>
                   
                 </li>
               

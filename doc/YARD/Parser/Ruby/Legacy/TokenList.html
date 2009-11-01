@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Parser::Ruby::Legacy::TokenList</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../glossary.html">Glossary (T)</a> :: 
-    <a href="../../../../YARD.html" title="YARD">YARD</a> :: <a href="../../../Parser.html" title="Parser">Parser</a> :: <a href="../../Ruby.html" title="Ruby">Ruby</a> :: <a href="../Legacy.html" title="Legacy">Legacy</a>
-     :: 
-    TokenList
+    <a href="../../../../_index.html">Index (T)</a> &raquo; 
+    <a href="../../../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../../../Parser.html" title="Parser">Parser</a> &raquo; <a href="../../Ruby.html" title="Ruby">Ruby</a> &raquo; <a href="../Legacy.html" title="Legacy">Legacy</a>
+     &raquo; 
+    <span class="title">TokenList</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,14 +44,11 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="../../../../Array.html" title="Array">Array</a></li><ul>
-            
-              <li>YARD::Parser::Ruby::Legacy::TokenList</li><ul>
-            
-            </ul></ul>
-          </ul>
+          
+            <li class="next"><a href="../../../../Array.html" title="Array">Array</a></li>
+          
+            <li class="next">YARD::Parser::Ruby::Legacy::TokenList</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -75,13 +71,29 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+  <h2>Constant Summary</h2>
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants included from <a href="RubyToken.html" title="YARD::Parser::Ruby::Legacy::RubyToken">YARD::Parser::Ruby::Legacy::RubyToken</a></h3>
+  <p class="inherited"><a href="RubyToken.html#EXPR_BEG-constant" title="EXPR_BEG">EXPR_BEG</a>, <a href="RubyToken.html#EXPR_MID-constant" title="EXPR_MID">EXPR_MID</a>, <a href="RubyToken.html#EXPR_END-constant" title="EXPR_END">EXPR_END</a>, <a href="RubyToken.html#EXPR_ARG-constant" title="EXPR_ARG">EXPR_ARG</a>, <a href="RubyToken.html#EXPR_FNAME-constant" title="EXPR_FNAME">EXPR_FNAME</a>, <a href="RubyToken.html#EXPR_DOT-constant" title="EXPR_DOT">EXPR_DOT</a>, <a href="RubyToken.html#EXPR_CLASS-constant" title="EXPR_CLASS">EXPR_CLASS</a>, <a href="RubyToken.html#TokenDefinitions-constant" title="TokenDefinitions">TokenDefinitions</a>, <a href="RubyToken.html#TkReading2Token-constant" title="TkReading2Token">TkReading2Token</a>, <a href="RubyToken.html#TkSymbol2Token-constant" title="TkSymbol2Token">TkSymbol2Token</a>, <a href="RubyToken.html#NEWLINE_TOKEN-constant" title="NEWLINE_TOKEN">NEWLINE_TOKEN</a></p>
+  
+  
+  
+    <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(content = nil) ">- (Object) initialize(content = nil) </a>
+        <a href="#initialize-instance_method" title="- (TokenList) initialize(content = nil) ">- (TokenList) initialize(content = nil) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>TokenList</tt>.
+
+</span>
         
       </li>
     
@@ -92,6 +104,8 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
@@ -99,12 +113,16 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#to_s-instance_method" title="- (Object) to_s(full_statement = false, show_block = true) ">- (Object) to_s(full_statement = false, show_block = true) </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -129,11 +147,40 @@
     <div class="method_details">
   <p class="signature first" id="initialize-instance_method">
   
-    - (Object) initialize(content = nil) 
+    - (<tt><a href="" title="TokenList">TokenList</a></tt>) initialize(content = nil) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>TokenList</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="TokenList">TokenList</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>TokenList</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -161,7 +208,7 @@
       <div class="method_details">
   <p class="signature first" id="push-instance_method">
   
-    - (Object) push(*tokens) 
+    - (<tt>Object</tt>) push(*tokens) 
   
 
   
@@ -171,8 +218,7 @@
   
 </p><div class="docstring">
   <div class="discussion">
-      
-
+    
   </div>
 </div>
 <div class="tags">
@@ -244,7 +290,7 @@ A list of tokens. If the token is a string, it is parsed with <tt><a href="RubyL
       <div class="method_details">
   <p class="signature " id="squeeze-instance_method">
   
-    - (Object) squeeze(type = TkSPACE) 
+    - (<tt>Object</tt>) squeeze(type = TkSPACE) 
   
 
   
@@ -274,7 +320,7 @@ A list of tokens. If the token is a string, it is parsed with <tt><a href="RubyL
       <div class="method_details">
   <p class="signature " id="to_s-instance_method">
   
-    - (Object) to_s(full_statement = false, show_block = true) 
+    - (<tt>Object</tt>) to_s(full_statement = false, show_block = true) 
   
 
   

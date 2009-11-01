@@ -1,22 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="custom.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
-
-    <title>PARSER.markdown</title>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>File: Parser</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
   <body>
-    <div id="content">
-      <div class="section docstring readme">
-        <h1>Parser Architecture</h1>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: Parser</span>
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>Parser Architecture</h1>
 
 <p>The parser component of YARD is the first component in the data processing pipeline
 that runs before any handling is done on the source. The parser is meant to translate
-the source into a set of statements that can be understood by the <a href="HANDLERS.markdown.html" title="Handlers">Handlers</a>
+the source into a set of statements that can be understood by the <a href="file.Handlers.html" title="Handlers">Handlers</a>
 that run immediately afterwards.</p>
 
 <p>The important classes are described in the class diagram of the entire parser
@@ -193,14 +214,8 @@ but using the legacy parser it is only one statement:</p>
 
 <p>In addition, this means that most handling still needs to be done via string
 manipulation and regular expression matching, making it considerably more
-difficult to use in edge case scenarios.</p>
-      </div>
-    </div>
-    <div id="yard_info">
-  Generated on Friday, October 16 2009 at 12:40:30 AM by 
-  <abbr class="yard" title="Yay! A Ruby Documentation Tool"><a href="http://yard.soen.ca">YARD</a></abbr> 
-  0.2.3.5 (ruby-1.9.1).
-</div>
-
+difficult to use in edge case scenarios.</p></div></div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
   </body>
 </html>

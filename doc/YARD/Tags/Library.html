@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Tags::Library</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (L)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../Tags.html" title="Tags">Tags</a>
-     :: 
-    Library
+    <a href="../../_index.html">Index (L)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../Tags.html" title="Tags">Tags</a>
+     &raquo; 
+    <span class="title">Library</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -60,7 +59,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Holds all the registered meta tags. If you want to extend YARD and add a
 new meta tag, you can do it in one of two ways.
 </p>
@@ -115,7 +114,6 @@ object with your own by setting <tt><a href="#default_factory%3D-class_method" t
 running YARD. This is useful if you want to change the syntax of existing
 tags (@see, @since, etc.)
 </p>
-
 
   </div>
 </div>
@@ -177,7 +175,7 @@ methods, or the.
       </li>
     
       <li class="public ">
-        <a href="#sorted_labels-class_method" title="+ (Array<Symbol>) sorted_labels ">+ (Array<Symbol>) sorted_labels </a>
+        <a href="#sorted_labels-class_method" title="+ (Array&lt;Symbol&gt;) sorted_labels ">+ (Array&lt;Symbol&gt;) sorted_labels </a>
         
         
         
@@ -189,13 +187,79 @@ Sorts the labels lexically by their label name, often used when displaying.
       </li>
     
       <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize(factory = Library.default_factory) ">- (Object) initialize(factory = Library.default_factory) </a>
+        <a href="#initialize-instance_method" title="- (Library) initialize(factory = Library.default_factory) ">- (Library) initialize(factory = Library.default_factory) </a>
         
         
+        
+          <span class="summary_desc">
+A new instance of <tt>Library</tt>.
+
+</span>
         
       </li>
     
   </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Library">Library</a></tt>) initialize(factory = Library.default_factory) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of <tt>Library</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Library">Library</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Library</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='const'>Library</span><span class='period'>.</span><span class='id default_factory'>default_factory</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='id factory'>factory</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
   <div id="attr_details">
     <h2>Attribute Details</h2>
     
@@ -205,16 +269,15 @@ Sorts the labels lexically by their label name, often used when displaying.
       <div class="method_details">
   <p class="signature first" id="default_factory-class_method">
   
-    + (Object) default_factory 
+    + (<tt>Object</tt>) default_factory 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>default_factory</tt>
 </p>
-
 
   </div>
 </div>
@@ -247,16 +310,15 @@ Returns the value of attribute <tt>default_factory</tt>
       <div class="method_details">
   <p class="signature " id="labels-class_method">
   
-    + (Object) labels  <span class="extras">(readonly)</span>
+    + (<tt>Object</tt>) labels  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Returns the value of attribute <tt>labels</tt>
 </p>
-
 
   </div>
 </div>
@@ -289,16 +351,15 @@ Returns the value of attribute <tt>labels</tt>
       <div class="method_details">
   <p class="signature " id="factory-instance_method">
   
-    - (Object) factory 
+    - (<tt>Object</tt>) factory 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 A factory class to handle parsing of tags, defaults to <tt><a href="#default_factory-class_method" title="default_factory">default_factory</a></tt>
 </p>
-
 
   </div>
 </div>
@@ -326,56 +387,23 @@ A factory class to handle parsing of tags, defaults to <tt><a href="#default_fac
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize(factory = Library.default_factory) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-125
-126
-127</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/tags/library.rb', line 125</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='const'>Library</span><span class='period'>.</span><span class='id default_factory'>default_factory</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id factory'>factory</span> <span class='op'>=</span> <span class='id factory'>factory</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="define_tag-class_method">
   
-    + (Object) define_tag(label, tag, meth = &quot;&quot;) 
+    + (<tt>Object</tt>) define_tag(label, tag, meth = &quot;&quot;) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Convenience method to define a new tag using one of <tt><a href="Tag.html" title="Tag">Tag</a></tt>&#8217;s factory
 methods, or the regular <tt><a href="DefaultFactory.html#parse_tag-instance_method" title="DefaultFactory#parse_tag">DefaultFactory#parse_tag</a></tt> factory method if none
 is supplied.
 </p>
-
 
   </div>
 </div>
@@ -407,6 +435,8 @@ the tag name to create
       
         <span class='name'>meth</span>
       
+      
+        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
       
       
         &mdash;
@@ -476,17 +506,16 @@ class to directly create a tag for
       <div class="method_details">
   <p class="signature " id="sorted_labels-class_method">
   
-    + (Array<Symbol>) sorted_labels 
+    + (<tt><a href="../../Array.html" title="Array">Array</a>&lt;Symbol></tt>) sorted_labels 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
+    <p>
 Sorts the labels lexically by their label name, often used when displaying
 the tags.
 </p>
-
 
   </div>
 </div>

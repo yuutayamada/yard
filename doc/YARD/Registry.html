@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::Registry</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../glossary.html">Glossary (R)</a> :: 
+    <a href="../_index.html">Index (R)</a> &raquo; 
     <a href="../YARD.html" title="YARD">YARD</a>
-     :: 
-    Registry
+     &raquo; 
+    <span class="title">Registry</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -62,49 +61,74 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="DEFAULT_YARDOC_FILE-constant ">DEFAULT_YARDOC_FILE =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.yardoc</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-  </dl>
-  <h2>Attribute Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The <tt>Registry</tt> is the centralized data store for all <tt><a href="CodeObjects.html" title="CodeObjects">CodeObjects</a></tt>
+created during parsing. The storage is a key value store with the
+object&#8217;s path (see <tt><a href="CodeObjects/Base.html#path-instance_method" title="CodeObjects::Base#path">CodeObjects::Base#path</a></tt>) as the key and the
+object itself as the value. Object paths must be unique to be stored in the
+Registry. All lookups for objects are done on the singleton Registry
+instance using the <tt><a href="#at-instance_method" title="Registry#at">Registry#at</a></tt> or <tt><a href="#resolve-instance_method" title="Registry#resolve">Registry#resolve</a></tt> methods.
+</p>
+<p>
+The registry is saved to a &#8220;yardoc&#8221; file, which can be loaded
+back to perform any lookups.
+</p>
+<p>
+This class is a singleton class. Any method called on the class will be
+delegated to the instance.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="DEFAULT_YARDOC_FILE-constant ">DEFAULT_YARDOC_FILE =
+            <span class="summary_desc"></span>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.yardoc</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
+    <h2>Attribute Summary</h2>
   <ul class="summary">
     
-      <li class="public "><a href="#objects-class_method" title="+ (Object) objects ">+ (Object) objects </a> <span class="extras">(readonly)</span>
+      <li class="public "><a href="#objects-class_method" title="+ (Array&lt;CodeObjects::Base&gt;) objects ">+ (Array&lt;CodeObjects::Base&gt;) objects </a> <span class="extras">(readonly)</span>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>objects</tt>.
+Holds the objects cache.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#namespace-instance_method" title="- (Object) namespace ">- (Object) namespace </a>
+      <li class="public "><a href="#namespace-instance_method" title="- (Hash{String =&gt; CodeObjects::Base}) namespace ">- (Hash{String =&gt; CodeObjects::Base}) namespace </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>namespace</tt>.
+The internal namespace hash.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#proxy_types-instance_method" title="- (Object) proxy_types ">- (Object) proxy_types </a> <span class="extras">(readonly)</span>
+      <li class="public "><a href="#proxy_types-instance_method" title="- ({String =&gt; Symbol}) proxy_types ">- ({String =&gt; Symbol}) proxy_types </a> <span class="extras">(readonly)</span>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>proxy_types</tt>.
+The assumed types of a list of paths.
 
 </span>
         
       </li>
     
-      <li class="public "><a href="#yardoc_file-instance_method" title="- (Object) yardoc_file ">- (Object) yardoc_file </a>
+      <li class="public "><a href="#yardoc_file-instance_method" title="- (String) yardoc_file ">- (String) yardoc_file </a>
         
           <span class="summary_desc">
-Returns the value of attribute <tt>yardoc_file</tt>.
+Gets/sets the yardoc filename.
 
 </span>
         
@@ -115,100 +139,223 @@ Returns the value of attribute <tt>yardoc_file</tt>.
   <ul class="summary">
     
       <li class="public ">
-        <a href="#clear-class_method" title="+ (Object) clear ">+ (Object) clear </a>
+        <a href="#clear-class_method" title="+ (nil) clear ">+ (nil) clear </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#all-instance_method" title="- (Object) all(*types) ">- (Object) all(*types) </a>
-        
-        
+          <span class="summary_desc">
+Clears the registry and cache.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#at-instance_method" title="- (Object) at(path) ">- (Object) at(path) </a>
+        <a href="#all-instance_method" title="- (Array&lt;CodeObjects::Base&gt;) all(*types) ">- (Array&lt;CodeObjects::Base&gt;) all(*types) </a>
+        
+        
+        
+          <span class="summary_desc">
+Returns all objects in the registry that match one of the types provided.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#at-instance_method" title="- (CodeObjects::Base) at(path) ">- (CodeObjects::Base) at(path) </a>
         
         (also: #[])
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#clear-instance_method" title="- (Object) clear ">- (Object) clear </a>
-        
-        
+          <span class="summary_desc">
+Returns the object at a specific path.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#delete-instance_method" title="- (Object) delete(object) ">- (Object) delete(object) </a>
+        <a href="#clear-instance_method" title="- (nil) clear ">- (nil) clear </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#initialize-instance_method" title="- (Object) initialize ">- (Object) initialize </a>
-        
-        
+          <span class="summary_desc">
+Clears the registry.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#load-instance_method" title="- (Object) load(files = [], reload = false) ">- (Object) load(files = [], reload = false) </a>
+        <a href="#delete-instance_method" title="- (nil) delete(object) ">- (nil) delete(object) </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#load_yardoc-instance_method" title="- (Object) load_yardoc(file = yardoc_file) ">- (Object) load_yardoc(file = yardoc_file) </a>
-        
-        
+          <span class="summary_desc">
+Deletes an object from the registry.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#paths-instance_method" title="- (Object) paths ">- (Object) paths </a>
+        <a href="#initialize-instance_method" title="- (Registry) initialize ">- (Registry) initialize </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#register-instance_method" title="- (Object) register(object) ">- (Object) register(object) </a>
-        
-        
+          <span class="summary_desc">
+Creates the Registry.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#resolve-instance_method" title="- (Object) resolve(namespace, name, inheritance = false, proxy_fallback = false) ">- (Object) resolve(namespace, name, inheritance = false, proxy_fallback = false) </a>
+        <a href="#load-instance_method" title="- (Boolean) load(files = [], reload = false) ">- (Boolean) load(files = [], reload = false) </a>
         
         
         
-      </li>
-    
-      <li class="public ">
-        <a href="#root-instance_method" title="- (Object) root ">- (Object) root </a>
-        
-        
+          <span class="summary_desc">
+Loads the registry and/or parses a list of files.
+
+</span>
         
       </li>
     
       <li class="public ">
-        <a href="#save-instance_method" title="- (Object) save(file = yardoc_file) ">- (Object) save(file = yardoc_file) </a>
+        <a href="#load_yardoc-instance_method" title="- (nil) load_yardoc(file = yardoc_file) ">- (nil) load_yardoc(file = yardoc_file) </a>
         
         
+        
+          <span class="summary_desc">
+Loads a yardoc file directly.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#paths-instance_method" title="- (Array&lt;String&gt;) paths ">- (Array&lt;String&gt;) paths </a>
+        
+        
+        
+          <span class="summary_desc">
+Returns the paths of all of the objects in the registry.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#register-instance_method" title="- (CodeObjects::Base) register(object) ">- (CodeObjects::Base) register(object) </a>
+        
+        
+        
+          <span class="summary_desc">
+Registers a new object with the registry.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#resolve-instance_method" title="- (CodeObjects::Base) resolve(namespace, name, inheritance = false, proxy_fallback = false) ">- (CodeObjects::Base) resolve(namespace, name, inheritance = false, proxy_fallback = false) </a>
+        
+        
+        
+          <span class="summary_desc">
+Attempts to find an object by name starting at <tt>namespace</tt>,
+performing.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#root-instance_method" title="- (CodeObjects::RootObject) root ">- (CodeObjects::RootObject) root </a>
+        
+        
+        
+          <span class="summary_desc">
+The root namespace object.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#save-instance_method" title="- (Boolean) save(file = yardoc_file) ">- (Boolean) save(file = yardoc_file) </a>
+        
+        
+        
+          <span class="summary_desc">
+Saves the registry to <tt>file</tt>.
+
+</span>
         
       </li>
     
   </ul>
-    <div id="attr_details">
+  <div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Registry">Registry</a></tt>) initialize 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates the Registry
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Registry">Registry</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 161</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span>
+  <span class='ivar'>@yardoc_file</span> <span class='op'>=</span> <span class='const'>DEFAULT_YARDOC_FILE</span>
+  <span class='id clear'>clear</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="attr_details">
     <h2>Attribute Details</h2>
     
       
@@ -217,33 +364,51 @@ Returns the value of attribute <tt>yardoc_file</tt>.
       <div class="method_details">
   <p class="signature first" id="objects-class_method">
   
-    + (Object) objects  <span class="extras">(readonly)</span>
+    + (<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a>></tt>) objects  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
-Returns the value of attribute <tt>objects</tt>
+    <p>
+Holds the objects cache. This attribute should never be accessed directly.
 </p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the objects cache
+
+
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id objects'>objects</span>
   <span class='ivar'>@objects</span>
@@ -259,33 +424,51 @@ Returns the value of attribute <tt>objects</tt>
       <div class="method_details">
   <p class="signature " id="namespace-instance_method">
   
-    - (Object) namespace 
+    - (<tt>Hash{String =&gt;CodeObjects::Base}</tt>) namespace 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
-Returns the value of attribute <tt>namespace</tt>
+    <p>
+The internal namespace hash
 </p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>Hash{String =&gt;CodeObjects::Base}</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the path/object hash
+
+
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-146
-147
-148</pre>
+252
+253
+254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 252</span>
 
 <span class='kw'>def</span> <span class='id namespace'>namespace</span>
   <span class='ivar'>@namespace</span>
@@ -301,33 +484,51 @@ Returns the value of attribute <tt>namespace</tt>
       <div class="method_details">
   <p class="signature " id="proxy_types-instance_method">
   
-    - (Object) proxy_types  <span class="extras">(readonly)</span>
+    - (<tt>{String =&gt;Symbol}</tt>) proxy_types  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
-Returns the value of attribute <tt>proxy_types</tt>
+    <p>
+The assumed types of a list of paths
 </p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt>{String =&gt;Symbol}</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a set of unresolved paths and their assumed type
+
+
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-22
-23
-24</pre>
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id proxy_types'>proxy_types</span>
   <span class='ivar'>@proxy_types</span>
@@ -343,33 +544,57 @@ Returns the value of attribute <tt>proxy_types</tt>
       <div class="method_details">
   <p class="signature " id="yardoc_file-instance_method">
   
-    - (Object) yardoc_file 
+    - (<tt><a href="../String.html" title="String">String</a></tt>) yardoc_file 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-      <p>
-Returns the value of attribute <tt>yardoc_file</tt>
+    <p>
+Gets/sets the yardoc filename
 </p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the yardoc filename
+
+
+      
+    </li>
+  
+</ul>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#DEFAULT_YARDOC_FILE-constant" title="DEFAULT_YARDOC_FILE">DEFAULT_YARDOC_FILE</a></li>
+    
+  </ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id yardoc_file'>yardoc_file</span>
   <span class='ivar'>@yardoc_file</span>
@@ -380,63 +605,52 @@ Returns the value of attribute <tt>yardoc_file</tt>
 </div>
     
   </div>
-<div id="constructor_details">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (Object) initialize 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-87
-88
-89
-90</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 87</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span>
-  <span class='ivar'>@yardoc_file</span> <span class='op'>=</span> <span class='const'>DEFAULT_YARDOC_FILE</span>
-  <span class='id clear'>clear</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
   <div id="method_details">
     <h2>Method Details</h2>
     
       <div class="method_details">
   <p class="signature first" id="clear-class_method">
   
-    + (Object) clear 
+    + (<tt>nil</tt>) clear 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Clears the registry and cache
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
-18</pre>
+32
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id clear'>clear</span>
   <span class='id instance'>instance</span><span class='period'>.</span><span class='id clear'>clear</span> 
@@ -450,31 +664,106 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="all-instance_method">
   
-    - (Object) all(*types) 
+    - (<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a>></tt>) all(*types) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns all objects in the registry that match one of the types provided in
+the <tt>types</tt> list (if <tt>types</tt> is provided).
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Returns all objects
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id all'>all</span></pre>
+    
+      <h4>
+Returns all classes and modules
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id all'>all</span><span class='lparen'>(</span><span class='symbol'>:class</span><span class='comma'>,</span> <span class='symbol'>:module</span><span class='rparen'>)</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Array.html" title="Array">Array</a>&lt;Symbol></tt>)</span>
+      
+      
+        <span class='name'>types</span>
+      
+      
+      
+        &mdash;
+        
+an optional list of types to narrow the objects down by. Equivalent to
+performing a select: <tt>Registry.all.select {|o| types.include(o.type)
+}</tt>
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the list of objects found
+
+
+      
+    </li>
+  
+</ul>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="CodeObjects/Base.html#type-instance_method" title="CodeObjects::Base#type">CodeObjects::Base#type</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65</pre>
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id all'>all</span><span class='lparen'>(</span><span class='op'>*</span><span class='id types'>types</span><span class='rparen'>)</span>
   <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id obj'>obj</span><span class='op'>|</span> 
@@ -496,7 +785,7 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="at-instance_method">
   
-    - (Object) at(path) 
+    - (<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) at(path) 
   
 
   
@@ -504,16 +793,82 @@ Returns the value of attribute <tt>yardoc_file</tt>
     <span class="names">[]</span>
     </span>
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the object at a specific path.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>, <tt>:root</tt>)</span>
+      
+      
+        <span class='name'>path</span>
+      
+      
+      
+        &mdash;
+        
+the pathname to look for. If <tt>path</tt> is <tt>root</tt>, returns the
+<tt><a href="#root-instance_method" title="#root">#root</a></tt> object.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the object at path
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+if no object is found
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-71</pre>
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id at'>at</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span> <span class='id path'>path</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='id root'>root</span> <span class='op'>:</span> <span class='id namespace'>namespace</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='kw'>end</span></pre>
     </td>
@@ -524,24 +879,47 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="clear-instance_method">
   
-    - (Object) clear 
+    - (<tt>nil</tt>) clear 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Clears the registry
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-81
-82
-83
-84
-85</pre>
+153
+154
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id clear'>clear</span>
   <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='const'>SymbolHash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -556,23 +934,67 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="delete-instance_method">
   
-    - (Object) delete(object) 
+    - (<tt>nil</tt>) delete(object) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deletes an object from the registry
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+        <span class='name'>object</span>
+      
+      
+      
+        &mdash;
+        
+the object to remove
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-76
-77
-78
-79</pre>
+146
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> 
   <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span><span class='id object'>object</span><span class='period'>.</span><span class='id path'>path</span><span class='rparen'>)</span>
@@ -586,36 +1008,148 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="load-instance_method">
   
-    - (Object) load(files = [], reload = false) 
+    - (<tt>Boolean</tt>) load(files = [], reload = false) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Loads the registry and/or parses a list of files
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Loads the yardoc file or parses files &#8216;a&#8217;, &#8216;b&#8217; and
+&#8216;c&#8217; (but not both)
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Reparses files &#8216;a&#8217; and &#8216;b&#8217; regardless if yardoc
+file exists
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>, <tt><a href="../Array.html" title="Array">Array</a></tt>)</span>
+      
+      
+        <span class='name'>files</span>
+      
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
+      
+        &mdash;
+        
+if <tt>files</tt> is an Array, it should represent a list of files that
+YARD should parse into the registry. If reload is set to false and the
+yardoc file already exists, these files are skipped. If files is a String,
+it should represent the yardoc file to load into the registry.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>reload</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        
+if reload is false and a yardoc file already exists, any files passed in
+will be ignored.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the registry was successfully loaded
+
+
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+if files is not a String or Array
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id load'>load</span><span class='lparen'>(</span><span class='id files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id reload'>reload</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id files'>files</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -642,25 +1176,71 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="load_yardoc-instance_method">
   
-    - (Object) load_yardoc(file = yardoc_file) 
+    - (<tt>nil</tt>) load_yardoc(file = yardoc_file) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Loads a yardoc file directly
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>)</span>
+      
+      
+        <span class='name'>file</span>
+      
+      
+        <em class="default">(defaults to: <tt>yardoc_file</tt>)</em>
+      
+      
+        &mdash;
+        
+the yardoc file to load.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47</pre>
+84
+85
+86
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id load_yardoc'>load_yardoc</span><span class='lparen'>(</span><span class='id file'>file</span> <span class='op'>=</span> <span class='id yardoc_file'>yardoc_file</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id exists?'>exists?</span><span class='lparen'>(</span><span class='id file'>file</span><span class='rparen'>)</span>
@@ -676,22 +1256,51 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="paths-instance_method">
   
-    - (Object) paths 
+    - (<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="../String.html" title="String">String</a>></tt>) paths 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the paths of all of the objects in the registry.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="../String.html" title="String">String</a>></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+all of the paths in the registry.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id paths'>paths</span>
   <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id k'>k</span><span class='op'>|</span> <span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rbrace'>}</span>
@@ -704,24 +1313,74 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="register-instance_method">
   
-    - (Object) register(object) 
+    - (<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) register(object) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Registers a new object with the registry
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+        <span class='name'>object</span>
+      
+      
+      
+        &mdash;
+        
+the object to register
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the registered object
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-92
-93
-94
-95
-96</pre>
+170
+171
+172
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id register'>register</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id objects'>objects</span><span class='lbracket'>[</span><span class='id object'>object</span><span class='period'>.</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id object'>object</span>
@@ -736,57 +1395,238 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="resolve-instance_method">
   
-    - (Object) resolve(namespace, name, inheritance = false, proxy_fallback = false) 
+    - (<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) resolve(namespace, name, inheritance = false, proxy_fallback = false) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Attempts to find an object by name starting at <tt>namespace</tt>,
+performing a lookup similar to Ruby&#8217;s method of resolving a constant
+in a namespace.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Looks for instance method #reverse starting from A::B::C
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='const'>P</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A::B::C</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#reverse</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Looks for a constant in the root namespace
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CONSTANT</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Looks for a class method respecting the inheritance tree
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='id myclass'>myclass</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mymethod</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Looks for a constant but returns a proxy if not found
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='const'>P</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A::B::C</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>D</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'># =&gt; #&lt;yardoc proxy A::B::C::D&gt;</span></pre>
+    
+      <h4>
+Looks for a complex path from a namespace
+
+</h4>
+      <pre class="example code">  <span class='const'>Registry</span><span class='period'>.</span><span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='const'>P</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A::B</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>B::D</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; #&lt;yardoc class A::B::D&gt;</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/NamespaceObject.html" title="CodeObjects::NamespaceObject">CodeObjects::NamespaceObject</a></tt>, <tt>nil</tt>)</span>
+      
+      
+        <span class='name'>namespace</span>
+      
+      
+      
+        &mdash;
+        
+the starting namespace (module or class). If <tt>nil</tt> or
+<tt>:root</tt>, starts from the <tt><a href="#root-instance_method" title="#root">#root</a></tt> object.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>, <tt>Symbol</tt>)</span>
+      
+      
+        <span class='name'>name</span>
+      
+      
+      
+        &mdash;
+        
+the name (or complex path) to look for from <tt>namespace</tt>.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>inheritance</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        
+Follows inheritance chain (mixins, superclass) when performing name
+resolution if set to <tt>true</tt>.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <span class='name'>proxy_fallback</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        
+If <tt>true</tt>, returns a proxy representing the unresolved path
+(namespace + name) if no object is found.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the object if it is found
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Proxy.html" title="CodeObjects::Proxy">CodeObjects::Proxy</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a Proxy representing the object if <tt>proxy_fallback</tt> is
+<tt>true</tt>.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+if <tt>proxy_fallback</tt> is <tt>false</tt> and no object was found.
+
+
+      
+    </li>
+  
+</ul>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../top-level-namespace.html#P-instance_method" title="P">P</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135</pre>
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 202</span>
 
 <span class='kw'>def</span> <span class='id resolve'>resolve</span><span class='lparen'>(</span><span class='id namespace'>namespace</span><span class='comma'>,</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id inheritance'>inheritance</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id proxy_fallback'>proxy_fallback</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id namespace'>namespace</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>CodeObjects</span><span class='op'>::</span><span class='const'>Proxy</span><span class='rparen'>)</span>
@@ -834,20 +1674,49 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="root-instance_method">
   
-    - (Object) root 
+    - (<tt><a href="CodeObjects/RootObject.html" title="CodeObjects::RootObject">CodeObjects::RootObject</a></tt>) root 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The root namespace object.
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/RootObject.html" title="CodeObjects::RootObject">CodeObjects::RootObject</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the root object in the namespace
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-74</pre>
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id root'>root</span><span class='semicolon'>;</span> <span class='id namespace'>namespace</span><span class='lbracket'>[</span><span class='symbol'>:root</span><span class='rbracket'>]</span> <span class='kw'>end</span></pre>
     </td>
@@ -858,23 +1727,75 @@ Returns the value of attribute <tt>yardoc_file</tt>
       <div class="method_details">
   <p class="signature " id="save-instance_method">
   
-    - (Object) save(file = yardoc_file) 
+    - (<tt>Boolean</tt>) save(file = yardoc_file) 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Saves the registry to <tt>file</tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../String.html" title="String">String</a></tt>)</span>
+      
+      
+        <span class='name'>file</span>
+      
+      
+        <em class="default">(defaults to: <tt>yardoc_file</tt>)</em>
+      
+      
+        &mdash;
+        
+the yardoc file to save to
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the file was saved
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-49
-50
-51
-52</pre>
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/registry.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span><span class='id file'>file</span> <span class='op'>=</span> <span class='id yardoc_file'>yardoc_file</span><span class='rparen'>)</span>
   <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span><span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='ivar'>@namespace</span><span class='comma'>,</span> <span class='ivar'>@proxy_types</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id f'>f</span><span class='rparen'>)</span> <span class='rbrace'>}</span>

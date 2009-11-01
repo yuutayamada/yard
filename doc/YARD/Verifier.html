@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Class: YARD::Verifier</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script type="text/javascript" charset="utf-8">
+      relpath = '..';
+      if (relpath != '') relpath += '/';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (V)</a> &raquo; 
+    <a href="../YARD.html" title="YARD">YARD</a>
+     &raquo; 
+    <span class="title">Verifier</span>
+  
+</div>
+
+      <div id="search">
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
+        <a id ="file_list_link" href="#">File List</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: YARD::Verifier</h1>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/yard/verifier.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Similar to a Proc, but runs a set of Ruby expressions using a small DSL to
+make tag lookups easier.
+</p>
+<p>
+The syntax is as follows:
+</p>
+<ul>
+<li>All syntax is Ruby compatible
+
+</li>
+<li><tt>object</tt> (<tt>o</tt> for short) exist to access the object being
+verified
+
+</li>
+<li><tt>@TAGNAME</tt> is translated into <tt>object.tag('TAGNAME')</tt>
+
+</li>
+<li><tt>@@TAGNAME</tt> is translated into <tt>object.tags('TAGNAME')</tt>
+
+</li>
+<li><tt>object</tt> can be omitted as target for method calls (it is implied)
+
+</li>
+</ul>
+
+  </div>
+</div>
+<div class="tags">
+    <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Create a verifier to check for objects that don&#8217;t have @private tags
+
+</h4>
+      <pre class="example code">  <span class='id verifier'>verifier</span> <span class='op'>=</span> <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>!@private</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id verifier'>verifier</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> <span class='comment'># =&gt; true (no @private tag)</span></pre>
+    
+      <h4>
+Create a verifier to find any return tag with an empty description
+
+</h4>
+      <pre class="example code">  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@return.text.empty?</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='comment'># Equivalent to:
+</span>  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>object.tag(:return).text.empty?</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Check if there are any @param tags
+
+</h4>
+      <pre class="example code">  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@@param.empty?</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='comment'># Equivalent to:
+</span>  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>object.tags(:param).empty?</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Using <tt>object</tt> or <tt>o</tt> to look up object attributes directly
+
+</h4>
+      <pre class="example code">  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>object.docstring == &quot;hello world&quot;</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='comment'># Equivalent to:
+</span>  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>o.docstring == &quot;hello world&quot;</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Without using <tt>object</tt> or <tt>o</tt>
+
+</h4>
+      <pre class="example code">  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tag(:return).size == 1 || has_tag?(:author)</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+      <h4>
+Specifying multiple expressions
+
+</h4>
+      <pre class="example code">  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@return</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@param</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@yield</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='comment'># Equivalent to:
+</span>  <span class='const'>Verifier</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@return &amp;&amp; @param &amp;&amp; @yield</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></pre>
+    
+  </div>
+
+</div>  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public "><a href="#object-instance_method" title="- (CodeObjects::Base) object ">- (CodeObjects::Base) object </a> <span class="extras">(readonly)</span>
+        
+          <span class="summary_desc">
+The current object being tested.
+
+</span>
+        
+      </li>
+    
+  </ul>
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+        <a href="#call-instance_method" title="- (Boolean) call(object) ">- (Boolean) call(object) </a>
+        
+        
+        
+          <span class="summary_desc">
+Tests the expressions on the object.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#initialize-instance_method" title="- (Verifier) initialize(*expressions) ">- (Verifier) initialize(*expressions) </a>
+        
+        
+        
+          <span class="summary_desc">
+Creates a verifier from a set of expressions.
+
+</span>
+        
+      </li>
+    
+      <li class="public ">
+        <a href="#method_missing-instance_method" title="- (Object) method_missing(sym, *args, &amp;block) ">- (Object) method_missing(sym, *args, &amp;block) </a>
+        
+        
+        
+          <span class="summary_desc">
+Passes any method calls to the object from the <tt><a href="#call-instance_method" title="#call">#call</a></tt>.
+
+</span>
+        
+      </li>
+    
+  </ul>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Verifier">Verifier</a></tt>) initialize(*expressions) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a verifier from a set of expressions
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Array.html" title="Array">Array</a>&lt;<a href="../String.html" title="String">String</a>></tt>)</span>
+      
+      
+        <span class='name'>expressions</span>
+      
+      
+      
+        &mdash;
+        
+a list of Ruby expressions to parse.
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Verifier">Verifier</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new instance of <tt>Verifier</tt>
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/verifier.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id expressions'>expressions</span><span class='rparen'>)</span>
+  <span class='id create_method_from_expressions'>create_method_from_expressions</span><span class='lparen'>(</span><span class='id expressions'>expressions</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) method_missing(sym, *args, &amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Passes any method calls to the object from the <tt><a href="#call-instance_method" title="#call">#call</a></tt>
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/verifier.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id method_missing'>method_missing</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id object'>object</span><span class='period'>.</span><span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='rparen'>)</span>
+    <span class='id object'>object</span><span class='period'>.</span><span class='id send'>send</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="object-instance_method"></span>
+      <div class="method_details">
+  <p class="signature first" id="object-instance_method">
+  
+    - (<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>) object  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">o</span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current object being tested
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the current object being tested
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/verifier.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id object'>object</span>
+  <span class='ivar'>@object</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details">
+  <p class="signature first" id="call-instance_method">
+  
+    - (<tt>Boolean</tt>) call(object) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tests the expressions on the object
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="CodeObjects/Base.html" title="CodeObjects::Base">CodeObjects::Base</a></tt>)</span>
+      
+      
+        <span class='name'>object</span>
+      
+      
+      
+        &mdash;
+        
+the object to verify
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the result of the expressions
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yard/verifier.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id call'>call</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span>
+  <span class='id modify_nilclass'>modify_nilclass</span>
+  <span class='ivar'>@object</span> <span class='op'>=</span> <span class='id object'>object</span>
+  <span class='id retval'>retval</span> <span class='op'>=</span> <span class='id __execute'>__execute</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+  <span class='id unmodify_nilclass'>unmodify_nilclass</span>
+  <span class='id retval'>retval</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+</div>
+    
+    <div id="footer">Powered by yard 0.2.3.5 (ruby-1.9.1)</div>
+  </body>
+</html>

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=UTF-8" />
     <title>Class: YARD::CodeObjects::RootObject</title>
@@ -12,23 +12,22 @@
       if (relpath != '') relpath += '/';
     </script>
     <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/autocomplete.js"></script>
     <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
   </head>
   <body>
     <div id="header">
       <div id="menu">
   
-    <a href="../../glossary.html">Glossary (R)</a> :: 
-    <a href="../../YARD.html" title="YARD">YARD</a> :: <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
-     :: 
-    RootObject
+    <a href="../../_index.html">Index (R)</a> &raquo; 
+    <a href="../../YARD.html" title="YARD">YARD</a> &raquo; <a href="../CodeObjects.html" title="CodeObjects">CodeObjects</a>
+     &raquo; 
+    <span class="title">RootObject</span>
   
 </div>
 
       <div id="search">
-        <a id="class_list_link" href="#">Namespace List</a> |
-        <a id="method_list_link" href="#">Method List</a> |
+        <a id="class_list_link" href="#">Namespace List</a>
+        <a id="method_list_link" href="#">Method List</a>
         <a id ="file_list_link" href="#">File List</a>
       </div>
       <div class="clear"></div>
@@ -45,18 +44,15 @@
       
         <ul class="fullTree">
           <li>Object</li>
-          <ul>
-            
-              <li><a href="Base.html" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></li><ul>
-            
-              <li><a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></li><ul>
-            
-              <li><a href="ModuleObject.html" title="YARD::CodeObjects::ModuleObject">YARD::CodeObjects::ModuleObject</a></li><ul>
-            
-              <li>YARD::CodeObjects::RootObject</li><ul>
-            
-            </ul></ul></ul></ul>
-          </ul>
+          
+            <li class="next"><a href="Base.html" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a></li>
+          
+            <li class="next"><a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></li>
+          
+            <li class="next"><a href="ModuleObject.html" title="YARD::CodeObjects::ModuleObject">YARD::CodeObjects::ModuleObject</a></li>
+          
+            <li class="next">YARD::CodeObjects::RootObject</li>
+          
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
@@ -75,7 +71,27 @@
 </dl>
 <div class="clear"></div>
 
-  <h2>Method Summary</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Represents the root namespace object (the invisible Ruby module that holds
+all top level modules, class and other objects).
+</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>  
+  
+  
+    
+  
+  
+    
+  
+  
+    <h2>Method Summary</h2>
   <ul class="summary">
     
       <li class="public ">
@@ -83,12 +99,16 @@
         
         
         
+          <span class="summary_desc"></span>
+        
       </li>
     
       <li class="public ">
         <a href="#path-instance_method" title="- (Object) path ">- (Object) path </a>
         
         
+        
+          <span class="summary_desc"></span>
         
       </li>
     
@@ -106,7 +126,7 @@
   
   
   <h3 class="inherited">Methods inherited from <a href="NamespaceObject.html" title="YARD::CodeObjects::NamespaceObject">YARD::CodeObjects::NamespaceObject</a></h3>
-  <p class="inherited"><a href="NamespaceObject.html#initialize-instance_method" title="#initialize">#initialize</a>, <a href="NamespaceObject.html#class_attributes-instance_method" title="#class_attributes">#class_attributes</a>, <a href="NamespaceObject.html#instance_attributes-instance_method" title="#instance_attributes">#instance_attributes</a>, <a href="NamespaceObject.html#child-instance_method" title="#child">#child</a>, <a href="NamespaceObject.html#included_meths-instance_method" title="#included_meths">#included_meths</a>, <a href="NamespaceObject.html#included_constants-instance_method" title="#included_constants">#included_constants</a>, <a href="NamespaceObject.html#mixins-instance_method" title="#mixins">#mixins</a></p>
+  <p class="inherited"><a href="NamespaceObject.html#initialize-instance_method" title="#initialize">#initialize</a></p>
   
   
   
@@ -122,7 +142,7 @@
 </div>
 <div id="method_missing_details">
   <h2>Dynamic Method Handling</h2>
-  <p class="notice">
+  <p class="notice super">
     This class handles dynamic methods through the <tt>method_missing</tt> method
     
       in the class <a href="Base.html#method_missing-instance_method" title="YARD::CodeObjects::Base">YARD::CodeObjects::Base</a>
@@ -136,7 +156,7 @@
       <div class="method_details">
   <p class="signature first" id="inspect-instance_method">
   
-    - (Object) inspect 
+    - (<tt>Object</tt>) inspect 
   
 
   
@@ -146,10 +166,10 @@
       <pre class="lines">
 
 
-5</pre>
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/root_object.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/root_object.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id inspect'>inspect</span><span class='semicolon'>;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;yardoc root&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>end</span></pre>
     </td>
@@ -160,7 +180,7 @@
       <div class="method_details">
   <p class="signature " id="path-instance_method">
   
-    - (Object) path 
+    - (<tt>Object</tt>) path 
   
 
   
@@ -170,10 +190,10 @@
       <pre class="lines">
 
 
-4</pre>
+6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/root_object.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/yard/code_objects/root_object.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id path'>path</span><span class='semicolon'>;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>end</span></pre>
     </td>
