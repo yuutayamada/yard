@@ -67,7 +67,7 @@ describe YARD::CodeObjects::Proxy do
     pathobj = ModuleObject.new(:root, :YARD)
     obj = P(pathobj, "A::B#test")
     obj.name.should == :test
-    obj.path.should == "A::B#test"
+    obj.path.should == "YARD::A::B#test"
   end
   
   it "should allow type to be changed" do
@@ -111,5 +111,11 @@ describe YARD::CodeObjects::Proxy do
     
     # Now it should resolve
     proxy.type.should == :module
+  end
+  
+  it "should return namespace in path if proxy is inside namespace" do
+    foo = ModuleObject.new(:root, :Foo)
+    proxy = Proxy.new(foo, 'Bar::Baz')
+    proxy.path.should == "Foo::Bar::Baz"
   end
 end

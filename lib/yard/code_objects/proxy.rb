@@ -84,18 +84,20 @@ module YARD
         if obj = to_obj
           obj.path
         else
-          if @namespace.root?
-            (@imethod ? ISEP : "") + name.to_s
-          elsif @origname
-            if @origname =~ /^[A-Z]/
-              @origname
-            else
-              [namespace.path, @origname].join
-            end
-          elsif name.to_s =~ /^[A-Z]/ # const
-            name.to_s
-          else # class meth?
-            [namespace.path, name.to_s].join(CSEP)
+          if @imethod
+            sep = ISEP
+          elsif name.to_s =~ /^[A-Z]/
+            sep = NSEP
+          else
+            sep = CSEP
+          end
+          
+          if namespace.is_a?(Base) && namespace.root?
+            (sep == ISEP ? sep : "") + name.to_s
+          elsif !namespace.path.empty?
+            [namespace.path, name.to_s].join(sep)
+          else
+            @origname || name.to_s
           end
         end
       end

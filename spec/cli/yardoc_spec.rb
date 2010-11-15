@@ -276,7 +276,7 @@ describe YARD::CLI::Yardoc do
     it "should not call #tag on namespace if namespace is proxy with --no-private" do
       Registry.clear
       YARD.parse_string "module Qux; class Foo::Bar; end; end"
-      foobar = Registry.at('Foo::Bar')
+      foobar = Registry.at('Qux::Foo::Bar')
       foobar.namespace.type = :module
       @yardoc.parse_arguments *%w( --no-private )
       @yardoc.options[:verifier].call(foobar).should == true

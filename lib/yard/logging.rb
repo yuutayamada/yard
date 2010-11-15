@@ -35,7 +35,7 @@ module YARD
       return unless show_backtraces
       error "#{exc.class.class_name}: #{exc.message}"
       error "Stack trace:" + 
-        exc.backtrace[0..5].map {|x| "\n\t#{x}" }.join + "\n"
+        exc.backtrace.map {|x| "\n\t#{x}" }.join + "\n"
     end
     
     # Sets the logger level for the duration of the block
