@@ -1,0 +1,3 @@
+[submodule "vendor/rubygems-backports"]
+	path = vendor/rubygems-backports
+	url = git://github.com/lsegal/rubygems-backports
