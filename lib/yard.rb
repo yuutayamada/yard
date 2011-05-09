@@ -41,6 +41,11 @@ rescue Exception
   CONTINUATIONS_SUPPORTED = false
 end
 
+# Backport RubyGems SourceIndex and other classes
+if defined?(Gem::VERSION) && Gem::VERSION >= "1.8.0"
+  require File.join(YARD::ROOT, *%w(.. vendor rubygems-backports lib rubygems-backports))
+end
+
 # Load Ruby core extension classes
 Dir.glob(File.join(YARD::ROOT, 'yard', 'core_ext', '*.rb')).each do |file|
   require file
