@@ -42,8 +42,12 @@ rescue Exception
 end
 
 # Backport RubyGems SourceIndex and other classes
-if defined?(Gem::VERSION) && Gem::VERSION >= "1.8.0"
-  require File.join(YARD::ROOT, *%w(.. vendor rubygems-backports lib rubygems-backports))
+begin
+  require 'rubygems'
+  if defined?(Gem::VERSION) && Gem::VERSION >= "1.8.0"
+    require File.join(YARD::ROOT, *%w(.. vendor rubygems-backports lib rubygems-backports))
+  end
+rescue LoadError
 end
 
 # Load Ruby core extension classes
