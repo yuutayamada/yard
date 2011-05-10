@@ -45,7 +45,8 @@ end
 begin
   require 'rubygems'
   if defined?(Gem::VERSION) && Gem::VERSION >= "1.8.0"
-    require File.join(YARD::ROOT, *%w(.. vendor rubygems-backports lib rubygems-backports))
+    path = %w(.. vendor rubygems-backports lib rubygems-backports)
+    require File.join(YARD::ROOT, *path)
   end
 rescue LoadError
 end
