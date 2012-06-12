@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-12 17:02+0900\n"
+"PO-Revision-Date: 2012-06-12 18:26+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -170,16 +170,15 @@ msgstr ""
 "意味している。"
 
 #: ../README.md:66
-#, fuzzy
 msgid ""
 "**3. Custom Constructs and Extensibility of YARD**: YARD is designed to be\n"
 "extended and customized by plugins. Take for instance the scenario where "
 "you\n"
 "need to document the following code:"
 msgstr ""
-"**3. カスタム構成とYARDの拡張性**: YARDは拡張及び\n"
-"プラグインでカスタマイズできるように設計されている。\n"
-"例えば、次のコードをドキュメント化する必要がある場合"
+"** 3. YARDのカスタムコンストラクタと拡張性 **: YARDは\n"
+"プラグインによって拡張やカスタマイズする為に設計されている。\n"
+"例えばあなたが次のコードのドキュメントの場所を必要とするシナリオを考える。"
 
 #: ../README.md:70
 msgid ""
@@ -260,7 +259,6 @@ msgstr ""
 "コードの未処理例外を明らかにすること、などがある。"
 
 #: ../README.md:98
-#, fuzzy
 msgid ""
 "**5. Local Documentation Server**: YARD can serve documentation for "
 "projects\n"
@@ -273,19 +271,17 @@ msgid ""
 "YARD will do all the work in re-generating the HTML. This makes writing\n"
 "documentation a much faster process."
 msgstr ""
-"**5. ローカルドキュメントサーバー**: YARDは動的な検索や、\n"
-"live reloadの恩恵を追加すると共に、\n"
-"プロジェクトまたはインストール済みのgemの\n"
-"ドキュメント作成を提供する。(`gem server`と同様)\n"
-"live reloadを使うことによって、\n"
-"あなたのコードを記述できる、又は、\n"
-"そのページをリフレッシュすることによって直ちに結果をプレビューできる。\n"
-"YARDはHTMLの再生成の全ての仕事をする。\n"
+"**5. Local Documentation Server**:\n"
+"YARDは動的な検索も再ロードの利点も用い\n"
+"プロジェクトやインストール済みのgem(`gem server`と同様)用のドキュメント作成を提供する。\n"
+"live reload機能によって,あなたのコードを記述したり\n"
+"ページをリフレーシュする事によって結果をすぐにプレビューできる\n"
+"YARDはHTML再生成の全ての仕事をする\n"
 "これによりドキュメントの作成をより高速のプロセスで行える。"
 
 #: ../README.md:106
 msgid "## Installing"
-msgstr ""
+msgstr "## インストール"
 
 #: ../README.md:108
 msgid "To install YARD, use the following command:"
@@ -301,16 +297,14 @@ msgstr ""
 "(もしPOSIXシステムのルート下でインストールしている場合、sudoを追加する)"
 
 #: ../README.md:114
-#, fuzzy
 msgid ""
 "Alternatively, if you've checked the source out directly, you can call\n"
 "`rake install` from the root project directory."
 msgstr ""
 "上のコマンドの代わりに、もしソースを直接チェックアウトしたならば、\n"
-"あなたはプロジェクトのルートディレクトリから`rake install`で呼び出せる。"
+"あなたはプロジェクトのルートディレクトリから`rake install`を行う事ができる"
 
 #: ../README.md:117
-#, fuzzy
 msgid ""
 "**Important Note for Debian/Ubuntu users:** there's a possible chance your "
 "Ruby\n"
@@ -318,11 +312,10 @@ msgid ""
 "HTML.\n"
 "If running `which rdoc` turns up empty, install RDoc by issuing:"
 msgstr ""
-"**Debian/Ubuntuユーザーへの重要な注意:** 時々HTMLにマークアップを変換する為"
-"に\n"
-"YARDによって使われるが、RubyがRDoc無しでインストールしてしまう可能性があ"
-"る。\n"
-"もし`which rdoc`コマンドでパスが存在しない場合は、RDocをインストールする。"
+"**Debian/Ubuntuユーザーへの重要な注意:**\n"
+"RubyがRDocなしでinstallされる可能性がある。\n"
+"RDocはYARDによってマークアップをHTMLに変換する為に時々使われるので、\n"
+"もし`which rdoc`コマンドでパスが存在しない場合は、次のコマンドでRDocをインストールする。"
 
 #: ../README.md:121
 msgid "    $ sudo apt-get install rdoc"
@@ -330,9 +323,8 @@ msgstr ""
 
 # YARD::CLI::Yardoc
 #: ../README.md:124
-#, fuzzy
 msgid "## Usage"
-msgstr "== 使用法"
+msgstr "## 使用法"
 
 #: ../README.md:126
 msgid ""
@@ -381,7 +373,6 @@ msgid ""
 msgstr ""
 
 #: ../README.md:144
-#, fuzzy
 msgid ""
 "The most common command you will probably use is `yard doc`, or `yardoc`. "
 "You\n"
@@ -393,20 +384,18 @@ msgid ""
 "specify\n"
 "paths and globs from the commandline via:"
 msgstr ""
-"恐らく使用される最も一般的なコマンドは`yard doc`、または`yardoc`となる。\n"
-"YARDが提供するオプションを見る為に`yardoc --help`をタイプできる。\n"
+"恐らく最も使用される一般的なコマンドは`yard doc`、または`yardoc`となるだろう。\n"
+"YARDが提供するオプションを見るには`yardoc --help`をタイプする事で表示できる。\n"
 "でも、ドキュメントを生成するのに最も簡単な方法は、\n"
-"あなたのプロジェクトのルートの中で`yardoc`をタイプする。\n"
-"これによって、\n"
-"あなたのファイルは`lib/`ディレクトリの中にあるとみなされ、\n"
-"もし他の場所にあるなら、コマンドラインからパスとglobを指定できる。"
+"あなたのプロジェクトのルートで`yardoc`をタイプする方法である。\n"
+"これはあなたのファイルが`lib/`ディレクトリの中で示されるとみなす。\n"
+"もし他の場所にあるなら、次のようにコマンドラインからパスとglobを指定する:"
 
 #: ../README.md:151
 msgid "    $ yardoc 'lib/**/*.rb' 'app/**/*.rb' ...etc..."
 msgstr ""
 
 #: ../README.md:153
-#, fuzzy
 msgid ""
 "The tool will generate a `.yardoc` file which will store the cached "
 "database\n"
@@ -417,9 +406,8 @@ msgstr ""
 "このツールは`.yardoc`ファイルを生成する。それは\n"
 "あなたのソースコードとドキュメントをキャッシュしたデータベースを格納する。\n"
 "もしあなたが他のテンプレートと共にドキュメントを再生成したいなら、\n"
-"あなたは`--use-cache` (or -c) オプションを使えばよい。\n"
-"これによって、ソースの解析をスキップしドキュメント生成の処理をスピードアップ"
-"する。"
+"単に`--use-cache` (or -c) オプションを使えばよい。\n"
+"ソースの解析をスキップする事によって生成プロセスをスピードアップする。"
 
 #: ../README.md:158
 msgid ""
@@ -474,18 +462,15 @@ msgstr ""
 "次の事に留意する。READMEファイルは自身の`--readme`引数と共に指定される。"
 
 #: ../README.md:179
-#, fuzzy
 msgid ""
 "You can also add a `.yardopts` file to your project directory which lists\n"
 "the switches separated by whitespace (newlines or space) to pass to yardoc\n"
 "whenever it is run. A full overview of the `.yardopts` file can be found in\n"
 "{YARD::CLI::Yardoc}."
 msgstr ""
-"yardocを起動したときのプロジェクトのディレクトリパスは、\n"
-"`.yardopts`ファイルに追加することもできる。\n"
-"その場合はスペースによってその引数を区切り、リストする。\n"
-"`.yardopts`ファイルの全ての概要は、 {YARD::CLI::Yardoc} で見つけることができ"
-"る。"
+"あなたはあなたのプロジェクトディレクトリに`.yardopts`を追加することもできる。\n"
+"これは起動する時に毎回、スペースによって区切られた引数のリストをyardocに渡す。\n"
+"`.yardopts`ファイルの全ての概要は、 {YARD::CLI::Yardoc} で見つけることができる。"
 
 #: ../README.md:184
 msgid "### Queries"
