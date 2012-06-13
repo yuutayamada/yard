@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-13 13:13+0900\n"
+"PO-Revision-Date: 2012-06-13 16:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1536,15 +1536,12 @@ msgid "# Getting Started with YARD"
 msgstr "# YARDを使い始めるには"
 
 #: ../docs/GettingStarted.md:5
-#, fuzzy
 msgid ""
 "There are a few ways which YARD can be of use to you or your project. This\n"
 "document will cover the most common ways to use YARD:"
 msgstr ""
-"YARDには、あなたやあなたのプロジェクトの助けとなるいくつか使用方法がある"
-"が、\n"
-"このドキュメントでは、以下の目次の様な最も一般的なYARDの使い方について説明す"
-"る。"
+"YARDには、あなたやあなたのプロジェクトの助けとなるいくつか使用方法があるが、\n"
+"このドキュメントでは、以下の目次の様な最も一般的なYARDの使い方について説明する。"
 
 #: ../docs/GettingStarted.md:8
 msgid ""
@@ -1669,7 +1666,6 @@ msgid "## Which Markup Format?"
 msgstr "## どのマークアップ書式を使う？"
 
 #: ../docs/GettingStarted.md:66
-#, fuzzy
 msgid ""
 "YARD does not impose a specific markup. The above example uses standard "
 "RDoc\n"
@@ -1683,9 +1679,8 @@ msgid ""
 msgstr ""
 "YARDは特定のマークアップを強要しない。\n"
 "上の例は標準のRDocマークアップ書式を例として使ったが、\n"
-"それだけではなく、YARDは同様にtextileやmarkdownや\n"
-"コマンドライン経由の操作または`.yardopts`ファイルをも\n"
-"サポートする。(以下参照)\n"
+"それだけではなく、\n"
+"コマンドラインや`.yardopts`ファイル経由でtexttileとmarkdownもサポートする(以下参照)\n"
 "これが意味することは、\n"
 "あなたが好きなどんな書式を使おうとも自由である。\n"
 "このガイドは実際にmarkdownを使って書かれている。\n"
@@ -1702,17 +1697,16 @@ msgid "## Adding Tags to Documentation"
 msgstr "## ドキュメントにつけられているタグ"
 
 #: ../docs/GettingStarted.md:76
-#, fuzzy
 msgid ""
 "The tag syntax that YARD uses is the same @tag-style syntax you may have "
 "seen\n"
 "if you've ever coded in Java, Python, PHP, Objective-C or a myriad of other\n"
 "languages. The following tag adds an author tag to your class:"
 msgstr ""
-"もし今までにJava,Python,PHP,Objective-Cまたは無数の他の言語を使ったことがあっ"
-"たら\n"
-"YARDが使うタグ構文は、あなたが見たことがある@tag-style構文と同様となる。\n"
-"次のタグ構文はあなたのクラス(MyClass)に作者(author)タグを追加する。"
+"YARDが使うタグ構文は,もしあなたが今まで\n"
+"Java, Python, PHP, Objective-Cや無数の他の言語をプログラミングした事があれば\n"
+"既にあなたが見たことがある@tagスタイルと同じ構文である\n"
+"次のタグはauthorタグをあなたのクラスに追加する:"
 
 #: ../docs/GettingStarted.md:80
 msgid ""
@@ -1830,7 +1824,6 @@ msgstr ""
 "その時はできればテキストを、`(see ...)`文の次の行に追加すべきである。"
 
 #: ../docs/GettingStarted.md:130
-#, fuzzy
 msgid ""
 "Note that we don't have to \"refer\" the whole docstring. We can also link\n"
 "individual tags instead. Since \"get\" and \"post\" actually have different\n"
@@ -1841,8 +1834,7 @@ msgstr ""
 "必ずしもdocstring全体を\"参照\"する必要はなく、\n"
 "代わりに個々のタグをリンクすることができる。\n"
 "実際に異なる説明を持っている\"get\"と\"post\"から、\n"
-"より正確な例はパラメータやリターンタグ参照だけになる。\n"
-"例:"
+"より正確な例はパラメータやリターンタグ参照だけになる。"
 
 #: ../docs/GettingStarted.md:135
 msgid ""
@@ -1928,7 +1920,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:171
-#, fuzzy
 msgid ""
 "Note the latter example can be replaced by the meta-type \"Boolean\".\n"
 "Another meta-type is \"void\", which stands for \"no meaningful value\"\n"
@@ -1936,9 +1927,9 @@ msgid ""
 "only, but are recommended."
 msgstr ""
 "次の事に留意する。\n"
-"後の例は、meta-typeを\"Boolean\"に変えることができる、そして、\n"
-"numeric型は\"Number\"に変えることができる。\n"
-"これらのmeta-typeは慣例で使われているだけだが、推奨されている。"
+"後の例は、メタタイプの\"Boolean\"によって置換される。\n"
+"他のメタタイプは\"void\"であり\"意味のない値\"用であり、戻り値用に利用される\n"
+"これらのメタタイプは慣習で利用されるだけだが推奨される"
 
 #: ../docs/GettingStarted.md:176
 msgid ""
@@ -1957,7 +1948,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:182
-#, fuzzy
 msgid ""
 "We mentioned that these type fields are \"mostly\" free-form. In truth, "
 "they\n"
@@ -1970,13 +1960,13 @@ msgid ""
 "more\n"
 "\"formal\" type specification proposal."
 msgstr ""
-"これらの型フィールドは\"大部分\"がフリーフォームと述べた。\n"
-"実際には、慣例によって定義される。\n"
-"詳細な型の記述の為、に一般的な型の仕様や推奨される慣習の一覧を見るには、\n"
-"[http://yardoc.org/types.html](http://yardoc.org/types.html)を参照。\n"
-"次の事に留意する。\n"
-"私達は正式な型指定の提案に取り組んでいるものの、\n"
-"これらの慣例は時々変わるかもしれないということ。"
+"\n"
+"我々が述べてきたこれらのフィールドの型は殆どがフリーフォームである。\n"
+"実のところ,それらは慣習によって定義される。\n"
+"型の指定用に一般的な型指定の例や推奨される慣習を調べるには、\n"
+"[http://yardoc.org/types.html](http://yardoc.org/types.html)を参照\n"
+"これらの慣習はいつの日か変更されるかもしれない、\n"
+"けれども我々はより正式な型指定の提案に取りかかっている。"
 
 #: ../docs/GettingStarted.md:189
 msgid "## Documenting DSL Methods"
@@ -2001,8 +1991,7 @@ msgstr ""
 "とはいうものの、フレームワークやライブラリでは、\n"
 "大抵似たようなメタプログラミング作業を実行するカスタムメソッドを目にする。\n"
 "そして、それはアプリケーションの中にある機能を記述する為に便利である。\n"
-"[DataMapper](http://datamapper.org)のようにプロジェクトの中の`property`メソッ"
-"ドを考え、\n"
+"[DataMapper](http://datamapper.org)のようにプロジェクトの中の`property`メソッドを考え、\n"
 "そして、データベースモデル用の属性の型を作成すると\n"
 "コー​​ドは次のようになる。"
 
@@ -2040,7 +2029,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:216
-#, fuzzy
 msgid ""
 "Note that YARD uses the first argument in the method call to determine the\n"
 "method name. In some cases, this would not be the method name, and you "
@@ -2048,8 +2036,8 @@ msgid ""
 "need to declare it manually. You can do so with the `@!method` directive:"
 msgstr ""
 "次の事に留意する。\n"
-"YARDはメソッド名を決定するのに、メソッド呼び出しの最初の引数を使う。\n"
-"もし、このメソッド名でない場合、手動で宣言する必要がある。\n"
+"YARDはメソッド名を決定するのに、メソッド呼び出しの最初に引数を使う。\n"
+"もし、これがメソッド名でない場合、手動で宣言する必要がある。\n"
 "下の`@method`タグで宣言を行うことができる。"
 
 #: ../docs/GettingStarted.md:220
@@ -2059,11 +2047,12 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:223
-#, fuzzy
 msgid ""
 "The @!method directive can also accept a full method signature with "
 "parameters:"
-msgstr "@methodタグは全てのメソッド用法とパラメータを受け入れることもできる。"
+msgstr ""
+"@!method 命令は\n"
+"完全なメソッドのシグネチャ受け入れる事もできる。"
 
 #: ../docs/GettingStarted.md:225
 msgid ""
@@ -2090,7 +2079,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:237
-#, fuzzy
 msgid ""
 "Finally, you can tag a method as an attribute by replacing the @!method\n"
 "tag with @!attribute. The @!attribute directive allows for the flags [r], "
@@ -2098,11 +2086,10 @@ msgid ""
 "or [rw] to declare a readonly, writeonly, or readwrite attribute, "
 "respectively."
 msgstr ""
-"最終的に、@attributeタグを用い@methodタグを\n"
+"最終的に、@!attributeタグを用い@!methodタグを\n"
 "置換する事によって属性の様にメソッドのタグが出来る。\n"
-"@attributeタグは、[r],[w]や[rw]フラグで\n"
-"それぞれに読み込み、書き込み、読み書き属性の宣言を\n"
-"受け入れる。"
+"読み込み専用,書込み専用,読み書きOK,個々に指定を宣言する為に\n"
+"@!attirbute指令は[r], [w], [rw]フラグ用に受け入れる\n"
 
 #: ../docs/GettingStarted.md:241
 msgid ""
@@ -2112,13 +2099,12 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:245
-#, fuzzy
 msgid ""
 "(Note that if the name can be automatically detected, you do not need to\n"
 "specify it in the @!method or @!attribute directives)"
 msgstr ""
 "(次のことに留意する。\n"
-"名前が自動で認められる場合、@methodや@attributeタグの記入を\n"
+"名前が自動で認められる場合、@!methodや@!attributeタグの記入を\n"
 "必要としないことに注意する。)"
 
 #: ../docs/GettingStarted.md:248
@@ -2407,7 +2393,6 @@ msgid "### Embedding Files `{include:file:...}`"
 msgstr "### ファイルの埋め込み `{include:file:...}`"
 
 #: ../docs/GettingStarted.md:372
-#, fuzzy
 msgid ""
 "You can embed the contents of files using `{include:file:path/to/file}`,\n"
 "similar to the `{include:OBJECT}` tag above. If the file uses a specific "
@@ -2415,12 +2400,11 @@ msgid ""
 "type, it will be applied and embedded as marked up text. The following\n"
 "shows how the tag can be used inside of comments:"
 msgstr ""
-"上の`{include:OBJECT}`タグと同様に、\n"
-"あなたはその内容を埋め込むことができる。\n"
-"ファイルは`{include:file:path/to/file}`を用いる。\n"
-"もしファイルが特定のマークアップ型を使う場合は、\n"
-"マークアップテキストとして適用され組み込まれる。\n"
-"以下は、どのタグがコメントの内部で使うことができるか表す。"
+"`{include:file:path/to/file}`は上の`{include:OBJECT}`タグと同様に\n"
+"使う事によってファイルの内容を埋め込む事ができる。\n"
+"ファイルが特定のマークアップの型を使う場合は,\n"
+"マークアップテキストとして埋め込まれ適用される。\n"
+"次はコメントの内部で利用されるタグにどのようなものがあるか一覧する。"
 
 #: ../docs/GettingStarted.md:377
 msgid ""
@@ -2449,13 +2433,10 @@ msgstr ""
 "以下のREADMEファイルの内部のドキュメントを考えてみる。"
 
 #: ../docs/GettingStarted.md:388
-#, fuzzy
 msgid ""
 "    !!!plain\n"
 "    = igLatinPay!"
 msgstr ""
-"        !!!plain\n"
-"    = igLatinPay!"
 
 #: ../docs/GettingStarted.md:391
 msgid ""
@@ -2498,15 +2479,14 @@ msgid "### `yard` Executable"
 msgstr "### 実行可能な`yard`コマンド"
 
 #: ../docs/GettingStarted.md:409
-#, fuzzy
 msgid ""
 "YARD ships with a single executable aptly named `yard`. In addition to\n"
 "generating standard documentation for your project, you would use this tool\n"
 "if you wanted to:"
 msgstr ""
 "YARDは単一で適切に実行可能な'yard'コマンドとして送り出す。\n"
-"あなたのプロジェクトの為の標準ドキュメントを生成することに加え\n"
-"以下のツールを使える。"
+"あなたのプロジェクトの為の標準のドキュメントを生成することに加え、\n"
+"次のツールも使える。"
 
 #: ../docs/GettingStarted.md:413
 msgid ""
@@ -2525,7 +2505,6 @@ msgstr ""
 "* ドキュメントの統計を解析する"
 
 #: ../docs/GettingStarted.md:420
-#, fuzzy
 msgid ""
 "The following commands are available in YARD 0.6.x (see `yard help` for a\n"
 "full list):"
@@ -2627,7 +2606,6 @@ msgid ""
 msgstr "あなたの`.yardopts`設定にコマンドラインに渡された引数は追加される。"
 
 #: ../docs/GettingStarted.md:461
-#, fuzzy
 msgid ""
 "Note that options for `yardoc` are discussed in the {file:README.md "
 "README},\n"
@@ -2635,9 +2613,8 @@ msgid ""
 "Yardoc}."
 msgstr ""
 "次の事に留意する。\n"
-"`yardoc`の設定は、{file:README.md README}の中で説明されている。\n"
-"そして、`.yardopts`ファイルの全ての概要は{YARD::CLI::Yardoc}中で見つけられ"
-"る。"
+"`yardoc`用のオプションは {file:README.md README} の中で説明される。\n"
+"全ての`.yardopts`ファイルの概要は {YARD::CLI::Yardoc} の中で見つけられる。"
 
 #: ../docs/GettingStarted.md:464
 msgid "### Documenting Extra Files"
@@ -2702,7 +2679,6 @@ msgid "#### Adding Meta-Data to Extra Files"
 msgstr "#### 追加のファイルにメタデータを追加する"
 
 #: ../docs/GettingStarted.md:486
-#, fuzzy
 msgid ""
 "You can add YARD-style `@tag` metadata to the top of any extra file if "
 "prefixed\n"
@@ -2713,12 +2689,10 @@ msgid ""
 "data\n"
 "in a README:"
 msgstr ""
-"もし`#`ハッシュ記号を使ったコメントによってプレフィックスしたら\n"
-"あなたは何らかの特別なファイルの一番上に、\n"
-"YARDスタイルの`@tag`メタデータを追加できる。\n"
+"`#`のハッシュコメントによってプレフィックスした場合、\n"
+"任意の追加のファイルのトップにYARDスタイルの`@tag`メタデータを追加できる。\n"
 "YARDは任意のメタデータを受け入れる。\n"
-"しかし、`@markup`,`@encoding`,`@title`については、\n"
-"特別な注意を払う必要がある。\n"
+"しかし`@markup`,`@encoding`,`@title`タグには特別な注意を払わなければならない。\n"
 "次の事に留意する。\n"
 "タグの前に空白があってはならない。\n"
 "これはREADMEの中のいくつかのタグデータの例:"
@@ -2735,7 +2709,6 @@ msgid "    This is the best library you will ever meet. Lipsum ..."
 msgstr "    これはあなたが出会う最高のライブラリとなる。以下略..."
 
 #: ../docs/GettingStarted.md:498
-#, fuzzy
 msgid ""
 "The `@markup` tag allows you to specify a markup format to use for the "
 "file,\n"
@@ -2753,7 +2726,6 @@ msgstr ""
 "あなたが(拡張子の)自動検出を上書きしたい時に使われる。"
 
 #: ../docs/GettingStarted.md:504
-#, fuzzy
 msgid ""
 "By using `@encoding` you can specify a non-standard encoding. Note that\n"
 "`yardoc --charset` sets the global encoding (for all comments / files),\n"
@@ -2767,10 +2739,8 @@ msgstr ""
 "`@encoding`を使用することによって、\n"
 "あなたは非標準のエンコーディングを指定できる。\n"
 "次の事に留意する。\n"
-"`yardoc --charset`は全体のエンコーディングを設定する(全てのコメント/ファイル"
-"で)、\n"
-"なので、もしあなたがで全てのファイルでユニコードを使っているなら、それを指定"
-"できる。\n"
+"`yardoc --charset`は全体のエンコーディングを設定する(全てのコメント/ファイル)、\n"
+"なので、もしあなたが全てのファイルでユニコードを使っているならこれを指定できる。\n"
 "例えば、ローカライズした`README.jp`ファイルとSJISデータをもっていたら\n"
 "`@encoding`タグを使うことによって、default global charsetを上書きする為に\n"
 "使うことができる。\n"
@@ -2866,7 +2836,6 @@ msgid "## Extending YARD"
 msgstr "## YARDを拡張する"
 
 #: ../docs/GettingStarted.md:549
-#, fuzzy
 msgid ""
 "There are many ways to extend YARD to support non-standard Ruby syntax "
 "(DSLs),\n"
@@ -2874,10 +2843,9 @@ msgid ""
 "and documentation from code. An overview of YARD's full architecture can be\n"
 "found in the {file:docs/Overview.md} document."
 msgstr ""
-"非標準のRuby構文(DSL)をサポートする為にYARDを拡張するには、\n"
-"沢山の方法がある。\n"
+"非標準のRuby構文(DSL)をサポートするのにYARDを拡張するための沢山の方法がある。\n"
 "新しいメタデータタグの追加や\n"
-"プログラムで中間のメタデータにアクセスする方法、\n"
+"プログラム的に中間のメタデータにアクセスする方法、\n"
 "コードから記述する方法など。\n"
 "YARDの全体構造の概要は、\n"
 "{file:docs/Overview.md}ドキュメントの中で見つけられる。"
@@ -2932,7 +2900,6 @@ msgid "## Plugin Support"
 msgstr "## プラグインサポート"
 
 #: ../docs/GettingStarted.md:574
-#, fuzzy
 msgid ""
 "As of 0.4, YARD will automatically load any gem named with the prefix of\n"
 "`yard-` or `yard_`. You can use this to load a custom plugin that\n"
