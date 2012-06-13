@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-13 18:44+0900\n"
+"PO-Revision-Date: 2012-06-13 19:10+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3533,13 +3533,11 @@ msgstr ""
 "文の設定の中へ変換するよう意図されている。"
 
 #: ../docs/Parser.md:10
-#, fuzzy
 msgid ""
 "The important classes are described in the class diagram of the entire "
 "parser\n"
 "system below:"
-msgstr ""
-"重要なクラスは、以下のパーサーの全体のシステムのクラス図表の中で記述する。"
+msgstr "重要なクラスは、以下のパーサーの全体のシステムのクラス図表の中で記述する。"
 
 #: ../docs/Parser.md:13
 msgid "![Parser Class Diagram](images/parser-class-diagram.png)"
@@ -3582,7 +3580,6 @@ msgstr ""
 "様々な他の言語用に実装され、登録される。"
 
 #: ../docs/Parser.md:26
-#, fuzzy
 msgid ""
 "This factory class should always be used when parsing source files rather "
 "than\n"
@@ -3592,11 +3589,10 @@ msgid ""
 "and this is coordinated by the `SourceParser` class as well."
 msgstr ""
 "このファクトリークラスは、個々のパーサークラスを解析する時より\n"
-"ソースファイルを解析する時に毎回用いられるべきである。\n"
-"それは解析したソース上のハンドラーを実行するパイプラインを起動する為であ"
-"る。\n"
-"使われたパーサーは、ハンドラーにもマッチしなければならない。\n"
-"その上、`SourceParser`クラスによって調整されなければならない。"
+"ソースファイルを解析する時に毎回利用される。\n"
+"なのでそれは解析されたソース上でハンドラーを起動するパイプラインを開始する。\n"
+"利用されるパーサーはハンドラーにマッチしなければならない、\n"
+"これは`SourceParser`クラスによって同様にコーディネートされる。"
 
 #: ../docs/Parser.md:31
 msgid "## Using the SourceParser Class"
@@ -3658,22 +3654,20 @@ msgstr ""
 "    YARD::Parser::SourceParser.parse_string(\"int main() { }\", :c)"
 
 #: ../docs/Parser.md:55
-#, fuzzy
 msgid ""
 "Note that these two methods are aliased as {YARD.parse} and {YARD."
 "parse_string} for\n"
 "convenience."
 msgstr ""
 "以下の事に留意する。\n"
-"二つのメソッドは、便利に使う為の\n"
-"{YARD.parse}や{YARD.parse_string}のようなエイリアスとなる。"
+"これらの二つのメソッドは、便利に使う為の\n"
+"{YARD.parse}や{YARD.parse_string}のような別名となる。"
 
 #: ../docs/Parser.md:58
 msgid "## Implementing and Registering a Custom Parser"
 msgstr "## カスタムパーサーを実装及び登録する"
 
 #: ../docs/Parser.md:60
-#, fuzzy
 msgid ""
 "To implement a custom parser, subclass {YARD::Parser::Base}. Documentation "
 "on which\n"
@@ -3688,14 +3682,13 @@ msgid ""
 "method {YARD::Parser::SourceParser.register_parser_type}:"
 msgstr ""
 "カスタムパーサーを実装するには、{YARD::Parser::Base}をサブクラス化する。\n"
-"実装される抽象化メソッド上のドキュメントはそのクラスの中で記述される。\n"
-"クラスが実装されると、\n"
-"正しい拡張子のファイルが解析される必要がある時や\n"
-"ユーザーが明示的にパーサーのタイプを選択する時に呼び出されるように\n"
-"{YARD::Parser::SourceParser}ファクトリークラスと共に格納される。\n"
+"抽象的なメソッドのドキュメントはクラスの中で記述され実装される。\n"
+"クラスが実装されたあとで、\n"
+"正しい拡張子のファイルが解析される為に必要となる時や\n"
+"ユーザーが明示的にパーサーのタイプを選択する時に\n"
+"呼び出される為に{YARD::Parser::SourceParser}ファクトリークラスを用い記録される。\n"
 "あなたの新しいパーサークラスを登録するには、\n"
-"以下の様に{YARD::Parser::SourceParser.register_parser_type}メソッドを呼び出"
-"す。"
+"以下の様に{YARD::Parser::SourceParser.register_parser_type}メソッドを呼び出す。"
 
 #: ../docs/Parser.md:67
 msgid ""
@@ -3717,7 +3710,6 @@ msgid "## The Two Ruby Parser Types"
 msgstr "## 2つのRubyパーサーの型"
 
 #: ../docs/Parser.md:75
-#, fuzzy
 msgid ""
 "When parsing Ruby, the SourceParser can either instantiate the new {YARD::"
 "Parser::Ruby::RubyParser}\n"
@@ -3850,7 +3842,6 @@ msgstr ""
 "型がない`s()`は`:list`型のノード用の縮めた表記となる。)"
 
 #: ../docs/Parser.md:121
-#, fuzzy
 msgid ""
 "As shown, not all of the elements are AstNodes in themselves, some are "
 "String\n"
@@ -3862,9 +3853,8 @@ msgstr ""
 "示されたように、要素の全てがそれら自身の中のAstNodeでは無く、\n"
 "いくつかは、値を含んでいるStringオブジェクトとなる。\n"
 "ノード内部AstNodeだけのリストは、\n"
-"{YARD::Parser::Ruby::AstNode#children #children}メソッド経由でアクセスされ"
-"る。\n"
-"S式によって上のメソッドが宣言される。以下のようにできる。"
+"{YARD::Parser::Ruby::AstNode#children #children}メソッド経由でアクセスされる。\n"
+"上で宣言されたS式によって以下のようにできる。"
 
 #: ../docs/Parser.md:126
 msgid ""
@@ -3876,7 +3866,6 @@ msgid "### AstNode#source and #line"
 msgstr ""
 
 #: ../docs/Parser.md:130
-#, fuzzy
 msgid ""
 "Every node defines the `#source` method which returns the source code that "
 "the\n"
@@ -3976,7 +3965,6 @@ msgid "## The Legacy Parser"
 msgstr "## レガシーパーサー"
 
 #: ../docs/Parser.md:168
-#, fuzzy
 msgid ""
 "The goal of the legacy parser is much the same as the new parser, but it is "
 "far\n"
@@ -4005,19 +3993,18 @@ msgstr ""
 "しかし、それははるかに単純である。\n"
 "完璧なASTの代わりに、\n"
 "レガシーパーサーは、単純に\n"
-"{YARD::Parser::Ruby::Legacy::StatementList}で呼び出される\"文(statement)\"の"
-"リストの\n"
+"{YARD::Parser::Ruby::Legacy::StatementList}で呼び出される\"ステートメント\"のリストの\n"
 "グループを作る。\n"
-"これらの文のリストは、{YARD::Parser::Ruby::Legacy::Statement} オブジェクトで"
-"構成されている。\n"
-"文は、何らかのメソッド呼び出し状態か、ループか、宣言となる。\n"
-"それぞれの文はブロックを持っているかわからない。\n"
-"状態やループの場合、ブロックは文のリストの内部となる。\n"
+"これらのステートメントのリストは、{YARD::Parser::Ruby::Legacy::Statement}\n"
+"オブジェクトで構成されている。\n"
+"ステートメントは任意のメソッドで条件,ループ,宣言を呼び出す。\n"
+"それぞれのステートメントはブロックを持っているかわからない。\n"
+"条件やループの場合、ブロックはステートメントの内部のリストになる。\n"
 "メソッド呼び出しの場合、ブロックはブロックを実行する。(もし提供されるなら)\n"
-"文それ自体は、トークンで構成されている。\n"
+"ステートメントそれ自体は、トークンで構成されている。\n"
 "その為、新しいパーサーのように自然な意味になる代わりに、\n"
-"文はそれらを作り上げる単語のトークンに直接紐付けられる。\n"
-"文をソースに変換する為には、\n"
+"ステートメントはそれらを作り上げる単語のトークンに直接紐付けられる。\n"
+"ステートメントをソースに変換する為には、\n"
 "全てのトークンと共に単純に加えればいい。\n"
 "(これは`#to_s`メソッドを使用し行われる。)"
 
