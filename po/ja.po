@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-13 16:25+0900\n"
+"PO-Revision-Date: 2012-06-13 16:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3008,7 +3008,6 @@ msgid "## The Processor Class"
 msgstr "## プロセッサークラス"
 
 #: ../docs/Handlers.md:24
-#, fuzzy
 msgid ""
 "The main purpose of the processor, as mentioned above, is to traverse "
 "through\n"
@@ -3032,14 +3031,14 @@ msgstr ""
 "プロセッサーは処理されている状態について管理する。\n"
 "例えば、プロセッサーは現在の\n"
 "ネームスペース(モジュールやオブジェクトのクラスが定義される)、\n"
-"スコープ(クラスやインスタンス)、ファイルと所有者\n"
+"スコープ(クラスやインスタンス)、ファイルとオーナー\n"
 "を追跡する。\n"
-"所有者は、オブジェクトを参照する。\n"
+"オーナーは、オブジェクトを参照する。\n"
 "そのオブジェクトは処理されるソース命令文に最も直接的な責任を持つ。\n"
 "これは(参照するオブジェクトの対象は)、多くの場合ネームスペースと同じで、\n"
 "メソッドの本体を解析した時を除き、\n"
 "そのネームスペースでは、クラスやモジュール,メソッドが定義される。\n"
-"そして所有者はメソッドオブジェクト自体となる。"
+"そしてオーナーはメソッドオブジェクト自体となる。"
 
 #: ../docs/Handlers.md:34
 msgid "## Implementing a Handler"
@@ -3085,7 +3084,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/Handlers.md:51
-#, fuzzy
 msgid ""
 "For details on what nodes are, and what node types are, see the\n"
 "{file:docs/Parser.md parser architecture document}."
@@ -3148,13 +3146,12 @@ msgid ""
 msgstr ""
 
 #: ../docs/Handlers.md:75
-#, fuzzy
 msgid ""
 "In this case we handle any of the method calls to method name `describe` "
 "with\n"
 "the following syntaxes:"
 msgstr ""
-"このケースでは、私達はメソッド名`describe`のメソッド呼び出しを\n"
+"このケースでは、私達はメソッド名`describe`メソッドの呼び出しを\n"
 "次の構文のように処理できる。"
 
 #: ../docs/Handlers.md:78
@@ -3172,7 +3169,6 @@ msgid "### Creating a new Code Object"
 msgstr "### 新しいコードオブジェクトを作成する"
 
 #: ../docs/Handlers.md:87
-#, fuzzy
 msgid ""
 "Usually (but not always) handling is performed to create new code objects to "
 "add\n"
@@ -3188,11 +3184,11 @@ msgid ""
 "object. This method will be seen in the next example."
 msgstr ""
 "通常(しかし、いつもではない)の処理は、\n"
-"レジストリを追加する新しいコードオブジェクトの作成が実行される。\n"
+"レジストリを追加する新しいコードオブジェクトの作成する為に実行される。\n"
 "(コードオブジェクトについては{file:docs/CodeObjects.md this document}参照)\n"
-"コードオブジェクトは単純に作成されたり存在する`namespace`に追加される。\n"
-"これは、レジストリにそれらを追加するだけで十分である。\n"
-"何故なら便利な{YARD::Handlers::Base#register register}メソッドがあり、\n"
+"コードオブジェクトは単純に既存の`namespace`に作成され追加される。\n"
+"これは、レジストリにそれらを追加するために十分である。\n"
+"便利な{YARD::Handlers::Base#register register}メソッドがあり、\n"
 "これは新たに作成されるオブジェクト、ファイル、行、\n"
 "ソースやオブジェクトのdocstringのような標準属性を素早く設定する。\n"
 "このメソッドは次の例の中で見られるだろう。"
@@ -3325,7 +3321,6 @@ msgid "A few notes on the differences:"
 msgstr "標準のハンドラーとの違いに関するいくつかの注意。"
 
 #: ../docs/Handlers.md:145
-#, fuzzy
 msgid ""
 "  * We inherit from `Legacy::Base` instead of the standard Ruby Base handler "
 "class.\n"
