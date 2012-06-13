@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-12 18:26+0900\n"
+"PO-Revision-Date: 2012-06-13 11:30+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -503,7 +503,6 @@ msgid ""
 msgstr ""
 
 #: ../README.md:196
-#, fuzzy
 msgid ""
 "Note that the \"@tag\" syntax returns the first tag named \"tag\" on the "
 "object.\n"
@@ -511,7 +510,7 @@ msgid ""
 msgstr ""
 "次の事に留意する。\n"
 "\"@tag\"構文は、オブジェクトの最初に\"tag\"と名付けられたタグを返す。\n"
-"全ての\"tag\"と名付けたタグの集まりを返すには、\"@@tag\"を使う。"
+"全ての\"tag\"と名付けたタグの配列を返すには、\"@@tag\"を使う。"
 
 #: ../README.md:199
 msgid ""
@@ -538,14 +537,13 @@ msgid "**2. Rake Task**"
 msgstr ""
 
 #: ../README.md:209
-#, fuzzy
 msgid ""
 "The second most obvious is to generate docs via a Rake task. You can do this "
 "by\n"
 "adding the following to your `Rakefile`:"
 msgstr ""
-"もう一つの方法として、Rake Taskを介してドキュメントを生成する。\n"
-"あなたの`Rakefile`に次の内容を追加することによって作成できる。"
+"もう一つの方法として、Rakeのタスクを介してドキュメントを生成する。\n"
+"あなたの`Rakefile`に次の内容を追加することによって作成できる:"
 
 #: ../README.md:212
 msgid ""
@@ -605,15 +603,13 @@ msgid ""
 msgstr ""
 
 #: ../README.md:234
-#, fuzzy
 msgid ""
 "Note that class methods must not be referred to with the \"::\" namespace\n"
 "separator. Only modules, classes and constants should use \"::\"."
 msgstr ""
 "次の事に留意する。\n"
-"クラスメソッドは、\"::\"ネームスペース区切りとともに参照されるべきではな"
-"い。\n"
-"モジュールのクラスと定数は\"::\"を使うべき。"
+"クラスメソッドは、\"::\"ネームスペース区切りとともに参照されるべきではない。\n"
+"モジュールだけクラスと定数は\"::\"を使うべきである。"
 
 #: ../README.md:237
 msgid ""
@@ -720,7 +716,6 @@ msgid "**5. `yard graph` Graphviz Generator**"
 msgstr ""
 
 #: ../README.md:275
-#, fuzzy
 msgid ""
 "You can use `yard graph` to generate dot graphs of your code. This, of "
 "course,\n"
@@ -739,26 +734,24 @@ msgid ""
 "More options can be seen by typing `yard graph --help`, but here is an "
 "example:"
 msgstr ""
-"`yard-graph`はあなたのコードにdotのグラフを生成できる。\n"
+"あなたのコードの図を生成する為に`yard graph`を利用できる。\n"
 "これにはもちろん、[Graphviz](http://www.graphviz.org)と`dot`が必要となる。\n"
 "デフォルトでこれは、Graphvizのサポートできる最高のURL2表記で\n"
-"クラスやモジュールの図を生成する。\n"
-"しかし、記載されている任意のメソッドは生成しない。\n"
-"`--dependencies`オプションは、mixinで含んでいるものを見る。\n"
-"標準出力やファイルに出力できる、また`dot`を直接パイプできる。\n"
-"同じpublic,protectedとprivateは、yard-graphの可視性規則が適用される。\n"
-"さらに、オプションは、`yard-graph --help`とタイプすることによって見ることがで"
-"きる。\n"
-"次に例がある。"
+"クラスやモジュールの図を生成する。しかし、記載されたメソッドは生成しない。\n"
+"`-- full`オプションを用いメソッドと属性が記述される。\n"
+"mixinで含んでいるものを一覧する為に`--dependencies`オプションもある。\n"
+"標準出力やファイルに出力したり、また`dot`に直接パイプできる。\n"
+"同じpublic,protectedとprivateの可視性規則は、`yard-graph`に適用される。\n"
+"詳細なオプションは、`yard-graph --help`とタイプすることによって見ることができる。\n"
+"次に例がある:"
 
 #: ../README.md:284
 msgid "    $ yard graph --protected --full --dependencies"
 msgstr ""
 
 #: ../README.md:287
-#, fuzzy
 msgid "## Changelog"
-msgstr "#### 範囲"
+msgstr ""
 
 #: ../README.md:289
 msgid ""
