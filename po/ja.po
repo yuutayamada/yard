@@ -4215,14 +4215,13 @@ msgid "### Common Tag Syntaxes"
 msgstr "### 一般的なタグ構文"
 
 #: ../docs/Tags.md:89
-#, fuzzy
 msgid ""
 "Although custom tags can be parsed in any way, the built-in tags follow a "
 "few\n"
 "common syntax structures by convention in order to simplify the syntax. The\n"
 "following syntaxes are available:"
 msgstr ""
-"カスタムタグはどの方法でも解析される。しかし、\n"
+"カスタムタグはどの方法でも解析され、\n"
 "ビルトインタグは、構文を簡単にする為に定められた\n"
 "いくつかの共通する構文構造に従う。\n"
 "次の構文が用意されている。"
