@@ -4602,14 +4602,12 @@ msgstr ""
 
 # title
 #: ../docs/TagsArch.md:1
-#, fuzzy
 msgid "Tags Architecture"
-msgstr "パーサー構造"
+msgstr "タグ構造"
 
 #: ../docs/TagsArch.md:3
-#, fuzzy
 msgid "# Tags Architecture"
-msgstr "# パーサー構造"
+msgstr "# タグ構造"
 
 #: ../docs/TagsArch.md:5
 msgid "## Programmatic API"
@@ -4789,16 +4787,14 @@ msgid ""
 msgstr ""
 
 #: ../docs/TagsArch.md:67
-#, fuzzy
 msgid ""
 "  * Text with types: parses a list of types at the beginning of the text. "
 "Types\n"
 "    are optional. The standard syntax is in the form `[type1, type2, ...]`,\n"
 "    for example:"
 msgstr ""
-"  * Text with types: テキストの最初の部分で型のリストを解析する。型は任意で指"
-"定できる。\n"
-"標準的な構文は[type1, type2, ...]という型をしている。例えば:"
+"  * Text with types: テキストの最初の部分で型のリストを解析する。型は任意で指定できる。\n"
+"標準的な構文は`[type1, type2, ...]`という型をしている。例えば:"
 
 #: ../docs/TagsArch.md:71
 msgid ""
