@@ -6108,9 +6108,8 @@ msgid "What's New?"
 msgstr "What's New?"
 
 #: ../docs/WhatsNew.md:3
-#, fuzzy
 msgid "# What's New in 0.8.x?"
-msgstr "# What's New in 0.7.x?"
+msgstr "# What's New in 0.8.x?"
 
 #: ../docs/WhatsNew.md:5
 msgid ""
@@ -6399,10 +6398,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/WhatsNew.md:175
-#, fuzzy
 msgid "## New C parser / handlers architecture (0.8.0)"
-msgstr ""
-"## Parser/Handlerアーキテクチャにトラッキング変数の状態が追加された (0.7.0)"
+msgstr "## 新しい Cパーサー / ハンドラー構造 (0.8.0)"
 
 #: ../docs/WhatsNew.md:177
 msgid ""
@@ -6425,9 +6422,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/WhatsNew.md:189
-#, fuzzy
 msgid "## Added support for `module_function` calls in Ruby code (0.8.0)"
-msgstr "## `rb_define_alias`用のサポートが追加された (0.7.4)"
+msgstr "## `module_function`がRubyのコードの中で呼び出されるサポートが追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:191
 msgid ""
@@ -6674,7 +6670,6 @@ msgstr ""
 "それは正規のメソッドではない。"
 
 #: ../docs/WhatsNew.md:320
-#, fuzzy
 msgid ""
 "In addition to basic DSL method detection, YARD also supports macros to "
 "create\n"
@@ -6682,27 +6677,24 @@ msgid ""
 "\"attached\" to class level methods to create implicit documentation for "
 "macros."
 msgstr ""
-"基本のDSLメソッド検知に加えて、YARDは、マクロをサポートし、\n"
-"これは、他のオブジェクトにコピーされるdocstringを作成できる。\n"
-"これらのマクロは、\n"
-"マクロ用にドキュメントを暗黙に作成し、クラスレベルメソッドに\"attached\"され"
-"る。"
+"更に基本のDSLメソッド検知に加えて、\n"
+"YARDは他のオブジェクトにコピーできるdocstringを作成するマクロもサポートする。\n"
+"これらのマクロはマクロ用に暗黙のドキュメントを作成するために\n"
+"クラスレベルメソッドに\"追加\"(attached)もできる。"
 
 #: ../docs/WhatsNew.md:324
-#, fuzzy
 msgid ""
 "Macros and DSL method detection are discussed in much more detail in the\n"
 "{file:docs/GettingStarted.md}, so you should read about them there if "
 "you're\n"
 "interested in this feature."
 msgstr ""
-"マクロとDSLメソッド宣言の詳細は{file:docs/GettingStarted.md}で説明されるの"
-"で、\n"
+"マクロとDSLメソッド宣言の詳細は{file:docs/GettingStarted.md}で説明されるので、\n"
 "あなたがこの機能に興味がある場合、そこで読む事ができる。"
 
 #: ../docs/WhatsNew.md:328
 msgid "## Inherited attributes now show in HTML output (0.7.0)"
-msgstr "## 継承された属性をHTML出力ですぐに調べる(0.7.0)"
+msgstr "## 継承された属性をHTML出力ですぐに調べられるようになった (0.7.0)"
 
 #: ../docs/WhatsNew.md:330
 msgid ""
@@ -6720,7 +6712,6 @@ msgid "## The 'app' directory is now parsed by default (0.7.0)"
 msgstr "## デフォルトで'app'ディレクトリはすぐに解析される (0.7.0)"
 
 #: ../docs/WhatsNew.md:335
-#, fuzzy
 msgid ""
 "YARD tries to follow the \"It Just Works\" attitude in writing developer "
 "tools,\n"
@@ -6730,13 +6721,12 @@ msgid ""
 "We should have done this a while ago! And don't worry, YARD still checks\n"
 "lib and ext by default, too."
 msgstr ""
-"YARDは開発者のツールに書かれている、その仕事をフォローする為に試す。\n"
-"それに伴い、コードの中を検索しデフォルトのglobのリストに、\n"
-"`app/**/*.rb`が追加された。\n"
-"これで、rubydoc.infoであなたのコードを記述する時、あなたのappディレクトリを記"
-"述する為に\n"
-"`.yardopts`を作成する必要はない。\n"
-"私達は、ちょっと前にこれを行ったが心配しないで、\n"
+"YARDは開発者のツールで書かれている\\\"ちゃんと動く\\\"姿勢をフォローしようとする、\n"
+"従って、それがコード用に検索するglobのデフォルトのリストに\n"
+"追加された`app/**/*.rb`を持つ\n"
+"あなたはもはやrubydoc.infoであなたのコードを記述する時に\n"
+"あなたのアプリのディレクトリ記述するのに`.yardopts`を作成する必要はない。\n"
+"ちょっと前にこれが完成したが、心配しないで、\n"
 "YARDはまだデフォルトでlibとextもチェックする。"
 
 #: ../docs/WhatsNew.md:342
