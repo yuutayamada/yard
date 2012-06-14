@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-13 19:10+0900\n"
+"PO-Revision-Date: 2012-06-14 12:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -4135,9 +4135,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:50
-#, fuzzy
 msgid "## Directives"
-msgstr "## セクション"
+msgstr "## ディレクティブ"
 
 #: ../docs/Tags.md:52
 msgid ""
@@ -4212,9 +4211,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:87
-#, fuzzy
 msgid "### Common Tag Syntaxes"
-msgstr "## タグ構文"
+msgstr "### 一般的なタグ構文"
 
 #: ../docs/Tags.md:89
 #, fuzzy
@@ -4316,9 +4314,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:139
-#, fuzzy
 msgid "### Type List Conventions"
-msgstr "## ネストしたセクション"
+msgstr "### 型のリスト慣習"
 
 #: ../docs/Tags.md:141
 msgid ""
@@ -4415,9 +4412,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:184
-#, fuzzy
 msgid "#### Duck-Types"
-msgstr "## 型を宣言する"
+msgstr "#### ダックタイピング"
 
 #: ../docs/Tags.md:186
 msgid ""
@@ -4438,9 +4434,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:196
-#, fuzzy
 msgid "#### Hashes"
-msgstr "#### 範囲"
+msgstr "#### ハッシュ"
 
 #: ../docs/Tags.md:198
 msgid ""
@@ -4468,9 +4463,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:210
-#, fuzzy
 msgid "#### Literals"
-msgstr "### タグのリスト"
+msgstr "#### リテラル"
 
 #: ../docs/Tags.md:212
 msgid ""
@@ -4541,9 +4535,8 @@ msgid ""
 msgstr ""
 
 #: ../docs/Tags.md:249
-#, fuzzy
 msgid "## Adding Custom Tags"
-msgstr "### カスタムタグを付ける"
+msgstr "#### カスタムタグの追加する"
 
 #: ../docs/Tags.md:251
 msgid ""
