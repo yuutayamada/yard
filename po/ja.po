@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-14 12:48+0900\n"
+"PO-Revision-Date: 2012-06-14 18:21+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9029,9 +9029,8 @@ msgstr ""
 # YARD::Handlers::Ruby
 #: ../lib/yard/autoload.rb:62 ../lib/yard/handlers/c/base.rb:62
 #: ../lib/yard/handlers/c/handler_methods.rb:62
-#, fuzzy
 msgid "CRuby Handlers"
-msgstr "全てのRubyハンドラー"
+msgstr "CRuby ハンドラー"
 
 # YARD::Handlers::Ruby
 #: ../lib/yard/autoload.rb:82 ../lib/yard/handlers/ruby/base.rb:82
@@ -9051,9 +9050,8 @@ msgstr "古いRuby1.8パーサー用のハンドラー"
 #: ../lib/yard/autoload.rb:134 ../lib/yard/i18n/locale.rb:134
 #: ../lib/yard/i18n/message.rb:134 ../lib/yard/i18n/messages.rb:134
 #: ../lib/yard/i18n/pot_generator.rb:134 ../lib/yard/i18n/text.rb:134
-#, fuzzy
 msgid "Namespace for internationalization (i18n)"
-msgstr "テンプレートシステム用のNamespace"
+msgstr "国際化用のNamespace (i18n)"
 
 # YARD::Parser
 #: ../lib/yard/autoload.rb:144 ../lib/yard/parser/base.rb:144
@@ -9076,9 +9074,8 @@ msgstr ""
 #: ../lib/yard/autoload.rb:147 ../lib/yard/parser/c/c_parser.rb:147
 #: ../lib/yard/parser/c/comment_parser.rb:147
 #: ../lib/yard/parser/c/statement.rb:147
-#, fuzzy
 msgid "CRuby Parsing components"
-msgstr "Rubyのパーサーの構成"
+msgstr "CRubyのパーサーの構成"
 
 # YARD::Parser::Ruby
 #: ../lib/yard/autoload.rb:156 ../lib/yard/parser/ruby/ast_node.rb:156
@@ -9572,33 +9569,28 @@ msgstr "オプションを解析する。"
 # YARD::Rake::YardocTask#options
 # YARD::Rake::YardocTask#options=
 #: ../lib/yard/cli/graph.rb:4
-#, fuzzy
 msgid "Options to pass to the {Graph} CLI."
-msgstr "{CLI::Yardoc}の為のパスの設定"
+msgstr "{Graph} CLIに渡す為のオプション"
 
 # @param [String] text
 #: ../lib/yard/cli/graph.rb:6
-#, fuzzy
 msgid "the default output format"
-msgstr "フォーマットするテキスト"
+msgstr "デフォルトの出力フォーマット"
 
 # @param [Boolean] link
 #: ../lib/yard/cli/graph.rb:9
-#, fuzzy
 msgid "whether to list the full class diagram"
-msgstr "型をリンクするかどうか"
+msgstr "全てのクラス図をリストするかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/graph.rb:12
-#, fuzzy
 msgid "whether to show the object dependencies"
-msgstr "オブジェクトが同じものかどうか判断する"
+msgstr "オブジェクトの依存関係を調べるかどうか"
 
 # @param [Hash] opts
 #: ../lib/yard/cli/graph.rb:15
-#, fuzzy
 msgid "any contents to pass to the digraph"
-msgstr "アダプターに渡す為の追加のoptions"
+msgstr "図に渡す内容"
 
 # YARD::CLI::Graph
 #: ../lib/yard/cli/graph.rb:19
@@ -9690,9 +9682,8 @@ msgstr ""
 
 # @return [YRI]
 #: ../lib/yard/cli/i18n.rb:13
-#, fuzzy
 msgid "a new instance of I18n"
-msgstr "YRIの新しいインスタンス"
+msgstr "I18nの新しいインスタンス"
 
 # @since
 #: ../lib/yard/cli/i18n.rb:60 ../lib/yard/code_objects/base.rb:233
@@ -9771,15 +9762,13 @@ msgstr "登録するテンプレートのパスのリスト"
 
 # YARD::CLI::Yardoc#initialize
 #: ../lib/yard/cli/server.rb:27
-#, fuzzy
 msgid "Creates a new instance of the Server command line utility"
-msgstr "コマンドラインユーティリティの新しいインスタンスを作成する。"
+msgstr "サーバーコマンドラインユーティリティの新しいインスタンスを作成する。"
 
 # @return [Verifier]
 #: ../lib/yard/cli/server.rb:27
-#, fuzzy
 msgid "a new instance of Server"
-msgstr "検証器の新しいインスタンス"
+msgstr "サーバーの新しいインスタンス"
 
 # YARD::CLI::Stats::STATS_ORDER
 #: ../lib/yard/cli/stats.rb:8
@@ -9951,9 +9940,8 @@ msgstr ""
 
 # @return [Array<ConstantObject>]
 #: ../lib/yard/cli/yardoc.rb:10
-#, fuzzy
 msgid "the list of extra files rendered along with objects"
-msgstr "定数オブジェクトを継承したリスト"
+msgstr "オブジェクトと一緒に表示される追加のファイルのリスト"
 
 # @return [String]
 #: ../lib/yard/cli/yardoc.rb:13
@@ -9974,9 +9962,8 @@ msgstr ""
 
 # @return [String]
 #: ../lib/yard/cli/yardoc.rb:23
-#, fuzzy
 msgid "the default output format (:html)."
-msgstr "オブジェクト用にフォーマットされた出力"
+msgstr "デフォルト出力フォーマット (:html)"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:27
@@ -9994,11 +9981,10 @@ msgstr ""
 
 # @return [Array<NamespaceObject>]
 #: ../lib/yard/cli/yardoc.rb:35
-#, fuzzy
 msgid ""
 "the list of code objects to render\n"
 "the templates with."
-msgstr "継承ツリーを作り上げるコードオブジェクトのリスト"
+msgstr "リストと共にテンプレートを表示する為のコードオブジェクトのリスト"
 
 # @return [Numeric]
 #: ../lib/yard/cli/yardoc.rb:38
@@ -10372,9 +10358,8 @@ msgstr "visibilitiesのリスト"
 # YARD::CLI::Yardoc#visibilities
 # YARD::CLI::Yardoc#visibilities=
 #: ../lib/yard/cli/yardoc.rb:187
-#, fuzzy
 msgid "Keep track of which APIs are to be shown"
-msgstr "visibilitiesで示されるその中で手順を維持する。"
+msgstr "そのAPIが表示される経過を追う"
 
 # @since
 #: ../lib/yard/cli/yardoc.rb:189 ../lib/yard/cli/yardoc.rb:484
@@ -10385,9 +10370,8 @@ msgstr ""
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:189
-#, fuzzy
 msgid "a list of APIs"
-msgstr "ファイルのリスト"
+msgstr "APIのリスト"
 
 # @return [Array<Symbol>]
 #: ../lib/yard/cli/yardoc.rb:193
@@ -10607,9 +10591,8 @@ msgstr "visibilities用に認証ルールを追加する"
 
 # YARD::CLI::Yardoc#add_visibility_verifier
 #: ../lib/yard/cli/yardoc.rb:482
-#, fuzzy
 msgid "Adds verifier rule for APIs"
-msgstr "visibilities用に認証ルールを追加する"
+msgstr "API用に認証ルールを追加する"
 
 # YARD::CLI::Yardoc#run_verifier
 # YARD::Templates::Helpers::BaseHelper#run_verifier
@@ -10789,9 +10772,8 @@ msgstr ""
 # @param [Array<String, Symbol>]
 # @param [String, :root]
 #: ../lib/yard/cli/yri.rb:141
-#, fuzzy
 msgid "tag|param|cache_path"
-msgstr "path"
+msgstr ""
 
 # @param [String] cache_path
 #: ../lib/yard/cli/yri.rb:141
@@ -10803,9 +10785,8 @@ msgstr ""
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/cli/yri.rb:141
-#, fuzzy
 msgid "the object path"
-msgstr "パスのオブジェクト"
+msgstr "オブジェクトパス"
 
 # YARD::CLI::YRI#load_cache
 #: ../lib/yard/cli/yri.rb:151
@@ -11323,15 +11304,13 @@ msgstr ""
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/code_objects/base.rb:233
-#, fuzzy
 msgid "the object to copy data to"
-msgstr "パスのオブジェクト"
+msgstr "オブジェクトにデータをコピーする為のオブジェクト"
 
 # @return [CodeObjects::RootObject]
 #: ../lib/yard/code_objects/base.rb:233
-#, fuzzy
 msgid "the other object"
-msgstr "rootオブジェクト"
+msgstr "他のオブジェクト"
 
 # YARD::CodeObjects::Base#name
 # YARD::CodeObjects::Proxy#name
@@ -12121,22 +12100,19 @@ msgstr "name属性を設定する"
 
 # @param value
 #: ../lib/yard/code_objects/extra_file_object.rb:10
-#, fuzzy
 msgid "the value to set the attribute contents to."
-msgstr "属性の定数を設定する値"
+msgstr "値に属性の内容を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments
 # YARD::Parser::Ruby::RipperParser#comments
 #: ../lib/yard/code_objects/extra_file_object.rb:11
-#, fuzzy
 msgid "Returns the value of attribute contents"
-msgstr "コメント属性の値を返す。"
+msgstr "属性の内容の値を返す"
 
 # YARD::CodeObjects::NamespaceObject#constants=
 #: ../lib/yard/code_objects/extra_file_object.rb:11
-#, fuzzy
 msgid "Sets the attribute contents"
-msgstr "定数の属性を設定する"
+msgstr "属性の内容を設定する"
 
 # YARD::CodeObjects::ExtraFileObject#initialize
 #: ../lib/yard/code_objects/extra_file_object.rb:13
@@ -12186,7 +12162,6 @@ msgstr "ファイルの内容"
 
 # YARD::CodeObjects::MacroObject
 #: ../lib/yard/code_objects/macro_object.rb:6
-#, fuzzy
 msgid ""
 "A MacroObject represents a docstring defined through +@!macro NAME+ and can "
 "be\n"
@@ -12194,15 +12169,14 @@ msgid ""
 "+attached+ type flag to the macro definition to have it attached to the\n"
 "specific DSL method so it will be implicitly reused."
 msgstr ""
-"マクロオブジェクトは、+@macro NAME+ を通じて定義した docstring を表し、\n"
-"+@macro NAME+ タグを指定する事によって、再利用できる。\n"
+"マクロオブジェクトは、+@!macro NAME+ を通じて定義した docstring を表し、\n"
+"+@!macro NAME+ タグを指定する事によって、再利用できる。\n"
 "あなたは、固有のDSLメソッドに加えるマクロ定義の為に\n"
 "+attached+ 型フラグを提供もできる。\n"
-"なので、暗黙の内に再利用されるだろう。"
+"なので、暗黙の内に再利用される。"
 
 # YARD::CodeObjects::MacroObject
 #: ../lib/yard/code_objects/macro_object.rb:11
-#, fuzzy
 msgid ""
 "Macros are fully described in the {file:docs/Tags.md#macro Tags Overview}\n"
 "document."
@@ -12298,25 +12272,22 @@ msgstr "マクロの名前が記録されない場合"
 # @return [String]
 #: ../lib/yard/code_objects/macro_object.rb:50
 #: ../lib/yard/code_objects/macro_object.rb:70
-#, fuzzy
 msgid "the name of the macro"
-msgstr "タグの名前"
+msgstr "マクロの名前"
 
 # YARD::CodeObjects::MacroObject.find_or_create
 # YARD::CodeObjects::MacroObject.create_docstring
 #: ../lib/yard/code_objects/macro_object.rb:55
 #: ../lib/yard/code_objects/macro_object.rb:78
-#, fuzzy
 msgid ""
 "Parses a given docstring and determines if the macro is \"new\" or\n"
 "not. If the macro has $variable names or if it has a @!macro tag\n"
 "with the [new] or [attached] flag, it is considered new."
 msgstr ""
-"与えられるdocstringを解析するが、それはマクロが\"new\"であるかないかで決ま"
-"る。\n"
-"マクロが$変数名や@macroタグと一緒に[new]や[attached]フラグを持っている場"
-"合、\n"
-"\"new\"と見なされる。"
+"与えらたdocstringを解析しマクロが新しく作成されるものかどうか決める。\n"
+"もしマクロが$variable名を持っていた場合や\n"
+"[new]や[attached]フラグと一緒に@!macroタグを持っていた場合、\n"
+"新規に作成されるものとみなされる。"
 
 # YARD::CodeObjects::MacroObject.find_or_create
 # YARD::CodeObjects::MacroObject.create_docstring
@@ -12354,13 +12325,12 @@ msgstr ""
 
 # @return [MacroObject]
 #: ../lib/yard/code_objects/macro_object.rb:70
-#, fuzzy
 msgid ""
 "the newly created or existing macro, depending\n"
 "on whether the @!macro tag was a new tag or not."
 msgstr ""
 "新たに作成された、又は、既存のマクロを返す。\n"
-"@macroタグが新しいタグかどうかに依存する。"
+"@!macroタグはnewタグかそうでないかに依存する。"
 
 # YARD::CodeObjects::MacroObject.expand
 #: ../lib/yard/code_objects/macro_object.rb:80
@@ -12595,9 +12565,8 @@ msgstr ""
 
 # @param [Symbol] scope
 #: ../lib/yard/code_objects/method_object.rb:33
-#, fuzzy
 msgid "+:instance+, +:class+, or +:module+"
-msgstr "+:instance+ 又は +:class+"
+msgstr "+:instance+ や +:class+ や +:module+"
 
 # @return [MethodObject]
 #: ../lib/yard/code_objects/method_object.rb:33
@@ -12607,7 +12576,7 @@ msgstr "メソッドオブジェクトの新しいインスタンス"
 # @param [Symbol]
 #: ../lib/yard/code_objects/method_object.rb:33
 msgid "tag|param|scope"
-msgstr "scope"
+msgstr ""
 
 # @param [String, Symbol] name
 #: ../lib/yard/code_objects/method_object.rb:33
@@ -12641,11 +12610,10 @@ msgstr "メソッドが#initialize,コンストラクタメソッドかどうか
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:83
-#, fuzzy
 msgid ""
 "whether or not this method was created as a module\n"
 "function"
-msgstr "このオブジェクトがRootObjectかどうか"
+msgstr "このメソッドがモジュール関数として作成されたかどうか"
 
 # YARD::CodeObjects::MethodObject#attr_info
 #: ../lib/yard/code_objects/method_object.rb:88
@@ -14185,19 +14153,18 @@ msgstr "キーが存在するかどうか"
 # SymbolHash#merge!
 #: ../lib/yard/core_ext/symbol_hash.rb:61
 #: ../lib/yard/core_ext/symbol_hash.rb:67
-#, fuzzy
 msgid ""
 "Updates the object with the contents of another Hash object.\n"
 "This method modifies the original SymbolHash object"
 msgstr ""
-"他のハッシュオブジェクトの内容と共に、オブジェクトを更新する。\n"
-"このメソッドは、元のSymbolHashオブジェクトを変更する。"
+"他のハッシュオブジェクトの内容と共にオブジェクトを更新する。\n"
+"このメソッドは元のSymbolHashオブジェクトを変更する。"
 
 # @param [Hash]
 #: ../lib/yard/core_ext/symbol_hash.rb:65
 #: ../lib/yard/core_ext/symbol_hash.rb:72
 msgid "tag|param|hash"
-msgstr "hash"
+msgstr ""
 
 # @param [Hash] hash
 #: ../lib/yard/core_ext/symbol_hash.rb:65
@@ -14265,9 +14232,8 @@ msgstr ""
 
 # @param [Docstring]
 #: ../lib/yard/docstring.rb:27
-#, fuzzy
 msgid "tag|see|DocstringParser"
-msgstr "docstring"
+msgstr ""
 
 # @see
 #: ../lib/yard/docstring.rb:27
@@ -14300,11 +14266,10 @@ msgstr ""
 
 # @return [Object, nil]
 #: ../lib/yard/docstring.rb:37
-#, fuzzy
 msgid ""
 "the parser object used to parse a\n"
 "docstring."
-msgstr "ソースを解析する為に利用されるパーサーオブジェクト。"
+msgstr "docstringを解析する為に利用したパーサーオブジェクト。"
 
 # @return [Array<Tags::RefTag>]
 #: ../lib/yard/docstring.rb:43
@@ -14361,14 +14326,13 @@ msgstr "Docstringオブジェクトを作成する"
 
 # @param [String]
 #: ../lib/yard/docstring.rb:74
-#, fuzzy
 msgid "tag|param|raw_data"
-msgstr "マクロデータ"
+msgstr ""
 
 # @param [Tags::Tag, Tags::RefTag]
 #: ../lib/yard/docstring.rb:74 ../lib/yard/docstring.rb:214
 msgid "tag|param|tags"
-msgstr "tags"
+msgstr ""
 
 # @param [String]
 #: ../lib/yard/docstring.rb:74 ../lib/yard/parser/ruby/legacy/ruby_lex.rb:48
@@ -14403,32 +14367,29 @@ msgstr ""
 
 # YARD::CodeObjects::Base#tags
 #: ../lib/yard/docstring.rb:74
-#, fuzzy
 msgid "the list of tag objects in the docstring"
-msgstr "{#docstring}メソッドから、タグのリストを取得する。"
+msgstr "docstringの中のタグオブジェクトのリスト"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/docstring.rb:74
-#, fuzzy
 msgid ""
 "the object associated with the\n"
 "docstring. May be nil."
-msgstr "docstringと関連するオブジェクト"
+msgstr "docstringと共に関連したオブジェクト, nilになるかもしれない。"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/docstring.rb:74
-#, fuzzy
 msgid "the textual portion of the docstring"
-msgstr "docstring自身のオブジェクト"
+msgstr "docstringの原文の一部"
 
 # YARD::Docstring#initialize
 #: ../lib/yard/docstring.rb:84
-#, fuzzy
 msgid ""
 "Creates a new docstring with the raw contents attached to an optional\n"
 "object. Parsing will be done by the {DocstringParser} class."
 msgstr ""
-"未加工の内容は任意のオブジェクトが追加されると共に、新しいdocstringを作成する"
+"任意のオブジェクトに追加された未加工のコンテンツを用い新しいdocstringを作成する。\n"
+"解析は {DocstringParser} クラスによって完了する。"
 
 # @example 
 #: ../lib/yard/docstring.rb:99
@@ -14541,12 +14502,11 @@ msgstr "{#line_range}メソッドの最初の行"
 
 # YARD::Docstring#summary
 #: ../lib/yard/docstring.rb:156
-#, fuzzy
 msgid ""
 "Gets the first line of a docstring to the period or the first paragraph."
 msgstr ""
 "ピリオドや最初の段落の為に、\n"
-"局所化されるdocstringの最初の行を取得する。"
+"docstringの最初の行を取得する。"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:157
@@ -14577,16 +14537,14 @@ msgstr "更新され書式化される未加工のdocstringのデータ"
 
 # YARD::Docstring#add_tag
 #: ../lib/yard/docstring.rb:209
-#, fuzzy
 msgid ""
 "Adds a tag or reftag object to the tag list. If you want to parse\n"
 "tag data based on the {Tags::DefaultFactory} tag factory, use\n"
 "{DocstringParser} instead."
 msgstr ""
 "タグのリストにタグや参照タグオブジェクトを追加する。\n"
-"あなたが、{Tags::DefaultFactory}タグfactoryを元にしたタグデータを解析したい場"
-"合、\n"
-"代わりに{#create_tag}メソッドを使う。"
+"あなたが、 {Tags::DefaultFactory} タグファクトリーを元にしたタグデータを解析したい場合\n"
+"代わりに {DocstringParser} を使う。"
 
 # YARD::Docstring#create_tag
 # YARD::Docstring#add_tag
@@ -14801,45 +14759,39 @@ msgstr ""
 
 # @example
 #: ../lib/yard/docstring_parser.rb:29
-#, fuzzy
 msgid "tag|example|Creating a Custom DocstringParser"
-msgstr "コマンドを作成する"
+msgstr "tag|example|カスタムDocstringParserを作成する"
 
 # @example
 #: ../lib/yard/docstring_parser.rb:29
-#, fuzzy
 msgid "tag|example|Creating a Docstring with a DocstringParser"
-msgstr "root namespaceの中にメソッドを作成する"
+msgstr "tag|example|DocstringParserを用いDocstringを作成する"
 
 # @param [TokenList, String]
 # @param [String]
 # @param [String, #read, Object]
 #: ../lib/yard/docstring_parser.rb:29
-#, fuzzy
 msgid "tag|see|#parse_content"
-msgstr "内容"
+msgstr ""
 
 # @param [String] tag_buf
 #: ../lib/yard/docstring_parser.rb:32
-#, fuzzy
 msgid ""
 "the parsed text portion of the docstring,\n"
 "with tags removed."
-msgstr "空白文字が削除されたタグを追加したテキスト"
+msgstr "解析されたdocstringのテキストの一部,  削除されたタグと一緒"
 
 # @param [String] content
 #: ../lib/yard/docstring_parser.rb:35
-#, fuzzy
 msgid "the complete input string to the parser."
-msgstr "解析される未加工のコメント"
+msgstr "パーサーの為の完全な入力文字列"
 
 # @return [Array<Tags::Tag>]
 #: ../lib/yard/docstring_parser.rb:39
-#, fuzzy
 msgid ""
 "the list of meta-data tags identified\n"
 "by the parser"
-msgstr "指定されたタグ名によってタグのリストとなる。"
+msgstr "パーサーに認証されたメタデータタグのリスト"
 
 # @return [Array<Directive>]
 #: ../lib/yard/docstring_parser.rb:44
@@ -14883,15 +14835,13 @@ msgstr ""
 
 # YARD::CodeObjects::CONSTANTMATCH
 #: ../lib/yard/docstring_parser.rb:67
-#, fuzzy
 msgid "The regular expression to match the tag syntax"
-msgstr "Regular expression to match constant name(定数名にマッチする正規表現)"
+msgstr "タグ構文にマッチする為の正規表現"
 
 # YARD::Server::Router#initialize
 #: ../lib/yard/docstring_parser.rb:72
-#, fuzzy
 msgid "Creates a new parser to parse docstring data"
-msgstr "特定のアダプタ用に新しいrouterを作成する"
+msgstr "docstringのデータを解析する為の新しいパーサーを作成する"
 
 # YARD::Docstring#create_tag
 # YARD::Docstring#add_tag
@@ -14902,15 +14852,13 @@ msgstr "特定のアダプタ用に新しいrouterを作成する"
 # YARD::Docstring#delete_tag_if
 # YARD::Docstring#blank?
 #: ../lib/yard/docstring_parser.rb:75 ../lib/yard/docstring_parser.rb:88
-#, fuzzy
 msgid "Creation and Conversion Methods"
-msgstr "メタデータを作成しアクセスする。"
+msgstr "作成、変換メソッド"
 
 # @return [Docstring]
 #: ../lib/yard/docstring_parser.rb:75
-#, fuzzy
 msgid "a new instance of DocstringParser"
-msgstr "Docstringの新しいインスタンス"
+msgstr "DocstringParserの新しいインスタンス"
 
 # @param [Tags::Library] library
 #: ../lib/yard/docstring_parser.rb:75
@@ -14930,11 +14878,10 @@ msgstr ""
 # YARD::Docstring#replace
 # YARD::Docstring#dup
 #: ../lib/yard/docstring_parser.rb:88
-#, fuzzy
 msgid ""
 "translates parsed text into\n"
 "a Docstring object."
-msgstr "Docstringオブジェクトを作成する"
+msgstr "Docstringオブジェクトへ解析されたテキストを変換する"
 
 # YARD::DocstringParser#parse
 #: ../lib/yard/docstring_parser.rb:95
@@ -14948,27 +14895,23 @@ msgstr ""
 # YARD::Server::Router#route_list
 # YARD::Server::Router#route_search
 #: ../lib/yard/docstring_parser.rb:106 ../lib/yard/docstring_parser.rb:123
-#, fuzzy
 msgid "Parsing Methods"
-msgstr "メソッドを送る"
+msgstr "解析メソッド"
 
 # @param [Parser::Ruby::AstNode]
 #: ../lib/yard/docstring_parser.rb:106
-#, fuzzy
 msgid "tag|param|handler"
-msgstr "node"
+msgstr ""
 
 # @param [Docstring]
 #: ../lib/yard/docstring_parser.rb:106
-#, fuzzy
 msgid "tag|see|#to_docstring"
-msgstr "docstring"
+msgstr ""
 
 # @param [String, #read, Object] content
 #: ../lib/yard/docstring_parser.rb:106
-#, fuzzy
 msgid "the docstring text to parse"
-msgstr "解析の為のソースファイル。"
+msgstr "解析の為のdocstringのテキスト"
 
 # @param [Handlers::Base, nil] handler
 #: ../lib/yard/docstring_parser.rb:106
@@ -14995,27 +14938,22 @@ msgstr ""
 
 # YARD::Parser::SourceParser.parse_string
 #: ../lib/yard/docstring_parser.rb:119
-#, fuzzy
 msgid "Parses a given block of text."
-msgstr ""
-"+content+ の文字列を解析する。\n"
-"Parses a string +content+"
+msgstr "テキストの与えられたブロックを解析する"
 
 # YARD::Handlers::Base#process
 #: ../lib/yard/docstring_parser.rb:123
-#, fuzzy
 msgid ""
 "Subclasses can override this method to perform custom\n"
 "parsing of content data."
 msgstr ""
-"サブクラスはクラス用の処理機能を提供する為に、\n"
-"このメソッドを上書きする。"
+"サブクラスは内容のデータのカスタム解析を実行する為に\n"
+"このメソッドを上書きできる"
 
 # @yieldreturn [String]
 #: ../lib/yard/docstring_parser.rb:123
-#, fuzzy
 msgid "the content to parse"
-msgstr "シリアライズする為の内容"
+msgstr "解析する為の内容"
 
 # YARD::Docstring#create_tag
 #: ../lib/yard/docstring_parser.rb:179
@@ -15024,18 +14962,15 @@ msgstr "{Tags::DefaultFactory tag factory}から、タグを作成する。"
 
 # YARD::Docstring#create_tag
 #: ../lib/yard/docstring_parser.rb:181
-#, fuzzy
 msgid "To add an already created tag object, append it to {#tags}."
-msgstr ""
-"既に作成されたタグオブジェクトを追加するには、{#add_tag}メソッドを使う。"
+msgstr "既に作成されたタグオブジェクトを追加するには、{#tags}メソッドを追加する。"
 
 # File.relative_path
 # File.cleanpath
 #: ../lib/yard/docstring_parser.rb:185 ../lib/yard/docstring_parser.rb:202
 #: ../lib/yard/docstring_parser.rb:208 ../lib/yard/docstring_parser.rb:228
-#, fuzzy
 msgid "Tag Manipulation Methods"
-msgstr "パスを操作する"
+msgstr "タグ操作メソッド"
 
 # @return [Tags::Tag, Tags::RefTag]
 #: ../lib/yard/docstring_parser.rb:185
@@ -15072,15 +15007,13 @@ msgstr "{Tags::RefTag}を作成する"
 
 # YARD::Registry.register
 #: ../lib/yard/docstring_parser.rb:207
-#, fuzzy
 msgid "Creates a new directive using the registered {#library}"
-msgstr "リジストリを用い新しいオブジェクトを記録する"
+msgstr "記録された{#library}メソッドを使って新しい命令を作成する"
 
 # @return [OpenStruct]
 #: ../lib/yard/docstring_parser.rb:208
-#, fuzzy
 msgid "the directive object that is created"
-msgstr "状態を記憶する構造体オブジェクト"
+msgstr "作成される命令オブジェクト"
 
 # YARD::DocstringParser#tag_is_directive?
 #: ../lib/yard/docstring_parser.rb:227
@@ -15106,9 +15039,8 @@ msgstr ""
 # YARD::Parser::SourceParser.after_parse_file_callbacks
 #: ../lib/yard/docstring_parser.rb:239 ../lib/yard/docstring_parser.rb:246
 #: ../lib/yard/docstring_parser.rb:263 ../lib/yard/docstring_parser.rb:268
-#, fuzzy
 msgid "Parser Callback Methods"
-msgstr "パーサーのコールバック"
+msgstr "パーサーコールバックメソッド"
 
 # YARD::DocstringParser#call_after_parse_callbacks
 #: ../lib/yard/docstring_parser.rb:246
@@ -15125,9 +15057,8 @@ msgstr ""
 
 # @return [Proc]
 #: ../lib/yard/docstring_parser.rb:263
-#, fuzzy
 msgid "a block to be called after a docstring is parsed"
-msgstr "taskを起動した後で呼び出される,proc"
+msgstr "docstringが解析された後で呼び出されるためのブロック"
 
 # @yieldparam [SourceParser]
 #: ../lib/yard/docstring_parser.rb:263 ../lib/yard/parser/source_parser.rb:292
@@ -15819,66 +15750,56 @@ msgstr "owner属性を設定する"
 
 # @param value
 #: ../lib/yard/handlers/base.rb:314 ../lib/yard/handlers/base.rb:335
-#, fuzzy
 msgid "the value to set the attribute namespace to."
-msgstr "name属性を設定する値"
+msgstr "値にnamespace属性を設定するための値"
 
 # YARD::CodeObjects::ExtraFileObject#name=
 # YARD::Tags::RefTagList#name=
 # YARD::Templates::Section#name=
 #: ../lib/yard/handlers/base.rb:315 ../lib/yard/handlers/base.rb:336
-#, fuzzy
 msgid "Sets the attribute namespace"
-msgstr "name属性を設定する"
+msgstr "namespace属性を設定する"
 
 # @param value
 #: ../lib/yard/handlers/base.rb:317 ../lib/yard/handlers/base.rb:337
-#, fuzzy
 msgid "the value to set the attribute visibility to."
-msgstr "ファイル属性を設定する,値"
+msgstr "値にvisibility属性を設定するための値"
 
 # YARD::Parser::Ruby::RipperParser#ast
 # YARD::Parser::Ruby::RipperParser#root
 #: ../lib/yard/handlers/base.rb:318 ../lib/yard/handlers/base.rb:337
-#, fuzzy
 msgid "Returns the value of attribute visibility"
-msgstr "ast属性の値を返す。"
+msgstr "visibility属性の値を返す"
 
 # YARD::Parser::Ruby::AstNode#file=
 #: ../lib/yard/handlers/base.rb:318 ../lib/yard/handlers/base.rb:338
-#, fuzzy
 msgid "Sets the attribute visibility"
-msgstr "ファイル属性を設定する。"
+msgstr "visibility属性を設定する。"
 
 # @param value
 #: ../lib/yard/handlers/base.rb:320 ../lib/yard/handlers/base.rb:339
-#, fuzzy
 msgid "the value to set the attribute scope to."
-msgstr "ソースの属性を設定する,値"
+msgstr "値にスコープ属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkOPASGN#op
 #: ../lib/yard/handlers/base.rb:321 ../lib/yard/handlers/base.rb:339
-#, fuzzy
 msgid "Returns the value of attribute scope"
-msgstr "op属性の値を返す。"
+msgstr "スコープ属性の値を返す"
 
 # YARD::Parser::Ruby::AstNode#source=
 #: ../lib/yard/handlers/base.rb:321 ../lib/yard/handlers/base.rb:340
-#, fuzzy
 msgid "Sets the attribute scope"
-msgstr "ソース属性を設定する。"
+msgstr "スコープ属性を設定する"
 
 # YARD::Tags::Library.labels
 #: ../lib/yard/handlers/base.rb:324 ../lib/yard/handlers/base.rb:341
-#, fuzzy
 msgid "Returns the value of attribute globals"
-msgstr "属性のラベルの入った値を返す"
+msgstr "globals(全体)属性の値を返す"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#lex_state
 #: ../lib/yard/handlers/base.rb:327 ../lib/yard/handlers/base.rb:342
-#, fuzzy
 msgid "Returns the value of attribute extra_state"
-msgstr "lex_state属性の値を返す。"
+msgstr "extra_state属性の値を返す"
 
 # YARD::Handlers::Base#push_state
 #: ../lib/yard/handlers/base.rb:344
@@ -15886,8 +15807,8 @@ msgid ""
 "Executes a given block with specific state values for {#owner},\n"
 "{#namespace} and {#scope}."
 msgstr ""
-"{#owner},{#namespace}と{#scope} 用の特定の状態の値を用い、\n"
-"与えられたブロックを実行する。"
+"{#owner}, {#namespace} , {#scope}メソッド用の特定の状態値と\n"
+"一緒に与えられたブロックを実行する。"
 
 # @yield
 #: ../lib/yard/handlers/base.rb:355
@@ -15953,28 +15874,24 @@ msgstr "記録するオブジェクト"
 
 # YARD::Logger#enter_level
 #: ../lib/yard/handlers/base.rb:420
-#, fuzzy
 msgid "Registers the file/line of the declaration with the object"
-msgstr "ブロックの継続するlogger levelを設定する。"
+msgstr "オブジェクトを用い宣言のファイル/行を登録する"
 
 # YARD::Handlers::Base#expand_macro
 #: ../lib/yard/handlers/base.rb:429
-#, fuzzy
 msgid "Registers any docstring found for the object and expands macros"
-msgstr "マクロを拡張する為に +object+ のdocstringを設定する"
+msgstr "オブジェクト用に見つかった任意のdocstringを登録し、マクロを拡張する"
 
 # YARD::Registry.at
 # YARD::Registry.[]
 #: ../lib/yard/handlers/base.rb:452
-#, fuzzy
 msgid "Registers the object as being inside a specific group"
-msgstr "固有のパスでオブジェクトを返す"
+msgstr "特定のグループ内部のものとしてオブジェクトを登録する"
 
 # YARD::CodeObjects::MethodObject#aliases
 #: ../lib/yard/handlers/base.rb:466
-#, fuzzy
 msgid "Registers any transitive tags from the namespace on the object"
-msgstr "オブジェクトの全てのエイリアスの名前を返す"
+msgstr "オブジェクト上のnamespaceから全てのtransitiveタグを登録する"
 
 # YARD::Handlers::Base#register_visibility
 #: ../lib/yard/handlers/base.rb:490
@@ -15987,15 +15904,13 @@ msgstr ""
 # @param [Array<String>]
 # @param [Array]
 #: ../lib/yard/handlers/base.rb:495
-#, fuzzy
 msgid "tag|param|visibility"
-msgstr "list"
+msgstr ""
 
 # @return [String]
 #: ../lib/yard/handlers/base.rb:495
-#, fuzzy
 msgid "the visibility to set on the object"
-msgstr "マクロ上で記録されるデータ"
+msgstr "オブジェクトを設定するためのvisibility"
 
 # YARD::Handlers::Base#register_module_function
 #: ../lib/yard/handlers/base.rb:501
@@ -16222,16 +16137,14 @@ msgstr ""
 
 # @return [Boolean]
 #: ../lib/yard/handlers/c/base.rb:9
-#, fuzzy
 msgid "whether the handler handles this statement"
-msgstr "ノードがトークンかどうか"
+msgstr "ハンドラーがこのステートメントを操作するかどうか"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/handlers/c/base.rb:36 ../lib/yard/handlers/c/base.rb:40
 #: ../lib/yard/handlers/c/base.rb:44 ../lib/yard/handlers/c/base.rb:48
-#, fuzzy
 msgid "Registering objects"
-msgstr "記録されたオブジェクト"
+msgstr "オブジェクトを登録する"
 
 # YARD::Handlers::C::Base#namespace_for_variable
 # YARD::Handlers::C::Base#namespaces
@@ -16251,21 +16164,18 @@ msgstr "内部のブロックを解析する"
 
 # @return [String]
 #: ../lib/yard/handlers/c/base.rb:87 ../lib/yard/handlers/c/base.rb:104
-#, fuzzy
 msgid "Processing other files"
-msgstr "ファイルへのリンク"
+msgstr "他のファイルを処理する"
 
 # YARD::Handlers::Ruby::MethodConditionHandler
 #: ../lib/yard/handlers/c/init_handler.rb:2
-#, fuzzy
 msgid "Handles the Init_Libname() method"
-msgstr "メソッドの内部の条件を操作する"
+msgstr "Init_Libname()メソッドを操作する"
 
 # YARD::CLI::Yardoc#parse_arguments
 #: ../lib/yard/handlers/c/override_comment_handler.rb:2
-#, fuzzy
 msgid "Parses comments"
-msgstr "コマンドライン引数を解析する"
+msgstr "コメントを解析する"
 
 # YARD::Handlers::C::SymbolHandler
 #: ../lib/yard/handlers/c/symbol_handler.rb:2
@@ -16458,15 +16368,13 @@ msgstr "プロセッサーの新しいインスタンス"
 # @param [Hash]
 #: ../lib/yard/handlers/processor.rb:92 ../lib/yard/tags/directives.rb:54
 #: ../lib/yard/tags/library.rb:290
-#, fuzzy
 msgid "tag|param|parser"
-msgstr "params"
+msgstr ""
 
 # @param [Integer] char_no
 #: ../lib/yard/handlers/processor.rb:92
-#, fuzzy
 msgid "the parser used to initialize the processor"
-msgstr "char numberをトークンにイニシャライズする, char number"
+msgstr "プロセッサを初期化するために使ったパーサー"
 
 # YARD::Handlers::Processor#process
 #: ../lib/yard/handlers/processor.rb:106
@@ -16907,9 +16815,8 @@ msgstr "クラス変数を操作する(@@変数)"
 # YARD::Handlers::Ruby::ConstantHandler
 #: ../lib/yard/handlers/ruby/comment_handler.rb:2
 #: ../lib/yard/handlers/ruby/legacy/comment_handler.rb:2
-#, fuzzy
 msgid "Handles any lone comment statement in a Ruby file"
-msgstr "任意の定数割り当てを操作する"
+msgstr "Rubyのファイルの中の任意の単一のコメントステートメントを操作する"
 
 # YARD::Handlers::Ruby::Legacy::ConstantHandler
 # YARD::Handlers::Ruby::ConstantHandler
@@ -16922,9 +16829,8 @@ msgstr "任意の定数割り当てを操作する"
 # YARD::Handlers::Ruby::MacroHandler
 #: ../lib/yard/handlers/ruby/dsl_handler.rb:5
 #: ../lib/yard/handlers/ruby/legacy/dsl_handler.rb:6
-#, fuzzy
 msgid "Handles automatic detection of dsl-style methods"
-msgstr "マクロを操作する(dsl-styleメソッド)"
+msgstr "DSLスタイルのメソッドの自動宣言を操作する"
 
 # YARD::Handlers::Ruby::Legacy::ExceptionHandler
 # YARD::Handlers::Ruby::ExceptionHandler
@@ -17368,15 +17274,13 @@ msgstr ""
 
 # @param [String]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:50
-#, fuzzy
 msgid "tag|param|member_tag"
-msgstr "member"
+msgstr ""
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:50
-#, fuzzy
 msgid "the tag object to check for types"
-msgstr "チェックするオブジェクト"
+msgstr "型をチェックする為のタグオブジェクト"
 
 # @return [String]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:50
@@ -17539,38 +17443,33 @@ msgstr ""
 
 # YARD::Handlers::Processor#initialize
 #: ../lib/yard/i18n/locale.rb:18
-#, fuzzy
 msgid "Creates a locale for +name+ locale."
-msgstr "+file+用の新しいProcessorを作成する"
+msgstr "+name+ の言語別にlocaleを作成する"
 
 # @return [Logger]
 #: ../lib/yard/i18n/locale.rb:20
-#, fuzzy
 msgid "a new instance of Locale"
-msgstr "Loggerの新しいインスタンス"
+msgstr "Localeの新しいインスタンス"
 
 # @return [String]
 #: ../lib/yard/i18n/locale.rb:20
-#, fuzzy
 msgid "the locale name."
-msgstr "モジュール名"
+msgstr "言語名(地域名)"
 
 # YARD::I18n::Locale#load
 #: ../lib/yard/i18n/locale.rb:26
 msgid "Loads translation messages from +locale_directory+/{#name}.po."
-msgstr ""
+msgstr "+locale_directory+/{#name}.po.から翻訳メッセージをロードする"
 
 # @return [Boolean]
 #: ../lib/yard/i18n/locale.rb:30
-#, fuzzy
 msgid "+true+ if PO file exists, +false+ otherwise."
-msgstr "全てのプラグインが正しくロードした場合、true、そうでなければ、false"
+msgstr "POファイルが存在すればtrue、そうでなければ、false"
 
 # @param [Boolean]
 #: ../lib/yard/i18n/locale.rb:30
-#, fuzzy
 msgid "tag|param|locale_directory"
-msgstr "load_order_error"
+msgstr ""
 
 # @param [String] locale_directory
 #: ../lib/yard/i18n/locale.rb:30
@@ -17590,15 +17489,13 @@ msgstr ""
 # @param [CodeObjects::NamespaceObject, nil]
 # @param [CodeObjects::NamespaceObject]
 #: ../lib/yard/i18n/locale.rb:45
-#, fuzzy
 msgid "tag|param|message"
-msgstr "namespace"
+msgstr ""
 
 # @param [CodeObjects::NamespaceObject] namespace
 #: ../lib/yard/i18n/locale.rb:45
-#, fuzzy
 msgid "the translation target message."
-msgstr "始まりのnamespace"
+msgstr "翻訳目標のメッセージ"
 
 # @return [String]
 #: ../lib/yard/i18n/locale.rb:45
@@ -17616,15 +17513,13 @@ msgstr ""
 
 # @param tag_name
 #: ../lib/yard/i18n/message.rb:11
-#, fuzzy
 msgid "the message ID of the trnslation target message."
-msgstr "解析の為のタグの名前"
+msgstr "翻訳目標のメッセージのメッセージID"
 
 # @param [Fixnum, nil] line
 #: ../lib/yard/i18n/message.rb:14
-#, fuzzy
 msgid "path and line number where the message is appered."
-msgstr "ファイルの中でオブジェクトが位置する,行数"
+msgstr "メッセージが現れるところのパスと行数"
 
 # @return [Set]
 #: ../lib/yard/i18n/message.rb:15
@@ -17633,80 +17528,70 @@ msgstr ""
 
 # @return [Array<MethodObject>]
 #: ../lib/yard/i18n/message.rb:18
-#, fuzzy
 msgid "the set of comments for the messages."
-msgstr "マッチしたメソッドのリスト"
+msgstr "メッセージ用のコメントのグループ"
 
 # YARD::Handlers::Processor#initialize
 #: ../lib/yard/i18n/message.rb:21
-#, fuzzy
 msgid "Creates a trasnlate target message for message ID +id+."
-msgstr "+file+用の新しいProcessorを作成する"
+msgstr "メッセージID +id+ 用の翻訳目標のメッセージを作成する"
 
 # @return [Tag]
 #: ../lib/yard/i18n/message.rb:23
-#, fuzzy
 msgid "a new instance of Message"
-msgstr "タグの新しいインスタンス"
+msgstr "メッセージの新しいインスタンス"
 
 # @param [Fixnum]
 #: ../lib/yard/i18n/message.rb:23 ../lib/yard/i18n/messages.rb:26
 #: ../lib/yard/i18n/messages.rb:36
-#, fuzzy
 msgid "tag|param|id"
-msgstr "index"
+msgstr ""
 
 # @param [String] id
 #: ../lib/yard/i18n/message.rb:23
 msgid "the message ID of the translate target message."
-msgstr ""
+msgstr "翻訳目標のメッセージのメッセージID"
 
 # YARD::I18n::Message#add_location
 #: ../lib/yard/i18n/message.rb:30
 msgid "Adds location information for the message."
-msgstr ""
+msgstr "メッセージ用の地域情報を追加する"
 
 # @param [Fixnum, nil] line
 #: ../lib/yard/i18n/message.rb:34
-#, fuzzy
 msgid "the line number where the message appears."
-msgstr "ファイルの中でオブジェクトが位置する,行数"
+msgstr "メッセージが見えるところの行数"
 
 # @return [String]
 #: ../lib/yard/i18n/message.rb:34
-#, fuzzy
 msgid "the path where the message appears."
-msgstr "コマンドのベースURIの後で返す、パス"
+msgstr "メッセージが見えるところのパス"
 
 # YARD::I18n::Message#add_comment
 #: ../lib/yard/i18n/message.rb:39
 msgid "Adds a comment for the message."
-msgstr ""
+msgstr "メッセージ用のコメントを追加する"
 
 # @param [String, Array<String>, Docstring]
 # @param [String]
 #: ../lib/yard/i18n/message.rb:42
-#, fuzzy
 msgid "tag|param|comment"
-msgstr "comments"
+msgstr ""
 
 # @return [String]
 #: ../lib/yard/i18n/message.rb:42
-#, fuzzy
 msgid "the comment for the message to be added."
-msgstr "解析されるファイルの内容。"
+msgstr "追加されるメッセージ用のコメント"
 
 # @return [Boolean]
 #: ../lib/yard/i18n/message.rb:48
-#, fuzzy
 msgid "checks whether this message is equal to another."
-msgstr "このマクロがメソッドに加えられるかどうか"
+msgstr "このメッセージが他と同じかどうか"
 
 # @param [String] content
 #: ../lib/yard/i18n/message.rb:48
-#, fuzzy
 msgid "the +Message+ to be compared."
-msgstr "解析される未加工のコメント"
+msgstr "比較される為の +message+"
 
 # YARD::I18n::Messages
 #: ../lib/yard/i18n/messages.rb:4
@@ -17715,15 +17600,13 @@ msgstr ""
 
 # YARD::Logger#initialize
 #: ../lib/yard/i18n/messages.rb:10
-#, fuzzy
 msgid "Creates a new container."
-msgstr "新しいloggerを作成する"
+msgstr "新しいコンテナを作成する"
 
 # @return [Tag]
 #: ../lib/yard/i18n/messages.rb:10
-#, fuzzy
 msgid "a new instance of Messages"
-msgstr "タグの新しいインスタンス"
+msgstr "メッセージの新しいインスタンス"
 
 # YARD::I18n::Messages#each
 #: ../lib/yard/i18n/messages.rb:15
@@ -17732,17 +17615,15 @@ msgstr ""
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/i18n/messages.rb:19
-#, fuzzy
 msgid "tag|yieldparam|message"
-msgstr "tag"
+msgstr ""
 
 # @return [CodeObjects::RootObject]
 #: ../lib/yard/i18n/messages.rb:19
-#, fuzzy
 msgid ""
 "the next message object in\n"
 "the enumeration."
-msgstr "namespaceの中のrootオブジェクト"
+msgstr "配列の中の次のメッセージオブジェクト"
 
 # @return [Message, nil]
 #: ../lib/yard/i18n/messages.rb:26
@@ -17766,15 +17647,13 @@ msgstr ""
 
 # @param [String] path
 #: ../lib/yard/i18n/messages.rb:36
-#, fuzzy
 msgid "the ID of the message to be registered."
-msgstr "記録する為のパス名"
+msgstr "記録されるメッセージのID"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/i18n/messages.rb:36
-#, fuzzy
 msgid "the registered +Message+."
-msgstr "記録されたオブジェクト"
+msgstr "記録された +Message+"
 
 # YARD::I18n::Messages#==
 #: ../lib/yard/i18n/messages.rb:41
@@ -17783,9 +17662,8 @@ msgstr ""
 
 # @param [#to_s] tag
 #: ../lib/yard/i18n/messages.rb:44
-#, fuzzy
 msgid "the container to compare."
-msgstr "作成するタグ名"
+msgstr "比較するためのコンテナ"
 
 # @return [Boolean]
 #: ../lib/yard/i18n/messages.rb:44
@@ -17794,9 +17672,8 @@ msgstr ""
 
 # @return [Array<NamespaceObject>]
 #: ../lib/yard/i18n/messages.rb:52
-#, fuzzy
 msgid "the set of message objects"
-msgstr "オブジェクトのnamespaceのリスト"
+msgstr "メッセージオブジェクトのグループ"
 
 # YARD::I18n::PotGenerator
 #: ../lib/yard/i18n/pot_generator.rb:6
@@ -17898,9 +17775,8 @@ msgstr ""
 
 # @example
 #: ../lib/yard/i18n/pot_generator.rb:64
-#, fuzzy
 msgid "tag|example|Generate a .pot file"
-msgstr "ファイルのglobを解析する。"
+msgstr "tag|example|.popファイルを生成する"
 
 # @see
 #: ../lib/yard/i18n/pot_generator.rb:64
@@ -17923,9 +17799,8 @@ msgstr ""
 
 # @return [Router]
 #: ../lib/yard/i18n/pot_generator.rb:78
-#, fuzzy
 msgid "a new instance of PotGenerator"
-msgstr "Routerの新しいインスタンス"
+msgstr "PotGeneratorの新しいインスタンス"
 
 # @param [String] relative_base_path
 #: ../lib/yard/i18n/pot_generator.rb:78
@@ -17937,45 +17812,40 @@ msgstr ""
 
 # @param [Boolean]
 #: ../lib/yard/i18n/pot_generator.rb:78
-#, fuzzy
 msgid "tag|param|relative_base_path"
-msgstr "relative"
+msgstr ""
 
 # @param [Array<CodeObjects::Base>] objects
 #: ../lib/yard/i18n/pot_generator.rb:85
-#, fuzzy
 msgid ""
 "Parses {CodeObjects::Base} objects and stores extracted msgids\n"
 "into {#messages}"
 msgstr ""
-"テンプレートに渡す為の\n"
-"{CodeObjects::Base} オブジェクトのリスト"
+"{CodeObjects::Base}オブジェクトを解析し、\n"
+"{#messages}メソッドの中へ抽出されたmsgidを登録する"
 
 # @param [Array<CodeObjects::Base>] objects
 #: ../lib/yard/i18n/pot_generator.rb:90
-#, fuzzy
 msgid ""
 "a list of\n"
 "{CodeObjects::Base} to be parsed."
-msgstr ""
-"テンプレートに渡す為の\n"
-"{CodeObjects::Base} オブジェクトのリスト"
+msgstr "解析される {CodeObjects::Base} のリスト"
 
 # @deprecated
 #: ../lib/yard/i18n/pot_generator.rb:97
-#, fuzzy
 msgid ""
 "Parses {CodeObjects::ExtraFileObject} objects and stores\n"
 "extracted msgids into {#messages}."
-msgstr "替わりに{CodeObjects::ExtraFileObject#contents}を使う"
+msgstr ""
+"{CodeObjects::ExtraFileObject} オブジェクトを解析し、\n"
+"抽出されたmsgidを{#messages}の中へ登録する。"
 
 # @deprecated
 #: ../lib/yard/i18n/pot_generator.rb:102
-#, fuzzy
 msgid ""
 "a list\n"
 "of {CodeObjects::ExtraFileObject} objects to be parsed."
-msgstr "替わりに{CodeObjects::ExtraFileObject#contents}を使う"
+msgstr "解析される {CodeObjects::ExtraFileObject} オブジェクトのリスト"
 
 # YARD::I18n::PotGenerator#generate
 #: ../lib/yard/i18n/pot_generator.rb:109
@@ -18028,15 +17898,13 @@ msgstr "Textの新しいインスタンス"
 
 # @param [String] text
 #: ../lib/yard/i18n/text.rb:11
-#, fuzzy
 msgid "a text to be translated."
-msgstr "エスケープするテキスト"
+msgstr "翻訳されるテキスト"
 
 # @param [Fixnum, nil]
 #: ../lib/yard/i18n/text.rb:11
-#, fuzzy
 msgid "tag|param|input"
-msgstr "param|line"
+msgstr ""
 
 # YARD::I18n::Text#extract_messages
 #: ../lib/yard/i18n/text.rb:17
@@ -18045,33 +17913,28 @@ msgstr ""
 
 # @yieldparam [Array<String>]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "tag|yieldparam|line_no"
-msgstr "files"
+msgstr ""
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "tag|yieldparam|name"
-msgstr "tag"
+msgstr ""
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "tag|yieldparam|start_line_no"
-msgstr "tag"
+msgstr ""
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "tag|yieldparam|text"
-msgstr "tag"
+msgstr ""
 
 # @yieldparam [Array<String>]
 #: ../lib/yard/i18n/text.rb:34 ../lib/yard/options.rb:142
-#, fuzzy
 msgid "tag|yieldparam|value"
-msgstr "files"
+msgstr ""
 
 # @yield [:paragraph, text, start_line_no]
 #: ../lib/yard/i18n/text.rb:34
@@ -18093,37 +17956,32 @@ msgstr ""
 
 # @return [Fixnum]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid ""
 "the defined line number of extracted\n"
 "attribute."
-msgstr "ノードの文字列の行数"
+msgstr "抽出された属性の定義された行数"
 
 # @param [#to_s] key
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "the name of extracted attribute."
-msgstr "カスタム属性の名前"
+msgstr "抽出された属性の名前"
 
 # @return [Fixnum]
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid ""
 "the start line number of\n"
 "extracted paragraph."
-msgstr "ノードの文字列の行数"
+msgstr "抽出された段落の最初の行数"
 
 # @param [String] text
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "the text of extracted paragraph."
-msgstr "エスケープするテキスト"
+msgstr "抽出された段落のテキスト"
 
 # @param value
 #: ../lib/yard/i18n/text.rb:34
-#, fuzzy
 msgid "the value of extracted attribute."
-msgstr "name属性を設定する値"
+msgstr "抽出された属性の値"
 
 # YARD::I18n::Text#translate
 #: ../lib/yard/i18n/text.rb:49
@@ -18132,21 +17990,18 @@ msgstr ""
 
 # @param [Object]
 #: ../lib/yard/i18n/text.rb:52
-#, fuzzy
 msgid "tag|param|locale"
-msgstr "val"
+msgstr ""
 
 # @return [String]
 #: ../lib/yard/i18n/text.rb:52
-#, fuzzy
 msgid "the translation target locale."
-msgstr "トークンのテキストの値"
+msgstr "翻訳目標の地域"
 
 # @return [String]
 #: ../lib/yard/i18n/text.rb:52
-#, fuzzy
 msgid "translated text."
-msgstr "整えられたテキスト"
+msgstr "翻訳されたテキスト"
 
 # YARD::Logger
 #: ../lib/yard/logging.rb:6
@@ -18166,9 +18021,8 @@ msgstr ""
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/logging.rb:15
-#, fuzzy
 msgid "the IO object being logged to"
-msgstr "テストされる現在のオブジェクト"
+msgstr "IOオブジェクトに記録されるIOオブジェクト"
 
 # @return [Boolean]
 #: ../lib/yard/logging.rb:19
@@ -18196,15 +18050,13 @@ msgstr ""
 
 # @param value
 #: ../lib/yard/logging.rb:30
-#, fuzzy
 msgid "the value to set the attribute show_progress to."
-msgstr "show_backtraces属性を設定する値"
+msgstr "値にshow_progress属性を設定する為の値"
 
 # YARD::Logger#show_backtraces=
 #: ../lib/yard/logging.rb:31
-#, fuzzy
 msgid "Sets the attribute show_progress"
-msgstr "show_backtraces属性を設定する"
+msgstr "show_progress属性を設定する"
 
 # YARD::Logger.instance
 #: ../lib/yard/logging.rb:33
@@ -18249,25 +18101,22 @@ msgstr ""
 
 # @param [String] content
 #: ../lib/yard/logging.rb:66
-#, fuzzy
 msgid "a block of arbitrary code to benchmark"
-msgstr "解析する為のコードの入ったブロック。"
+msgstr "ベンチマークの為の任意のコードの入ったブロック"
 
 # @param [Symbol]
 # @param [#to_s]
 #: ../lib/yard/logging.rb:66 ../lib/yard/logging.rb:82
 #: ../lib/yard/logging.rb:117
-#, fuzzy
 msgid "tag|param|msg"
-msgstr "タグ"
+msgstr ""
 
 # @param [TokenList, String]
 # @param [String]
 # @param [String, #read, Object]
 #: ../lib/yard/logging.rb:66 ../lib/yard/logging.rb:82
-#, fuzzy
 msgid "tag|param|nontty_log"
-msgstr "内容"
+msgstr ""
 
 # @param [Symbol, nil] nontty_log
 #: ../lib/yard/logging.rb:66 ../lib/yard/logging.rb:82
@@ -18278,9 +18127,8 @@ msgstr ""
 
 # @return [String]
 #: ../lib/yard/logging.rb:66 ../lib/yard/logging.rb:117
-#, fuzzy
 msgid "the message to display"
-msgstr "表示する出力結果"
+msgstr "表示するメッセージ"
 
 # YARD::Logger#progress
 #: ../lib/yard/logging.rb:74
@@ -18293,9 +18141,8 @@ msgstr ""
 # @param [String, CodeObjects::ExtraFileObject] filename
 # @param [String] filename
 #: ../lib/yard/logging.rb:82
-#, fuzzy
 msgid "the message to log"
-msgstr "リンクするファイル名"
+msgstr "記録するメッセージ"
 
 # YARD::Logger#clear_progress
 #: ../lib/yard/logging.rb:104
@@ -18321,9 +18168,8 @@ msgstr "exc"
 
 # @param [Fixnum]
 #: ../lib/yard/logging.rb:126
-#, fuzzy
 msgid "tag|param|level_meth"
-msgstr "level"
+msgstr ""
 
 # @param [Array<String>] exc
 #: ../lib/yard/logging.rb:126
@@ -18332,9 +18178,8 @@ msgstr "バックトレースのリスト"
 
 # @param [Array<String>] exc
 #: ../lib/yard/logging.rb:126
-#, fuzzy
 msgid "the level to log backtrace at"
-msgstr "バックトレースのリスト"
+msgstr "バックトレースを記録する階層"
 
 # YARD::Logger#warn_no_continuations
 #: ../lib/yard/logging.rb:134
@@ -18522,27 +18367,23 @@ msgstr ""
 
 # @example
 #: ../lib/yard/options.rb:68
-#, fuzzy
 msgid "tag|example|Defining an Options class with custom option keys"
-msgstr "タイトルと共にクラスにリンクする"
+msgstr "カスタムオプションのkeyを用いたオプションクラス定義"
 
 # @example
 #: ../lib/yard/options.rb:68
-#, fuzzy
 msgid "tag|example|Deprecating an option while still supporting it"
-msgstr "htmlフォーマットと共にオブジェクトを表示する"
+msgstr "まだサポートしているけれど廃止するオプション"
 
 # @example
 #: ../lib/yard/options.rb:68
-#, fuzzy
 msgid "tag|example|Initializing default option values"
-msgstr "セクションのデフォルトのグループ"
+msgstr "tag|example|初期化されたデフォルトのオプション値"
 
 # @example
 #: ../lib/yard/options.rb:68
-#, fuzzy
 msgid "tag|example|Using +default_attr+ to create default attributes"
-msgstr "直接オブジェクト属性を検索するには、+object+ や +o+を使う"
+msgstr "tag|example|デフォルト属性を作成するための +default_attr+ を用いる"
 
 # YARD::Options.default_attr
 #: ../lib/yard/options.rb:70
@@ -18558,15 +18399,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/options.rb:79
-#, fuzzy
 msgid "tag|example|Defining a default option key"
-msgstr "セクションのデフォルトのグループ"
+msgstr "tag|example|デフォルトのオプションキーの定義"
 
 # @param [Object]
 #: ../lib/yard/options.rb:79
-#, fuzzy
 msgid "tag|param|default"
-msgstr "val"
+msgstr ""
 
 # @param [Object, Proc] default
 #: ../lib/yard/options.rb:79
@@ -18577,9 +18416,8 @@ msgstr ""
 
 # @param [String, Symbol] section
 #: ../lib/yard/options.rb:79
-#, fuzzy
 msgid "the option key name"
-msgstr "セクション名"
+msgstr "オプションキー名"
 
 # YARD::Options#[]
 #: ../lib/yard/options.rb:85
@@ -18593,21 +18431,18 @@ msgstr ""
 
 # @example
 #: ../lib/yard/options.rb:90
-#, fuzzy
 msgid "tag|example|Calling on an option key with Hash syntax"
-msgstr "タイトルと共にクラスにリンクする"
+msgstr "tag|example|ハッシュ構文を用いたオプションキーを呼び出す"
 
 # @param [Hash] opts
 #: ../lib/yard/options.rb:90
-#, fuzzy
 msgid "the option name to access"
-msgstr "マッチするハッシュのオプション"
+msgstr "アクセスするためのオプション名"
 
 # @param value
 #: ../lib/yard/options.rb:90
-#, fuzzy
 msgid "the value of the option named +key+"
-msgstr "name属性を設定する値"
+msgstr "+key+ と名付けられたオプションの値"
 
 # YARD::Options#[]=
 #: ../lib/yard/options.rb:93
@@ -18623,28 +18458,24 @@ msgstr ""
 
 # @example
 #: ../lib/yard/options.rb:99
-#, fuzzy
 msgid "tag|example|Setting an option with Hash syntax"
-msgstr "globalの状態を設定する"
+msgstr "tag|example|ハッシュ構文を用いたオプションの設定"
 
 # @param [Hash] options
 #: ../lib/yard/options.rb:99
-#, fuzzy
 msgid "the optin to set"
-msgstr "ハッシュのオプション"
+msgstr "設定するためのオプション"
 
 # @param [Object] value
 # @param [Object] val
 #: ../lib/yard/options.rb:99
-#, fuzzy
 msgid "the value being set"
-msgstr "挿入する値"
+msgstr "設定される値"
 
 # @param [String] title
 #: ../lib/yard/options.rb:99
-#, fuzzy
 msgid "the value to set for the option"
-msgstr "リンク用に利用するタイトル"
+msgstr "オプション用に設定するための値"
 
 # YARD::Options#update
 #: ../lib/yard/options.rb:102
@@ -18660,9 +18491,8 @@ msgstr ""
 
 # @example
 #: ../lib/yard/options.rb:108
-#, fuzzy
 msgid "tag|example|Updating a set of options on an Options object"
-msgstr "インクルードしているdocstringは、オブジェクトの内容となる。"
+msgstr "tag|example|オプションオブジェクトでオプションのグループの更新"
 
 # YARD::Options#merge
 #: ../lib/yard/options.rb:117
@@ -18673,16 +18503,14 @@ msgstr ""
 
 # @see
 #: ../lib/yard/options.rb:122
-#, fuzzy
 msgid "tag|see|#update"
-msgstr "find_nth_file"
+msgstr ""
 
 # @return [Base]
 # @return [MacroObject]
 #: ../lib/yard/options.rb:122
-#, fuzzy
 msgid "the newly created options object"
-msgstr "新たに作成されたオブジェクト"
+msgstr "新たに作成されたオプションオブジェクト"
 
 # @return [Hash]
 #: ../lib/yard/options.rb:128
@@ -18703,27 +18531,23 @@ msgstr ""
 
 # @yieldparam [Base]
 #: ../lib/yard/options.rb:142
-#, fuzzy
 msgid "tag|yieldparam|key"
-msgstr "self"
+msgstr ""
 
 # @param [Hash] options
 #: ../lib/yard/options.rb:142
-#, fuzzy
 msgid "the option key"
-msgstr "ハッシュのオプション"
+msgstr "オプションのキー"
 
 # @param [Hash] options
 #: ../lib/yard/options.rb:142
-#, fuzzy
 msgid "the option value"
-msgstr "ハッシュのオプション"
+msgstr "オプションの値"
 
 # @return [String]
 #: ../lib/yard/options.rb:150
-#, fuzzy
 msgid "Inspects the object"
-msgstr "解析するオブジェクト"
+msgstr "オブジェクトを解析する"
 
 # @return [Boolean]
 #: ../lib/yard/options.rb:156
@@ -18748,9 +18572,8 @@ msgstr ""
 
 # YARD::Tags::DefaultTag#defaults
 #: ../lib/yard/options.rb:182
-#, fuzzy
 msgid "Resets all values to their defaults."
-msgstr "デフォルトの属性の値を返す"
+msgstr "それらのデフォルトの全ての値をリセットする"
 
 # @abstract
 #: ../lib/yard/options.rb:187
@@ -18767,15 +18590,13 @@ msgstr ""
 
 # @param [#to_sym] key
 #: ../lib/yard/options.rb:204
-#, fuzzy
 msgid "the key to delete a value for"
-msgstr "削除するキー"
+msgstr "キー用に値を削除する為のキー"
 
 # @param [String] data
 #: ../lib/yard/options.rb:204
-#, fuzzy
 msgid "the value that was deleted"
-msgstr "シリアライズされたデータ"
+msgstr "削除された値"
 
 # YARD::Parser::Base
 #: ../lib/yard/parser/base.rb:4
@@ -18908,23 +18729,20 @@ msgstr "ソース属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:6
-#, fuzzy
 msgid "the value to set the attribute line to."
-msgstr "name属性を設定する値"
+msgstr "値に行属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader#line_num
 #: ../lib/yard/parser/c/statement.rb:7
-#, fuzzy
 msgid "Returns the value of attribute line"
-msgstr "line_num属性の値を返す。"
+msgstr "行属性の値を返す"
 
 # YARD::CodeObjects::ExtraFileObject#name=
 # YARD::Tags::RefTagList#name=
 # YARD::Templates::Section#name=
 #: ../lib/yard/parser/c/statement.rb:7
-#, fuzzy
 msgid "Sets the attribute line"
-msgstr "name属性を設定する"
+msgstr "行属性を設定"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:7 ../lib/yard/parser/ruby/ast_node.rb:48
@@ -18981,9 +18799,8 @@ msgstr "文の新しいインスタンス"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:39 ../lib/yard/parser/c/statement.rb:45
-#, fuzzy
 msgid "the value to set the attribute comments to."
-msgstr "meths(メソッド)属性を設定する値"
+msgstr "値にコメント属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments
 # YARD::Parser::Ruby::RipperParser#comments
@@ -18995,15 +18812,13 @@ msgstr "コメント属性の値を返す。"
 
 # YARD::CodeObjects::NamespaceObject#meths=
 #: ../lib/yard/parser/c/statement.rb:40 ../lib/yard/parser/c/statement.rb:46
-#, fuzzy
 msgid "Sets the attribute comments"
-msgstr "meths属性を設定する"
+msgstr "コメント属性を設定する"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:43
-#, fuzzy
 msgid "the value to set the attribute block to."
-msgstr "ソースの属性を設定する,値"
+msgstr "値にblock属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::Statement#block
 #: ../lib/yard/parser/c/statement.rb:44
@@ -19013,72 +18828,61 @@ msgstr "ブロック属性の値を返す。"
 
 # YARD::Parser::Ruby::AstNode#source=
 #: ../lib/yard/parser/c/statement.rb:44
-#, fuzzy
 msgid "Sets the attribute block"
-msgstr "ソース属性を設定する。"
+msgstr "block属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:44
-#, fuzzy
 msgid "the value to set the attribute declaration to."
-msgstr "section属性を設定する値"
+msgstr "値に宣言属性を設定するための値"
 
 # YARD::Templates::Template#section
 #: ../lib/yard/parser/c/statement.rb:45
-#, fuzzy
 msgid "Returns the value of attribute declaration"
-msgstr "section属性の値を返す"
+msgstr "宣言属性の値を返す"
 
 # YARD::Templates::Template#section=
 #: ../lib/yard/parser/c/statement.rb:45
-#, fuzzy
 msgid "Sets the attribute declaration"
-msgstr "section属性を設定する"
+msgstr "宣言属性を設定する"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:51
-#, fuzzy
 msgid "the value to set the attribute type to."
-msgstr "name属性を設定する値"
+msgstr "値に型属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkOPASGN#op
 #: ../lib/yard/parser/c/statement.rb:52
-#, fuzzy
 msgid "Returns the value of attribute type"
-msgstr "op属性の値を返す。"
+msgstr "型属性の値を返す"
 
 # YARD::CodeObjects::ExtraFileObject#name=
 # YARD::Tags::RefTagList#name=
 # YARD::Templates::Section#name=
 #: ../lib/yard/parser/c/statement.rb:52
-#, fuzzy
 msgid "Sets the attribute type"
-msgstr "name属性を設定する"
+msgstr "型属性を設定する"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:52
-#, fuzzy
 msgid "the value to set the attribute overrides to."
-msgstr "cvars(クラス変数)の属性を設定する値"
+msgstr "値にオーバーライド属性を設定するための値"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkNode#node
 #: ../lib/yard/parser/c/statement.rb:53
-#, fuzzy
 msgid "Returns the value of attribute overrides"
-msgstr "node属性の値を返す。"
+msgstr "オーバーライド属性の値を返す"
 
 # YARD::Tags::RefTag#owner=
 # YARD::Tags::RefTagList#owner=
 #: ../lib/yard/parser/c/statement.rb:53
-#, fuzzy
 msgid "Sets the attribute overrides"
-msgstr "owner属性を設定する"
+msgstr "オーバーライド属性を設定する"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:53
-#, fuzzy
 msgid "the value to set the attribute statement to."
-msgstr "name属性を設定する値"
+msgstr "値にステートメント属性を設定するための値"
 
 # YARD::CodeObjects::ExtraFileObject#name
 # YARD::CodeObjects::ExtraFileObject#path
@@ -19087,23 +18891,20 @@ msgstr "name属性を設定する値"
 # YARD::Tags::RefTagList#name
 # YARD::Templates::Section#name
 #: ../lib/yard/parser/c/statement.rb:54
-#, fuzzy
 msgid "Returns the value of attribute statement"
-msgstr "name属性の値を返す"
+msgstr "ステートメント属性の値を返す"
 
 # YARD::CodeObjects::ExtraFileObject#name=
 # YARD::Tags::RefTagList#name=
 # YARD::Templates::Section#name=
 #: ../lib/yard/parser/c/statement.rb:54
-#, fuzzy
 msgid "Sets the attribute statement"
-msgstr "name属性を設定する"
+msgstr "ステートメント属性を設定する"
 
 # @return [Token]
 #: ../lib/yard/parser/c/statement.rb:55
-#, fuzzy
 msgid "a new instance of Comment"
-msgstr "トークンの新しいインスタンス"
+msgstr "コメントの新しいインスタンス"
 
 # YARD::Parser::Ruby#s
 #: ../lib/yard/parser/ruby/ast_node.rb:5
@@ -19111,8 +18912,8 @@ msgid ""
 "Builds and s-expression by creating {AstNode} objects with\n"
 "the type provided by the first argument."
 msgstr ""
-"最初の引数によって提供された型と共に{AstNode}オブジェクトを\n"
-"作成する事によってビルドされS式にされる。"
+"最初の引数によって提供された型を用い{AstNode}オブジェクトを作成する事によって\n"
+"ビルドされS式にされる。"
 
 # @example An implicit list of keywords
 #: ../lib/yard/parser/ruby/ast_node.rb:24
@@ -19525,9 +19326,8 @@ msgstr "ノードがメソッド呼び出しかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:243
-#, fuzzy
 msgid "whether the node is a method definition"
-msgstr "ノードがメソッド呼び出しかどうか"
+msgstr "ノードがメソッド定義かどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:248
@@ -19536,15 +19336,13 @@ msgstr "ノードがifやelsifやelseの条件かどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:253
-#, fuzzy
 msgid "whether the node is a loop"
-msgstr "ノードがトークンかどうか"
+msgstr "ノードがループかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:258
-#, fuzzy
 msgid "whether the node has a block"
-msgstr "ノードがトークンかどうか"
+msgstr "ノードがblockかどうか"
 
 # YARD::Parser::Ruby::AstNode#has_line?
 # YARD::Parser::Ruby::AstNode#line
@@ -19651,15 +19449,13 @@ msgstr "解析するオブジェクト"
 #: ../lib/yard/parser/ruby/ast_node.rb:482
 #: ../lib/yard/parser/ruby/ast_node.rb:484
 #: ../lib/yard/parser/ruby/ast_node.rb:485
-#, fuzzy
 msgid "Managing node state"
-msgstr "グローバルなテンプレートの状態を管理する。"
+msgstr "ノードの状態の管理"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkStatementEnd
 #: ../lib/yard/parser/ruby/ast_node.rb:330
-#, fuzzy
 msgid "Resets node state in tree"
-msgstr "文の終りを表す。"
+msgstr "ツリーの中でノードの状態をリセットする"
 
 # YARD::Parser::Ruby::AstNode#reset_line_info
 #: ../lib/yard/parser/ruby/ast_node.rb:339
@@ -19668,16 +19464,13 @@ msgstr "行情報をリセットする。"
 
 # YARD::CodeObjects::MethodObject
 #: ../lib/yard/parser/ruby/ast_node.rb:479
-#, fuzzy
 msgid "Represents a lone comment block in source"
-msgstr "ソースの中のRubyメソッドを表す。"
+msgstr "ソースの中の単一のコメントブロックを表す"
 
 # YARD::Parser::Ruby::Legacy::RubyToken
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:7
 msgid "Legacy lexical tokenizer module."
 msgstr ""
-"レガシーレキシカルトークナイザーモジュール\n"
-"(レガシーな単語をトークナイザーするモジュール)"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::Token
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:17
@@ -20264,9 +20057,8 @@ msgstr ""
 
 # @param [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:22
-#, fuzzy
 msgid "the list of remaining files to parse"
-msgstr "解析するファイルのリスト"
+msgstr "解析のための残りのファイルのリスト"
 
 # YARD::Parser::OrderedParser#initialize
 #: ../lib/yard/parser/source_parser.rb:25
@@ -20284,30 +20076,26 @@ msgstr ""
 
 # @return [CParser]
 #: ../lib/yard/parser/source_parser.rb:32
-#, fuzzy
 msgid "a new instance of OrderedParser"
-msgstr "Cパーサーの新しいインスタンス"
+msgstr "OrderedParserの新しいインスタンス"
 
 # @return [Processor]
 #: ../lib/yard/parser/source_parser.rb:32
-#, fuzzy
 msgid ""
 "a structure containing all global\n"
 "state during parsing"
-msgstr "全てのグローバルな状態の処理の間に扱うプロセッサーオブジェクト"
+msgstr "解析中の全ての全体の状態を含んでいる構造体"
 
 # @yieldparam [OpenStruct]
 #: ../lib/yard/parser/source_parser.rb:32
-#, fuzzy
 msgid "tag|param|global_state"
-msgstr "globals"
+msgstr ""
 
 # YARD::Handlers::Ruby::Legacy::ClassConditionHandler#parse_condition
 # YARD::Handlers::Ruby::ClassConditionHandler#parse_condition
 #: ../lib/yard/parser/source_parser.rb:39
-#, fuzzy
 msgid "Parses the remainder of the {#files} list."
-msgstr "if/unlessステートメントの部分の条件を解析する。"
+msgstr "{#files} のリストの残りを解析する"
 
 # YARD::Parser::SourceParser
 #: ../lib/yard/parser/source_parser.rb:51
@@ -20528,14 +20316,12 @@ msgstr "有効なパーサーの型。"
 
 # YARD::Parser::SourceParser.before_parse_list
 #: ../lib/yard/parser/source_parser.rb:188
-#, fuzzy
 msgid ""
 "Registers a callback to be called before a list of files is parsed\n"
 "via {parse}. The block passed to this method will be called on\n"
 "subsequent parse calls."
 msgstr ""
-"ファイルのリストが{parse}経由で解析される前に\n"
-"呼び出されるコールバックを記録する。\n"
+"{parse} 経由でファイルのリストが解析される前に呼び出されるコールバックを記録する\n"
 "このメソッドに渡されるブロックはそれに続く、parse呼び出し上で呼び出される。"
 
 # YARD::Parser::SourceParser.before_parse_list
@@ -20683,23 +20469,22 @@ msgstr "yieldされるブロック。"
 # @yield [files, globals]
 #: ../lib/yard/parser/source_parser.rb:231
 #: ../lib/yard/parser/source_parser.rb:255
-#, fuzzy
 msgid ""
 "the yielded block is called once before\n"
 "parsing all files"
-msgstr "yieldされるブロックは全てのファイルを解析する前に一度呼び出される。"
+msgstr ""
+"yieldされたブロックは\n"
+"全てのファイルを解析する前に一度だけ呼び出される。"
 
 # YARD::Parser::SourceParser.after_parse_list
 #: ../lib/yard/parser/source_parser.rb:236
-#, fuzzy
 msgid ""
 "Registers a callback to be called after a list of files is parsed\n"
 "via {parse}. The block passed to this method will be called on\n"
 "subsequent parse calls."
 msgstr ""
-"ファイルのリストが{parse}経由で解析された後で呼び出される為にコールバックを記"
-"録する。\n"
-"このメソッドの為に渡されるブロックはその後のparse呼び出し上で呼び出される。\n"
+"ファイルのリストが {parse} 経由で解析された後で呼び出される為にコールバックを記録する。\n"
+"このメソッドの為に渡されるブロックはその後のparse呼び出し上で呼び出される。"
 
 # @example Printing results after parsing occurs
 #: ../lib/yard/parser/source_parser.rb:255
@@ -20730,15 +20515,13 @@ msgstr "ブロックが無視される為の戻り値"
 
 # YARD::Parser::SourceParser.before_parse_file
 #: ../lib/yard/parser/source_parser.rb:260
-#, fuzzy
 msgid ""
 "Registers a callback to be called before an individual file is parsed.\n"
 "The block passed to this method will be called on subsequent parse\n"
 "calls."
 msgstr ""
-"個々のファイルが解析される前に呼び出される為に、\n"
-"コールバックを記録する。\n"
-"このメソッドの為に渡されるブロックはその後parse呼び出しを呼び出される。"
+"個々のファイルが解析される前に呼び出されるコールバックを記録する\n"
+"blockはこのメソッドが続くparse呼び出しで呼び出されるために解析される。"
 
 # YARD::Parser::SourceParser.before_parse_file
 #: ../lib/yard/parser/source_parser.rb:264
@@ -20772,7 +20555,6 @@ msgstr ""
 
 # @yieldreturn [Boolean]
 #: ../lib/yard/parser/source_parser.rb:292
-#, fuzzy
 msgid ""
 "if the block returns +false+, parsing for\n"
 "the file is cancelled."
@@ -20900,9 +20682,8 @@ msgstr ""
 
 # @param [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:358
-#, fuzzy
 msgid "Parses a list of files in a queue."
-msgstr "解析するファイルのリスト"
+msgstr "キューのなかのファイルのリストを解析する"
 
 # @param [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:361
