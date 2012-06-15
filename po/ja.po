@@ -7594,7 +7594,6 @@ msgstr ""
 "その内容のインラインテーブルが追加された(0.6.0)"
 
 #: ../docs/WhatsNew.md:691
-#, fuzzy
 msgid ""
 "A table of contents is now generated dynamically using JavaScript for extra\n"
 "file pages (such as README's, or this document). It is generated based off "
@@ -7603,17 +7602,15 @@ msgid ""
 "right or listed inline on the page."
 msgstr ""
 "コンテンツのテーブルは追加のファイルのページ用に、\n"
-"JavaScriptによって動的に生成される(READMEやこのドキュメントのように)。\n"
-"これは、ドキュメントで利用されたヘッダー(h1,h2,... tags)とは違うベースを生成"
-"し、\n"
-"右側に添えられるか、又は、ページ上でインラインが記述される。"
+"JavaScriptによって動的に生成されるようになった(READMEやこのドキュメントのように)。\n"
+"これは、ドキュメントで利用されたヘッダー(h1,h2,... tags)がのぞかれた\n"
+"ベースを生成し右側に添えられるか、又は、ページ上でインラインが記述される。"
 
 #: ../docs/WhatsNew.md:696
 msgid "## Ad-hoc tag registration via `yardoc` CLI (`--tag`, etc.) (0.6.0)"
 msgstr "## `yardoc`CLI(`--tag`, etc.)経由での臨時のタグの記録 (0.6.0)"
 
 #: ../docs/WhatsNew.md:698
-#, fuzzy
 msgid ""
 "Simple meta-data tags can now be added at the command-line and registered "
 "to\n"
@@ -7621,37 +7618,37 @@ msgid ""
 "create\n"
 "a freeform text tag, use the following:"
 msgstr ""
-"単純なメタデータタグがコマンドラインで追加され、\n"
-"事前定義された方法の数字でテンプレートで表示する為に記録される。\n"
-"例えば、フリーフォームテキストのタグを作成するには、次のようになる:"
+"単純なメタデータタグは\n"
+"コマンドラインで追加され、事前に定義されたいくつか方法で\n"
+"テンプレートの中で表示されるために登録されるようになった。\n"
+"例えばフリーフォームテキストのタグを作成するには、次のようになる:"
 
 #: ../docs/WhatsNew.md:702
 msgid "    --tag my_tag_name:\"My Tag Title\""
 msgstr ""
 
 #: ../docs/WhatsNew.md:704
-#, fuzzy
 msgid ""
 "You can also create a \"typed\" tag (similar to `@return`), a typed named "
 "tag\n"
 "(similar to `@param`) as well as various combinations. The full list of\n"
 "options are listed in `yardoc --help` under the \"Tag Options\" section."
 msgstr ""
-"あなたは、\"型\"のタグも(\"@return\"と同様),name-tagの型も(`@param`と同様),\n"
-"又、様々な組み合わせも生成できる。\n"
-"完全なタグのオプションの説明は、\n"
-"`yardoc --help`の下にある\"Tag Options\"セクションで記述される。"
+"あなたは\"型\"のタグ(`@return`と同様に)も\n"
+"型のタグ名(`@param`と同様に)も様々な組み合わせもを作成する事もできる。\n"
+"オプションの完全なリストは\n"
+"`yardoc --help`の \"Tag Options\" のセクションよりで記述される。"
 
 #: ../docs/WhatsNew.md:708
-#, fuzzy
 msgid ""
 "If you wish to create a tag to store data but do not wish to show this data\n"
 "in the templates, use the `--hide-tag` option to hide it from generated "
 "output:"
 msgstr ""
-"あなたが、データを記録する為にタグを作成する事を望み、\n"
-"しかし、テンプレートでこのデータを一覧しない場合、\n"
-"生成された出力からそれを隠すのには、`--hide-tag`オプションを使う。"
+"あなたがデータを登録するためにタグを作成することを望むが、\n"
+"テンプレートの中のこのデータを一覧したくない場合、\n"
+"生成された出力からそれを隠すには`--hide-tag`オプションを使う。\n"
+"\n"
 
 #: ../docs/WhatsNew.md:711
 msgid "    --hide-tag my_tag_name"
@@ -7662,7 +7659,6 @@ msgid "## Added `--transitive-tags` to register transitive tags (0.6.0)"
 msgstr "## 過渡的なタグを記録するのに、`--transitive-tags`を追加された (0.6.0)"
 
 #: ../docs/WhatsNew.md:715
-#, fuzzy
 msgid ""
 "Transitive tags are tags that apply to all descendants of a namespace "
 "(class\n"
@@ -7674,13 +7670,12 @@ msgid ""
 msgstr ""
 "transitiveタグは、namespace上(クラス又はモジュール)で記述された時、\n"
 "全てのnamespaceの子孫に適用するタグである。\n"
-"例えば、`@since`タグは、transitiveタグである。\n"
-"クラスに`@since`を適用すると、クラスで全てのメソッドに`@since`が自動的に適用"
-"される。\n"
-"メソッドで直接`@since`タグを作成すると、継承された値を上書きするだろう。"
+"例えば、`@since`タグはTransitiveタグである。\n"
+"クラスに`@since`タグを適用すると、\n"
+"クラスの中の全てのメソッドに自動的に`@since`が適用される\n"
+"メソッドで直接`@since`タグを作成すると継承された値をオーバーライドする。"
 
 #: ../docs/WhatsNew.md:721
-#, fuzzy
 msgid ""
 "You can specify transitive tags on the command-line by using this option. "
 "Note\n"
@@ -7689,13 +7684,12 @@ msgid ""
 "to be specified as transitive. If you wish to do this programmatically, see\n"
 "the {YARD::Tags::Library.transitive_tags} attribute."
 msgstr ""
-"あなたは、このオプションによってコマンドライン上でtransitiveタグを指定でき"
-"る。\n"
-"次の事に注意する。\n"
-"transitiveとして指定するタグは、常に存在しなければならない(組み込みまたは、作"
-"成されたタグと`--tag`オプションを用いる)。\n"
-"あなたがこのプログラムを実行したいなら、 {YARD::Tags::Library."
-"transitive_tags} 属性を参照する。"
+"このオプションによって\n"
+"コマンドラインのタグを過渡的に指定できる\n"
+"transitiveとして指定される\n"
+"タグは既に存在しなければならない。\n"
+"(組み込みや`--tag`オプションによって作成された)\n"
+"あなたがこのプログラムを実行したいなら、 {YARD::Tags::Library.transitive_tags} 属性を参照する。"
 
 #: ../docs/WhatsNew.md:726
 msgid ""
@@ -7705,29 +7699,28 @@ msgstr ""
 "す) (0.6.0)"
 
 #: ../docs/WhatsNew.md:728
-#, fuzzy
 msgid ""
 "As seen in the `yard stats` feature overview, `yardoc` displays RDoc-like\n"
 "statistics when it is run. The output is equivalent to typing `yard stats`.\n"
 "To hide this output when yardoc is run, use `--no-stats`."
 msgstr ""
-"`yard stats`の機能概要に見られるように、\n"
-"`yardoc`は、RDocのように起動した時に統計値を表示する。\n"
-"出力は`yard stats`と打つのと同様である。\n"
-"この出力を隠すには、起動時に`--no-stats`を付ける。"
+"上記のように`yard stats`機能の概要は\n"
+"`yardoc`が起動する時にRDocのように統計を表示する\n"
+"出力は`yard stats`をタイプするのと同様である。\n"
+"yardocが起動する時にこの出力を隠すには、\n"
+"`--no-stats`を使う"
 
 #: ../docs/WhatsNew.md:732
 msgid "## `yri` now works on constants (0.6.0)"
 msgstr "## `yri`定数の処理をできるようになった (0.6.0)"
 
 #: ../docs/WhatsNew.md:734
-#, fuzzy
 msgid ""
 "Templates have now been added for text view of constants, which displays "
 "any\n"
 "documentation and the constant value."
 msgstr ""
-"テンプレートは、定数のテキスト一覧用に追加されました。\n"
+"テンプレートは定数の一覧を作成するため追加されるようになった。\n"
 "これは任意のドキュメントと定数を表示する。"
 
 #: ../docs/WhatsNew.md:737
@@ -7737,7 +7730,6 @@ msgstr ""
 "(0.6.2)"
 
 #: ../docs/WhatsNew.md:739
-#, fuzzy
 msgid ""
 "This is a backwards-incompatible change that disables plugins from "
 "automatically\n"
@@ -7750,16 +7742,16 @@ msgid ""
 "see next item). You can also set `autoload_plugins` to a list of plugins\n"
 "to be automatically loaded on start."
 msgstr ""
-"これは非後方互換で、YARDをスタートアップする時に、\n"
-"自動的にロードされてからプラグインを無効化する変更をする。\n"
-"今後は、あなたが自分で宣言すべきである。\n"
-"これは、あなたのプロジェクトのプラグインが、\n"
-"あなたのプロジェクトのルートで`.yardopts`ファイルに`--plugin PLUGINNAME`を追"
-"加する事で利用される。\n"
-"あなたの設定ファイルで`load_plugins`にtrueが設定する事によって、\n"
-"プラグインが自動ロードするように再設定できる。\n"
+"これはYARDのスタートアップする時の自動的なロードから\n"
+"プラグインを無効化する非後方互換な変更である。\n"
+"今後はあなたは手動で宣言しなければならない、\n"
+"それはあなたのプロジェクトのプラグインが\n"
+"あなたのプロジェクトのrootで`.yardopts`ファイルに\n"
+"`--plugin PLUGINNAME`を追加することによって利用される。\n"
+"あなたの設定ファイルの中で`load_plugins`をtrueに設定する事によって\n"
+"自動でロードされるプラグインを再度有効にできる。\n"
 "(`yard config load_plugins true`, 事項参照)\n"
-"あなたは、起動時に自動的にロードする為にプラグインのリストを\n"
+"あなたは、起動時に自動的にロードする為にプラグインのリストに\n"
 "`autoload_plugins`に設定する事も出来る。"
 
 #: ../docs/WhatsNew.md:747
@@ -7772,7 +7764,6 @@ msgstr ""
 "これらの変更をあなたのユーザーに通知するか確認してください。"
 
 #: ../docs/WhatsNew.md:750
-#, fuzzy
 msgid ""
 "Note that `--plugin` switches passed on the commandline (not via `."
 "yardopts`)\n"
@@ -7780,9 +7771,8 @@ msgid ""
 "commands."
 msgstr ""
 "次のことに留意する。\n"
-"コマンドラインで渡される`--plugin`引数(`.yardopts`経由ではない)は、\n"
-"ロードされるコマンドの前に解析され、それ自身が新しいCLIコマンドラインで追加で"
-"きる。"
+"コマンドライン(`.yardopts`経由ではない)で渡された--pulugin引数はコマンドがロードされる前に解析され、\n"
+"その結果、新しいCLIコマンドの中で追加できる。"
 
 #: ../docs/WhatsNew.md:753
 msgid ""
@@ -8120,7 +8110,6 @@ msgstr ""
 "-----------------------------------------------------"
 
 #: ../docs/WhatsNew.md:889
-#, fuzzy
 msgid ""
 "YARD now supports the ability to specify a language type for code blocks in\n"
 "docstrings. Although no actual highlighting support is added for any "
@@ -8128,10 +8117,9 @@ msgid ""
 "but Ruby, you can add your own support by writing your own helper method:"
 msgstr ""
 "YARDはdocstringの中のコードブロック用に、\n"
-"言語の型を指定する機能をサポートできるようになった。\n"
+"言語の型を指定する機能をサポートするようになった。\n"
 "実際のハイライトサポートは、全ての言語に追加されているわけではないが\n"
-"Rubyは、あなた自身がhelperメソッドを書くことによってサポートを追加する事がで"
-"きる。"
+"Rubyは、あなた自身がhelperメソッドを書くことによってサポートを追加する事ができる。"
 
 #: ../docs/WhatsNew.md:893
 msgid ""
@@ -8209,16 +8197,15 @@ msgstr ""
 "う。"
 
 #: ../docs/WhatsNew.md:924
-#, fuzzy
 msgid ""
 "One main use for this is the `yard-doc-core` package, which enabled yri\n"
 "support for Ruby core classes (stdlib coming soon as `yard-doc-stdlib`).\n"
 "To install it, simply:"
 msgstr ""
 "これの主なものとしては、`yard-doc-core`パッケージである。\n"
-"これは、Rubyコアクラス用のyriサポートを可能にする。\n"
-"(標準ライブラリは`yard-doc-stdlib`としてすぐに記録される)\n"
-"インストールするには、単純に次のようになる:"
+"これはRubyのコアクラス用のyriサポートを有効化する\n"
+"(標準ライブラリは`yard-doc-stdlib`として近日登場予定)\n"
+"簡単にインストールするには:"
 
 #: ../docs/WhatsNew.md:928
 msgid ""
@@ -8249,15 +8236,14 @@ msgstr ""
 "-----------------------------------------------"
 
 #: ../docs/WhatsNew.md:940
-#, fuzzy
 msgid ""
 "You can now add custom paths to non-gem .yardoc files\n"
 "by adding them as newline separated paths in `~/.yard/yri_search_paths`."
 msgstr ""
-"あなたは、gemではない.yardocファイルの\n"
-"カスタムパスを追加できるようになった。\n"
-"これは`~/.yard/yri_search_paths`のファイルの中に\n"
-"改行によって区切られたパスを追加することによって行える。"
+"あなたは`~/.yard/yri_search_paths`の中に\n"
+"改行に区切られたパスとして追加する事によって\n"
+"gem無しの.yardocファイルに\n"
+"カスタムパスを追加できるようになった。"
 
 #: ../docs/WhatsNew.md:943
 msgid ""
@@ -8289,7 +8275,6 @@ msgstr ""
 "--------------------------------"
 
 #: ../docs/WhatsNew.md:953
-#, fuzzy
 msgid ""
 "The class list now displays as an expandable tree view to better organized "
 "an\n"
@@ -8300,9 +8285,9 @@ msgid ""
 msgstr ""
 "クラスリストは別の乱雑なnamespaceをより体型化する為に\n"
 "拡張可能なツリー 一覧を表示できるようになった。\n"
-"あなたが、適切に重要でないクラスをnamespaceにした場合、\n"
-"(Railsのtimezome classのように)\n"
-"それら(重要でないクラス)は、ユーザーが明示しなければ、\n"
+"あなたが重要でないクラスをnamespaceにした場合、\n"
+"(Railsのtimezome classのような)\n"
+"それら(重要でないクラス)は、ユーザーが検索しなければ、\n"
 "クラスリストのスペースを専有しない。"
 
 #: ../docs/WhatsNew.md:958
@@ -8329,13 +8314,10 @@ msgid ""
 msgstr ""
 
 #: ../docs/WhatsNew.md:967
-#, fuzzy
 msgid ""
 "The above file contents will be rendered with a textile markup engine\n"
 "(eg. RedCloth)."
-msgstr ""
-"上のファイルの内容は、textileマークアップエンジンで表示される(つまり"
-"RedCloth)。"
+msgstr "上のファイルの内容は、textileマークアップエンジンで表示される(つまりRedCloth)。"
 
 #: ../docs/WhatsNew.md:970
 msgid ""
@@ -8420,7 +8402,6 @@ msgstr ""
 "-----------------------------------"
 
 #: ../docs/WhatsNew.md:1004
-#, fuzzy
 msgid ""
 "The templates were redesigned, most notably removing the ugly frameset, "
 "adding\n"
@@ -8431,26 +8412,24 @@ msgid ""
 "others\n"
 "that existed but were previously omitted from the generated documentation."
 msgstr ""
-"テンプレートは再設計された、特に汚いフレームセットを削除しなければならな"
-"い、\n"
-"クラス/メソッドのリストに検索を追加する、\n"
-"あなたは多くのタグが@todoのようなテンプレートでの可視性になった事に\n"
-"注意すべきである。\n"
-"新しい@abstractと@noteタグと存在した他のいくつかだが、事前に生成されたドキュ"
-"メントから省略される。"
+"テンプレートは再設計された特に汚いフレームセットを削除しなければならない、\n"
+"クラス/メソッドのリストに検索を追加する。\n"
+"レイアウトを簡単にしてほとんどの場合きれいに作成するようになった。\n"
+"あなたがさらにタグで注意することは、\n"
+"@todo,新しい@abstract,@noteタグそしていくつか存在する他のタグなどのように\n"
+"テンプレートの中の可視性になった事である。\n"
+"しかし既に生成されたドキュメントからは除外される。"
 
 #: ../docs/WhatsNew.md:1010
-#, fuzzy
 msgid ""
 "There is also a new templating engine (based on the tadpole templating "
 "library)\n"
 "to allow for much more user customization. You can read about it in\n"
 "{file:docs/Templates.md}."
 msgstr ""
-"よりユーザーがカスタマイズする為に受入れられる、\n"
-"新しいテンプレートエンジン(tadpoleというテンプレートライブラリが基の)であ"
-"る。\n"
-"{file:docs/Templates.md}でこれについて読む事が出来る。"
+"これは更なるユーザーのカスタマイズを受け入れる為の\n"
+"新しいテンプレートエンジンでもある(tadpoleテンプレートライブラリベースの)\n"
+"これらのについては{file:docs/Templates.md}の中で読む事ができる。"
 
 #: ../docs/WhatsNew.md:1014
 msgid ""
@@ -8520,7 +8499,6 @@ msgstr ""
 "------------------"
 
 #: ../docs/WhatsNew.md:1039
-#, fuzzy
 msgid ""
 "YARD now supports loading of plugins via RubyGems. Any gem named `yard-*` "
 "or\n"
@@ -8552,7 +8530,6 @@ msgstr ""
 "------------------------------"
 
 #: ../docs/WhatsNew.md:1049
-#, fuzzy
 msgid ""
 "Two new tags were added to the list of builtin meta-tags in YARD. "
 "`@abstract`\n"
@@ -8575,19 +8552,17 @@ msgstr ""
 "`@abstract`は、概要(abstract)として、class/module/methodをマークする。\n"
 "さらに、`@private`は、\"private\"として、オブジェクトをマークする。\n"
 "後者のタグは、\n"
-"オブジェクトがRuby自身の可視性をpublicにする所で利用される。\n"
-"Ruby自身の可視性の範囲をpublicにする所で利用される。\n"
-"(定数は、クラス、モジュールはプライベートにはするはできない)\n"
+"後のタグはオブジェクトがRuby自身の可視性の制約の為に\n"
+"実際のあなたのpublic APIの一部ではないにしてもpublic相当の場所で利用される\n"
+"(定数は、クラス、モジュールはプライベートにはできない)\n"
 "あなたは、慎重にこのタグを利用すべきである。\n"
 "RDocが`:nodoc:`タグと同様であるという意味ではない。\n"
-"YARDはprivate オブジェクトの記述も認識する事を、覚えておいてほしい。\n"
-"このタグは、あなたが、自分のドキュメントでこれらのprivateオブジェクトの全てを"
-"無視する為に\n"
+"YARDはprivate オブジェクトの記述も推奨する事を覚えておいてほしい。\n"
+"このタグは、あなたが、自分のドキュメントでこれらのprivateオブジェクトの全てを無視する為に\n"
 "クエリー(`--query !@private`)を作成できるように存在する。\n"
-"あなたは、新しい`--no-private`引数を利用する事もできる。\n"
-"これは、前述のクエリーへのショートカットである。\n"
-"さらに、新しいタグについて知りたい場合は、 {file:docs/GettingStarted.md}のガ"
-"イドで読むことができる。"
+"あなたは新しい`--no-private`引数を利用する事もできる。\n"
+"これは前述のクエリーへのショートカットである。\n"
+"さらに新しいタグについて知りたい場合は、 {file:docs/GettingStarted.md} のガイドで読むことができる。"
 
 #: ../docs/WhatsNew.md:1062
 msgid ""
@@ -8641,7 +8616,6 @@ msgstr ""
 "---------------------"
 
 #: ../docs/WhatsNew.md:1083
-#, fuzzy
 msgid ""
 "YARD's development actually focuses primarily on 1.9 from the get-go, so it "
 "is\n"
@@ -8672,7 +8646,6 @@ msgstr ""
 "---------------------------------------"
 
 #: ../docs/WhatsNew.md:1093
-#, fuzzy
 msgid ""
 "Using Ruby 1.9 also gives YARD the advantage of using the new `ripper` "
 "library\n"
@@ -8756,7 +8729,6 @@ msgstr ""
 "---------------------"
 
 #: ../docs/WhatsNew.md:1120
-#, fuzzy
 msgid ""
 "The new `@overload` tag enables users to document methods that take "
 "multiple\n"
