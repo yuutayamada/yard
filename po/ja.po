@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-14 18:21+0900\n"
+"PO-Revision-Date: 2012-06-15 17:09+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9305,12 +9305,11 @@ msgstr ""
 
 # YARD::CLI::Command#load_script
 #: ../lib/yard/cli/command.rb:63
-#, fuzzy
 msgid ""
 "Loads a Ruby script. If <tt>Config.options[:safe_mode]</tt> is enabled,\n"
 "this method will do nothing."
 msgstr ""
-"Rubyスクリプトをロードする。 +Config.options[:safe_mode]+ が有効の場合、\n"
+"Rubyスクリプトをロードする。 <tt>Config.options[:safe_mode]</tt> が有効の場合、\n"
 "このメソッドは、何もしないだろう。"
 
 # @since
@@ -16233,7 +16232,6 @@ msgstr "パーサー型(:ruby, :ruby18, :c)"
 # YARD::Handlers::Processor#globals
 # YARD::Handlers::Processor#globals=
 #: ../lib/yard/handlers/processor.rb:62
-#, fuzzy
 msgid ""
 "Handlers can share state for the entire post processing stage through\n"
 "this attribute. Note that post processing stage spans multiple files.\n"
@@ -20540,15 +20538,13 @@ msgstr ""
 
 # YARD::Parser::SourceParser.after_parse_file
 #: ../lib/yard/parser/source_parser.rb:297
-#, fuzzy
 msgid ""
 "Registers a callback to be called after an individual file is parsed.\n"
 "The block passed to this method will be called on subsequent parse\n"
 "calls."
 msgstr ""
-"個々のファイルが解析された後で呼び出される為に\n"
-"コールバックを記録する。\n"
-"このメソッドの為に渡されるブロックはその後parse呼び出しを呼び出される。"
+"個々のファイルが解析された後で呼び出されるコールバックを登録する。\n"
+"このメソッドに渡されたブロックは次のparseメソッドの呼び出しで呼び出される。"
 
 # YARD::Parser::SourceParser.after_parse_file
 #: ../lib/yard/parser/source_parser.rb:301
@@ -20574,7 +20570,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:321
 msgid "tag|example|Printing the length of each file after it is parsed"
-msgstr "解析された後でそれぞれのファイルのサイズをプリントする"
+msgstr "tag|example|解析された後でそれぞれのファイルのサイズをプリントする"
 
 # @yieldparam [SourceParser] parser
 #: ../lib/yard/parser/source_parser.rb:321
@@ -20585,12 +20581,11 @@ msgstr "ファイルを解析した、パーサーオブジェクト。"
 
 # @yield [parser]
 #: ../lib/yard/parser/source_parser.rb:321
-#, fuzzy
 msgid ""
 "the yielded block is called once after each file\n"
 "that is parsed. This might happen many times for a single codebase."
 msgstr ""
-"yieldされるブロックは、それぞれのファイルが解析された後で一度呼び出される。\n"
+"yieldされたブロックは解析される個々のファイルの後で一度呼び出される。\n"
 "これは単一のコードベースの為に何回も起る可能性がある。"
 
 # @return [Array<Proc>]
@@ -20674,9 +20669,8 @@ msgstr "ソースパーサーの新しいインスタンス。"
 
 # @overload
 #: ../lib/yard/parser/source_parser.rb:404
-#, fuzzy
 msgid "tag|overload|initialize"
-msgstr "dynamic_attr_name"
+msgstr ""
 
 # YARD::Parser::SourceParser#parse
 #: ../lib/yard/parser/source_parser.rb:412
@@ -20808,21 +20802,19 @@ msgstr "taskを起動した後で呼び出される,proc"
 
 # @return [Verifier, Proc]
 #: ../lib/yard/rake/yardoc_task.rb:38
-#, fuzzy
 msgid ""
 "an optional {Verifier} to run against all objects\n"
 "being generated. Any object that the verifier returns false for will be\n"
 "excluded from documentation. This attribute can also be a lambda."
 msgstr ""
-"生成される全てのオブジェクトに対して起動する為の、\n"
-"任意の {Verifier} となる。\n"
-"verifierがドキュメントから除外される為にfalseを返す任意のオブジェクト。\n"
-"この属性は、lambdaにもできる。"
+"全てのオブジェクトに対して起動するための任意の {Verifier}(認証者)\n"
+"verifierがドキュメントから除外される為のfalseを返す任意のオブジェクト\n"
+"この属性はlmbdaにもできる。"
 
 # YARD::Rake::YardocTask#initialize
 #: ../lib/yard/rake/yardoc_task.rb:41
 msgid "Creates a new task with name +name+."
-msgstr "+name+ 名と共に新しいtaskを作成する。"
+msgstr "+name+ 名を用いる新しいタスクを作成する"
 
 # @yield
 #: ../lib/yard/rake/yardoc_task.rb:46
@@ -20930,22 +20922,19 @@ msgstr ""
 
 # @example
 #: ../lib/yard/registry.rb:31
-#, fuzzy
 msgid "tag|example|Getting an object by a specific path"
-msgstr "パスによってオブジェクトにリンクする"
+msgstr "tag|example|パスによってオブジェクトを取得する"
 
 # @example
 #: ../lib/yard/registry.rb:31
-#, fuzzy
 msgid "tag|example|Loading the Registry"
-msgstr "レジストリをロードする"
+msgstr "tag|example|レジストリをロードする"
 
 # @example
 #: ../lib/yard/registry.rb:31
-#, fuzzy
 msgid ""
 "tag|example|Performing a lookup on a method anywhere in the inheritance tree"
-msgstr "関連する継承ツリーのクラスメソッドを探す"
+msgstr "tag|example|継承ツリーのどこでもメソッドで検索を実行する"
 
 # YARD::Registry.yardoc_file_for_gem
 #: ../lib/yard/registry.rb:41
@@ -21638,9 +21627,8 @@ msgstr ""
 #: ../lib/yard/registry_store.rb:10 ../lib/yard/registry_store.rb:213
 #: ../lib/yard/registry_store.rb:250 ../lib/yard/registry_store.rb:291
 #: ../lib/yard/serializers/yardoc_serializer.rb:36
-#, fuzzy
 msgid "The registry no longer tracks proxy types"
-msgstr "レジストリのシングルトンインスタンス"
+msgstr "レジストリはプロキシタイプの追跡をしない"
 
 # YARD::RegistryStore#checksums
 #: ../lib/yard/registry_store.rb:12
@@ -21696,9 +21684,8 @@ msgstr "パス名(:rootやrootオブジェクト用の'')"
 # YARD::RegistryStore#put
 # YARD::RegistryStore#[]=
 #: ../lib/yard/registry_store.rb:70
-#, fuzzy
 msgid "Deletes an object at a given path"
-msgstr "パスと一緒にオブジェクトを関連付ける。"
+msgstr "与えられたパスでオブジェクトを削除する"
 
 # YARD::RegistryStore#keys
 #: ../lib/yard/registry_store.rb:75
@@ -21744,9 +21731,8 @@ msgstr ""
 
 # @param [String] name
 #: ../lib/yard/registry_store.rb:94 ../lib/yard/registry_store.rb:103
-#, fuzzy
 msgid "the type to look for"
-msgstr "検索するname"
+msgstr "型用に検索する型"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/registry_store.rb:103
@@ -22273,14 +22259,13 @@ msgstr "記録する為のパス名"
 
 # YARD::Server::FinishRequest
 #: ../lib/yard/server/adapter.rb:5
-#, fuzzy
 msgid ""
 "Short circuits a request by raising an error. This exception is caught\n"
 "by {Commands::Base#call} to immediately end a request and return a response."
 msgstr ""
-"エラーを上げることによって、リクエストを省く。\n"
-"この例外は、すぐに、リクエストの終了とレスポンスを返す為に\n"
-"{Commands::Base#call}によってキャッチされる。"
+"エラーを上げることによってリクエストを省く。\n"
+"この例外はすぐに、リクエストの終了とレスポンスを返す為に\n"
+"{Commands::Base#call} によってキャッチされる。"
 
 # YARD::Server::NotFoundError
 #: ../lib/yard/server/adapter.rb:9
@@ -22965,32 +22950,29 @@ msgstr ""
 
 # YARD::Server::DocServerHelper#url_for_file
 #: ../lib/yard/server/doc_server_helper.rb:30
-#, fuzzy
 msgid ""
 "Modifies {Templates::Helpers::HtmlHelper#url_for_list} to return a URL\n"
 "based on the list prefix instead of a HTML filename."
 msgstr ""
-"ディスク上の場所の代わりにURLを返す{Templates::Helpers::"
-"HtmlHelper#url_for_file}を変更する。"
+"HTMLファイル名の代わりにリストのプレフィックス基準のURLを返すには、\n"
+"{Templates::Helpers::HtmlHelper#url_for_list} を変更する"
 
 # YARD::CodeObjects::MethodObject#name
 #: ../lib/yard/server/doc_server_helper.rb:38
-#, fuzzy
 msgid "Returns the frames URL for the page"
-msgstr "オブジェクトの名前を返す"
+msgstr "ページ用のフレームのURLを返す"
 
 # YARD::Server::DocServerHelper#url_for_main
 #: ../lib/yard/server/doc_server_helper.rb:46
 msgid ""
 "Returns the main URL, first checking a readme and then linking to the index"
-msgstr ""
+msgstr "メインのURLを返し、最初にreadmeをチェックしその時インデックスにリンクする。"
 
 # YARD::Templates::Helpers::HtmlHelper#url_for_file
 #: ../lib/yard/server/doc_server_helper.rb:56
 #: ../lib/yard/templates/helpers/html_helper.rb:385
-#, fuzzy
 msgid "Returns the URL for the alphabetic index page"
-msgstr "固有のファイル用のURLを返す"
+msgstr "アルファベット順のインデックスのページ用にURLを返す"
 
 # @example The base path for a library 'foo'
 #: ../lib/yard/server/doc_server_helper.rb:65
@@ -23982,13 +23964,12 @@ msgstr "タグ名,キー名,型,テキストの入ったタグオブジェクト
 
 # YARD::Tags::DefaultFactory#parse_tag_with_types_and_name
 #: ../lib/yard/tags/default_factory.rb:51
-#, fuzzy
 msgid ""
 "Parses tag text and creates a new tag with formally declared types, a title\n"
 "on the first line and descriptive text"
 msgstr ""
-"タグタキストを解析し,形式的に宣言された型と共に新しいタグを作成する,\n"
-"キー名と説明文。"
+"タグテキストを解析し、新しいタグを作成する。\n"
+"形式的に宣言された型、最初の行のタイトル、説明文を用いる。"
 
 # YARD::Tags::DefaultFactory#extract_name_from_text
 #: ../lib/yard/tags/default_factory.rb:94
@@ -24108,11 +24089,12 @@ msgstr ""
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/tags/directives.rb:42
-#, fuzzy
 msgid ""
 "the object the parent docstring is\n"
 "attached to. May be nil."
-msgstr "このマクロが追加されるメソッドオブジェクト\n"
+msgstr ""
+"オブジェクトを返す、親のdocstringがオブジェクトに追加される。\n"
+"nilになるかもしれない。"
 
 # @return [Handlers::Base, nil]
 #: ../lib/yard/tags/directives.rb:48
@@ -24124,28 +24106,25 @@ msgstr ""
 
 # @return [Section]
 #: ../lib/yard/tags/directives.rb:54
-#, fuzzy
 msgid "a new instance of Directive"
-msgstr "セクションの新しいインスタンス"
+msgstr "ディレクティブの新しいインスタンス"
 
 # @param [Symbol]
 # @param [#to_s]
 #: ../lib/yard/tags/directives.rb:54 ../lib/yard/tags/library.rb:100
 #: ../lib/yard/tags/library.rb:158
 msgid "tag|param|tag"
-msgstr "タグ"
+msgstr ""
 
 # @param [OptionParser] opts
 #: ../lib/yard/tags/directives.rb:54
-#, fuzzy
 msgid "the docstring parser object"
-msgstr "パーサーオブジェクトのオプション"
+msgstr "docstringのパーサーオブジェクト"
 
 # @return [Adapter Dependent]
 #: ../lib/yard/tags/directives.rb:54
-#, fuzzy
 msgid "the meta-data tag containing all input to the docstring"
-msgstr "routerを用いやってくるデータのリクエスト"
+msgstr "メタデータタグ、docstringに全て入力するデータを含んでいる"
 
 # YARD::Tags::Directive#call
 #: ../lib/yard/tags/directives.rb:63
@@ -24181,18 +24160,15 @@ msgstr ""
 #: ../lib/yard/tags/directives.rb:519 ../lib/yard/tags/directives.rb:552
 #: ../lib/yard/tags/directives.rb:553 ../lib/yard/tags/directives.rb:582
 #: ../lib/yard/tags/directives.rb:583
-#, fuzzy
 msgid "Parser callbacks"
 msgstr "パーサーのコールバック"
 
 # YARD::Server::Adapter#start
 #: ../lib/yard/tags/directives.rb:68
-#, fuzzy
 msgid ""
 "implement this method to perform all data processing for\n"
 "the directive."
-msgstr ""
-"あなたのサーバーにあなたのアダプターを接続する為に、このメソッドを実装する。"
+msgstr "ディレクディブ用に全てのデータ処理を実行する為にこのメソッドを実装する"
 
 # YARD::Tags::Directive#after_parse
 #: ../lib/yard/tags/directives.rb:71
@@ -24272,9 +24248,8 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:132
-#, fuzzy
 msgid "== Defining a Macro"
-msgstr "### マクロの作成"
+msgstr "== マクロを定義する"
 
 # YARD::Tags::MacroDirective
 #: ../lib/yard/tags/directives.rb:134
@@ -24305,9 +24280,8 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:148
-#, fuzzy
 msgid "== Using a Macro"
-msgstr "### マクロの作成"
+msgstr "== マクロを使う"
 
 # YARD::Tags::MacroDirective
 #: ../lib/yard/tags/directives.rb:150
@@ -24319,9 +24293,8 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:154
-#, fuzzy
 msgid "== Attaching a Macro to a DSL Method"
-msgstr "### DSL（Class）Methodにマクロをつける。"
+msgstr "== DSL（Class）メソッドにマクロを追加する"
 
 # YARD::Tags::MacroDirective
 #: ../lib/yard/tags/directives.rb:156
@@ -24382,12 +24355,10 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:183
-#, fuzzy
 msgid "=== Ranges"
-msgstr "#### 範囲"
+msgstr "=== 範囲"
 
 #: ../lib/yard/tags/directives.rb:185
-#, fuzzy
 msgid ""
 "Ranges are also acceptable with the syntax <tt>${N-M}</tt>. Negative values\n"
 "on either N or M are valid, and refer to indexes from the end of the list.\n"
@@ -24395,12 +24366,11 @@ msgid ""
 "argument names following, ending with the return type of the method. This\n"
 "could be documented as:"
 msgstr ""
-"範囲は${N-M}の構文で指定できる。\n"
+"範囲は <tt>${N-M}</tt> の構文で指定できる。\n"
 "NやMには負の値を指定可能で、\n"
 "その場合リストの最後からのインデックスを参照する。\n"
 "最初の引数でそれに続く引数名とともに使われて、\n"
-"メソッドのリターンタイプとともに終了するメソッドを作るDSLメソッドを考えよ"
-"う。\n"
+"メソッドのリターンタイプとともに終了するメソッドを作るDSLメソッドを考えよう。\n"
 "これは次のように記述できる。"
 
 # YARD::Tags::MacroDirective
@@ -24413,14 +24383,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:196
-#, fuzzy
 msgid ""
 "As described, the method is using the signature <tt>foo(a, b, c)</tt> and "
 "the return\n"
 "type from the last argument, +String+. When using ranges, tokens are joined\n"
 "with commas. Note that this includes using $0:"
 msgstr ""
-"上記の通り、メソッドはfoo(a,b,c)の用法と最後の引数、\n"
+"上記の通り、メソッドは <tt>foo(a, b, c)</tt> の用法と最後の引数、\n"
 "`String`からのリターンタイプを使っている。\n"
 "範囲を使うときは、トークンはコンマでつながれている。\n"
 "$0を使った場合を記述する。"
@@ -24433,7 +24402,6 @@ msgid ""
 msgstr ""
 
 #: ../lib/yard/tags/directives.rb:203
-#, fuzzy
 msgid ""
 "If you want to separate them with spaces, use <tt>$1 $2 $3 $4 ...</tt>. Note "
 "that\n"
@@ -24441,21 +24409,19 @@ msgid ""
 "error),\n"
 "so it would be safe to list <tt>$1 $2 ... $10</tt>, for example."
 msgstr ""
-"もし、それらをスペースで分離したいのであれば、`$1 $2 $3 $4 ....` を使いなさ"
-"い。\n"
-"トークンが展開できないときは、空の文字列を返す。\n"
-"だから例のように`$1 $2 ... $10`と列挙するのが安全だろう。"
+"それらをスペースを用い区切りたい場合は、<tt>$1 $2 $3 $4 ...</tt> を使う\n"
+"留意する事としてトークンが拡張できない場合は\n"
+"空の文字列を返すだろう。(エラーではない)\n"
+"なので例えば\n"
+"<tt>$1 $2 ... $10</tt> のように記述すると安全だろう。"
 
 #: ../lib/yard/tags/directives.rb:207
-#, fuzzy
 msgid "=== Escaping Interpolation"
-msgstr "#### 補間をエスケープする"
+msgstr "=== 補間をエスケープする"
 
 #: ../lib/yard/tags/directives.rb:209
-#, fuzzy
 msgid "Interpolation can be escaped by prefixing the +$+ with +\\+, like so:"
-msgstr ""
-"補間をエスケープするには、下の様に`$`の前に`\\`置く事でエスケープする。"
+msgstr "補間文字をエスケープするには、下の様に +$+ の前に +\\+ 置く事でエスケープする。"
 
 # YARD::Tags::MacroDirective
 #: ../lib/yard/tags/directives.rb:211
@@ -24518,27 +24484,23 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:250
-#, fuzzy
 msgid "tag|example|Attaching a macro directly to a DSL method"
-msgstr "メソッド呼び出しの為に加えられるマクロを作成する。"
+msgstr "tag|example|DSLメソッドに直接マクロを追加する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:250
-#, fuzzy
 msgid "tag|example|Attaching a macro to a class method (for DSL usage)"
-msgstr "クラスメソッドの名前(プレフィックスを用いる)"
+msgstr "tag|example|クラスメソッドにマクロを追加する(DSL使用)"
 
 # @example
 #: ../lib/yard/tags/directives.rb:250
-#, fuzzy
 msgid "tag|example|Defining a simple macro"
-msgstr "一般的なマクロを作成"
+msgstr "tag|example|簡単なマクロ定義"
 
 # @example
 #: ../lib/yard/tags/directives.rb:250
-#, fuzzy
 msgid "tag|example|Using a simple macro in multiple docstrings"
-msgstr "複数の表現を指定する"
+msgstr "tag|example|複数のdocstringの中の単純名マクロを使う"
 
 # YARD::Tags::MethodDirective
 #: ../lib/yard/tags/directives.rb:327
@@ -24584,15 +24546,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:350
-#, fuzzy
 msgid "tag|example|Attaching multiple methods to the same source"
-msgstr "root namespaceの中にメソッドを作成する"
+msgstr "tag|example|同じソースに複数のメソッドを追加する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:350
-#, fuzzy
 msgid "tag|example|Defining a simple method"
-msgstr "インスタンスメソッドにリンクする"
+msgstr "tag|example|簡単なメソッドを定義する"
 
 # @see
 #: ../lib/yard/tags/directives.rb:350
@@ -24642,15 +24602,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:433
-#, fuzzy
 msgid "tag|example|Defining a simple readonly attribute"
-msgstr "簡単なコールバックを実装する"
+msgstr "tag|example|readonly属性を簡単に定義する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:433
-#, fuzzy
 msgid "tag|example|Defining a simple readwrite attribute"
-msgstr "タイトルと共にクラスにリンクする"
+msgstr "tag|example|readwrite属性を簡単に定義する"
 
 # @see
 #: ../lib/yard/tags/directives.rb:433
@@ -24702,21 +24660,18 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:518
-#, fuzzy
 msgid "tag|example|Declaring a method as an attribute"
-msgstr "extraファイル(追加のファイル)にリンクする。"
+msgstr "tag|example|属性としてメソッドを宣言する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:518
-#, fuzzy
 msgid "tag|example|Documenting dynamic module inclusion"
-msgstr "一般的なマクロを作成"
+msgstr "tag|example|動的にモジュール含有するドキュメントを作成する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:518
-#, fuzzy
 msgid "tag|example|Parsing C code"
-msgstr "マクロを展開する"
+msgstr "tag|example|Cのコードを解析する"
 
 # YARD::Tags::ScopeDirective
 #: ../lib/yard/tags/directives.rb:536
@@ -24748,15 +24703,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:552
-#, fuzzy
 msgid "tag|example|Modifying the scope of a DSL method"
-msgstr "メソッドの入ったフォーマットされた型"
+msgstr "tag|example|DSLメソッドのスコープを変更する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:552
-#, fuzzy
 msgid "tag|example|Modifying the scope of a set of methods"
-msgstr "メソッドの入ったフォーマットされた型"
+msgstr "tag|example|メソッドのグループのスコープを変更する"
 
 # YARD::Tags::VisibilityDirective
 #: ../lib/yard/tags/directives.rb:565
@@ -24789,15 +24742,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/directives.rb:582
-#, fuzzy
 msgid "tag|example|Modifying the visibility of a DSL method"
-msgstr "メソッドの入ったフォーマットされた型"
+msgstr "tag|example|DSLメソッドの可視性を変更する"
 
 # @example
 #: ../lib/yard/tags/directives.rb:582
-#, fuzzy
 msgid "tag|example|Modifying the visibility of a set of methods"
-msgstr "インスタンスメソッドにリンクする"
+msgstr "tag|example|メソッドのグループの可視性を変更する"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:4
@@ -24809,9 +24760,8 @@ msgstr ""
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/tags/library.rb:8
-#, fuzzy
 msgid "== Defining Custom Meta-Data Tags"
-msgstr "== カスタムした特別なメタデータタグ(+--tag+)を追加する"
+msgstr "== カスタムメタデータタグを定義する"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:10
@@ -24875,9 +24825,8 @@ msgstr ""
 
 # YARD::Tags
 #: ../lib/yard/tags/library.rb:37
-#, fuzzy
 msgid "== Namespaced Tags"
-msgstr "タグの構成の為のNamespace"
+msgstr "== Namespaceタグ"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:39
@@ -24896,7 +24845,6 @@ msgstr ""
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:45
-#, fuzzy
 msgid ""
 "If you have specialized tag parsing needs you can substitute the {#factory}\n"
 "object with your own by setting {Library.default_factory= Library."
@@ -24907,9 +24855,10 @@ msgid ""
 msgstr ""
 "== 追加や変更のタグ構文\n"
 "あなたが、専用のタグ解析が必要な場合、\n"
-"YARDが起動する前に自分で解析するメソッドを用意し、\n"
-"{Library.default_factory= Library.default_factory}を設定すると、\n"
-"{#factory}オブジェクトの代用ができる。\n"
+"自分で{Library.default_factory= Library.default_factory}を\n"
+"YARDが起動する前に自身を解析するメソッドを用い\n"
+"新しいクラスに設定する事によって\n"
+"{#factory} オブジェクトを代替できる\n"
 "これは、既に存在するタグ(@see,@since等)構文を変更したい場合、便利である。"
 
 # @example Defining a custom directive
@@ -24926,15 +24875,13 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/library.rb:58
-#, fuzzy
 msgid "tag|example|Defining a custom directive"
-msgstr "カスタムライブラリのソースを実装する"
+msgstr "tag|example|カスタムディレクティブを定義する"
 
 # @example
 #: ../lib/yard/tags/library.rb:58
-#, fuzzy
 msgid "tag|example|Defining a custom tag"
-msgstr "コマンドを作成する"
+msgstr "tag|example|カスタムタグを定義する"
 
 # @see
 #: ../lib/yard/tags/library.rb:58 ../lib/yard/tags/library.rb:84
@@ -24943,21 +24890,18 @@ msgstr ""
 
 # @see
 #: ../lib/yard/tags/library.rb:58
-#, fuzzy
 msgid "tag|see|Directive"
-msgstr "find_nth_file"
+msgstr ""
 
 # @see
 #: ../lib/yard/tags/library.rb:58
-#, fuzzy
 msgid "tag|see|define_directive"
-msgstr "find_nth_file"
+msgstr ""
 
 # @see
 #: ../lib/yard/tags/library.rb:58
-#, fuzzy
 msgid "tag|see|define_tag"
-msgstr "find_nth_file"
+msgstr ""
 
 # @return [SymbolHash{Symbol=>String}]
 #: ../lib/yard/tags/library.rb:62
@@ -24968,9 +24912,8 @@ msgstr ""
 
 # @return [NamespaceObject]
 #: ../lib/yard/tags/library.rb:66
-#, fuzzy
 msgid "the main Library instance object."
-msgstr "namespaceオブジェクト"
+msgstr "メインライブライリのインスタンスオブジェクト"
 
 # YARD::Tags::Library.default_factory=
 #: ../lib/yard/tags/library.rb:71
@@ -25024,11 +24967,10 @@ msgstr "タグがフリーフォームテキストの場合"
 
 # @return [Class<Tag>]
 #: ../lib/yard/tags/library.rb:100
-#, fuzzy
 msgid ""
 "the Tag class to use to parse the tag\n"
 "or the method to call on the factory class"
-msgstr "タグを解析する為に利用するタグクラス"
+msgstr "ファクトリークラスで呼び出すタグやメソッドを解析し利用する為のタグクラス"
 
 # @return [Symbol]
 #: ../lib/yard/tags/library.rb:100 ../lib/yard/tags/library.rb:113
@@ -25037,27 +24979,26 @@ msgstr "タグの為のfactoryメソッド名"
 
 # YARD::Tags::Library.factory_method_for
 #: ../lib/yard/tags/library.rb:105
-#, fuzzy
 msgid ""
 "Returns the factory method used to parse the tag text for a specific\n"
 "directive"
 msgstr ""
-"特定のタグ用のタグテキストを解析するのに、利用されるファクトリーメソッドを返"
-"す。"
+"特定のディレクティブ用に\n"
+"タグテキストを解析する為に利用されたファクトリーメソッドを返す"
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:113
-#, fuzzy
 msgid "tag|param|directive"
-msgstr "relative"
+msgstr ""
 
 # @return [Class<Tag>]
 #: ../lib/yard/tags/library.rb:113
-#, fuzzy
 msgid ""
 "the Tag class to use to parse the tag or\n"
 "the methods to call on the factory class"
-msgstr "タグを解析する為に利用するタグクラス"
+msgstr ""
+"ファクトリークラスで呼び出す為に\n"
+"タグやメソッドを解析し利用する為のタグクラス"
 
 # @param [String, Symbol] section
 #: ../lib/yard/tags/library.rb:113
@@ -27769,15 +27710,13 @@ msgstr ""
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:572
-#, fuzzy
 msgid "highlighted html"
 msgstr "ハイライトされたHTML"
 
 # @param [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:572
-#, fuzzy
 msgid "tag|param|html"
-msgstr "to"
+msgstr ""
 
 # @see
 #: ../lib/yard/templates/helpers/html_helper.rb:572
