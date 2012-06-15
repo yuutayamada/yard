@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-15 17:09+0900\n"
+"PO-Revision-Date: 2012-06-15 18:19+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -25002,9 +25002,8 @@ msgstr ""
 
 # @param [String, Symbol] section
 #: ../lib/yard/tags/library.rb:113
-#, fuzzy
 msgid "the directive name"
-msgstr "セクション名"
+msgstr "ディレクティブ名"
 
 # YARD::Tags::Library.visible_tags
 # YARD::Tags::Library.visible_tags=
@@ -25087,9 +25086,8 @@ msgstr ""
 
 # @param [Fixnum]
 #: ../lib/yard/tags/library.rb:158
-#, fuzzy
 msgid "tag|param|label"
-msgstr "level"
+msgstr ""
 
 # @param [#to_s, Class<Tag>]
 # @param [CodeObjects::MethodObject]
@@ -25120,9 +25118,8 @@ msgstr ""
 
 # @overload
 #: ../lib/yard/tags/library.rb:196
-#, fuzzy
 msgid "tag|overload|define_directive"
-msgstr "dynamic_attr_name"
+msgstr ""
 
 # YARD::Tags::Library#factory
 # YARD::Tags::Library#factory=
@@ -25139,9 +25136,8 @@ msgstr "ライブラリの新しいインスタンス"
 
 # @param tag_name
 #: ../lib/yard/tags/library.rb:267 ../lib/yard/tags/library.rb:280
-#, fuzzy
 msgid "the name of the tag to look for"
-msgstr "解析の為のタグの名前"
+msgstr "検索する為のタグの名前"
 
 # @return [Boolean]
 #: ../lib/yard/tags/library.rb:267
@@ -25152,14 +25148,12 @@ msgstr ""
 
 # YARD::CodeObjects::CodeObjectList#initialize
 #: ../lib/yard/tags/library.rb:272
-#, fuzzy
 msgid "Creates a new {Tag} object with a given tag name and data"
-msgstr "namespaceに関連付けられた新しいオブジェクトのリストを作成する。"
+msgstr "与えられたタグ名とデータを用い新しい {Tag} オブジェクトを作成する。"
 
 # @return [Base]
 # @return [MacroObject]
 #: ../lib/yard/tags/library.rb:273
-#, fuzzy
 msgid "the newly created tag object"
 msgstr "新たに作成されたオブジェクト"
 
@@ -25172,12 +25166,10 @@ msgstr ""
 
 # YARD::Docstring#initialize
 #: ../lib/yard/tags/library.rb:285
-#, fuzzy
 msgid ""
 "Creates a new directive with tag information and a docstring parser\n"
 "object."
-msgstr ""
-"未加工の内容は任意のオブジェクトが追加されると共に、新しいdocstringを作成する"
+msgstr "タグ情報とdocstringパーサーオブジェクトを用い新しいディレクティブを作成する"
 
 # @return [String]
 #: ../lib/yard/tags/library.rb:290 ../lib/yard/tags/tag.rb:14
@@ -25187,26 +25179,22 @@ msgstr "タグの名前"
 # @return [Base]
 # @return [MacroObject]
 #: ../lib/yard/tags/library.rb:290
-#, fuzzy
 msgid "the newly created directive"
-msgstr "新たに作成されたオブジェクト"
+msgstr "新たに作成されたディレクティブ"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/tags/library.rb:290
-#, fuzzy
 msgid "the parser object parsing the docstring"
-msgstr "docstring自身のオブジェクト"
+msgstr "パーサーオブジェクト、docstringを解析する"
 
 # @param [Symbol] tag
 # @param [String] tag_name
 # @param [String] name
 #: ../lib/yard/tags/library.rb:290
-#, fuzzy
 msgid "the tag data"
-msgstr "タグ名"
+msgstr "タグデータ"
 
 #: ../lib/yard/tags/library.rb:312
-#, fuzzy
 msgid ""
 "# @abstract Subclass and override {#run} to implement\n"
 "#   a custom Threadable class.\n"
@@ -25214,9 +25202,6 @@ msgid ""
 "  def run; raise NotImplementedError end\n"
 "end"
 msgstr ""
-"        !!!plain\n"
-"        @abstract カスタムThreadableクラスを実装する為に{#run}メソッドをサブ"
-"クラス化や上書きする"
 
 # @yard.tag abstract
 #: ../lib/yard/tags/library.rb:312
@@ -25225,29 +25210,24 @@ msgstr ""
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:312
-#, fuzzy
 msgid "tag|yard.tag|abstract"
-msgstr "brackets"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:313
-#, fuzzy
 msgid ""
 "Marks a class/module/method as abstract with optional\n"
 "implementor information."
-msgstr ""
-"  * `@abstract`: 省略可能な実装者の情報と共にクラス,モジュール,メソッドの概要"
-"をマークする。"
+msgstr "任意の実装情報をと一緒に用い概要としてclass/module/methodをマークする"
 
 #: ../lib/yard/tags/library.rb:327
-#, fuzzy
 msgid ""
 "The special name +@api private+ does display a notice in\n"
 "documentation if it is listed, letting users know that the\n"
 "method is not to be used by external components."
 msgstr ""
-"    (*) 次の事に留意する。特別な名前の`@api privete`は、\n"
-"それがあるドキュメントの中に通知を表示する。\n"
-"そして、そのメソッドが使われていないことをユーザーに知らせる。"
+"特別な名前の +@api private+ は\n"
+"それが記述された場合ドキュメントの中で通知を表示するようになり\n"
+"ユーザーにメソッドが外部の構成要素によって使えないことを知らせる。"
 
 # @note
 #: ../lib/yard/tags/library.rb:327 ../lib/yard/tags/library.rb:473
@@ -25275,22 +25255,19 @@ msgstr ""
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:327
-#, fuzzy
 msgid "tag|yard.tag|api"
-msgstr "prefix"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:328
-#, fuzzy
 msgid ""
 "Declares the API that the object belongs to. Does not display in\n"
 "output, but useful for performing queries (+yardoc --query+). Any text is\n"
 "allowable in this tag, and there are no predefined values."
 msgstr ""
-"  * `@api`: オブジェクトが属するAPIを宣言する。表示はされない。\n"
-"     しかし、クエリーを実行するのに便利である。\n"
-"     (クエリを抽出する為のコマンドは `yardoc --query`がある。)\n"
-"     どんなテキストでもこのタグでは使用できる,また事前に定義された値は無い"
-"(*)."
+"オブジェクトが属するAPIを宣言する。\n"
+"出力を表示できないが、クエリーの実行用に便利である(+yardoc --query+)。\n"
+"任意のテキストは\n"
+"このタグを受入可能であり、事前定義された値はない。"
 
 # @example 
 #: ../lib/yard/tags/library.rb:337
@@ -25302,9 +25279,8 @@ msgstr ""
 
 # YARD::Handlers::Base
 #: ../lib/yard/tags/library.rb:337
-#, fuzzy
 msgid "Attribute"
-msgstr "=== +owner+ 属性"
+msgstr "属性"
 
 # @note
 #: ../lib/yard/tags/library.rb:337 ../lib/yard/tags/library.rb:347
@@ -25322,9 +25298,8 @@ msgstr ""
 # @param [Array<String, Symbol>]
 # @param [String, :root]
 #: ../lib/yard/tags/library.rb:337
-#, fuzzy
 msgid "tag|yard.tag|attr"
-msgstr "path"
+msgstr ""
 
 # YARD::Tags::Library#attr_tag
 #: ../lib/yard/tags/library.rb:338
@@ -25350,15 +25325,13 @@ msgstr ""
 # YARD::Server::Commands::Base#body
 # YARD::Server::Commands::Base#body=
 #: ../lib/yard/tags/library.rb:347
-#, fuzzy
 msgid "Attribute Getter"
-msgstr "リクエスト毎のグループを属性化する。"
+msgstr "Getter属性"
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:347
-#, fuzzy
 msgid "tag|yard.tag|attr_reader"
-msgstr "full_attr_name"
+msgstr ""
 
 # YARD::Tags::Library#attr_reader_tag
 #: ../lib/yard/tags/library.rb:348
@@ -25376,15 +25349,13 @@ msgstr ""
 # YARD::Server::Commands::Base#body
 # YARD::Server::Commands::Base#body=
 #: ../lib/yard/tags/library.rb:357
-#, fuzzy
 msgid "Attribute Setter"
-msgstr "リクエスト毎のグループを属性化する。"
+msgstr "Setter属性"
 
 # @param [String]
 #: ../lib/yard/tags/library.rb:357
-#, fuzzy
 msgid "tag|yard.tag|attr_writer"
-msgstr "title"
+msgstr ""
 
 # YARD::Tags::Library#attr_writer_tag
 #: ../lib/yard/tags/library.rb:358
@@ -25405,14 +25376,12 @@ msgstr ""
 
 # @param [String]
 #: ../lib/yard/tags/library.rb:364
-#, fuzzy
 msgid "tag|yard.tag|author"
-msgstr "anchor"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:365
-#, fuzzy
 msgid "List the author or authors of a class, module, or method."
-msgstr "  * `@version`: クラス、モジュール、メソッドのバージョンを列挙する。"
+msgstr "著者やクラス,モジュール,メソッドの著者を記述する"
 
 # @example Deprecate a method with a replacement API
 #: ../lib/yard/tags/library.rb:380
@@ -25438,21 +25407,18 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/library.rb:380
-#, fuzzy
 msgid "tag|example|Deprecate a method with a replacement API"
-msgstr "root namespaceの中にメソッドを作成する"
+msgstr "tag|example|置換APIを用いメソッドをメソッドを廃止する"
 
 # @example
 #: ../lib/yard/tags/library.rb:380
-#, fuzzy
 msgid "tag|example|Deprecate a method with no replacement"
-msgstr "root namespaceの中にメソッドを作成する"
+msgstr "tag|example|置換APIを用いないでメソッドを廃止する"
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:380
-#, fuzzy
 msgid "tag|yard.tag|deprecated"
-msgstr "relative"
+msgstr ""
 
 # YARD::Tags::Library#deprecated_tag
 #: ../lib/yard/tags/library.rb:381
@@ -25487,27 +25453,20 @@ msgstr ""
 # @param [String]
 # @param [String, Regexp]
 #: ../lib/yard/tags/library.rb:391
-#, fuzzy
 msgid "tag|yard.tag|example"
-msgstr "filename"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:392
-#, fuzzy
 msgid ""
 "Show an example snippet of code for an object. The first line\n"
 "is an optional title."
-msgstr ""
-"  * `@example`: コードの一部を例として表示する。\n"
-"     最初の行は省略可能なタイトルである。\n"
+msgstr "オブジェクト用にコード片の例を表示する。最初の行は任意のタイトル。"
 
 #: ../lib/yard/tags/library.rb:399
-#, fuzzy
 msgid ""
 "# @note This method should only be used in outer space.\n"
 "def eject; end"
 msgstr ""
-"        !!!plain\n"
-"        @note このメソッドは外部からのみ利用される。"
 
 # @yard.tag note
 #: ../lib/yard/tags/library.rb:399
@@ -25521,9 +25480,8 @@ msgstr ""
 
 # @param [Parser::Ruby::AstNode]
 #: ../lib/yard/tags/library.rb:399
-#, fuzzy
 msgid "tag|yard.tag|note"
-msgstr "node"
+msgstr ""
 
 # YARD::Tags::Library#note_tag
 #: ../lib/yard/tags/library.rb:400
@@ -25543,7 +25501,6 @@ msgstr ""
 
 # @param [Hash] options
 #: ../lib/yard/tags/library.rb:418
-#, fuzzy
 msgid "Options Hash"
 msgstr "ハッシュのオプション"
 
@@ -25555,12 +25512,10 @@ msgstr ""
 # @param [String, Symbol]
 # @param [Symbol, String]
 #: ../lib/yard/tags/library.rb:418
-#, fuzzy
 msgid "tag|yard.tag|option"
-msgstr "section"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:419
-#, fuzzy
 msgid ""
 "Describe an options hash in a method. The tag takes the\n"
 "name of the options parameter first, followed by optional types,\n"
@@ -25568,11 +25523,12 @@ msgid ""
 "description of the option. The default value should be placed within\n"
 "parentheses and is optional (can be omitted)."
 msgstr ""
-"  * `@option`: メソッドの中のハッシュの設定を説明をする。\n"
-"    タグは最初にパラメーターの設定の名前を取得する。\n"
-"    (以下の例でいえば、@paramのopts)\n"
-"    それに続いて、省略可能な型(複数指定可),キー名の設定,\n"
-"    キー名のデフォルトの値(省略可能),設定の説明がある。"
+"メソッドの中のハッシュのオプションを説明する。\n"
+"タグは最初にoptionsのパラメータの名前(name)を取得し、\n"
+"続いて任意で型(types)、オプションのキー名、\n"
+"キー用のデフォルトの値、オプションの説明となる。\n"
+"デフォルト値は任意で(入れなくてもよい)\n"
+"括弧の中に置なければならない。"
 
 # YARD::Tags::Library#option_tag
 #: ../lib/yard/tags/library.rb:425
@@ -25608,12 +25564,10 @@ msgstr ""
 
 # @param [Fixnum]
 #: ../lib/yard/tags/library.rb:437
-#, fuzzy
 msgid "tag|yard.tag|overload"
-msgstr "level"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:438
-#, fuzzy
 msgid ""
 "Describe that your method can be used in various\n"
 "contexts with various parameters or return types. The first\n"
@@ -25621,11 +25575,12 @@ msgid ""
 "indented tag data will be a new documentation string with its\n"
 "own tags adding metadata for such an overload."
 msgstr ""
-"  * `@overload`: 様々な引数やリターンタイプと共に、\n"
-"    様々なコンテキストで使うことができるメソッドを説明する。\n"
-"    最初の行で新しいメソッドの用法を宣言しなければならない、\n"
-"    そしてそれにつづくインデントされたタグデータは、\n"
-"    多重定義用にメタデータがタグに追加された新しい文字列となる。"
+"あなたのメソッドが様々なパラメータや戻りの型と一緒に\n"
+"様々なコンテキストで利用される説明をする。\n"
+"最初に行は新しいメソッドのシグネチャで宣言しなければならない、\n"
+"そして続くインデントされたタグデータは\n"
+"オーバーロードの様に自身の追加するメタデータタグを用い\n"
+"新しいドキュメント文字列になる。"
 
 # @example 
 #: ../lib/yard/tags/library.rb:445
@@ -25642,9 +25597,8 @@ msgstr ""
 # @param [Array<Parser::Ruby::AstNode>]
 # @param [Hash]
 #: ../lib/yard/tags/library.rb:445
-#, fuzzy
 msgid "tag|yard.tag|param"
-msgstr "params"
+msgstr ""
 
 # YARD::Tags::Library#param_tag
 #: ../lib/yard/tags/library.rb:446
@@ -25684,9 +25638,8 @@ msgstr ""
 # @param [Array<String, Symbol>]
 # @param [String, :root]
 #: ../lib/yard/tags/library.rb:473
-#, fuzzy
 msgid "tag|yard.tag|private"
-msgstr "path"
+msgstr ""
 
 # YARD::Tags::Library#private_tag
 #: ../lib/yard/tags/library.rb:474
@@ -25723,9 +25676,8 @@ msgstr ""
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:482
-#, fuzzy
 msgid "tag|yard.tag|raise"
-msgstr "relative"
+msgstr ""
 
 # YARD::Tags::Library#raise_tag
 #: ../lib/yard/tags/library.rb:483
@@ -25765,21 +25717,18 @@ msgstr ""
 
 # @example
 #: ../lib/yard/tags/library.rb:498
-#, fuzzy
 msgid "tag|example|A method returns an Array or a single object"
-msgstr "全てのオブジェクトを返す"
+msgstr "tag|example|メソッドは配列や単一のオブジェクトを返す"
 
 # @example
 #: ../lib/yard/tags/library.rb:498
-#, fuzzy
 msgid "tag|example|A regular return value"
-msgstr "全てのオブジェクトを返す"
+msgstr "tag|example|慣習的な戻り値の例"
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:498
-#, fuzzy
 msgid "tag|yard.tag|return"
-msgstr "recursive"
+msgstr ""
 
 # YARD::Tags::Library#return_tag
 #: ../lib/yard/tags/library.rb:499
@@ -25806,20 +25755,21 @@ msgstr ""
 
 # @param [Tags::Tag, Tags::RefTag]
 #: ../lib/yard/tags/library.rb:510
-#, fuzzy
 msgid "tag|yard.tag|see"
-msgstr "tags"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:511
-#, fuzzy
 msgid ""
 "\"See Also\" references for an object. Accepts URLs or\n"
 "other code objects with an optional description at the end.\n"
 "Note that the URL or object will be automatically linked by\n"
 "YARD and does not need to be formatted with markup."
 msgstr ""
-"  * `@see`: オブジェクトを参照する。URLや他のコードを受け取る。\n"
-"    省略可能な説明を後ろにつけることができる。"
+"\"See Also(参照)\"はオブジェクトに参照される。\n"
+"URLや最後で任意の説明を用いた他のコードオブジェクトを受入れる。\n"
+"留意する事としてURLやオブジェクトは\n"
+"YARDによって自動的にリンクされ、\n"
+"マークアップを用いフォーマットされる必要はない。"
 
 # @example 
 #: ../lib/yard/tags/library.rb:518
@@ -25835,29 +25785,20 @@ msgstr ""
 
 # @param [Fixnum, nil]
 #: ../lib/yard/tags/library.rb:518
-#, fuzzy
 msgid "tag|yard.tag|since"
-msgstr "param|line"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:519
-#, fuzzy
 msgid "Lists the version that the object was first added."
-msgstr ""
-"  * `@since`: バージョンとオブジェクトに最初につけられた機能を列挙する。"
+msgstr "オブジェクトが最初に追加されたバージョンを記述する"
 
 #: ../lib/yard/tags/library.rb:544
-#, fuzzy
 msgid ""
 "# @todo Add support for Jabberwocky service.\n"
 "#   There is an open source Jabberwocky library available\n"
 "#   at http://jbrwcky.org that can be easily integrated.\n"
 "class Wonderlander; end"
 msgstr ""
-"        !!!plain\n"
-"        @todo 何らかのサービスに対するサポートを提供する。\n"
-"          そこには、プロジェクトに容易に統合できる。\n"
-"          http://somesite.comで利用可能な\n"
-"          何らかのオープンソースのライブラリがある。"
 
 # @yard.tag todo
 #: ../lib/yard/tags/library.rb:544
@@ -25871,9 +25812,8 @@ msgstr ""
 
 # @param [String]
 #: ../lib/yard/tags/library.rb:544
-#, fuzzy
 msgid "tag|yard.tag|todo"
-msgstr "to"
+msgstr ""
 
 # YARD::Tags::Library#todo_tag
 #: ../lib/yard/tags/library.rb:545
@@ -25924,9 +25864,8 @@ msgstr ""
 
 # @param [Array<String>]
 #: ../lib/yard/tags/library.rb:557
-#, fuzzy
 msgid "tag|yard.tag|version"
-msgstr "式"
+msgstr ""
 
 # YARD::Tags::Library#version_tag
 #: ../lib/yard/tags/library.rb:558
@@ -25953,17 +25892,13 @@ msgid "Yields"
 msgstr ""
 
 #: ../lib/yard/tags/library.rb:573
-#, fuzzy
 msgid "[parameters] description"
 msgstr ""
-"        !!!plain\n"
-"    @tagname [型] <名前> <説明>"
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/tags/library.rb:573
-#, fuzzy
 msgid "tag|see|tag:yieldparam"
-msgstr "tag"
+msgstr ""
 
 # @see
 #: ../lib/yard/tags/library.rb:573
@@ -25972,9 +25907,8 @@ msgstr ""
 
 # @param [Fixnum]
 #: ../lib/yard/tags/library.rb:573
-#, fuzzy
 msgid "tag|yard.tag|yield"
-msgstr "rel"
+msgstr ""
 
 # YARD::Tags::Library#yield_tag
 #: ../lib/yard/tags/library.rb:574
@@ -26001,9 +25935,8 @@ msgstr ""
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/tags/library.rb:582
-#, fuzzy
 msgid "tag|yard.tag|yieldparam"
-msgstr "tag"
+msgstr ""
 
 # YARD::Tags::Library#yieldparam_tag
 #: ../lib/yard/tags/library.rb:583
@@ -26056,9 +25989,8 @@ msgstr ""
 
 # @param [Boolean]
 #: ../lib/yard/tags/library.rb:595
-#, fuzzy
 msgid "tag|yard.directive|attribute"
-msgstr "hide_attributes"
+msgstr ""
 
 # @yard.directive [EndGroupDirective] endgroup
 #: ../lib/yard/tags/library.rb:598
@@ -26095,9 +26027,8 @@ msgstr ""
 # @param [MacroObject]
 # @param [CodeObjects::MacroObject]
 #: ../lib/yard/tags/library.rb:604
-#, fuzzy
 msgid "tag|yard.directive|macro"
-msgstr "macro"
+msgstr ""
 
 # @yard.directive [with_title_and_text] method
 #: ../lib/yard/tags/library.rb:608
@@ -26118,15 +26049,13 @@ msgstr ""
 
 # title
 #: ../lib/yard/tags/library.rb:611
-#, fuzzy
 msgid "ParseDirective"
-msgstr "パーサー構造"
+msgstr "パーサーディレクティブ"
 
 # @return [Symbol]
 #: ../lib/yard/tags/library.rb:611
-#, fuzzy
 msgid "[language] code"
-msgstr "言語の型"
+msgstr ""
 
 # @yard.directive [with_types]
 #: ../lib/yard/tags/library.rb:611
@@ -26139,17 +26068,13 @@ msgid "ScopeDirective"
 msgstr ""
 
 #: ../lib/yard/tags/library.rb:616
-#, fuzzy
 msgid "class | instance"
 msgstr ""
-"        !!!plain\n"
-"        @scope クラス又はインスタンス"
 
 # @param [Symbol]
 #: ../lib/yard/tags/library.rb:616
-#, fuzzy
 msgid "tag|yard.directive|scope"
-msgstr "scope"
+msgstr ""
 
 #: ../lib/yard/tags/library.rb:617
 #, fuzzy
