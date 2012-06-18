@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-06-15 18:19+0900\n"
+"PO-Revision-Date: 2012-06-18 18:32+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -26744,14 +26744,12 @@ msgid "tag|yard.directive|scope"
 msgstr ""
 
 #: ../lib/yard/tags/library.rb:617
-#, fuzzy
 msgid ""
 "Sets the scope of a DSL method. Only applicable to DSL method\n"
 "calls. Acceptable values are 'class' or 'instance'"
 msgstr ""
-"  * `@scope`: DSLメソッドの範囲を設定する。\n"
-"     DSLメソッドの呼び出しにのみ適用可能である。\n"
-"     指定可能な値はクラス、又は,インスタンスである。"
+"DSLメソッドのスコープに設定する。DSLメソッド呼び出しにだけ適用できる。\n"
+"受け入れる値は'class'または'instance'である。"
 
 # @yard.directive [VisibilityDirective] visibility
 #: ../lib/yard/tags/library.rb:621
@@ -26769,14 +26767,13 @@ msgid "tag|yard.directive|visibility"
 msgstr ""
 
 #: ../lib/yard/tags/library.rb:622
-#, fuzzy
 msgid ""
 "Sets the visibility of a DSL method. Only applicable to\n"
 "DSL method calls. Acceptable values are public, protected, or private."
 msgstr ""
-"  * `@visibility`: DSLメソッドの可視範囲を設定する。\n"
-"    DSLメソッドの呼び出しのためだけに適用できる。\n"
-"    public、protected、privateのいずれかの値が許容される。\n"
+"DSLメソッドの可視性を設定する。\n"
+"DSLメソッド呼び出しに適用できる。\n"
+"受け入れる値はpublic,protected,privateとなる"
 
 # @param value
 #: ../lib/yard/tags/option_tag.rb:4
@@ -27230,9 +27227,8 @@ msgstr "モジュール名"
 
 # @param [String] the
 #: ../lib/yard/templates/engine.rb:175
-#, fuzzy
 msgid "the path to generate a module name for"
-msgstr "モジュール名を生成する為のパス"
+msgstr "パス用のモジュール名を生成する為のパス"
 
 # YARD::Templates::Helpers::BaseHelper
 #: ../lib/yard/templates/helpers/base_helper.rb:3
@@ -28052,33 +28048,28 @@ msgstr "ファイルの場所を指し示す、URL"
 
 # YARD::Templates::Helpers::HtmlHelper#url_for_file
 #: ../lib/yard/templates/helpers/html_helper.rb:360
-#, fuzzy
 msgid "Returns the URL for a list type"
-msgstr "固有のファイル用のURLを返す"
+msgstr "リストのタイプ用にURLを返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:364
-#, fuzzy
 msgid "the URL pointing to the list"
-msgstr "ファイルの場所を指し示す、URL"
+msgstr "リストの為の場所を示すURL"
 
 # @param [ClassObject] klass
 #: ../lib/yard/templates/helpers/html_helper.rb:364
-#, fuzzy
 msgid "the list type to generate a URL for"
-msgstr "属性を生成するクラス用のクラス"
+msgstr "リストの型用のURLを生成するためのリストの型"
 
 # YARD::Templates::Helpers::HtmlHelper#url_for_file
 #: ../lib/yard/templates/helpers/html_helper.rb:369
-#, fuzzy
 msgid "Returns the URL for the frameset page"
-msgstr "固有のファイル用のURLを返す"
+msgstr "フレームセットページ用のURLを返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:372
-#, fuzzy
 msgid "the URL pointing to the frames page"
-msgstr "ファイルの場所を指し示す、URL"
+msgstr "フレームページのURLのポイント"
 
 # YARD::Templates::Helpers::HtmlHelper#url_for_main
 #: ../lib/yard/templates/helpers/html_helper.rb:377
@@ -28088,11 +28079,10 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:380
 #: ../lib/yard/templates/helpers/html_helper.rb:388
-#, fuzzy
 msgid ""
 "the URL pointing to the first main page the\n"
 "user should see."
-msgstr "ファイルの場所を指し示す、URL"
+msgstr "ユーザーが調べる最初のメインページの為のURLのポイント"
 
 # YARD::Templates::Helpers::HtmlHelper#format_object_name_list
 #: ../lib/yard/templates/helpers/html_helper.rb:395
@@ -28289,9 +28279,8 @@ msgstr ""
 
 # @param [String] source
 #: ../lib/yard/templates/helpers/html_helper.rb:557
-#, fuzzy
 msgid "the source code whose language to determine"
-msgstr "書式化するソースコード"
+msgstr "どの言語か決める為のソースコード"
 
 # YARD::Templates::Helpers::HtmlHelper#parse_codeblocks
 #: ../lib/yard/templates/helpers/html_helper.rb:567
@@ -28317,9 +28306,8 @@ msgstr ""
 
 # @param [String] name
 #: ../lib/yard/templates/helpers/html_helper.rb:572
-#, fuzzy
 msgid "the html to search for code in"
-msgstr "検索の為のタグ名"
+msgstr "HTMLの中のコード用に検索するためのHTML"
 
 # YARD::Templates::Helpers::HtmlSyntaxHighlightHelper
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:5
@@ -28561,7 +28549,6 @@ msgstr "マークアップのクラス"
 # @param [Symbol] the
 #: ../lib/yard/templates/helpers/markup_helper.rb:149
 #: ../lib/yard/templates/helpers/markup_helper.rb:159
-#, fuzzy
 msgid "the markup type (:rdoc, :markdown, etc.)"
 msgstr "マークアップの型(:rdoc, :markdown, etc.)"
 
@@ -28844,9 +28831,8 @@ msgstr ""
 
 # @example
 #: ../lib/yard/templates/template.rb:24
-#, fuzzy
 msgid "tag|example|Adding in extra mixins to include on a template"
-msgstr "Stringクラスのプログラムにmixinを追加する"
+msgstr "tag|example|テンプレート上でincludeするために追加のmixinを追加する"
 
 # @example
 #: ../lib/yard/templates/template.rb:24
@@ -28860,21 +28846,18 @@ msgstr ""
 
 # @param [Template]
 #: ../lib/yard/templates/template.rb:37
-#, fuzzy
 msgid "tag|param|template"
-msgstr "from_template"
+msgstr "tag|param|template"
 
 # @return [LibraryVersion]
 #: ../lib/yard/templates/template.rb:37
-#, fuzzy
 msgid "the options hash containing all template information"
-msgstr "ライブラリの情報含んでいるオブジェクト"
+msgstr "ハッシュのオプションは全てのテンプレート情報を含んでいる"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/template.rb:37
-#, fuzzy
 msgid "the template object to mixin the extra includes."
-msgstr "含めるオブジェクト"
+msgstr "追加のincludeをmixinする為のテンプレートオブジェクト"
 
 # @param value
 #: ../lib/yard/templates/template.rb:59
@@ -29301,27 +29284,23 @@ msgstr ""
 
 # @param [String] text
 #: ../lib/yard/templates/template_options.rb:11
-#, fuzzy
 msgid "the template output format"
-msgstr "フォーマットするテキスト"
+msgstr "テンプレート出力のフォーマット"
 
 # @param [String] path
 #: ../lib/yard/templates/template_options.rb:14
-#, fuzzy
 msgid "the template name used to render output"
-msgstr "記録する為のパス名"
+msgstr "出力を表示するため利用されたテンプレート名"
 
 # @param value
 #: ../lib/yard/templates/template_options.rb:17
-#, fuzzy
 msgid "the markup format to use when parsing docstrings"
-msgstr "docstring属性を設定する,値"
+msgstr "docstringを解析する時に使うためのマークアップフォーマット"
 
 # YARD::Templates::Helpers::HtmlHelper#signature_types
 #: ../lib/yard/templates/template_options.rb:20
-#, fuzzy
 msgid "the default return type for a method with no return tags"
-msgstr "メソッドのシグネチャ用に、返す型を取得する。"
+msgstr "returnタグを用いないメソッド用のデフォルトの戻りの型"
 
 # @return [Boolean]
 #: ../lib/yard/templates/template_options.rb:23
@@ -29330,52 +29309,43 @@ msgstr ""
 
 # @param [String] source
 #: ../lib/yard/templates/template_options.rb:26
-#, fuzzy
 msgid "whether code blocks should be syntax highlighted"
-msgstr "ハイライトするソースコード"
+msgstr "コードブロックが構文ハイライトされるかどうか"
 
 # YARD::Templates::Helpers::MarkupHelper::MARKUP_PROVIDERS
 #: ../lib/yard/templates/template_options.rb:29
-#, fuzzy
 msgid "the markup provider class for the markup format"
-msgstr ""
-"それぞれのマークアップの型用の\n"
-"マークアッププロバイダーのデフォルトのリスト。"
+msgstr "マークアップフォーマット用のマークアッププロバイダークラス"
 
 # @return [OpenStruct]
 #: ../lib/yard/templates/template_options.rb:33
-#, fuzzy
 msgid ""
 "an open struct containing any global state across all\n"
 "generated objects in a template."
 msgstr ""
-"ファイルとハンドラーとの間で共有される\n"
-"任意のグローバルな状態を含んでいるOpenStruct"
+"テンプレートの中で生成された全てのオブジェクトに渡って\n"
+"全てのglobalの状態を含んでいるopen struct"
 
 # @return [Template]
 #: ../lib/yard/templates/template_options.rb:37
-#, fuzzy
 msgid "the main object being generated in the template"
-msgstr "モジュールの表しているテンプレート"
+msgstr "テンプレートの中で生成されるメインオブジェクト"
 
 # YARD::CodeObjects::Base#name
 # YARD::CodeObjects::Proxy#name
 #: ../lib/yard/templates/template_options.rb:40
-#, fuzzy
 msgid "the owner of the generated object"
-msgstr "オブジェクトの名前"
+msgstr "生成されたオブジェクトのオーナー"
 
 # @return [Boolean]
 #: ../lib/yard/templates/template_options.rb:43
-#, fuzzy
 msgid "the template type used to generate output"
-msgstr "出力を生成するかどうか"
+msgstr "出力を生成するために使ったテンプレートタイプ"
 
 # @return [Boolean]
 #: ../lib/yard/templates/template_options.rb:46
-#, fuzzy
 msgid "whether serialization should be performed"
-msgstr "シリアライズが存在するかどうか"
+msgstr "シリアライズが実行されるかどうか"
 
 # @return [Serializers::Base]
 #: ../lib/yard/templates/template_options.rb:50
@@ -29393,15 +29363,13 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/templates/template_options.rb:54
 #: ../lib/yard/templates/template_options.rb:56
-#, fuzzy
 msgid "whether highlighting should be ignored"
-msgstr "ハイライトされたソース"
+msgstr "ハイライトが無視されるかどうか"
 
 # @param [String] title
 #: ../lib/yard/templates/template_options.rb:60
-#, fuzzy
 msgid "the title of a given page"
-msgstr "リンクのタイトル"
+msgstr "与えられたページのタイトル"
 
 # @return [Array<String>]
 #: ../lib/yard/templates/template_options.rb:68
@@ -29432,27 +29400,23 @@ msgstr ""
 
 # @return [nil]
 #: ../lib/yard/templates/template_options.rb:74
-#, fuzzy
 msgid "if the mixin is not a module object"
-msgstr "文がメソッド呼び出しでない場合"
+msgstr "mixinがモジュールオブジェクトでない場合"
 
 # @param [Fixnum, nil]
 #: ../lib/yard/templates/template_options.rb:74
-#, fuzzy
 msgid "tag|param|mixin"
-msgstr "param|line"
+msgstr "tag|param|mixin"
 
 # @return [Boolean]
 #: ../lib/yard/templates/template_options.rb:74
-#, fuzzy
 msgid "whether a mixin matches the embed_mixins list"
-msgstr "+node+ がハンドラーにマッチするかどうか"
+msgstr "mixinがembed_mixinsのリストにマッチするかどうか"
 
 # @param [Serializers::Base] serializer
 #: ../lib/yard/templates/template_options.rb:85
-#, fuzzy
 msgid "the verifier object"
-msgstr "シリアライザーオブジェクト"
+msgstr "verifier(認証)オブジェクト"
 
 # YARD::Verifier
 #: ../lib/yard/verifier.rb:3
