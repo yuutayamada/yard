@@ -1518,7 +1518,7 @@ msgstr "以下は`CodeObjects`のnamespaceの中で用いられるクラスの�
 
 #: ../docs/CodeObjects.md:24
 msgid "![CodeObjects Class Diagram](images/code-objects-class-diagram.png)"
-msgstr ""
+msgstr "![CodeObjects Class Diagram](images/code-objects-class-diagram.png)"
 
 #: ../docs/CodeObjects.md:26
 msgid "## Unique Path Representation"
@@ -1570,7 +1570,7 @@ msgstr ""
 
 #: ../docs/CodeObjects.md:43
 msgid "## Registry"
-msgstr "## レジストリー"
+msgstr "## レジストリ"
 
 #: ../docs/CodeObjects.md:45
 msgid ""
@@ -1600,7 +1600,7 @@ msgstr ""
 
 #: ../docs/CodeObjects.md:52
 msgid "## Identity Map"
-msgstr ""
+msgstr "## Identity Map"
 
 #: ../docs/CodeObjects.md:54
 msgid ""
@@ -1624,10 +1624,12 @@ msgid ""
 "    id = ClassObject.new(:root, \"MyClass\").object_id #=> 13352\n"
 "    ClassObject.new(:root, \"MyClass\").object_id #=> 13352"
 msgstr ""
+"    id = ClassObject.new(:root, \"MyClass\").object_id #=> 13352\n"
+"    ClassObject.new(:root, \"MyClass\").object_id #=> 13352"
 
 #: ../docs/CodeObjects.md:62
 msgid "## Proxy Objects"
-msgstr "## プロキシーオブジェクト"
+msgstr "## プロキシ オブジェクト"
 
 #: ../docs/CodeObjects.md:64
 msgid ""
@@ -1672,6 +1674,8 @@ msgid ""
 "    P(:InvalidObject).type == :proxy  #=> true\n"
 "    P(:InvalidObject).is_a?(Proxy)    #=> true"
 msgstr ""
+"    P(:InvalidObject).type == :proxy  #=> true\n"
+"    P(:InvalidObject).is_a?(Proxy)    #=> true"
 
 #: ../docs/CodeObjects.md:79
 msgid "## Adding Data to Code Objects"
@@ -1699,6 +1703,8 @@ msgid ""
 "    object = MethodObject.new(:root, \"my_method\")\n"
 "    object[:modified_at] = Time.now"
 msgstr ""
+"    object = MethodObject.new(:root, \"my_method\")\n"
+"    object[:modified_at] = Time.now"
 
 #: ../docs/CodeObjects.md:89
 msgid ""
@@ -1711,7 +1717,7 @@ msgstr ""
 
 #: ../docs/CodeObjects.md:92
 msgid "    object.modified_at #=> 2009-06-03 20:08:46 -0400"
-msgstr ""
+msgstr "    object.modified_at #=> 2009-06-03 20:08:46 -0400"
 
 #: ../docs/CodeObjects.md:94
 msgid "## Creating a Custom CodeObject"
@@ -1767,6 +1773,9 @@ msgid ""
 "      \"__FooPrefix\" + sep + super\n"
 "    end"
 msgstr ""
+"    def path\n"
+"      \"__FooPrefix\" + sep + super\n"
+"    end"
 
 #: ../docs/CodeObjects.md:113
 msgid ""
