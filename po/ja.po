@@ -2800,6 +2800,8 @@ msgid ""
 "    !!!plain\n"
 "    = igLatinPay!"
 msgstr ""
+"    !!!plain\n"
+"    = igLatinPay!"
 
 #: ../docs/GettingStarted.md:391
 msgid ""
