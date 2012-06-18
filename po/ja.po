@@ -3788,6 +3788,9 @@ msgid ""
 "* [Data Storage Component](#storage)\n"
 "* [Post Processing & Templating System](#templates)"
 msgstr ""
+"* [Code Parsing & Processing Component](#parsing)\n"
+"* [Data Storage Component](#storage)\n"
+"* [Post Processing & Templating System](#templates)"
 
 #: ../docs/Overview.md:14
 msgid ""
@@ -3818,11 +3821,11 @@ msgstr "重要なクラスやこれらの構成の依存関係は、次のクラ
 
 #: ../docs/Overview.md:24
 msgid "![Overview Class Diagram](images/overview-class-diagram.png)"
-msgstr ""
+msgstr "![Overview Class Diagram](images/overview-class-diagram.png)"
 
 #: ../docs/Overview.md:26
 msgid "<a name=\"parsing\"></a>"
-msgstr ""
+msgstr "<a name=\"parsing\"></a>"
 
 #: ../docs/Overview.md:28
 msgid "## Code Parsing & Processing Component"
@@ -3849,6 +3852,10 @@ msgid ""
 "  * {file:docs/CodeObjects.md}\n"
 "  * {file:docs/Tags.md}"
 msgstr ""
+"  * {file:docs/Parser.md}\n"
+"  * {file:docs/Handlers.md}\n"
+"  * {file:docs/CodeObjects.md}\n"
+"  * {file:docs/Tags.md}"
 
 #: ../docs/Overview.md:39
 msgid ""
@@ -3869,7 +3876,7 @@ msgstr ""
 
 #: ../docs/Overview.md:44
 msgid "<a name=\"storage\"></a>"
-msgstr ""
+msgstr "<a name=\"storage\"></a>"
 
 #: ../docs/Overview.md:46
 msgid "## Data Storage Component"
@@ -3896,7 +3903,7 @@ msgstr ""
 
 #: ../docs/Overview.md:54
 msgid "<a name=\"templates\"></a>"
-msgstr ""
+msgstr "<a name=\"templates\"></a>"
 
 #: ../docs/Overview.md:56
 msgid "## Post Processing & Templating System"
