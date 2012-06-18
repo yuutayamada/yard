@@ -5309,7 +5309,7 @@ msgstr ""
 
 #: ../docs/TagsArch.md:34
 msgid "    YARD::Tags::Library.define_tag(\"A Sample Tag\", :tagname)"
-msgstr ""
+msgstr "    YARD::Tags::Library.define_tag(\"A Sample Tag\", :tagname)"
 
 #: ../docs/TagsArch.md:36
 msgid ""
@@ -5344,7 +5344,7 @@ msgstr "登録の分離やタグ作成は次の表の通り。"
 
 #: ../docs/TagsArch.md:47
 msgid "![Tags Architecture Class Diagram](images/tags-class-diagram.png)"
-msgstr ""
+msgstr "![Tags Architecture Class Diagram](images/tags-class-diagram.png)"
 
 #: ../docs/TagsArch.md:49
 msgid "### DefaultFactory"
@@ -5395,6 +5395,8 @@ msgid ""
 "        # @example Inspect an element\n"
 "        #   myobj.inspect #=> #<Object:0x123525>"
 msgstr ""
+"        # @example Inspect an element\n"
+"        #   myobj.inspect #=> #<Object:0x123525>"
 
 #: ../docs/TagsArch.md:67
 msgid ""
@@ -5411,6 +5413,8 @@ msgid ""
 "        # @return [String, Symbol] a description here\n"
 "        # @return description here with no types"
 msgstr ""
+"        # @return [String, Symbol] a description here\n"
+"        # @return description here with no types"
 
 #: ../docs/TagsArch.md:74
 msgid ""
@@ -5426,6 +5430,8 @@ msgid ""
 "        # @param [String] str the string to reverse\n"
 "        def reverse(str) '...' end"
 msgstr ""
+"        # @param [String] str the string to reverse\n"
+"        def reverse(str) '...' end"
 
 #: ../docs/TagsArch.md:80
 msgid ""
@@ -5468,7 +5474,7 @@ msgstr ""
 
 #: ../docs/TagsArch.md:95
 msgid "    YARD::Tags::Library.define_tag \"Parameter\", :param, :with_types"
-msgstr ""
+msgstr "    YARD::Tags::Library.define_tag \"Parameter\", :param, :with_types"
 
 #: ../docs/TagsArch.md:97
 msgid ""
@@ -5492,6 +5498,9 @@ msgid ""
 "      Tag.new(tag_name, text)\n"
 "    end"
 msgstr ""
+"    def parse_tag(tag_name, text)\n"
+"      Tag.new(tag_name, text)\n"
+"    end"
 
 #: ../docs/TagsArch.md:106
 msgid ""
@@ -5512,6 +5521,9 @@ msgid ""
 "      Tag.new(tag_name, raw_text)\n"
 "    end"
 msgstr ""
+"    def parse_tag_with_raw_text(tag_name, text, raw_text)\n"
+"      Tag.new(tag_name, raw_text)\n"
+"    end"
 
 #: ../docs/TagsArch.md:114
 msgid ""
@@ -5537,7 +5549,7 @@ msgstr ""
 
 #: ../docs/TagsArch.md:121
 msgid "    YARD::Tags::Library.default_factory = MyFactory"
-msgstr ""
+msgstr "    YARD::Tags::Library.default_factory = MyFactory"
 
 #: ../docs/TagsArch.md:123
 msgid ""
