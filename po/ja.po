@@ -3963,7 +3963,7 @@ msgstr "重要なクラスは、以下のパーサーの全体のシステムの
 
 #: ../docs/Parser.md:13
 msgid "![Parser Class Diagram](images/parser-class-diagram.png)"
-msgstr ""
+msgstr "![Parser Class Diagram](images/parser-class-diagram.png)"
 
 #: ../docs/Parser.md:15
 msgid "(Note: the RubyToken classes are omitted from the diagram)"
@@ -4037,6 +4037,8 @@ msgid ""
 "    YARD::Parser::SourceParser.parse('spec_*.rb')\n"
 "    YARD::Parser::SourceParser.parse(['spec_*.rb', '*_helper.rb'])"
 msgstr ""
+"    YARD::Parser::SourceParser.parse('spec_*.rb')\n"
+"    YARD::Parser::SourceParser.parse(['spec_*.rb', '*_helper.rb'])"
 
 #: ../docs/Parser.md:40
 msgid "This is equivalent to the convenience method {YARD.parse}:"
@@ -4044,7 +4046,7 @@ msgstr "これは以下の便宜的なメソッド{YARD.parse}と同等である
 
 #: ../docs/Parser.md:42
 msgid "    YARD.parse('lib/**/*.rb')"
-msgstr ""
+msgstr "    YARD.parse('lib/**/*.rb')"
 
 #: ../docs/Parser.md:44
 msgid ""
@@ -4061,7 +4063,7 @@ msgstr ""
 
 #: ../docs/Parser.md:48
 msgid "    YARD::Parser::SourceParser.parse_string(\"def method(a, b) end\")"
-msgstr ""
+msgstr "    YARD::Parser::SourceParser.parse_string(\"def method(a, b) end\")"
 
 #: ../docs/Parser.md:50
 msgid "You can also provide the parser type explicitly as the second argument:"
@@ -4115,7 +4117,7 @@ msgstr ""
 #: ../docs/Parser.md:67
 msgid ""
 "    SourceParser.register_parser_type(:my_parser, MyParser, 'my_parser_ext')"
-msgstr ""
+msgstr "    SourceParser.register_parser_type(:my_parser, MyParser, 'my_parser_ext')"
 
 #: ../docs/Parser.md:69
 msgid ""
@@ -4182,7 +4184,7 @@ msgstr ""
 
 #: ../docs/Parser.md:91
 msgid "    YARD::Parser::SourceParser.parser_type = :ruby18"
-msgstr ""
+msgstr "    YARD::Parser::SourceParser.parser_type = :ruby18"
 
 #: ../docs/Parser.md:93
 msgid ""
@@ -4253,6 +4255,11 @@ msgid ""
 "    node[0]    #=> s(:int, \"1\")\n"
 "    node[0][0] #=> \"1\""
 msgstr ""
+"    # S式は `hello if 1` ステートメントを定義する\n"
+"    node = s(:if_mod, s(:int, \"1\"), s(:var_ref, s(:ident, \"hello\")))\n"
+"    node.type  #=> :if_mod\n"
+"    node[0]    #=> s(:int, \"1\")\n"
+"    node[0][0] #=> \"1\""
 
 #: ../docs/Parser.md:118
 msgid ""
@@ -4281,11 +4288,11 @@ msgstr ""
 #: ../docs/Parser.md:126
 msgid ""
 "    node.children #=> [s(:int, \"1\"), s(:var_ref, s(:ident, \"hello\"))]"
-msgstr ""
+msgstr "    node.children #=> [s(:int, \"1\"), s(:var_ref, s(:ident, \"hello\"))]"
 
 #: ../docs/Parser.md:128
 msgid "### AstNode#source and #line"
-msgstr ""
+msgstr "### AstNode#source and #line"
 
 #: ../docs/Parser.md:130
 msgid ""
@@ -4307,6 +4314,10 @@ msgid ""
 "    ast[0].condition.source  #=> \"1 == 1\"\n"
 "    ast[0].then_block.source #=> \"raise Exception\""
 msgstr ""
+"    source = \"if 1 == 1 then\\n  raise Exception\\n end\"\n"
+"    ast = YARD::Parser::Ruby::RubyParser.parse(source).root\n"
+"    ast[0].condition.source  #=> \"1 == 1\"\n"
+"    ast[0].then_block.source #=> \"raise Exception\""
 
 #: ../docs/Parser.md:139
 msgid ""
@@ -4350,7 +4361,7 @@ msgstr ""
 
 #: ../docs/Parser.md:153
 msgid "### AstNode#jump"
-msgstr ""
+msgstr "### AstNode#jump"
 
 #: ../docs/Parser.md:155
 msgid ""
@@ -4371,6 +4382,9 @@ msgid ""
 "    ast = s(s(:int, \"1\"), s(s(:var_ref, s(:ident, \"hello\"))))\n"
 "    ast.jump(:ident)[0] #=> \"hello\""
 msgstr ""
+"    # Get the first identifier in the statement\n"
+"    ast = s(s(:int, \"1\"), s(s(:var_ref, s(:ident, \"hello\"))))\n"
+"    ast.jump(:ident)[0] #=> \"hello\""
 
 #: ../docs/Parser.md:163
 msgid ""
@@ -4453,6 +4467,9 @@ msgid ""
 "    stmts[0].block       #=> nil\n"
 "    stmts[0].tokens.to_s #=> \"hello if 1\""
 msgstr ""
+"    stmts = ARD::Parser::Ruby::Legacy::StatementList.new(\"hello if 1\")\n"
+"    stmts[0].block       #=> nil\n"
+"    stmts[0].tokens.to_s #=> \"hello if 1\""
 
 #: ../docs/Parser.md:189
 msgid ""
