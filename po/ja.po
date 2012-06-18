@@ -3328,6 +3328,9 @@ msgid ""
 "[yard-rspec]:http://github.com/lsegal/yard-spec-plugin\n"
 "[rspec]:http://rspec.info"
 msgstr ""
+"[graphviz]:http://www.graphviz.org\n"
+"[yard-rspec]:http://github.com/lsegal/yard-spec-plugin\n"
+"[rspec]:http://rspec.info"
 
 # title
 #: ../docs/Handlers.md:1
@@ -3354,7 +3357,7 @@ msgstr ""
 #: ../docs/Handlers.md:10
 msgid ""
 "![Handlers Architecture Class Diagram](images/handlers-class-diagram.png)"
-msgstr ""
+msgstr "![Handlers Architecture Class Diagram](images/handlers-class-diagram.png)"
 
 #: ../docs/Handlers.md:12
 msgid "## The Pipeline"
@@ -3452,6 +3455,8 @@ msgid ""
 "    class MyModuleHandler < YARD::Handlers::Ruby::Base\n"
 "      handles :module"
 msgstr ""
+"    class MyModuleHandler < YARD::Handlers::Ruby::Base\n"
+"      handles :module"
 
 #: ../docs/Handlers.md:46
 msgid ""
@@ -3460,6 +3465,10 @@ msgid ""
 "      end\n"
 "    end"
 msgstr ""
+"      def process\n"
+"        puts \"Handling a module named #{statement[0].source}\"\n"
+"      end\n"
+"    end"
 
 #: ../docs/Handlers.md:51
 msgid ""
@@ -3514,6 +3523,8 @@ msgid ""
 "    class MyHandler < YARD::Handlers::Ruby::Base\n"
 "      handles method_call(:describe)"
 msgstr ""
+"    class MyHandler < YARD::Handlers::Ruby::Base\n"
+"      handles method_call(:describe)"
 
 #: ../docs/Handlers.md:70
 msgid ""
@@ -3522,6 +3533,10 @@ msgid ""
 "      end\n"
 "    end"
 msgstr ""
+"      def process\n"
+"        # メソッド呼び出しを処理する\n"
+"      end\n"
+"    end"
 
 #: ../docs/Handlers.md:75
 msgid ""
@@ -3541,6 +3556,12 @@ msgid ""
 "      a_block\n"
 "    end"
 msgstr ""
+"    describe(something)\n"
+"    describe arg1, arg2, arg3\n"
+"    describe(something) { perform_a_block }\n"
+"    describe \"Something\" do\n"
+"      a_block\n"
+"    end"
 
 #: ../docs/Handlers.md:85
 msgid "### Creating a new Code Object"
@@ -3573,7 +3594,7 @@ msgstr ""
 
 #: ../docs/Handlers.md:95
 msgid "### Handling an Inner Block"
-msgstr ""
+msgstr "### 内部のブロックの操作"
 
 #: ../docs/Handlers.md:97
 msgid ""
@@ -3617,6 +3638,8 @@ msgid ""
 "    class YARD::Handlers::Ruby::ModuleHandler < YARD::Handlers::Ruby::Base\n"
 "      handles :module"
 msgstr ""
+"    class YARD::Handlers::Ruby::ModuleHandler < YARD::Handlers::Ruby::Base\n"
+"      handles :module"
 
 #: ../docs/Handlers.md:111
 msgid ""
@@ -3627,6 +3650,12 @@ msgid ""
 "      end\n"
 "    end"
 msgstr ""
+"      def process\n"
+"        modname = statement[0].source\n"
+"        mod = register ModuleObject.new(namespace, modname)\n"
+"        parse_block(statement[1], :namespace => mod)\n"
+"      end\n"
+"    end"
 
 #: ../docs/Handlers.md:118
 msgid ""
@@ -3647,7 +3676,7 @@ msgstr ""
 
 #: ../docs/Handlers.md:123
 msgid "### API Differences for Legacy Handler"
-msgstr ""
+msgstr "### Legacy Handler用のAPIの相違点"
 
 #: ../docs/Handlers.md:125
 msgid ""
@@ -3682,6 +3711,8 @@ msgid ""
 "Ruby::Legacy::Base\n"
 "      handles TkMODULE"
 msgstr ""
+"    class YARD::Handlers::Ruby::Legacy::ModuleHandler < YARD::Handlers::Ruby::Legacy::Base\n"
+"      handles TkMODULE"
 
 #: ../docs/Handlers.md:136
 msgid ""
@@ -3693,6 +3724,12 @@ msgid ""
 "      end\n"
 "    end"
 msgstr ""
+"      def process\n"
+"        modname = statement.tokens.to_s[/^module\\s+(#{NAMESPACEMATCH})/, 1]\n"
+"        mod = register ModuleObject.new(namespace, modname)\n"
+"        parse_block(:namespace => mod)\n"
+"      end\n"
+"    end"
 
 #: ../docs/Handlers.md:143
 msgid "A few notes on the differences:"
