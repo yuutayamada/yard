@@ -22,6 +22,8 @@ msgid ""
 "YARD: Yay! A Ruby Documentation Tool\n"
 "===================================="
 msgstr ""
+"YARD: Yay! A Ruby Documentation Tool\n"
+"===================================="
 
 #: ../README.md:4
 msgid ""
@@ -37,6 +39,15 @@ msgid ""
 "**Latest Version**: 0.8.2.1 (codename \"Shave It\")    \n"
 "**Release Date**: June 10th 2012"
 msgstr ""
+"**Homepage**:     [http://yardoc.org](http://yardoc.org)   \n"
+"**IRC**:          [irc.freenode.net / #yard](irc://irc.freenode.net/yard)    \n"
+"**Git**:          [http://github.com/lsegal/yard](http://github.com/lsegal/yard)   \n"
+"**Author**:       Loren Segal  \n"
+"**Contributors**: See Contributors section below    \n"
+"**Copyright**:    2007-2012    \n"
+"**License**:      MIT License    \n"
+"**Latest Version**: 0.8.2.1 (codename \"Shave It\")    \n"
+"**Release Date**: June 10th 2012"
 
 #: ../README.md:14
 msgid ""
@@ -145,6 +156,14 @@ msgid ""
 "       contents.reverse\n"
 "     end"
 msgstr ""
+"     # 文字列やIOオブジェクトの内容を逆にする\n"
+"     #\n"
+"     # @param [String, #read] 逆にするためのコンテンツを入れる\n"
+"     # @return [String] 逆になった単語のコンテンツ\n"
+"     def reverse(contents)\n"
+"       contents = contents.read if respond_to? :read\n"
+"       contents.reverse\n"
+"     end"
 
 #: ../README.md:58
 msgid ""
@@ -187,6 +206,10 @@ msgid ""
 "      cattr_accessor :publisher\n"
 "    end"
 msgstr ""
+"    class List\n"
+"      # リスト用の発行者名を設定する\n"
+"      cattr_accessor :publisher\n"
+"    end"
 
 #: ../README.md:75
 msgid ""
@@ -289,7 +312,7 @@ msgstr "YARDをインストールする為に次のコマンドを使う。"
 
 #: ../README.md:110
 msgid "    $ gem install yard"
-msgstr ""
+msgstr "    $ gem install yard"
 
 #: ../README.md:112
 msgid "(Add `sudo` if you're installing under a POSIX system as root)"
@@ -319,7 +342,7 @@ msgstr ""
 
 #: ../README.md:121
 msgid "    $ sudo apt-get install rdoc"
-msgstr ""
+msgstr "    $ sudo apt-get install rdoc"
 
 # YARD::CLI::Yardoc
 #: ../README.md:124
@@ -353,7 +376,7 @@ msgstr ""
 
 #: ../README.md:135
 msgid "    $ yard --help"
-msgstr ""
+msgstr "    $ yard --help"
 
 #: ../README.md:137
 msgid ""
@@ -370,7 +393,7 @@ msgstr "### ドキュメントを生成する"
 msgid ""
 "<span class=\"note\">The `yardoc` executable is a shortcut for `yard doc`.</"
 "span>"
-msgstr ""
+msgstr "<span class=\"note\">The `yardoc` executable is a shortcut for `yard doc`.</span>"
 
 #: ../README.md:144
 msgid ""
@@ -393,7 +416,7 @@ msgstr ""
 
 #: ../README.md:151
 msgid "    $ yardoc 'lib/**/*.rb' 'app/**/*.rb' ...etc..."
-msgstr ""
+msgstr "    $ yardoc 'lib/**/*.rb' 'app/**/*.rb' ...etc..."
 
 #: ../README.md:153
 msgid ""
@@ -441,7 +464,7 @@ msgstr ""
 
 #: ../README.md:170
 msgid "    $ yardoc 'app/**/*.rb' - README LICENSE FAQ"
-msgstr ""
+msgstr "    $ yardoc 'app/**/*.rb' - README LICENSE FAQ"
 
 #: ../README.md:172
 msgid ""
@@ -453,7 +476,7 @@ msgstr ""
 
 #: ../README.md:175
 msgid "    $ yardoc - README LICENSE FAQ"
-msgstr ""
+msgstr "    $ yardoc - README LICENSE FAQ"
 
 #: ../README.md:177
 msgid ""
@@ -501,6 +524,9 @@ msgid ""
 "    --query 'object.has_tag?(:api) && object.tag(:api).text == \"public\"'\n"
 "    --query 'has_tag?(:api) && tag(:api).text == \"public\"'"
 msgstr ""
+"    --query '@api.text == \"public\"'\n"
+"    --query 'object.has_tag?(:api) && object.tag(:api).text == \"public\"'\n"
+"    --query 'has_tag?(:api) && tag(:api).text == \"public\"'"
 
 #: ../README.md:196
 msgid ""
@@ -526,6 +552,8 @@ msgid ""
 "    --query '@return' --query '@param'\n"
 "    --query '@return && @param'"
 msgstr ""
+"    --query '@return' --query '@param'\n"
+"    --query '@return && @param'"
 
 #: ../README.md:205
 msgid ""
@@ -534,7 +562,7 @@ msgstr "さらなるquery構文の情報については、 {YARD::Verifier} ク�
 
 #: ../README.md:207
 msgid "**2. Rake Task**"
-msgstr ""
+msgstr "**2. Rake Task**"
 
 #: ../README.md:209
 msgid ""
@@ -552,6 +580,10 @@ msgid ""
 "      t.options = ['--any', '--extra', '--opts'] # optional\n"
 "    end"
 msgstr ""
+"    YARD::Rake::YardocTask.new do |t|\n"
+"      t.files   = ['lib/**/*.rb', OTHER_PATHS]   # optional\n"
+"      t.options = ['--any', '--extra', '--opts'] # optional\n"
+"    end"
 
 #: ../README.md:217
 msgid ""
@@ -574,7 +606,7 @@ msgstr ""
 
 #: ../README.md:223
 msgid "    $ rake yard OPTS='--any --extra --opts'"
-msgstr ""
+msgstr "    $ rake yard OPTS='--any --extra --opts'"
 
 #: ../README.md:225
 msgid "**3. `yri` RI Implementation**"
@@ -601,6 +633,8 @@ msgid ""
 "    $ yri YARD::Handlers::Base#register\n"
 "    $ yri File.relative_path"
 msgstr ""
+"    $ yri YARD::Handlers::Base#register\n"
+"    $ yri File.relative_path"
 
 #: ../README.md:234
 msgid ""
@@ -621,7 +655,7 @@ msgstr ""
 
 #: ../README.md:240
 msgid "    $ sudo yard gems"
-msgstr ""
+msgstr "    $ sudo yard gems"
 
 #: ../README.md:242
 msgid ""
@@ -651,7 +685,7 @@ msgstr ""
 
 #: ../README.md:250 ../docs/WhatsNew.md:542
 msgid "    $ yard server"
-msgstr ""
+msgstr "    $ yard server"
 
 #: ../README.md:252
 msgid ""
@@ -666,7 +700,7 @@ msgstr ""
 
 #: ../README.md:255
 msgid "### Live Reloading"
-msgstr ""
+msgstr "### Live Reloading"
 
 #: ../README.md:257
 msgid ""
@@ -687,7 +721,7 @@ msgstr ""
 
 #: ../README.md:262
 msgid "### Serving Gems"
-msgstr ""
+msgstr "### Serving Gems"
 
 #: ../README.md:264
 msgid "To serve documentation for all installed gems, call:"
@@ -697,7 +731,7 @@ msgstr ""
 
 #: ../README.md:266 ../docs/WhatsNew.md:562
 msgid "    $ yard server --gems"
-msgstr ""
+msgstr "    $ yard server --gems"
 
 #: ../README.md:268
 msgid ""
@@ -713,7 +747,7 @@ msgstr ""
 
 #: ../README.md:273
 msgid "**5. `yard graph` Graphviz Generator**"
-msgstr ""
+msgstr "**5. `yard graph` Graphviz Generator**"
 
 #: ../README.md:275
 msgid ""
@@ -747,17 +781,19 @@ msgstr ""
 
 #: ../README.md:284
 msgid "    $ yard graph --protected --full --dependencies"
-msgstr ""
+msgstr "    $ yard graph --protected --full --dependencies"
 
 #: ../README.md:287
 msgid "## Changelog"
-msgstr ""
+msgstr "## Changelog"
 
 #: ../README.md:289
 msgid ""
 "- **June.9.12**: 0.8.2.1 release\n"
 "    - Fix a set of regressions in yard server search and dynamic generation"
 msgstr ""
+"- **June.9.12**: 0.8.2.1 release\n"
+"    - Fix a set of regressions in yard server search and dynamic generation"
 
 #: ../README.md:292
 msgid ""
@@ -771,6 +807,14 @@ msgid ""
 "(#548)\n"
 "    - Respect current visibility when parsing class conditions (#551)"
 msgstr ""
+"- **June.7.12**: 0.8.2 release\n"
+"    - Added progress style output in tty terminals\n"
+"    - Embedded mixins should ignore methods defined on module (#539)\n"
+"    - Fixed permalinks for embedded mixins in `yard server` (#540)\n"
+"    - Improve parsing in CRuby code (#543)\n"
+"    - Ensure Registry.resolve picks module when parsing mixins (#545)\n"
+"    - Fixed regression that caused various commands to not show output (#548)\n"
+"    - Respect current visibility when parsing class conditions (#551)"
 
 #: ../README.md:301
 msgid ""
@@ -782,6 +826,11 @@ msgid ""
 "    - Fix HTML output occasionally showing trailing mdash on options list "
 "(#522)"
 msgstr ""
+"- **May.2.12**: 0.8.1 release\n"
+"    - Added `--[no-]api` switch to generate docs for API sets (see {file:docs/WhatsNew.md} for details) (#532)\n"
+"    - The `yard list` command now uses cache by default (#533)\n"
+"    - Fix `yardoc` generating incorrectly named method list file (#528)\n"
+"    - Fix HTML output occasionally showing trailing mdash on options list (#522)"
 
 #: ../README.md:307
 msgid ""
@@ -821,12 +870,41 @@ msgid ""
 "      - Fix search bar not redirecting to method page. (#509)\n"
 "      - Fix server returning exception message bodies as String (#518)"
 msgstr ""
+"- **April.30.12**: 0.8.0 release\n"
+"    - See {file:docs/WhatsNew.md} for a list of added features\n"
+"    - Over 20 bug fixes:\n"
+"      - Properly filter hidden setter/getter attributes (#394)\n"
+"      - Fix test failures in Linux environments (#397, #472, #473, #512, #513)\n"
+"      - Fix attribute inheritance and @private (#432)\n"
+"      - Fix attribute parsing (#435)\n"
+"      - Allow aliases for attributes (#436)\n"
+"      - Fix namespace fetching in `handle_alias()` (#437)\n"
+"      - Fix overwritten attributes marked as inherited (#442)\n"
+"      - Fix documenting constants defined from C code with `rb_define_const()` (#443)\n"
+"      - Do not escape snippets twice (#445)\n"
+"      - Ajax method/class search should not fire when a non-printable character is pressed (#446)\n"
+"      - Fix yard server crashing when RDoc is not installed (#456)\n"
+"      - Fix tags ignored when `(see #foo)` is used (#457)\n"
+"      - Fix three \"Returns\" for two `@overload` tags (#458)\n"
+"      - Do not auto-detect DSL methods as method objects if parameter name is not a valid method name (#464)\n"
+"      - Fix attaching of macros to Object (#465)\n"
+"      - Fix handling of `%w()` source in `[]/[]=` parsed context. (#461, pull in #468)\n"
+"      - Don't add default `@return` if `@overload` has `@return`. (#458, pull in #469)\n"
+"      - Don't discard tags by (see ...). (#457, pull in #470)\n"
+"      - Fix constants listed as inherited when overwritten (#474)\n"
+"      - Fix `yardoc --asset` behaving differently on first and subsequent calls. (#477)\n"
+"      - `!!!lang` code blocks should set the lang in `<pre>`'s class. (#478, #479)\n"
+"      - Fix \"File List\" search tab error. (#502)\n"
+"      - Fix search bar not redirecting to method page. (#509)\n"
+"      - Fix server returning exception message bodies as String (#518)"
 
 #: ../README.md:335
 msgid ""
 "- **January.31.12**: 0.7.5 release\n"
 "    - Various minor bug fixes"
 msgstr ""
+"- **January.31.12**: 0.7.5 release\n"
+"    - Various minor bug fixes"
 
 #: ../README.md:338
 msgid ""
@@ -844,6 +922,17 @@ msgid ""
 "    - Improve support for has_rdoc in RubyGems 1.8.x (#401)\n"
 "    - See the {file:docs/WhatsNew.md} document for details on added features"
 msgstr ""
+"- **December.2.11**: 0.7.4 release\n"
+"    - Redcarpet is now the default Markdown formatting library. GFM now works out-of-box (#404)\n"
+"    - Fix server side searching for elements that are marked private (#420)\n"
+"    - Add 'textile_strict' and 'pre' markup types, reorganize text and none (#416)\n"
+"    - Improve encoding line detection (#415)\n"
+"    - Add support for `rb_define_alias` in CRuby code (#413)\n"
+"    - Fix rendering of some keywords in source view (#410)\n"
+"    - Add support for RDoc 3.10+ (#406, #407)\n"
+"    - Fix typewriter text being processed in code blocks (#403)\n"
+"    - Improve support for has_rdoc in RubyGems 1.8.x (#401)\n"
+"    - See the {file:docs/WhatsNew.md} document for details on added features"
 
 #: ../README.md:350
 msgid ""
@@ -854,6 +943,11 @@ msgid ""
 "    - Add support for `rb_define_attr` calls in CRuby code (#362)\n"
 "    - Handle file pointers in CRuby code (#358)"
 msgstr ""
+"- **October.15.11**: 0.7.3 release\n"
+"    - Improve support for parsing under Ruby 1.9.2p290 and 1.9.3 (#365, #370)\n"
+"    - Add support for SWIG generated CRuby code (#369)\n"
+"    - Add support for `rb_define_attr` calls in CRuby code (#362)\n"
+"    - Handle file pointers in CRuby code (#358)"
 
 #: ../README.md:356
 msgid ""
@@ -867,12 +961,22 @@ msgid ""
 "    - Fix bug in constant documentation when using `%w()` (#348)\n"
 "    - Fix YARD style URL links when using autolinking markdown (#353)"
 msgstr ""
+"- **June.14.11**: 0.7.2 release\n"
+"    - Fix `yard --help` not showing proper output\n"
+"    - YARD now expands path to `.yardoc` file in daemon mode for server (#328)\n"
+"    - Fix `@overload` tag linking to wrong method (#330)\n"
+"    - Fix incorrect return type when using `@macro` (#334)\n"
+"    - YARD now requires 'thread' to support RubyGems 1.7+ (#338)\n"
+"    - Fix bug in constant documentation when using `%w()` (#348)\n"
+"    - Fix YARD style URL links when using autolinking markdown (#353)"
 
 #: ../README.md:365
 msgid ""
 "- **May.18.11**: 0.7.1 release\n"
 "    - Fixes a bug in `yard server` not displaying class list properly."
 msgstr ""
+"- **May.18.11**: 0.7.1 release\n"
+"    - Fixes a bug in `yard server` not displaying class list properly."
 
 #: ../README.md:368
 msgid ""
@@ -887,6 +991,15 @@ msgid ""
 "    - Ignore keyboard shortcuts when an input is active (#312)\n"
 "    - And more..."
 msgstr ""
+"- **May.17.11**: 0.7.0 release\n"
+"    - See the {file:docs/WhatsNew.md} document for details on added features\n"
+"    - Make sure that Docstring#line_range is filled when possible (#243)\n"
+"    - Set #verifier in YardocTask (#282)\n"
+"    - Parse BOM in UTF-8 files (#288)\n"
+"    - Fix instance attributes not showing up in method list (#302)\n"
+"    - Fix rendering of %w() literals in constants (#306)\n"
+"    - Ignore keyboard shortcuts when an input is active (#312)\n"
+"    - And more..."
 
 #: ../README.md:378
 msgid ""
@@ -894,6 +1007,9 @@ msgid ""
 "    - Fix regression in RDoc 1.x markup loading\n"
 "    - Fix regression in loading of markup libraries for `yard server`"
 msgstr ""
+"- **April.14.11**: 0.6.8 release\n"
+"    - Fix regression in RDoc 1.x markup loading\n"
+"    - Fix regression in loading of markup libraries for `yard server`"
 
 #: ../README.md:382
 msgid ""
@@ -901,6 +1017,8 @@ msgid ""
 "    - Fix has_rdoc gem specification issue with new RubyGems plugin API "
 "(oops!)"
 msgstr ""
+"- **April.6.11**: 0.6.7 release\n"
+"    - Fix has_rdoc gem specification issue with new RubyGems plugin API (oops!)"
 
 #: ../README.md:385
 msgid ""
@@ -912,6 +1030,11 @@ msgid ""
 "    - Fix rendering of `{url description}` syntax when description contains "
 "newline"
 msgstr ""
+"- **April.6.11**: 0.6.6 release\n"
+"    - Fix error message when RDoc is not present (#270)\n"
+"    - Add markup type 'none' to perform basic HTML translation (fallback when RDoc is not present)\n"
+"    - Add support for RubyGems 1.7.x (#272)\n"
+"    - Fix rendering of `{url description}` syntax when description contains newline"
 
 #: ../README.md:391
 msgid ""
@@ -941,6 +1064,27 @@ msgid ""
 "    - Support `private_constant` class method for 1.9.3 (#219)\n"
 "    - Do not assume RDoc is installed (#214)"
 msgstr ""
+"- **March.13.11**: 0.6.5 release\n"
+"    - Support `ripper` gem in Ruby 1.8.7\n"
+"    - Upgrade jQuery to 1.5.1\n"
+"    - Fix handling of alias statements with quoted symbols (#262)\n"
+"    - Add CSS styles (#260)\n"
+"    - Unhandled exception in YARD::Handlers::Ruby::MixinHandler indexing documentation for eventmachine (#248)\n"
+"    - Splice any alias references on method re-definitions into separate methods (#247)\n"
+"    - Fix \"yard graph\" (#245)\n"
+"    - Don't process ++ typewriter text inside of HTML attributes (#244)\n"
+"    - Prioritize loading of Kramdown before Maruku (#241)\n"
+"    - Skip shebang encoding in docstrings (#238)\n"
+"    - Fix truncation of references in @deprecated (#232)\n"
+"    - Show @api private note when no other tags are present (#231)\n"
+"    - Detect docstrings starting with \"##\" as `Docstring#hash_flag` (#230)\n"
+"    - Remove trailing whitespace from freeform tags (#229)\n"
+"    - Fix line through for deprecated methods (#225)\n"
+"    - Mistake in Tags.md (#223)\n"
+"    - Improve database storage by being more efficient with filesystem usage (#222)\n"
+"    - Make Registry thread local (#221)\n"
+"    - Support `private_constant` class method for 1.9.3 (#219)\n"
+"    - Do not assume RDoc is installed (#214)"
 
 #: ../README.md:413
 msgid ""
@@ -955,12 +1099,24 @@ msgid ""
 "    - Disallow `extend self` inside of a class (gh-202)\n"
 "    - Constants now recognized in C extensions (gh-201)"
 msgstr ""
+"- **December.21.10**: 0.6.4 release\n"
+"    - Fix yri tool crashing with new Config class (gh-217)\n"
+"    - Fix support for ::TopLevelConstants (gh-216)\n"
+"    - YARD's test suite is now RSpec2 compatible (gh-215)\n"
+"    - Improved documentation for YARD::Server features (gh-207)\n"
+"    - Fix displaying of collaped method summary lists (gh-204)\n"
+"    - Fix automatic loading of markup providers (gh-206)\n"
+"    - Fix keyboard shortcuts for Chrome (gh-203)\n"
+"    - Disallow `extend self` inside of a class (gh-202)\n"
+"    - Constants now recognized in C extensions (gh-201)"
 
 #: ../README.md:424
 msgid ""
 "- **November.21.10**: 0.6.3 release\n"
 "    - Fixed regression that caused `yardoc --markup` to silently exit"
 msgstr ""
+"- **November.21.10**: 0.6.3 release\n"
+"    - Fixed regression that caused `yardoc --markup` to silently exit"
 
 #: ../README.md:427
 msgid ""
@@ -982,6 +1138,19 @@ msgid ""
 "(gh-185)\n"
 "    - Improved YARD documentation (gh-172,191,196)"
 msgstr ""
+"- **November.15.10**: 0.6.2 release\n"
+"    - **Plugins no longer automatically load, use `--plugin` to load a plugin**\n"
+"    - Added YARD::Config and ~/.yard/config YAML configuration file\n"
+"    - Added `yard config` command to view/edit YARD configuration file\n"
+"    - Fixes for YARD in 1.8.6 (gh-178)\n"
+"    - Various HTML template adjustments and fixes (gh-198,199,200)\n"
+"    - Improved `yard server -m` multi-project stability (gh-193)\n"
+"    - Fixed handling of `yardoc --no-private` with missing class definitions (gh-197)\n"
+"    - Added support for constants defined in C extensions (gh-177)\n"
+"    - Added support for Structs defined as \"Klass = Struct.new(...)\" (gh-187)\n"
+"    - Improved parsing support for third-party gems (gh-174,180)\n"
+"    - Improved support for JRuby 1.6.4+. YARD now passes all specs in JRuby (gh-185)\n"
+"    - Improved YARD documentation (gh-172,191,196)"
 
 #: ../README.md:441
 msgid ""
@@ -996,6 +1165,14 @@ msgid ""
 "    - Fixed support for loading .yardoc files under Windows\n"
 "    - Fixed inheritance tree arrows not displaying in certain environments"
 msgstr ""
+"- **September.06.10**: 0.6.1 release\n"
+"    - Fixed TOC showing on top of class/method list in no-frames view\n"
+"    - A message now displays when running `yard server` with Rack/Mongrel installed\n"
+"    - Improved performance of JS inline search for large class/method lists\n"
+"    - Improved link titles for relative object links\n"
+"    - Removed `String#camelcase` and `String#underscore` for better Rails compat.\n"
+"    - Fixed support for loading .yardoc files under Windows\n"
+"    - Fixed inheritance tree arrows not displaying in certain environments"
 
 #: ../README.md:450
 msgid ""
@@ -1013,12 +1190,26 @@ msgid ""
 "    - Removed `yard-graph` executable\n"
 "    - See more changes in the {file:docs/WhatsNew.md what's new document}"
 msgstr ""
+"- **August.29.10**: 0.6.0 release\n"
+"    - Added dynamic local documentation server\n"
+"    - Added @group/@endgroup declarations to organize methods into groups\n"
+"    - Added `yard` executable to serve as main CLI tool with pluggable commands\n"
+"    - Added `--asset` switch to `yardoc` to copy files/dirs to output dir\n"
+"    - Added ability to register/manipulate tags via CLI (`--tag`, etc.)\n"
+"    - Added `yard diff` command\n"
+"    - Added statistics to `yardoc` output (and `yard stats` command)\n"
+"    - Added Javascript generated Table of Contents to file pages\n"
+"    - Updated various APIs\n"
+"    - Removed `yard-graph` executable\n"
+"    - See more changes in the {file:docs/WhatsNew.md what's new document}"
 
 #: ../README.md:463
 msgid ""
 "- **June.22.10**: 0.5.8 release\n"
 "    - Merge fix from 0.6 branch for --no-private visibility checking"
 msgstr ""
+"- **June.22.10**: 0.5.8 release\n"
+"    - Merge fix from 0.6 branch for --no-private visibility checking"
 
 #: ../README.md:466
 msgid ""
@@ -1029,6 +1220,12 @@ msgid ""
 "    - Fix loading of .yardoc file as cache (and preserving aliases)\n"
 "    - Fix \"lib\" directory missing when running YARD on installed gems"
 msgstr ""
+"- **June.21.10**: 0.5.7 release\n"
+"    - Fixed visibility flag parsing in `yardoc`\n"
+"    - Updated Parser Architecture documentation with new SourceParser API\n"
+"    - Improved Registry documentation for new load commands\n"
+"    - Fix loading of .yardoc file as cache (and preserving aliases)\n"
+"    - Fix \"lib\" directory missing when running YARD on installed gems"
 
 #: ../README.md:473
 msgid ""
@@ -1036,42 +1233,57 @@ msgid ""
 "    - Bug fixes for RubyGems plugin, `has_rdoc=false` should now work\n"
 "    - New API for registering custom parsers. See {file:docs/WhatsNew.md}"
 msgstr ""
+"- **June.12.10**: 0.5.6 release\n"
+"    - Bug fixes for RubyGems plugin, `has_rdoc=false` should now work\n"
+"    - New API for registering custom parsers. See {file:docs/WhatsNew.md}"
 
 #: ../README.md:477
 msgid ""
 "- **May.22.10**: 0.5.5 release\n"
 "    - Various bug fixes"
 msgstr ""
+"- **May.22.10**: 0.5.5 release\n"
+"    - Various bug fixes"
 
 #: ../README.md:480
 msgid ""
 "- **March.22.10**: 0.5.4 release\n"
 "    - See {file:docs/WhatsNew.md what's new document} for changes"
 msgstr ""
+"- **March.22.10**: 0.5.4 release\n"
+"    - See {file:docs/WhatsNew.md what's new document} for changes"
 
 #: ../README.md:483
 msgid ""
 "- **January.11.10**: 0.5.3 release\n"
 "    - See {file:docs/WhatsNew.md what's new document} for changes"
 msgstr ""
+"- **January.11.10**: 0.5.3 release\n"
+"    - See {file:docs/WhatsNew.md what's new document} for changes"
 
 #: ../README.md:486
 msgid ""
 "- **December.16.09**: 0.5.2 release\n"
 "    - See {file:docs/WhatsNew.md what's new document} for changes"
 msgstr ""
+"- **December.16.09**: 0.5.2 release\n"
+"    - See {file:docs/WhatsNew.md what's new document} for changes"
 
 #: ../README.md:489
 msgid ""
 "- **December.15.09**: 0.5.1 release\n"
 "    - See {file:docs/WhatsNew.md what's new document} for changes"
 msgstr ""
+"- **December.15.09**: 0.5.1 release\n"
+"    - See {file:docs/WhatsNew.md what's new document} for changes"
 
 #: ../README.md:492
 msgid ""
 "- **December.13.09**: 0.5.0 release\n"
 "    - See {file:docs/WhatsNew.md what's new document} for changes"
 msgstr ""
+"- **December.13.09**: 0.5.0 release\n"
+"    - See {file:docs/WhatsNew.md what's new document} for changes"
 
 #: ../README.md:495
 msgid ""
@@ -1085,24 +1297,38 @@ msgid ""
 "    - Changed default rake task to `rake yard`\n"
 "    - Read about changes in {file:docs/WhatsNew.md}"
 msgstr ""
+"- **November.15.09**: 0.4.0 release\n"
+"    - Added new templating engine based on [tadpole](http://github.com/lsegal/tadpole)\n"
+"    - Added YARD queries (`--query` CLI argument to yardoc)\n"
+"    - Greatly expanded YARD documentation\n"
+"    - Added plugin support\n"
+"    - New `@abstract` and `@private` tags\n"
+"    - Changed default rake task to `rake yard`\n"
+"    - Read about changes in {file:docs/WhatsNew.md}"
 
 #: ../README.md:504
 msgid ""
 "- **August.13.09**: 0.2.3.5 release\n"
 "    - Minor bug fixes."
 msgstr ""
+"- **August.13.09**: 0.2.3.5 release\n"
+"    - Minor bug fixes."
 
 #: ../README.md:507
 msgid ""
 "- **August.07.09**: 0.2.3.4 release\n"
 "    - Minor bug fixes."
 msgstr ""
+"- **August.07.09**: 0.2.3.4 release\n"
+"    - Minor bug fixes."
 
 #: ../README.md:510
 msgid ""
 "- **July.26.09**: 0.2.3.3 release\n"
 "    - Minor bug fixes."
 msgstr ""
+"- **July.26.09**: 0.2.3.3 release\n"
+"    - Minor bug fixes."
 
 #: ../README.md:513
 msgid ""
@@ -1121,10 +1347,20 @@ msgid ""
 "      by appending \"- extra files here\" after regular source files. "
 "Example:"
 msgstr ""
+"- **July.06.09**: 0.2.3.2 release\n"
+"    - Fix Textile hard-break issues\n"
+"    - Add description for @see tag to use as link title in HTML docs.\n"
+"    - Add --title CLI option to specify a title for HTML doc files.\n"
+"    - Add custom.css file that can be overridden with various custom\n"
+"      styelsheet declarations. To use this, simply add `default/fulldoc/html/custom.css`\n"
+"      inside your code directory and use the `-t` template directory yardoc CLI\n"
+"      option to point to that template directory (the dir holding 'default').\n"
+"    - Add support in `yardoc` CLI to specify extra files (formerly --files)\n"
+"      by appending \"- extra files here\" after regular source files. Example:"
 
 #: ../README.md:524
 msgid "            yardoc --private lib/**/*.rb - FAQ LICENSE"
-msgstr ""
+msgstr "            yardoc --private lib/**/*.rb - FAQ LICENSE"
 
 #: ../README.md:526
 msgid ""
@@ -1135,12 +1371,18 @@ msgid ""
 "your\n"
 "      .gemspec file."
 msgstr ""
+"- **Jun.13.09**: 0.2.3.1 release.\n"
+"    - Add a RubyGems 1.3.2+ plugin to generate YARD documentation instead of\n"
+"      RDoc. To take advantage of this plugin, set `has_rdoc = 'yard'` in your\n"
+"      .gemspec file."
 
 #: ../README.md:531
 msgid ""
 "- **Jun.07.09**: 0.2.3 release. See the {file:docs/WhatsNew.md} file for a\n"
 "  list of important new features."
 msgstr ""
+"- **Jun.07.09**: 0.2.3 release. See the {file:docs/WhatsNew.md} file for a\n"
+"  list of important new features."
 
 #: ../README.md:534
 msgid ""
@@ -1149,10 +1391,13 @@ msgid ""
 "it\n"
 "  more robust and far easier to extend and use for the developer."
 msgstr ""
+"- **Jun.16.08**: 0.2.2 release. This is the largest changset since yard's\n"
+"  conception and involves a complete overhaul of the parser and API to make it\n"
+"  more robust and far easier to extend and use for the developer."
 
 #: ../README.md:538
 msgid "- **Feb.20.08**: 0.2.1 release."
-msgstr ""
+msgstr "- **Feb.20.08**: 0.2.1 release."
 
 #: ../README.md:540
 msgid ""
@@ -1164,24 +1409,30 @@ msgid ""
 "the\n"
 "  power of YARD and what to expect from the syntax (Yardoc style meta tags)."
 msgstr ""
+"- **Feb.24.07**: Released 0.1a experimental version for testing. The goal here is\n"
+"  to get people testing YARD on their code because there are too many possible\n"
+"  code styles to fit into a sane amount of test cases. It also demonstrates the\n"
+"  power of YARD and what to expect from the syntax (Yardoc style meta tags)."
 
 #: ../README.md:546
 msgid "## Contributors"
-msgstr ""
+msgstr "## 貢献者へ"
 
 #: ../README.md:548
 msgid ""
 "Special thanks to all contributors for submitting patches. A full list of\n"
 "contributors including their patches can be found at:"
 msgstr ""
+"パッチの申請をした全ての貢献者へ本当に感謝する。\n"
+"これらのパッチを投げた全ての貢献者のリストは次で見れる:"
 
 #: ../README.md:551
 msgid "http://github.com/lsegal/yard/contributors"
-msgstr ""
+msgstr "http://github.com/lsegal/yard/contributors"
 
 #: ../README.md:553
 msgid "## Copyright"
-msgstr ""
+msgstr "## Copyright"
 
 #: ../README.md:555
 msgid ""
@@ -1190,6 +1441,10 @@ msgid ""
 "RDoc/Ruby distributions. Please see the {file:LICENSE} and {file:LEGAL}\n"
 "documents for more information."
 msgstr ""
+"YARD &copy; 2007-2012 by [Loren Segal](mailto:lsegal@soen.ca). YARD is\n"
+"licensed under the MIT license except for some files which come from the\n"
+"RDoc/Ruby distributions. Please see the {file:LICENSE} and {file:LEGAL}\n"
+"documents for more information."
 
 # title
 #: ../docs/CodeObjects.md:1
