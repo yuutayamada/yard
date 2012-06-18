@@ -5709,7 +5709,7 @@ msgstr ""
 
 #: ../docs/Templates.md:50
 msgid "    YARD::Templates::Engine.render(:object => myobject)"
-msgstr ""
+msgstr "    YARD::Templates::Engine.render(:object => myobject)"
 
 #: ../docs/Templates.md:52
 msgid "A set of objects may be rendered into HTML documentation by using:"
@@ -5774,7 +5774,7 @@ msgstr ""
 
 #: ../docs/Templates.md:73
 msgid "    myobject.format(:format => :html)"
-msgstr ""
+msgstr "    myobject.format(:format => :html)"
 
 #: ../docs/Templates.md:75
 msgid "## Serializer"
@@ -5868,6 +5868,33 @@ msgid ""
 "        |       |-- index.erb\n"
 "        |       `-- text.erb"
 msgstr ""
+"    (Assuming templates/ is a template path)\n"
+"    templates\n"
+"    `-- default\n"
+"        |-- class\n"
+"        |   |-- dot\n"
+"        |   |   |-- setup.rb\n"
+"        |   |   `-- superklass.erb\n"
+"        |   |-- html\n"
+"        |   |   |-- constructor_details.erb\n"
+"        |   |   |-- setup.rb\n"
+"        |   |   `-- subclasses.erb\n"
+"        |   |-- setup.rb\n"
+"        |   `-- text\n"
+"        |       |-- setup.rb\n"
+"        |       `-- subclasses.erb\n"
+"        |-- docstring\n"
+"        |   |-- html\n"
+"        |   |   |-- abstract.erb\n"
+"        |   |   |-- deprecated.erb\n"
+"        |   |   |-- index.erb\n"
+"        |   |   `-- text.erb\n"
+"        |   |-- setup.rb\n"
+"        |   `-- text\n"
+"        |       |-- abstract.erb\n"
+"        |       |-- deprecated.erb\n"
+"        |       |-- index.erb\n"
+"        |       `-- text.erb"
 
 #: ../docs/Templates.md:123
 msgid ""
@@ -5910,7 +5937,7 @@ msgstr ""
 
 #: ../docs/Templates.md:135
 msgid "## setup.rb"
-msgstr ""
+msgstr "## setup.rb"
 
 #: ../docs/Templates.md:137
 msgid ""
@@ -5941,6 +5968,9 @@ msgid ""
 "      sections :section1, :section2, :section3\n"
 "    end"
 msgstr ""
+"    def init\n"
+"      sections :section1, :section2, :section3\n"
+"    end"
 
 #: ../docs/Templates.md:150
 msgid "## Sections"
@@ -5991,6 +6021,9 @@ msgid ""
 "      sections :header, [:section_a, :section_b]\n"
 "    end"
 msgstr ""
+"    def init\n"
+"      sections :header, [:section_a, :section_b]\n"
+"    end"
 
 #: ../docs/Templates.md:169
 msgid ""
@@ -6014,6 +6047,10 @@ msgid ""
 "      <%= yieldall %>\n"
 "    </div>"
 msgstr ""
+"    <h2>Header</h2>\n"
+"    <div id=\"contents\">\n"
+"      <%= yieldall %>\n"
+"    </div>"
 
 #: ../docs/Templates.md:178
 msgid ""
@@ -6038,6 +6075,8 @@ msgid ""
 "    <h2>First method</h2>\n"
 "    <%= yieldall :object => object.meths.first %>"
 msgstr ""
+"    <h2>First method</h2>\n"
+"    <%= yieldall :object => object.meths.first %>"
 
 #: ../docs/Templates.md:186
 msgid ""
@@ -6120,7 +6159,7 @@ msgstr "例えば、`default/class/html/setup.rb`の中の最初の行は、以�
 
 #: ../docs/Templates.md:212
 msgid "    include T('default/module/html')"
-msgstr ""
+msgstr "    include T('default/module/html')"
 
 #: ../docs/Templates.md:214
 msgid ""
@@ -6156,6 +6195,12 @@ msgid ""
 "methodmissing)\n"
 "    end"
 msgstr ""
+"    def init\n"
+"      super\n"
+"      sections.place(:subclasses).before(:children)\n"
+"      sections.delete(:children)\n"
+"      sections.place([:constructor_details, [T('method_details')]]).before(:methodmissing)\n"
+"    end"
 
 #: ../docs/Templates.md:229
 msgid ""
@@ -6192,7 +6237,7 @@ msgstr ""
 
 #: ../docs/Templates.md:240
 msgid "    sections :a, [:b, :c, [:d]]"
-msgstr ""
+msgstr "    sections :a, [:b, :c, [:d]]"
 
 #: ../docs/Templates.md:242
 msgid "You can get to the :d section with:"
@@ -6200,7 +6245,7 @@ msgstr "次のようにすると、:dセクションを取得できる。"
 
 #: ../docs/Templates.md:244
 msgid "    sections[:a][:c][:d]"
-msgstr ""
+msgstr "    sections[:a][:c][:d]"
 
 #: ../docs/Templates.md:246
 msgid ""
