@@ -5096,7 +5096,7 @@ msgstr ""
 
 #: ../docs/Tags.md:228
 msgid "<a name=\"reftags\"></a>"
-msgstr ""
+msgstr "<a name=\"reftags\"></a>"
 
 #: ../docs/Tags.md:232
 msgid ""
@@ -5104,6 +5104,9 @@ msgid ""
 "  Reference tag syntax applies only to meta-data tags, not directives.\n"
 "</p>"
 msgstr ""
+"<p class=\"note\">\n"
+"  Reference tag syntax applies only to meta-data tags, not directives.\n"
+"</p>"
 
 #: ../docs/Tags.md:236
 msgid ""
@@ -5122,12 +5125,18 @@ msgid ""
 "    # @param [Time] time the time that this operation took place\n"
 "    def clean(user, host, time = Time.now) end"
 msgstr ""
+"    # @param [String] user the username for the operation\n"
+"    # @param [String] host the host that this user is associated with\n"
+"    # @param [Time] time the time that this operation took place\n"
+"    def clean(user, host, time = Time.now) end"
 
 #: ../docs/Tags.md:246
 msgid ""
 "    # @param (see #clean)\n"
 "    def activate(user, host, time = Time.now) end"
 msgstr ""
+"    # @param (see #clean)\n"
+"    def activate(user, host, time = Time.now) end"
 
 #: ../docs/Tags.md:249
 msgid "## Adding Custom Tags"
@@ -5201,7 +5210,7 @@ msgstr ""
 
 #: ../docs/Tags.md:281
 msgid "{yard:include_tags}"
-msgstr ""
+msgstr "{yard:include_tags}"
 
 # title
 #: ../docs/TagsArch.md:1
