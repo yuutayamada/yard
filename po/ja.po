@@ -7547,7 +7547,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:257
 msgid "    $ yard doc --api public --api developer --no-api"
-msgstr ""
+msgstr "    $ yard doc --api public --api developer --no-api"
 
 #: ../docs/WhatsNew.md:259
 msgid ""
@@ -7576,7 +7576,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:274
 msgid "    $ yard doc --query '!@api || @api.text =~ /^(public|private)$/'"
-msgstr ""
+msgstr "    $ yard doc --query '!@api || @api.text =~ /^(public|private)$/'"
 
 #: ../docs/WhatsNew.md:276
 msgid ""
@@ -7666,6 +7666,11 @@ msgid ""
 "      property :title, String\n"
 "    end"
 msgstr ""
+"    class Post\n"
+"      # @attribute\n"
+"      # @return [String] the title of the post\n"
+"      property :title, String\n"
+"    end"
 
 #: ../docs/WhatsNew.md:316
 msgid ""
@@ -7783,6 +7788,9 @@ msgid ""
 "    # @markup rdoc\n"
 "    # @author Foo Bar (custom tag, does not display in templates)"
 msgstr ""
+"    # @title The Best Project Ever!\n"
+"    # @markup rdoc\n"
+"    # @author Foo Bar (custom tag, does not display in templates)"
 
 #: ../docs/WhatsNew.md:359
 msgid "    = This Project Rules"
@@ -8100,6 +8108,10 @@ msgid ""
 "    Some code\n"
 "    block here."
 msgstr ""
+"    !!!plain\n"
+"    !!!plain\n"
+"    Some code\n"
+"    block here."
 
 #: ../docs/WhatsNew.md:478
 msgid "The GFM version would be:"
@@ -8113,6 +8125,11 @@ msgid ""
 "    block here.\n"
 "    ```"
 msgstr ""
+"    !!!plain\n"
+"    ```plain\n"
+"    Some code\n"
+"    block here.\n"
+"    ```"
 
 #: ../docs/WhatsNew.md:486
 msgid "## Added `-m textile_strict` and `-m pre` markup types (0.7.4)"
@@ -8274,7 +8291,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:551
 msgid "    $ yard server --reload"
-msgstr ""
+msgstr "    $ yard server --reload"
 
 #: ../docs/WhatsNew.md:553
 msgid ""
@@ -8284,6 +8301,10 @@ msgid ""
 "  will need to flush the cache by deleting `.yardoc` and (optionally)\n"
 "  restarting the server.</span>"
 msgstr ""
+"<span class=\"note\">Note that in incremental mode, objects or method groupings\n"
+"  cannot be removed. If you have removed objects or modified groupings, you\n"
+"  will need to flush the cache by deleting `.yardoc` and (optionally)\n"
+"  restarting the server.</span>"
 
 #: ../docs/WhatsNew.md:558
 msgid ""
@@ -8313,6 +8334,13 @@ msgid ""
 "questions/1789376/how-do-i-make-no-ri-no-rdoc-the-default-for-gem-install)\n"
 "   for exact instructions.</span>"
 msgstr ""
+"<span class=\"note\">Documentation for the gem need not be previously generated\n"
+"  at install-time. If documentation for the gem has not been generated, YARD\n"
+"  will do this for you on-the-fly. It is therefore possible to speed up your\n"
+"  gem installs by using `gem install GEMNAME --no-rdoc` without repercussion.\n"
+"  You can also add this switch to your `~/.gemrc` file so that you don't need\n"
+"   to re-type it each time. See [this link](http://stackoverflow.com/questions/1789376/how-do-i-make-no-ri-no-rdoc-the-default-for-gem-install)\n"
+"   for exact instructions.</span>"
 
 #: ../docs/WhatsNew.md:572
 msgid "## Groups support for method listing (0.6.0)"
