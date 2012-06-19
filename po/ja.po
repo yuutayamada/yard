@@ -6263,7 +6263,7 @@ msgstr ""
 
 #: ../docs/Templates.md:249
 msgid "    sections[:a][:c].place(:e).after(:d)"
-msgstr ""
+msgstr "    sections[:a][:c].place(:e).after(:d)"
 
 #: ../docs/Templates.md:251
 msgid ""
@@ -6280,7 +6280,7 @@ msgstr ""
 
 #: ../docs/Templates.md:255
 msgid "    sections.place(:e).after_any(:d)"
-msgstr ""
+msgstr "    sections.place(:e).after_any(:d)"
 
 #: ../docs/Templates.md:257
 msgid "## Overriding Templates by Registering a Template Path"
@@ -6320,7 +6320,7 @@ msgstr ""
 #: ../docs/Templates.md:269
 msgid ""
 "    YARD::Templates::Engine.register_template_path '/path/to/mytemplates'"
-msgstr ""
+msgstr "    YARD::Templates::Engine.register_template_path '/path/to/mytemplates'"
 
 #: ../docs/Templates.md:271
 msgid ""
@@ -6365,6 +6365,11 @@ msgid ""
 "    |   |   |-- customsection.erb\n"
 "    |   |-- setup.rb"
 msgstr ""
+"    /path/to/mytemplates/:\n"
+"    |-- class\n"
+"    |   |-- html\n"
+"    |   |   |-- customsection.erb\n"
+"    |   |-- setup.rb"
 
 #: ../docs/Templates.md:288
 msgid "The `setup.rb` file would look like:"
@@ -6377,6 +6382,10 @@ msgid ""
 "      sections.push :customsection\n"
 "    end"
 msgstr ""
+"    def init\n"
+"      super\n"
+"      sections.push :customsection\n"
+"    end"
 
 #: ../docs/Templates.md:295
 msgid ""
@@ -6420,6 +6429,13 @@ msgid ""
 "    |   |   |   |-- full_list.css\n"
 "    |   |   |   |-- style.css"
 msgstr ""
+"    /yard/templates/default/:\n"
+"    |-- fulldoc\n"
+"    |   |-- html\n"
+"    |   |   |-- css\n"
+"    |   |   |   |-- common.css\n"
+"    |   |   |   |-- full_list.css\n"
+"    |   |   |   |-- style.css"
 
 #: ../docs/Templates.md:315
 msgid "The `style.css` is the primary stylesheet for the HTML output."
@@ -6469,6 +6485,13 @@ msgid ""
 "    |   |   |   |-- full_list.js\n"
 "    |   |   |   |-- jquery.js"
 msgstr ""
+"    /yard/templates/default/:\n"
+"    |-- fulldoc\n"
+"    |   |-- html\n"
+"    |   |   |-- js\n"
+"    |   |   |   |-- app.js\n"
+"    |   |   |   |-- full_list.js\n"
+"    |   |   |   |-- jquery.js"
 
 #: ../docs/Templates.md:335
 msgid "The `app.js` is the primary javascript file for the HTML output."
@@ -6522,6 +6545,13 @@ msgid ""
 "        |   |   |-- js\n"
 "        |   |   |   |-- custom.js"
 msgstr ""
+"        /template/default/:\n"
+"        |-- fulldoc\n"
+"        |   |-- html\n"
+"        |   |   |-- css\n"
+"        |   |   |   |-- custom.css\n"
+"        |   |   |-- js\n"
+"        |   |   |   |-- custom.js"
 
 #: ../docs/Templates.md:358
 msgid ""
@@ -6540,6 +6570,10 @@ msgid ""
 "        |   |-- html\n"
 "        |   |   |-- setup.rb"
 msgstr ""
+"        /template/default/:\n"
+"        |-- layout\n"
+"        |   |-- html\n"
+"        |   |   |-- setup.rb"
 
 #: ../docs/Templates.md:366
 msgid "      And the code would look like:"
@@ -6584,6 +6618,13 @@ msgid ""
 "        |   |   |-- js\n"
 "        |   |   |   |-- custom_full_menu.js"
 msgstr ""
+"        /path/to/mytemplates/:\n"
+"        |-- fulldoc\n"
+"        |   |-- html\n"
+"        |   |   |-- css\n"
+"        |   |   |   |-- custom_full_menu.css\n"
+"        |   |   |-- js\n"
+"        |   |   |   |-- custom_full_menu.js"
 
 #: ../docs/Templates.md:393
 msgid ""
@@ -6626,6 +6667,9 @@ msgid ""
 "  * Method List\n"
 "  * File List"
 msgstr ""
+"  * Class List\n"
+"  * Method List\n"
+"  * File List"
 
 #: ../docs/Templates.md:414
 msgid "Their contents are rendered in methods within the `fulldoc` template:"
@@ -6637,6 +6681,9 @@ msgid ""
 "  * `generate_method_list`\n"
 "  * `generate_file_list`"
 msgstr ""
+"  * `generate_class_list`\n"
+"  * `generate_method_list`\n"
+"  * `generate_file_list`"
 
 #: ../docs/Templates.md:420
 msgid "To override these lists you will need to:"
@@ -6658,6 +6705,10 @@ msgid ""
 "         |   |-- html\n"
 "         |   |   |-- setup.rb"
 msgstr ""
+"         /path/to/mytemplates/:\n"
+"         |-- fulldoc\n"
+"         |   |-- html\n"
+"         |   |   |-- setup.rb"
 
 #: ../docs/Templates.md:430
 msgid ""
@@ -6666,6 +6717,9 @@ msgid ""
 "           @items = @items.reject {|m| m.name.to_s =~ /=$/ && m."
 "is_attribute? }"
 msgstr ""
+"         def generate_method_list\n"
+"           @items = prune_method_listing(Registry.all(:method), false)\n"
+"           @items = @items.reject {|m| m.name.to_s =~ /=$/ && m.is_attribute? }"
 
 #: ../docs/Templates.md:434
 msgid ""
@@ -6717,6 +6771,10 @@ msgid ""
 "        |   |-- html\n"
 "        |   |   |-- setup.rb"
 msgstr ""
+"        /path/to/mytemplates/:\n"
+"        |-- layout\n"
+"        |   |-- html\n"
+"        |   |   |-- setup.rb"
 
 #: ../docs/Templates.md:466
 msgid ""
@@ -6746,7 +6804,7 @@ msgstr ""
 
 #: ../docs/Templates.md:482
 msgid "         def generate_feature_list"
-msgstr ""
+msgstr "         def generate_feature_list"
 
 #: ../docs/Templates.md:484
 msgid ""
