@@ -6653,6 +6653,10 @@ msgid ""
 "          super + %w(css/custom.css)\n"
 "        end"
 msgstr ""
+"        def stylesheets\n"
+"          # カスタムのcssが追加される間、存在するスタイルシートをロードする\n"
+"          super + %w(css/custom.css)\n"
+"        end"
 
 #: ../docs/Templates.md:373
 msgid ""
@@ -6661,6 +6665,10 @@ msgid ""
 "          super + %w(js/custom.js)\n"
 "        end"
 msgstr ""
+"        def javascripts\n"
+"          # カスタムのjavascriptが追加される間、存在するスタイルシートをロードする\n"
+"          super + %w(js/custom.js)\n"
+"        end"
 
 #: ../docs/Templates.md:379
 msgid ""
@@ -6709,6 +6717,10 @@ msgid ""
 "          super + %w(css/custom.css)\n"
 "        end"
 msgstr ""
+"        def stylesheets_full_list\n"
+"          # カスタムのcssが追加される間、存在するスタイルシートをロードする\n"
+"          super + %w(css/custom.css)\n"
+"        end"
 
 #: ../docs/Templates.md:401
 msgid ""
@@ -6717,6 +6729,11 @@ msgid ""
 "          super + %w(js/custom.js)\n"
 "        end"
 msgstr ""
+"        def javascripts_full_list\n"
+"          # カスタムのjavascriptが追加される間、存在するスタイルシートをロードする\n"
+"          # Load the existing javascripts while appending the custom one\n"
+"          super + %w(js/custom.js)\n"
+"        end"
 
 #: ../docs/Templates.md:406
 msgid "### Overriding Search Menus"
@@ -6754,7 +6771,7 @@ msgstr ""
 
 #: ../docs/Templates.md:420
 msgid "To override these lists you will need to:"
-msgstr ""
+msgstr "これらのリスト上書きするには:"
 
 #: ../docs/Templates.md:422
 msgid ""
@@ -6798,6 +6815,12 @@ msgid ""
 "           asset('method_list.html', erb(:full_list))\n"
 "         end"
 msgstr ""
+"         # ここでメソッドを表示する順番を逆にする為の機能を変更する\n"
+"           @items = @items.sort_by {|m| m.name.to_s }.reverse\n"
+"           @list_title = \"Method List\"\n"
+"           @list_type = \"methods\"\n"
+"           asset('method_list.html', erb(:full_list))\n"
+"         end"
 
 #: ../docs/Templates.md:441
 msgid "### Adding Additional Search Menus"
@@ -6851,6 +6874,10 @@ msgid ""
 "search_title => 'Feature List' } ]\n"
 "        end"
 msgstr ""
+"        def menu_lists\n"
+"          # 既存のメニューをロードする\n"
+"          super + [ { :type => 'feature', :title => 'Features', :search_title => 'Feature List' } ]\n"
+"        end"
 
 #: ../docs/Templates.md:471
 msgid ""
@@ -6880,6 +6907,10 @@ msgid ""
 "           @list_title = \"Feature List\"\n"
 "           @list_type = \"feature\""
 msgstr ""
+"           # レジストリーから全ての機能をロードす\n"
+"           @items = Registry.all(:feature)\n"
+"           @list_title = \"Feature List\"\n"
+"           @list_type = \"feature\""
 
 #: ../docs/Templates.md:489
 msgid ""
@@ -6887,6 +6918,9 @@ msgid ""
 "           # when not specified it will default to the value of @list_type\n"
 "           @list_class = \"class\""
 msgstr ""
+"           # optional: the specified stylesheet class\n"
+"           # when not specified it will default to the value of @list_type\n"
+"           @list_class = \"class\""
 
 #: ../docs/Templates.md:493
 msgid ""
@@ -6895,6 +6929,10 @@ msgid ""
 "           asset('feature_list.html', erb(:full_list))\n"
 "         end"
 msgstr ""
+"           # feature_list.htmlの名前と共に完全なHTMLファイルのリストを作成する\n"
+"           # @note this file must be match the name of the type\n"
+"           asset('feature_list.html', erb(:full_list))\n"
+"         end"
 
 # title
 #: ../docs/WhatsNew.md:1
