@@ -1535,7 +1535,7 @@ msgstr ""
 "これらの{YARD::CodeObjects::Base#path}の実装によって個別に定義される。\n"
 "このパスは場所を示すためや {YARD::Registry} の中でコードオブジェクトを登録するため利用される\n"
 "それ故、任意の基本サブクラスが個別の#pathメソッド用の文字列値を返す必要がある。\n"
-"オブジェクトはレジストリの中で他のオブジェクトと一緒に共存する事になる。"
+"オブジェクトはレジストリーの中で他のオブジェクトと一緒に共存する事になる。"
 
 #: ../docs/CodeObjects.md:33
 msgid ""
@@ -1565,7 +1565,7 @@ msgstr ""
 
 #: ../docs/CodeObjects.md:43
 msgid "## Registry"
-msgstr "## レジストリ"
+msgstr "## レジストリー"
 
 #: ../docs/CodeObjects.md:45
 msgid ""
@@ -1591,7 +1591,7 @@ msgstr ""
 "上で言われた、\n"
 "この組み合わせは個々のオブジェクトの要素の結果がそのパスによって独自に識別され,\n"
 "検索を実装するために利用される。\n"
-"レジストリの詳細については、 {YARD::Registry} クラスの中で読むことができる。"
+"レジストリーの詳細については、 {YARD::Registry} クラスの中で読むことができる。"
 
 #: ../docs/CodeObjects.md:52
 msgid "## Identity Map"
@@ -3578,7 +3578,7 @@ msgid ""
 "object. This method will be seen in the next example."
 msgstr ""
 "通常(しかし、いつもではない)の処理は、\n"
-"レジストリを追加する新しいコードオブジェクトの作成する為に実行される。\n"
+"レジストリーを追加する新しいコードオブジェクトの作成する為に実行される。\n"
 "(コードオブジェクトについては{file:docs/CodeObjects.md this document}参照)\n"
 "コードオブジェクトは単純に既存の`namespace`に作成され追加される。\n"
 "これは、レジストリにそれらを追加するために十分である。\n"
@@ -8592,14 +8592,12 @@ msgid ""
 "the processing in the initial registry's thread."
 msgstr ""
 "新しいスレッドの作成は暗黙の内に、\n"
-"解析する為に利用できる新しいレジストリをロードするだろう。\n"
+"解析する為に利用できる新しいレジストリーをロードするだろう。\n"
 "そして、他のスレッドとは独自に新しいコードオブジェクトを処理する。\n"
 "次の事に留意する。\n"
-"これはあなたがもう、スレッドを渡ってレジストリを利用する必要はないことを意味"
-"する。\n"
+"これはあなたがもう、スレッドを渡ってレジストリーを利用する必要はないことを意味する。\n"
 "あなたは、スレッドのローカルオブジェクトに直接アクセスするか、又は、\n"
-"スレッドのレジストリの初期化の処理をする為にスレッドを同期しなければならな"
-"い。"
+"スレッドのレジストリーの初期化の処理をする為にスレッドを同期しなければならない。"
 
 #: ../docs/WhatsNew.md:797
 msgid "## Support for ripper gem in Ruby 1.8.7 (0.6.5)"
@@ -10462,7 +10460,7 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/cli/stats.rb:14
 msgid "whether to parse and load registry"
-msgstr "解析するかレジストリをロードするかどうか"
+msgstr "解析するかレジストリーをロードするかどうか"
 
 # @return [Stats]
 #: ../lib/yard/cli/stats.rb:17
@@ -10477,7 +10475,7 @@ msgstr ""
 # @param [Boolean] parse
 #: ../lib/yard/cli/stats.rb:17
 msgid "whether to parse and load registry (see {#parse})"
-msgstr "解析するかレジストリがロードされるかどうか(see {#parse})"
+msgstr "解析するかレジストリーがロードされるかどうか(see {#parse})"
 
 # YARD::CLI::Stats#run
 # YARD::CLI::Yardoc#run
@@ -10516,9 +10514,8 @@ msgid ""
 "removing any objects that are not visible (private, protected) depending\n"
 "on the arguments passed to the command."
 msgstr ""
-"レジストリの中の全ての解析されたオブジェクト,\n"
-"コマンドに渡された引数に応じて不可視(private,protected)のオブジェクトを削除し"
-"ている。"
+"レジストリーの中の全ての解析されたオブジェクト,\n"
+"コマンドに渡された引数に応じて不可視(private,protected)のオブジェクトを削除している。"
 
 # YARD::CLI::Stats#stats_for_files
 #: ../lib/yard/cli/stats.rb:104
@@ -11679,13 +11676,11 @@ msgid ""
 "in memory. A unique {#path} is essential for this identity map to work\n"
 "correctly."
 msgstr ""
-"== レジストリの統合\n"
-"namespaceと共に関連付けられ作成される任意のオブジェクトは、レジストリと共に直"
-"ぐに記録される。\n"
+"== レジストリーの統合\n"
+"namespaceと共に関連付けられ作成される任意のオブジェクトは、レジストリーと共に直ぐに記録される。\n"
 "これは、メモリの中で一つ以上のRubyオブジェクトによって表される事を保証し、\n"
-"レジストリが独自のマップの様に振る舞う事を受け入れる。\n"
-"固有の{#path}メソッドは、この独自のマップを正常に機能させる為に必須のものであ"
-"る。"
+"レジストリーが独自のマップの様に振る舞う事を受け入れる。\n"
+"固有の{#path}メソッドは、この独自のマップを正常に機能させる為に必須のものである。"
 
 # YARD::CodeObjects::Base
 #: ../lib/yard/code_objects/base.rb:95
@@ -21606,8 +21601,8 @@ msgid ""
 "be loaded back to perform any lookups. See {Registry.load!} and\n"
 "{Registry.save} for information on saving and loading of a yardoc file."
 msgstr ""
-"== レジストリをセーブ/ロードする\n"
-"レジストリは\"yardoc file\"(実際はディレクトリ)にセーブされ、\n"
+"== レジストリーをセーブ/ロードする\n"
+"レジストリーは\"yardoc file\"(実際はディレクトリ)にセーブされ、\n"
 "任意の検索を実行する為に、ロードできる。\n"
 "yardocファイルのセーブやロードの情報は、\n"
 "{Registry.load!} , {Registry.save}を参照。"
@@ -21623,11 +21618,10 @@ msgid ""
 "object set must occur in the originating thread."
 msgstr ""
 "== スレッドの注意\n"
-"レジストリクラスは、YARD全体で直接アクセスされるシングルトンクラスとなる。\n"
-"スレッドの問題を緩和するには、YARD(0.6.5+)でthread localなレジストリを作"
-"る。\n"
+"レジストリークラスは、YARD全体で直接アクセスされるシングルトンクラスとなる。\n"
+"スレッドの問題を緩和するには、YARD(0.6.5+)でthread localなレジストリーを作る。\n"
 "これはスレッドの中で固有のオブジェクトのグループが生成される、\n"
-"レジストリにアクセスする全てのものを意味する。"
+"レジストリーにアクセスする全てのものを意味する。"
 
 # @example Getting an object by a specific path
 #: ../lib/yard/registry.rb:31
@@ -21655,7 +21649,7 @@ msgstr "tag|example|パスによってオブジェクトを取得する"
 # @example
 #: ../lib/yard/registry.rb:31
 msgid "tag|example|Loading the Registry"
-msgstr "tag|example|レジストリをロードする"
+msgstr "tag|example|レジストリーをロードする"
 
 # @example
 #: ../lib/yard/registry.rb:31
@@ -21780,12 +21774,11 @@ msgid ""
 "If files is a String, it should represent the yardoc file to load\n"
 "into the registry."
 msgstr ""
-"+files+が配列の場合、YARDがレジストリの中を解析するべきファイルのリストを表"
-"す。\n"
+"+files+が配列の場合、YARDがレジストリーの中を解析するべきファイルのリストを表す。\n"
 "reloadがfalseを設定された場合や、yardocファイルが既に存在する場合、\n"
 "これらのファイルは、スキップされる。\n"
 "ファイルがStringの場合、\n"
-"レジストリの中へロードするyardocファイルを表す。"
+"レジストリーの中へロードするyardocファイルを表す。"
 
 # @raise [ArgumentError]
 #: ../lib/yard/registry.rb:97
@@ -21886,7 +21879,7 @@ msgstr "ディスクから全てのオブジェクトをロードする"
 # YARD::Registry.save
 #: ../lib/yard/registry.rb:155
 msgid "Saves the registry to +file+"
-msgstr "+file+をレジストリにセーブする"
+msgstr "+file+ をレジストリーにセーブする"
 
 # YARD::Registry.save
 # YARD::Registry.delete_from_disk
@@ -21930,7 +21923,7 @@ msgstr "記録されたオブジェクト"
 # YARD::Registry.delete
 #: ../lib/yard/registry.rb:180
 msgid "Deletes an object from the registry"
-msgstr "レジストリから、オブジェクトを削除する"
+msgstr "レジストリーから、オブジェクトを削除する"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/registry.rb:182
@@ -21940,7 +21933,7 @@ msgstr "削除するオブジェクト"
 # YARD::Registry.clear
 #: ../lib/yard/registry.rb:187
 msgid "Clears the registry"
-msgstr "レジストリを空にする"
+msgstr "レジストリーを空にする"
 
 # YARD::Registry.each
 # YARD::Registry.all
@@ -21955,7 +21948,7 @@ msgstr "レジストリを空にする"
 #: ../lib/yard/registry.rb:236 ../lib/yard/registry.rb:240
 #: ../lib/yard/registry.rb:270 ../lib/yard/registry.rb:368
 msgid "Accessing Objects in the Registry"
-msgstr "レジストリの中でオブジェクトにアクセスする"
+msgstr "レジストリーの中でオブジェクトにアクセスする"
 
 # YARD::Registry.each
 #: ../lib/yard/registry.rb:195
@@ -21969,7 +21962,7 @@ msgid ""
 "in the +types+ list (if +types+ is provided)."
 msgstr ""
 "+types+ リスト(タイプが供給される場合 )\n"
-"供給される型の一つにマッチするレジストリの中でオブジェクトの全てを返す\n"
+"供給される型の一つにマッチするレジストリーの中でオブジェクトの全てを返す"
 
 # @example Returns all objects
 #: ../lib/yard/registry.rb:211
@@ -22020,12 +22013,12 @@ msgstr "オブジェクトのリストをみつける"
 # YARD::Registry.paths
 #: ../lib/yard/registry.rb:224
 msgid "Returns the paths of all of the objects in the registry."
-msgstr "レジストリの中の全てのオブジェクトのパスを返す"
+msgstr "レジストリーの中の全てのオブジェクトのパスを返す"
 
 # @return [Array<String>]
 #: ../lib/yard/registry.rb:226
 msgid "all of the paths in the registry."
-msgstr "レジストリの中のパスの全て"
+msgstr "レジストリーの中のパスの全て"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:226 ../lib/yard/registry_store.rb:80
@@ -22230,7 +22223,7 @@ msgid ""
 "single object database (for disk efficiency), or spread them out\n"
 "(for load time efficiency)."
 msgstr ""
-"レジストリストレージは単一のオブジェクトのデータベースの中へ\n"
+"レジストリーストレージは単一のオブジェクトのデータベースの中へ\n"
 "毎回ロードするか、(ディスク効率の為)\n"
 "又は、データベースを展開する。(ロード時間効率の為)"
 
@@ -22284,7 +22277,7 @@ msgstr "未解決のパスのグループやその想定される型"
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:353
 msgid "The registry singleton instance."
-msgstr "レジストリのシングルトンインスタンス"
+msgstr "レジストリーのシングルトンインスタンス"
 
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:356
@@ -22294,7 +22287,7 @@ msgstr "Legacy Methods"
 # @return [Registry]
 #: ../lib/yard/registry.rb:356
 msgid "returns the registry instance"
-msgstr "レジストリインスタンスを返す"
+msgstr "レジストリーインスタンスを返す"
 
 # @deprecated
 #: ../lib/yard/registry.rb:356
