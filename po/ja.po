@@ -2597,8 +2597,8 @@ msgstr "### オブジェクトのリンク `{...}`"
 msgid ""
 "To link another \"object\" (class, method, module, etc.), use the format:"
 msgstr ""
-"\"他のオブジェクト(class, method, module, etc.)へのリンクには、以下の書式を使"
-"う。\""
+"他の\"オブジェクト\"(クラス、メソッド、モジュール、 etc.)へのリンクには、\n"
+"以下の書式を使う:"
 
 #: ../docs/GettingStarted.md:316
 msgid ""
