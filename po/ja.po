@@ -6960,10 +6960,24 @@ msgid ""
 "13. **Single object db now default (multi-object db unsupported)** (0.8.0)\n"
 "14. **Added `--api` tag to generate documentation for API sets** (0.8.1)"
 msgstr ""
+"1. **ディレクティブ (タグ構文の新しい行動)** (0.8.0)\n"
+"2. **クラスのドキュメントの中にmixinを埋め込むのに `--embed-mixin(s)` が追加された** (0.8.0)\n"
+"3. **翻訳ドキュメント用の国際化 (I18n) サポート** (0.8.0)\n"
+"4. **新しい C パーサー / ハンドラー アーキテクチャ** (0.8.0)\n"
+"5. **YARDはメソッドのパラメータの中に`@param`名が無い場合、警告を出すようになった。\n"
+"6. **`module_function` がRubyのコードを呼び出すサポートが追加された** (0.8.0)\n"
+"7. **カスタムテンプレートによって大きくタグドキュメントが修正された** (0.8.0)\n"
+"8. **タグがネームスペース用の '.' を含むようになった** (0.8.0)\n"
+"9. **より良いナビをするのにフレームでないページ用に\"フレーム\"のリンクが追加された** (0.8.0)\n"
+"10. **ローカルのgemのグループ用にYARDサーバーにGemfileのサポートが追加された** (0.8.0)\n"
+"11. **サーバーは静的なドキュメントのようにルートのインデックス上のREADMEを表示するようになった** (0.8.0)\n"
+"12. **`yard stats --list-undoc --compact`に行数が追加された** (0.8.0)\n"
+"13. **単一のオブジェクトdbがデフォルトになった (マルチオブジェクトdbは未サポート)** (0.8.0)\n"
+"14. **API用のグループのドキュメントを生成するのに `--api` タグが追加された** (0.8.1)"
 
 #: ../docs/WhatsNew.md:20
 msgid "## Directives (new behavioural tag syntax) (0.8.0)"
-msgstr ""
+msgstr "## ディレクティブ (タグ構文の新しい行動) (0.8.0)"
 
 #: ../docs/WhatsNew.md:22
 msgid ""
@@ -6976,6 +6990,14 @@ msgid ""
 "  syntax for all of these tags will still work and is supported.\n"
 "</p>"
 msgstr ""
+"<p class=\"note\">\n"
+"  The tags {tag:!macro}, {tag:!method}, {tag:!attribute}, {tag:!group},\n"
+"  {tag:!endgroup}, {tag:!scope} and {tag:!visibility} have been changed\n"
+"  from meta-data tags to directives. This means they should now be called\n"
+"  with the \"@!\" prefix instead of \"@\". Note however that for <strong>\n"
+"  backward compatibility</strong>, the old \"@macro\", \"@method\", etc.,\n"
+"  syntax for all of these tags will still work and is supported.\n"
+"</p>"
 
 #: ../docs/WhatsNew.md:31
 msgid ""
@@ -6985,6 +7007,10 @@ msgid ""
 "  Please read this section carefully if you are using this tag.\n"
 "</p>"
 msgstr ""
+"<p class=\"note\">\n"
+"  Some <strong>backwards incompatible</strong> changes were made to {tag:!macro} syntax.\n"
+"  Please read this section carefully if you are using this tag.\n"
+"</p>"
 
 #: ../docs/WhatsNew.md:36
 msgid ""
@@ -6995,20 +7021,30 @@ msgid ""
 "in the {YARD::Tags::Library} class using {YARD::Tags::Library."
 "define_directive}."
 msgstr ""
+"YARD 0.8.0で追加された新しいタグ構文は\n"
+"`@!` プレフィックス(接頭辞)によって\"directives(ディレクティブ)\"を呼び出す。\n"
+"これらのディレクティブタグは、\n"
+"オブジェクトを処理している間やオンザフライで新しくオブジェクトを作成する時でさえ、\n"
+"パーサーの状態を変更するのに利用できる。\n"
+"プラグインAPIはタグ同様に可能で、\n"
+"ディレクティブは {YARD::Tags::Library.define_directive} によって\n"
+"{YARD::Tags::Library} クラスのなかに登録される。"
 
 #: ../docs/WhatsNew.md:42
 msgid ""
 "To use a directive, simply call it the same way as any tag. Tag syntax\n"
 "is documented in {file:docs/Tags.md}."
 msgstr ""
+"ディレクティブを使うには、単純にタグなどと同じ方法で呼び出す。\n"
+"タグ構文は {file:docs/Tags.md} で記述される。"
 
 #: ../docs/WhatsNew.md:45
 msgid "### Notable features of directives"
-msgstr ""
+msgstr "### 著名なディレクティブの機能"
 
 #: ../docs/WhatsNew.md:47
 msgid "#### Directives do not need to be attached to object docstrings"
-msgstr ""
+msgstr "#### ディレクティブはオブジェクトのdocstringに追加するのに必要ない"
 
 #: ../docs/WhatsNew.md:49
 msgid ""
@@ -7016,16 +7052,21 @@ msgid ""
 "do not need to be attached to an object in order to be used. This\n"
 "means you can have free-standing comments with directives, such as:"
 msgstr ""
+"メタデータタグとは違って作成されたオブジェクトに追加され、\n"
+"ディレクティブは利用される順番で追加される必要はない。\n"
+"これは次のようなディレクティブを用い自由な位置にコメントできる事を意味する:"
 
 #: ../docs/WhatsNew.md:53
 msgid ""
 "    # @macro mymacro\n"
 "    #   A new macro, not attached to any docstring"
 msgstr ""
+"    # @macro mymacro\n"
+"    #   A new macro, not attached to any docstring"
 
 #: ../docs/WhatsNew.md:56
 msgid "    # ...other Ruby code here..."
-msgstr ""
+msgstr "    # ...other Ruby code here..."
 
 #: ../docs/WhatsNew.md:58
 msgid ""
@@ -7033,16 +7074,21 @@ msgid ""
 "    # @macro mymacro\n"
 "    def mymethod; end"
 msgstr ""
+"    # 上のマクロを呼び出す:\n"
+"    # @macro mymacro\n"
+"    def mymethod; end"
 
 #: ../docs/WhatsNew.md:62
 msgid ""
 "You can do the same to define methods and attributes, as discussed\n"
 "below."
 msgstr ""
+"下の項で議論されるように\n"
+"あなたはメソッドと属性を定義するのを同じようにできる。"
 
 #: ../docs/WhatsNew.md:65
 msgid "#### `@!method` and `@!attribute` directives improved"
-msgstr ""
+msgstr "#### 改良された `@!method` と `@!attribute` ディレクティブ"
 
 #: ../docs/WhatsNew.md:67
 msgid ""
@@ -7051,6 +7097,12 @@ msgid ""
 "tag would only create one method per docstring. In 0.8.0, you could\n"
 "attach multiple methods to the same block of Ruby source, such as:"
 msgstr ""
+"メソッドと属性(attribute)のディレクティブは\n"
+"単一のdocstringで複数のオブジェクトを作成するのに利用できるようになった。\n"
+"以前は `@method` や `@attribute` タグは\n"
+"メソッド一つで個々のdocstringだけ作成していた。\n"
+"0.8.0ではRubyのソースの同じブロックに複数のメソッドを追加できる。\n"
+"次のようになる:"
 
 #: ../docs/WhatsNew.md:72
 msgid ""
@@ -7059,12 +7111,20 @@ msgid ""
 "    # Docstring for code\n"
 "    some_ruby_source"
 msgstr ""
+"    # @!method foo(a, b, c)\n"
+"    # @!method bar(x, y, z)\n"
+"    # コード用のdocstring\n"
+"    some_ruby_source"
 
 #: ../docs/WhatsNew.md:77
 msgid ""
 "The above creates #foo and #bar and the source listing for both will\n"
 "be `some_ruby_source` with \"Docstring for code\" as the docstring."
 msgstr ""
+"上の例は\n"
+"両方がdocstringとして\"コード用のdocstring\"と一緒に\n"
+"`some_ruby_source` の説明になるように、\n"
+"#fooメソッドと#barメソッドとソースのリストを作成する。"
 
 #: ../docs/WhatsNew.md:80
 msgid ""
@@ -7073,10 +7133,15 @@ msgid ""
 "code to be recognized; they can be in free-standing comments if the\n"
 "methods are defined dynamically and not associated with any code."
 msgstr ""
+"属性のディレクティブはさらにこの機能の平均を取得できる。\n"
+"次の事に留意する。\n"
+"これらのディレクティブは認識されるのにコードの行に追加される必要もない。\n"
+"つまり、これはメソッドが動的に定義される場合\n"
+"自由な場所にコメントでき、任意のコードと一緒に関連づけられない。"
 
 #: ../docs/WhatsNew.md:85
 msgid "#### New `@!parse` directive to parse Ruby code"
-msgstr ""
+msgstr "#### Rubyのコードを解析する為の新しい `@!parse` ディレクティブ"
 
 #: ../docs/WhatsNew.md:87
 msgid ""
@@ -7087,6 +7152,13 @@ msgid ""
 "For instance, a common case of the \"self.included\" callback in module\n"
 "to extend a module on a class might be in the form:"
 msgstr ""
+"新しい {tag:!parse} ディレクティブは\n"
+"YARDが元の形式で解析する必要はないコードの解析を開発者に\n"
+"許可するのに追加された。\n"
+"これはメソッドを定義する時や機能を実行する時に\n"
+" `instance_eval` と他の動的なメタプログラミングのテクニックを使う時に便利である。\n"
+"例えば、次の形式でクラス上でモジュールを拡張するのに\n"
+"モジュールの中の\"self.included\"コールバックの一般的なケース:"
 
 #: ../docs/WhatsNew.md:94
 msgid ""
@@ -7094,12 +7166,17 @@ msgid ""
 "      mod.extend(self)\n"
 "    end"
 msgstr ""
+"    def self.included(mod)\n"
+"      mod.extend(self)\n"
+"    end"
 
 #: ../docs/WhatsNew.md:98
 msgid ""
 "Unfortunately, this does not get picked up by YARD, but on the original\n"
 "class, we can add:"
 msgstr ""
+"あいにく、これはYARDによって取得できないが、\n"
+"元のクラス上で次のように追加できる:"
 
 #: ../docs/WhatsNew.md:101
 msgid ""
@@ -7108,34 +7185,46 @@ msgid ""
 "      include TheDynamicModule\n"
 "    end"
 msgstr ""
+"    class MyClass\n"
+"      # @!parse extend TheDynamicModule\n"
+"      include TheDynamicModule\n"
+"    end"
 
 #: ../docs/WhatsNew.md:106
 msgid ""
 "YARD will then parse the code `extend TheDynamicModule` as if\n"
 "it were in the source file."
 msgstr ""
+"それがソースファイルの中だった場合など\n"
+"YARDが `extend TheDynamicModule` のコードを解析する時"
 
 #: ../docs/WhatsNew.md:109
 msgid ""
 "You can also use this technique to register regular methods as\n"
 "attributes, if you did not define them with `attr_*` methods:"
 msgstr ""
+"これらの `attr_*` メソッドを用いて定義しなかった場合、\n"
+"あなたは属性として標準のメソッドを登録するのにこのテクニックを使う事ができる。"
 
 #: ../docs/WhatsNew.md:112
 msgid ""
 "    def foo; @foo end\n"
 "    def foo=(v) @foo = v end"
 msgstr ""
+"    def foo; @foo end\n"
+"    def foo=(v) @foo = v end"
 
 #: ../docs/WhatsNew.md:115
 msgid ""
 "    # Register them as methods:\n"
 "    # @!parse attr_accessor :foo"
 msgstr ""
+"    # メソッドとしてそれらを登録する\n"
+"    # @!parse attr_accessor :foo"
 
 #: ../docs/WhatsNew.md:118
 msgid "### Backward incompatible changes to `@!macro` directive"
-msgstr ""
+msgstr "### 後方互換性のない `@!macro` ディレクティブに変更する"
 
 #: ../docs/WhatsNew.md:120
 msgid ""
@@ -7145,10 +7234,14 @@ msgid ""
 "Instead, macros only expand the data that is indented inside of the tag\n"
 "text."
 msgstr ""
+"あいにく、新しいディレクティブアーキテクチャを作成する為の順番、\n"
+"`@macro` タグの中でいくつか前にサポートされた構文は、もうサポートされない。\n"
+"すなわち、マクロは全てのdocstring上のテキストを展開することはできない。\n"
+"代わりに、マクロはタグのテキストの内部のインデントされたデータだけ展開する。"
 
 #: ../docs/WhatsNew.md:126
 msgid "This syntax is **no longer supported**:"
-msgstr ""
+msgstr "This syntax is **no longer supported**:"
 
 #: ../docs/WhatsNew.md:128
 msgid ""
@@ -7156,6 +7249,9 @@ msgid ""
 "    # Expanding text $1 $2 $3\n"
 "    property :a, :b, :c"
 msgstr ""
+"    # @macro mymacro\n"
+"    # Expanding text $1 $2 $3\n"
+"    property :a, :b, :c"
 
 #: ../docs/WhatsNew.md:132
 msgid ""
@@ -7164,6 +7260,11 @@ msgid ""
 "indent all the macro expansion data so that it is part of the `@macro`\n"
 "tag as follows:"
 msgstr ""
+"0.7.0 ~ 0.7.5で、\n"
+"上はの例はdocstring \"Expanding text a b c\"と一緒に作成されたメソッドを持つ。\n"
+"これは、0.8.0では動かない。\n"
+"代わりに、あなたは全てのマクロ展開のデータをインデントしなければならない。\n"
+"つまり `@macro` タグの一部を次のようにする:"
 
 #: ../docs/WhatsNew.md:137
 msgid ""
@@ -7171,16 +7272,22 @@ msgid ""
 "    #   Expanding text $1 $2 $3\n"
 "    property :a, :b, :c"
 msgstr ""
+"    # @!macro mymacro\n"
+"    #   Expanding text $1 $2 $3\n"
+"    property :a, :b, :c"
 
 #: ../docs/WhatsNew.md:141
 msgid ""
 "Note that we also use the recommended `@!macro` syntax, though `@macro`\n"
 "is still supported."
 msgstr ""
+"次の事に留意する。\n"
+"我々は推奨された `@!macro` 構文を使うけれども、\n"
+"`@macro` はまだサポートされている。"
 
 #: ../docs/WhatsNew.md:144
 msgid "## Added `--embed-mixin(s)` to embed mixins into class docs (0.8.0)"
-msgstr ""
+msgstr "## クラスのドキュメントにmixinを埋め込むのに `--embed-mixin(s)` が追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:146
 msgid ""
@@ -7193,6 +7300,15 @@ msgid ""
 "they are mixed into. A note is added to the method signature telling the\n"
 "user where the method comes from."
 msgstr ""
+"mixinからのメソッドは\n"
+"全てのmixin用に `--embed-mixin ModuleName` や `--embed-mixins` 用の\n"
+"ドキュメント出力の中へ直接埋め込まれるようになった。\n"
+"これは生成されたドキュメントの中の分割されたファイルのなかの\n"
+"その時の一覧について警告無しでモジュールの中の\n"
+"メソッドをリファクタリングする為にドキュメントを書ける。\n"
+"mixinメソッドが埋め込まれた時、\n"
+"これは元のモジュールのページとこれらの混じったクラスのページの両方を一覧する。\n"
+"noteはメソッドのシグネチャがメソッドがどこからくるかユーザーに知らせるのに追加された。"
 
 #: ../docs/WhatsNew.md:155
 msgid ""
@@ -7200,16 +7316,22 @@ msgid ""
 "in order to match specific namespaces. For instance, you can embed\n"
 "only mixins inside of a \"Foo::Bar\" namespace by doing:"
 msgstr ""
+"`--embed-mixin` コマンドラインオプションは、\n"
+"指定のネームスペースにマッチするのにワイルドカードの値も取得できる。\n"
+"例えば、次の様にする事によって\n"
+"\"Foo::Bar\"ネームスペースの内部にmixinだけ埋め込むことができる。"
 
 #: ../docs/WhatsNew.md:159
 msgid ""
 "    !!!sh\n"
 "    $ yard doc --embed-mixin \"Foo::Bar::*\""
 msgstr ""
+"    !!!sh\n"
+"    $ yard doc --embed-mixin \"Foo::Bar::*\""
 
 #: ../docs/WhatsNew.md:162
 msgid "## Internationalization (I18n) support for translating docs"
-msgstr ""
+msgstr "## 翻訳ドキュメント用の国際化(I18n)サポート"
 
 #: ../docs/WhatsNew.md:164
 msgid ""
@@ -7219,6 +7341,10 @@ msgid ""
 "\".po\" files for translation with [gettext](http://www.gnu.org/software/"
 "gettext)."
 msgstr ""
+"YARDは複数の言語に翻訳したドキュメント用に国際化サポートを送りだすことになった。\n"
+"`yard i18n` コマンドは\n"
+"あなたが[gettext](http://www.gnu.org/software/gettext)を用いた翻訳用の\n"
+"\".pot\"と最後に\".po\"ファイルを生成するのを許可するようになった。"
 
 #: ../docs/WhatsNew.md:169
 msgid ""
@@ -7228,6 +7354,12 @@ msgid ""
 "but this tool allows you to get started in translating your\n"
 "documents. Improved I18n support will come throughout the 0.8.x series."
 msgstr ""
+"次の事に留意する。\n"
+"このツールはYARDの正当なI18nサポートの小さな一歩である。\n"
+"我々はまだ複数の言語の適切な生成の為に、\n"
+"例のテンプレートに適切なgettextサポートを追加する仕事が残っている。\n"
+"だがこのツールはあなたが翻訳ドキュメントを始めるのを受け入れる。\n"
+"改良されたI18nサポートは0.8.xシリーズに至る中で登場するだろう。"
 
 #: ../docs/WhatsNew.md:175
 msgid "## New C parser / handlers architecture (0.8.0)"
@@ -7241,10 +7373,16 @@ msgid ""
 "across Ruby and CRuby files ({tag:!group} will now work, for instance),\n"
 "and developers can now write custom handlers that target CRuby source files."
 msgstr ""
+"YARDパーサーの平均とハンドラーアーキテクチャを取得するのに\n"
+"C パーサーは完全に書き直された。\n"
+"これはYARDが解析異常が起きた時にさらに堅牢になる事を意味し\n"
+"タグとディレクティブはRubyとCRubyのファイル(例えば {tag:!group} が動くようになった)\n"
+"全域で堅実に動く様になった。\n"
+"そして、開発者はCRubyのソースファイルを目的にするカスタムハンドラーを書ける様になった。\n"
 
 #: ../docs/WhatsNew.md:183
 msgid "## YARD will now warn if `@param` name not in method params (0.8.0)"
-msgstr ""
+msgstr "## YARDはメソッドパラメーターの中に`@param`名がない場合、警告を出すようになった(0.8.0)"
 
 #: ../docs/WhatsNew.md:185
 msgid ""
@@ -7252,10 +7390,14 @@ msgid ""
 "source but give an invalid parameter name. This should catch a lot of\n"
 "common documentation errors and help keep your documentation consistent."
 msgstr ""
+"YARDはあなたのソースの中の `@param` タグを使う場合、あなたが警告を出せるようになった。\n"
+"しかし有効なパラメータ名を与える。\n"
+"これは沢山の一般的なドキュメントエラーをキャッチし、\n"
+"あなたの一貫したドキュメントの保守を助ける。"
 
 #: ../docs/WhatsNew.md:189
 msgid "## Added support for `module_function` calls in Ruby code (0.8.0)"
-msgstr "## `module_function`がRubyのコードの中で呼び出されるサポートが追加された (0.8.0)"
+msgstr "## `module_function` がRubyのコードの中で呼び出されるサポートが追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:191
 msgid ""
@@ -7264,10 +7406,16 @@ msgid ""
 "both having the exact same docstring, and marks the instance method\n"
 "as private."
 msgstr ""
+"Rubyの `module_function` コマンドは\n"
+"Rubyのファイルでサポートされるようになった。\n"
+"それは\"区切られたメソッド\"と\n"
+"\"一つのクラスと一つのインスタンスメソッド\"二つを定義し、\n"
+"正確な同じdocstring両方、\n"
+"privateとしてインスタンスメソッドをマークする。"
 
 #: ../docs/WhatsNew.md:196
 msgid "## Greatly improved tag documentation using custom template (0.8.0)"
-msgstr ""
+msgstr "## カスタムテンプレートによって大きく改良されたタグのドキュメント (0.8.0)"
 
 #: ../docs/WhatsNew.md:198
 msgid ""
@@ -7276,10 +7424,15 @@ msgid ""
 "for each one. This was done using template customization and extension\n"
 "available within YARD."
 msgstr ""
+"我々は個々のメタデータタグとディレクティブ用の\n"
+"ドキュメントを含めるのに {docs/Tags.md} を\n"
+"少なくとも各々一つ便利な例を用い完全に刷新しました。\n"
+"これはYARDの中でテンプレートのカスタマイズと拡張が可能になる事によって\n"
+"行なわれた。"
 
 #: ../docs/WhatsNew.md:203
 msgid "## Tags can now contain '.' for namespacing (0.8.0)"
-msgstr ""
+msgstr "## タグはネームスペース用の '.' を含める事できるようになった (0.8.0)"
 
 #: ../docs/WhatsNew.md:205
 msgid ""
@@ -7290,10 +7443,17 @@ msgid ""
 "way (using the \"yard.tagname\" namespace). The namespace recommendation\n"
 "is to use \"projectname.tagname\", or \"projectname.component.tagname\"."
 msgstr ""
+"0.8.0以前のタグはアルファベット文字列とアンダースコアだけ含める事ができた。\n"
+"YARDはタグ名で '.' の文字を受け入れるようになり、\n"
+"プロジェクトの指定のカスタムタグのネームスペース用に推奨する。\n"
+"YARDは自身のカスタム\n"
+"この方法でネームスペース(名前付け)されるタグのグループを持つ。\n"
+"おすすめのネームスペースは\n"
+"\"projectname.tagname\" や \"projectname.component.tagname\"を使う"
 
 #: ../docs/WhatsNew.md:212
 msgid "## Added \"frames\" links for non-framed pages for better nav (0.8.0)"
-msgstr ""
+msgstr "## ナビの改良の為フレームのないページ用にフレームのリンクが追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:214
 msgid ""
@@ -7302,20 +7462,28 @@ msgid ""
 "pages to reverse this, allowing you to navigate between framed and\n"
 "frameless pages seamlessly."
 msgstr ""
+"フレームのナビゲーションは\n"
+"フレームセットを取り除くのを取得するのに常に\"(no frames)\"のリンクを持っていた。\n"
+"YARD 0.8.0はこれを置き換えるのにフレームの無いページで\n"
+"\"(frames)\"のリンクを導入する\n"
+"フレームとフレーム無しのページ間を\n"
+"シームレスにナビゲートするのに許可される。"
 
 #: ../docs/WhatsNew.md:219
 msgid "## Added Gemfile support to YARD server for local gem sets (0.8.0)"
-msgstr ""
+msgstr "## ローカルgemのグループ用にYARDサーバーにGemfileのサポートが追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:221
 msgid ""
 "The `yard server` command now supports `--gemfile` to serve gems\n"
 "from a Gemfile.lock, instead of all system-wide gems."
 msgstr ""
+"全てのシステム側のgemの代わりにGemfile.lockからgemを提供するのに、\n"
+"`yard server` コマンドは、`--gemfile` をサポートするようになった。"
 
 #: ../docs/WhatsNew.md:224
 msgid "## Server now displays README on index route like static docs (0.8.0)"
-msgstr ""
+msgstr "## サーバーは静的なドキュメントのようなルートのインデックス上でREADMEを表示する(0.8.0)"
 
 #: ../docs/WhatsNew.md:226
 msgid ""
@@ -7324,16 +7492,26 @@ msgid ""
 "before displaying the alphabetic index. Note that the route for\n"
 "the alphabetic index page has now moved to the explicit '/index' action."
 msgstr ""
+"`yard server` コマンドは\n"
+"プロジェクト用のインデックスの動作について\n"
+"静的なドキュメントのような挙動になり、\n"
+"アルファベットのインデックスを表示する前に与える場合、\n"
+"READMEファイルを記述する。\n"
+"次の事に留意する。\n"
+"アルファベット順のインデックスページ用のルートは\n"
+"明示的な '/index' の動作に移るようになった。"
 
 #: ../docs/WhatsNew.md:231
 msgid "## Added line numbers to `yard stats --list-undoc --compact` (0.8.0)"
-msgstr ""
+msgstr "## `yard stats --list-undoc --compact` に行数が追加された (0.8.0)"
 
 #: ../docs/WhatsNew.md:233
 msgid ""
 "Line numbers are now listed in the compact listing of undocumented objects\n"
 "so that they can be more easily located in the files."
 msgstr ""
+"行数はコンパクトなアンドキュメントなオブジェクトのリストで記述されるようになった。\n"
+"なのでこれらはさらに簡単にファイルの中を示す事ができる。"
 
 #: ../docs/WhatsNew.md:236
 msgid "## Single object db now default (multi-object db unsupported) (0.8.0)"
@@ -7608,15 +7786,15 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:359
 msgid "    = This Project Rules"
-msgstr ""
+msgstr "    = This Project Rules"
 
 #: ../docs/WhatsNew.md:361
 msgid "    == Contents"
-msgstr ""
+msgstr "    == Contents"
 
 #: ../docs/WhatsNew.md:363
 msgid "    ..."
-msgstr ""
+msgstr "    ..."
 
 #: ../docs/WhatsNew.md:365
 msgid ""
@@ -7678,6 +7856,8 @@ msgid ""
 "    $ yard diff --git HEAD~5 HEAD\n"
 "    Added objects:"
 msgstr ""
+"    $ yard diff --git HEAD~5 HEAD\n"
+"    Added objects:"
 
 #: ../docs/WhatsNew.md:387
 msgid ""
@@ -7685,6 +7865,9 @@ msgid ""
 "      YARD::Parser::SourceParser#globals\n"
 "      ..."
 msgstr ""
+"      YARD::Parser::SourceParser#contents\n"
+"      YARD::Parser::SourceParser#globals\n"
+"      ..."
 
 #: ../docs/WhatsNew.md:391
 msgid "## Added `{include:file:FILENAME}` syntax (0.7.0)"
@@ -7819,6 +8002,10 @@ msgid ""
 "* {YARD::Parser::SourceParser.before_parse_file}\n"
 "* {YARD::Parser::SourceParser.after_parse_file}"
 msgstr ""
+"* {YARD::Parser::SourceParser.before_parse_list}\n"
+"* {YARD::Parser::SourceParser.after_parse_list}\n"
+"* {YARD::Parser::SourceParser.before_parse_file}\n"
+"* {YARD::Parser::SourceParser.after_parse_file}"
 
 #: ../docs/WhatsNew.md:442
 msgid ""
@@ -7859,7 +8046,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:453
 msgid "    yardoc -t guide - README GettingStarted FAQ TroubleShooting LICENSE"
-msgstr ""
+msgstr "    yardoc -t guide - README GettingStarted FAQ TroubleShooting LICENSE"
 
 #: ../docs/WhatsNew.md:455
 msgid ""
@@ -8146,27 +8333,31 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:578
 msgid "    # @group Rendering an Object"
-msgstr ""
+msgstr "    # @group Rendering an Object"
 
 #: ../docs/WhatsNew.md:580
 msgid ""
 "    # Documentation here\n"
 "    def foo; end"
 msgstr ""
+"    # Documentation here\n"
+"    def foo; end"
 
 #: ../docs/WhatsNew.md:583
 msgid ""
 "    # Extra documentation...\n"
 "    def bar; end"
 msgstr ""
+"    # Extra documentation...\n"
+"    def bar; end"
 
 #: ../docs/WhatsNew.md:586
 msgid "    # @group Another Group"
-msgstr ""
+msgstr "    # @group Another Group"
 
 #: ../docs/WhatsNew.md:588
 msgid "    def aaa; end"
-msgstr ""
+msgstr "    def aaa; end"
 
 #: ../docs/WhatsNew.md:590
 msgid ""
@@ -8176,6 +8367,9 @@ msgid ""
 "whitespace\n"
 "  from any other documentation or code.</span>"
 msgstr ""
+"<span class=\"note\">Note that these `@group` and `@endgroup` declarations are\n"
+"  not \"tags\" and should always be separated with at least 1 line of whitespace\n"
+"  from any other documentation or code.</span>"
 
 #: ../docs/WhatsNew.md:594
 msgid ""
@@ -8198,21 +8392,23 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:600
 msgid "    # @group Group 1"
-msgstr ""
+msgstr "    # @group Group 1"
 
 #: ../docs/WhatsNew.md:602
 msgid "    def foo; end"
-msgstr ""
+msgstr "    def foo; end"
 
 #: ../docs/WhatsNew.md:604
 msgid "    # @endgroup"
-msgstr ""
+msgstr "    # @endgroup"
 
 #: ../docs/WhatsNew.md:606
 msgid ""
 "    # This method should not be listed in any group\n"
 "    def bar; end"
 msgstr ""
+"    # This method should not be listed in any group\n"
+"    def bar; end"
 
 #: ../docs/WhatsNew.md:609
 msgid "## Single file template (`--one-file`) support (0.6.0)"
@@ -8240,6 +8436,9 @@ msgid ""
 "  continue to be used. They are shortcuts for `yard doc` and `yard ri`\n"
 "  respectively. However, `yard-graph` has been removed.</span>"
 msgstr ""
+"<span class=\"note\">The `yardoc` and `yri` commands are not deprecated and can\n"
+"  continue to be used. They are shortcuts for `yard doc` and `yard ri`\n"
+"  respectively. However, `yard-graph` has been removed.</span>"
 
 #: ../docs/WhatsNew.md:621
 msgid ""
@@ -8268,7 +8467,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:629
 msgid "    YARD::CLI::CommandParser.commands[:my_command] = MyCommandClass"
-msgstr ""
+msgstr "    YARD::CLI::CommandParser.commands[:my_command] = MyCommandClass"
 
 #: ../docs/WhatsNew.md:631
 msgid ""
@@ -8305,7 +8504,7 @@ msgstr ""
 msgid ""
 "For an overview of how to use `yard diff`, see [YARD Object Oriented Diffing]"
 "(http://gnuu.org/2010/06/26/yard-object-oriented-diffing/)."
-msgstr ""
+msgstr "For an overview of how to use `yard diff`, see [YARD Object Oriented Diffing](http://gnuu.org/2010/06/26/yard-object-oriented-diffing/)."
 
 #: ../docs/WhatsNew.md:644
 msgid "## `yard stats` to display statistics and undocumented objects (0.6.0)"
@@ -8326,6 +8525,12 @@ msgid ""
 "    Methods:       602 (   70 undocumented)\n"
 "     85.16% documented"
 msgstr ""
+"    Files:         125\n"
+"    Modules:        35 (    4 undocumented)\n"
+"    Classes:       139 (   29 undocumented)\n"
+"    Constants:      53 (   20 undocumented)\n"
+"    Methods:       602 (   70 undocumented)\n"
+"     85.16% documented"
 
 #: ../docs/WhatsNew.md:655
 msgid ""
@@ -8376,7 +8581,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:672
 msgid "    --asset docs/images:images"
-msgstr ""
+msgstr "    --asset docs/images:images"
 
 #: ../docs/WhatsNew.md:674
 msgid "## New template API (0.6.0)"
@@ -8397,15 +8602,15 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:680
 msgid "    sections.last.place(:my_section).before(:another_section)"
-msgstr ""
+msgstr "    sections.last.place(:my_section).before(:another_section)"
 
 #: ../docs/WhatsNew.md:682
 msgid "use:"
-msgstr ""
+msgstr "use:"
 
 #: ../docs/WhatsNew.md:684
 msgid "    sections.place(:my_section).before_any(:another_section)"
-msgstr ""
+msgstr "    sections.place(:my_section).before_any(:another_section)"
 
 #: ../docs/WhatsNew.md:686
 msgid ""
@@ -8457,7 +8662,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:702
 msgid "    --tag my_tag_name:\"My Tag Title\""
-msgstr ""
+msgstr "    --tag my_tag_name:\"My Tag Title\""
 
 #: ../docs/WhatsNew.md:704
 msgid ""
@@ -8484,7 +8689,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:711
 msgid "    --hide-tag my_tag_name"
-msgstr ""
+msgstr "    --hide-tag my_tag_name"
 
 #: ../docs/WhatsNew.md:713
 msgid "## Added `--transitive-tags` to register transitive tags (0.6.0)"
@@ -8729,6 +8934,8 @@ msgid ""
 "What's New in 0.5.x?\n"
 "===================="
 msgstr ""
+"What's New in 0.5.x?\n"
+"===================="
 
 #: ../docs/WhatsNew.md:808
 msgid ""
@@ -8803,6 +9010,10 @@ msgid ""
 "incremental</tt>\n"
 "  implies <tt>-c</tt>, so no need to specify them both.</p>"
 msgstr ""
+"<p class=\"note\">Note: in 0.5.3 and above you must use <tt>--incremental</tt>\n"
+"  to incrementally generate HTML, otherwise only parsing will be done\n"
+"  incrementally but HTML will be generated with all objects. <tt>--incremental</tt>\n"
+"  implies <tt>-c</tt>, so no need to specify them both.</p>"
 
 #: ../docs/WhatsNew.md:838
 msgid ""
@@ -8859,7 +9070,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:857
 msgid "    $ sudo yardoc --build-gems"
-msgstr ""
+msgstr "    $ sudo yardoc --build-gems"
 
 #: ../docs/WhatsNew.md:859
 msgid ""
@@ -8886,7 +9097,7 @@ msgstr "あなたは、下のようにyriで検索できるようになった"
 
 #: ../docs/WhatsNew.md:867
 msgid "    $ yri JSON"
-msgstr ""
+msgstr "    $ yri JSON"
 
 #: ../docs/WhatsNew.md:869
 msgid ""
@@ -8917,7 +9128,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:879
 msgid "    $ yardoc --default-return 'MyDefaultType'"
-msgstr ""
+msgstr "    $ yardoc --default-return 'MyDefaultType'"
 
 #: ../docs/WhatsNew.md:881
 msgid "You can also use the empty string to list no return type."
@@ -8958,6 +9169,10 @@ msgid ""
 "      # return highlighted HTML\n"
 "    end"
 msgstr ""
+"    # LANGNAMEがlanguageの場所:\n"
+"    def html_syntax_highlight_LANGNAME(source)\n"
+"      # ハイライトされたHTMLを返す\n"
+"    end"
 
 #: ../docs/WhatsNew.md:898
 msgid ""
@@ -8973,6 +9188,10 @@ msgid ""
 "    def python_code(self):\n"
 "      return self"
 msgstr ""
+"    !!!plain\n"
+"    !!!python\n"
+"    def python_code(self):\n"
+"      return self"
 
 #: ../docs/WhatsNew.md:905
 msgid ""
@@ -9043,6 +9262,9 @@ msgid ""
 "    # now you can use:\n"
 "    $ yri String"
 msgstr ""
+"    $ sudo gem install yard-doc-core\n"
+"    # あなたは次のコマンドを使えるようになった:\n"
+"    $ yri String"
 
 #: ../docs/WhatsNew.md:932
 msgid ""
@@ -9055,7 +9277,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:935
 msgid "    $ sudo gem install --version '= 1.8.6' yard-doc-core"
-msgstr ""
+msgstr "    $ sudo gem install --version '= 1.8.6' yard-doc-core"
 
 #: ../docs/WhatsNew.md:937
 msgid ""
@@ -9142,6 +9364,8 @@ msgid ""
 "    #!textile\n"
 "    contents here"
 msgstr ""
+"    #!textile\n"
+"    contents here"
 
 #: ../docs/WhatsNew.md:967
 msgid ""
@@ -9154,6 +9378,8 @@ msgid ""
 "Keyboard shortcuts for default HTML template (0.5.4)\n"
 "----------------------------------------------------"
 msgstr ""
+"Keyboard shortcuts for default HTML template (0.5.4)\n"
+"----------------------------------------------------"
 
 #: ../docs/WhatsNew.md:973
 msgid ""
@@ -9186,7 +9412,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:983
 msgid "    SourceParser.register_parser_type(:java, MyJavaParser, 'java')"
-msgstr ""
+msgstr "    SourceParser.register_parser_type(:java, MyJavaParser, 'java')"
 
 #: ../docs/WhatsNew.md:985
 msgid ""
@@ -9206,6 +9432,8 @@ msgid ""
 "What's New in 0.4.x?\n"
 "===================="
 msgstr ""
+"What's New in 0.4.x?\n"
+"===================="
 
 #: ../docs/WhatsNew.md:994
 msgid ""
@@ -9290,7 +9518,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:1023
 msgid "    --query '@api.text == \"public\"'"
-msgstr ""
+msgstr "    --query '@api.text == \"public\"'"
 
 #: ../docs/WhatsNew.md:1025
 msgid "More information on queries is in the {file:README.md}."
@@ -9415,13 +9643,15 @@ msgid ""
 "[http://github.com/lsegal/yard/commit/"
 "ad38a68dd73898b06bd5d0a1912b7d815878fae0](http://github.com/lsegal/yard/"
 "commit/ad38a68dd73898b06bd5d0a1912b7d815878fae0)"
-msgstr ""
+msgstr "[http://github.com/lsegal/yard/commit/ad38a68dd73898b06bd5d0a1912b7d815878fae0](http://github.com/lsegal/yard/commit/ad38a68dd73898b06bd5d0a1912b7d815878fae0)"
 
 #: ../docs/WhatsNew.md:1071
 msgid ""
 "What's New in 0.2.3.x?\n"
 "======================"
 msgstr ""
+"What's New in 0.2.3.x?\n"
+"======================"
 
 #: ../docs/WhatsNew.md:1074
 msgid ""
@@ -9589,6 +9819,17 @@ msgid ""
 "        # split args depending on context\n"
 "      end"
 msgstr ""
+"      # @overload def to_html(html, autolink = true)\n"
+"      #   This docstring describes the specific overload only.\n"
+"      #   @param [String] html the HTML\n"
+"      #   @param [Boolean] autolink whether or not to atuomatically link\n"
+"      #     URL references\n"
+"      # @overload def to_html(html, opts = {})\n"
+"      #   @param [String] html the HTML\n"
+"      #   @param [Hash] opts any attributes to add to the root HTML node\n"
+"      def to_html(*args)\n"
+"        # split args depending on context\n"
+"      end"
 
 #: ../docs/WhatsNew.md:1137
 msgid ""
