@@ -9942,7 +9942,7 @@ msgstr "YARDビルトインテンプレート用のルートパス"
 # @deprecated
 #: ../lib/yard.rb:11
 msgid "Use {Config::CONFIG_DIR}"
-msgstr ""
+msgstr "Use {Config::CONFIG_DIR}"
 
 # YARD.parse
 # YARD.parse_string
@@ -9953,7 +9953,7 @@ msgstr "解析用の{Parser::SourceParser}メソッドへのエイリアス"
 # @example Parse a glob of files
 #: ../lib/yard.rb:18
 msgid "YARD.parse('lib/**/*.rb')"
-msgstr ""
+msgstr "YARD.parse('lib/**/*.rb')"
 
 # @example
 #: ../lib/yard.rb:18
@@ -9963,22 +9963,22 @@ msgstr "ファイルのglobを解析する。"
 # @see
 #: ../lib/yard.rb:18
 msgid "tag|see|Parser::SourceParser.parse"
-msgstr ""
+msgstr "tag|see|Parser::SourceParser.parse"
 
 # @example Parse a string of input
 #: ../lib/yard.rb:25
 msgid "YARD.parse_string('class Foo; end')"
-msgstr ""
+msgstr "YARD.parse_string('class Foo; end')"
 
 # @example
 #: ../lib/yard.rb:25
 msgid "tag|example|Parse a string of input"
-msgstr "入力からの文字列を解析する"
+msgstr "tag|example|入力の文字列を解析する"
 
 # @see
 #: ../lib/yard.rb:25
 msgid "tag|see|Parser::SourceParser.parse_string"
-msgstr ""
+msgstr "tag|see|Parser::SourceParser.parse_string"
 
 # YARD.load_plugins
 # YARD::Config.load_plugins
@@ -10280,7 +10280,7 @@ msgstr "インスタンス上のユーティリティを起動する為のヘル
 #: ../lib/yard/cli/command.rb:13 ../lib/yard/cli/yri.rb:28
 #: ../lib/yard/server/commands/base.rb:33
 msgid "tag|see|#run"
-msgstr ""
+msgstr "tag|see|#run"
 
 # YARD::CLI::Command#common_options
 #: ../lib/yard/cli/command.rb:20
@@ -10307,7 +10307,7 @@ msgstr "OptionParserの末尾に一般的なオプションのグループを追
 #: ../lib/yard/templates/helpers/html_helper.rb:536
 #: ../lib/yard/templates/template.rb:230 ../lib/yard/templates/template.rb:256
 msgid "tag|param|opts"
-msgstr ""
+msgstr "tag|param|opts"
 
 # @param [OptionParser] opts
 #: ../lib/yard/cli/command.rb:23 ../lib/yard/cli/command.rb:54
@@ -10351,7 +10351,7 @@ msgstr "オプションを解析し、無効な引数を処理する。"
 #: ../lib/yard/templates/helpers/markup_helper.rb:140
 #: ../lib/yard/templates/section.rb:85 ../lib/yard/templates/template.rb:133
 msgid "0.6.0"
-msgstr ""
+msgstr "0.6.0"
 
 # @param [Array<String>]
 # @param [Array<Symbol, String, Template, Array>]
@@ -10363,7 +10363,7 @@ msgstr ""
 #: ../lib/yard/cli/yri.rb:49 ../lib/yard/cli/yri.rb:189
 #: ../lib/yard/docstring.rb:37 ../lib/yard/templates/template.rb:204
 msgid "tag|param|args"
-msgstr ""
+msgstr "tag|param|args"
 
 # @param [Array<String>] args
 #: ../lib/yard/cli/command.rb:54
@@ -10389,7 +10389,7 @@ msgstr ""
 #: ../lib/yard/config.rb:263 ../lib/yard/handlers/base.rb:228
 #: ../lib/yard/handlers/base.rb:235 ../lib/yard/server.rb:7
 msgid "0.6.2"
-msgstr ""
+msgstr "0.6.2"
 
 # @param [String]
 # @param [String, nil]
@@ -10400,7 +10400,7 @@ msgstr ""
 #: ../lib/yard/registry_store.rb:164
 #: ../lib/yard/templates/helpers/base_helper.rb:110
 msgid "tag|param|file"
-msgstr ""
+msgstr "tag|param|file"
 
 # @param [String] file
 #: ../lib/yard/cli/command.rb:67
@@ -10419,7 +10419,7 @@ msgstr ""
 # YARD::CLI::CommandParser
 #: ../lib/yard/cli/command_parser.rb:7
 msgid "  $ yard command_name [options]"
-msgstr ""
+msgstr "  $ yard command_name [options]"
 
 # YARD::CLI::CommandParser
 #: ../lib/yard/cli/command_parser.rb:9
@@ -10454,17 +10454,17 @@ msgstr ""
 # @see
 #: ../lib/yard/cli/command_parser.rb:22
 msgid "tag|see|Command"
-msgstr ""
+msgstr "tag|see|Command"
 
 # @see
 #: ../lib/yard/cli/command_parser.rb:22
 msgid "tag|see|commands"
-msgstr ""
+msgstr "tag|see|commands"
 
 # @see
 #: ../lib/yard/cli/command_parser.rb:22
 msgid "tag|see|default_command"
-msgstr ""
+msgstr "tag|see|default_command"
 
 # @return [Hash{Symbol => Command}]
 #: ../lib/yard/cli/command_parser.rb:26
@@ -10578,7 +10578,7 @@ msgstr "存在しないgem用に.yardocファイルをビルドする。"
 # @param [Array]
 #: ../lib/yard/cli/gems.rb:27
 msgid "tag|param|gems"
-msgstr ""
+msgstr "tag|param|gems"
 
 # YARD::CLI::Gems#optparse
 #: ../lib/yard/cli/gems.rb:59
@@ -10623,7 +10623,7 @@ msgstr ""
 # @see
 #: ../lib/yard/cli/graph.rb:23
 msgid "tag|see|Graph#run"
-msgstr ""
+msgstr "tag|see|Graph#run"
 
 # YARD::CLI::Graph#options
 #: ../lib/yard/cli/graph.rb:25
@@ -10670,6 +10670,8 @@ msgid ""
 "grapher = Graph.new\n"
 "grapher.run('--private')"
 msgstr ""
+"grapher = Graph.new\n"
+"grapher.run('--private')"
 
 # YARD::CLI::YRI#optparse
 # YARD::CLI::Graph#optparse
