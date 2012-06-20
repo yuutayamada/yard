@@ -2114,7 +2114,7 @@ msgid ""
 "a separate line."
 msgstr ""
 "ここでは他のタグ(@note)を追加したが、他に簡単なテキストを持つこともできる。\n"
-"その時はできればテキストを、`(see ...)`文の次の行に追加すべきである。"
+"その時はできればテキストを、`(see ...)`ステートメントの次の行に追加すべきである。"
 
 #: ../docs/GettingStarted.md:130
 msgid ""
@@ -3343,7 +3343,7 @@ msgstr ""
 "これの処理は、実行する単語の詳細の抽象化を解析の後で行う。\n"
 "そして、意味のあるソースの分析や、\n"
 "ロジックに関しては{file:docs/CodeObjects.md code objects}のような\n"
-"ソース文の受け入れだけで扱う。"
+"ソースステートメントの受け入れだけで扱う。"
 
 #: ../docs/Handlers.md:10
 msgid ""
@@ -3369,11 +3369,11 @@ msgid ""
 msgstr ""
 "{file:docs/Parser.md parser component}がソースを解析すると、\n"
 "後処理する為に{YARD::Handlers::Processor} クラスに渡す。\n"
-"そしてパーサーによって与える文の設定を辿ったり、\n"
-"ハンドラーがマッチしている文を委譲する責任がある。\n"
+"そしてパーサーによって与えるステートメントの設定を辿ったり、\n"
+"ハンドラーがマッチしているステートメントを委譲する責任がある。\n"
 "{YARD::Handlers::Base.handles?}メソッドがtrueを返す時、\n"
-"ハンドラーがマッチしている文を与える。\n"
-"ハンドラーは`process`メソッドによって呼び出した後で任意の処理を実行できる。\n"
+"ハンドラーがマッチしているステートメントを与える。\n"
+"ハンドラーは`process`メソッドによって呼び出した後で任意の処理を実行できる。"
 
 #: ../docs/Handlers.md:22
 msgid "## The Processor Class"
@@ -3399,14 +3399,14 @@ msgid ""
 "owner would be the method object itself."
 msgstr ""
 "主なプロセッサーの目的は、上で述べたように、\n"
-"パーサーによって与える文のリストを通じて辿ることである。\n"
+"パーサーによって与えるステートメントのリストを通じて辿ることである。\n"
 "プロセッサーは処理されている状態について管理する。\n"
 "例えば、プロセッサーは現在の\n"
 "ネームスペース(モジュールやオブジェクトのクラスが定義される)、\n"
 "スコープ(クラスやインスタンス)、ファイルとオーナー\n"
 "を追跡する。\n"
 "オーナーは、オブジェクトを参照する。\n"
-"そのオブジェクトは処理されるソース命令文に最も直接的な責任を持つ。\n"
+"そのオブジェクトは処理されるソースステートメントに最も直接的な責任を持つ。\n"
 "これは(参照するオブジェクトの対象は)、多くの場合ネームスペースと同じで、\n"
 "メソッドの本体を解析した時を除き、\n"
 "そのネームスペースでは、クラスやモジュール,メソッドが定義される。\n"
@@ -3489,7 +3489,7 @@ msgstr ""
 "`:sclass` ノードタイプそれぞれを処理する。\n"
 "(後者の:sclassは `class << Something` のようにクラス定義を参照する。)\n"
 "{YARD::Handlers::Base#statement statement}属性は、\n"
-"ハンドラーによって処理される現在のノード(や文を)参照する。"
+"ハンドラーによって処理される現在のノード(やステートメントを)参照する。"
 
 #: ../docs/Handlers.md:61
 msgid "### Handling a Method Call"
@@ -3506,8 +3506,7 @@ msgstr ""
 "場合によって開発者は、メソッド呼び出し操作を必要とするかもしれない。\n"
 "パーサーは多くのAST型(Abstract Syntax Tree)の中で、\n"
 "メソッド呼び出しを表現できる。そして、この処理を簡素化する為に、\n"
-"メソッド呼び出しは、次のような`handles`文の中で宣言される事によって処理され"
-"る。"
+"メソッド呼び出しは、次のような`handles`ステートメントの中で宣言される事によって処理される。"
 
 #: ../docs/Handlers.md:67
 msgid ""
@@ -3603,16 +3602,15 @@ msgid ""
 "parsing\n"
 "only the inner blocks that are relevant to documentation."
 msgstr ""
-"デフォルトでパーサーは全てのトップレベル文から、\n"
+"デフォルトでパーサーは全てのトップレベルステートメントから、\n"
 "プロセッサークラスのリストを与える。\n"
-"そして、プロセッサーは、トップレベル文だけ解析する。\n"
+"そして、プロセッサーは、トップレベルステートメントだけ解析する。\n"
 "モジュール、クラス、メソッド内でブロックが宣言される場合や、\n"
 "ブロックが処理されるメソッド呼び出しを解析した場合でさえ、\n"
 "{YARD::Handlers::Base#parse_block parse_block}メソッドは、\n"
-"解析の為に文のリストを呼び出さなければならない。\n"
-"これは命令文のリストの処理を継続するプロセッサーにリストを送信する。\n"
-"ソースツリーは、ドキュメント作成に関連したブロック内だけ解析することによっ"
-"て、\n"
+"解析の為にステートメントのリストを呼び出さなければならない。\n"
+"これはステートメントのリストの処理を継続するプロセッサーにリストを送信する。\n"
+"ソースツリーは、ドキュメント作成に関連したブロック内だけ解析することによって、\n"
 "この形式の中で選択され抜粋される。"
 
 #: ../docs/Handlers.md:105
@@ -3658,7 +3656,7 @@ msgid ""
 "options\n"
 "on the `parse_block` method."
 msgstr ""
-"この場合`statement[1]`は追加の文で、\n"
+"この場合`statement[1]`は追加のステートメントで、\n"
 "私達が解析するブロックのリストを参照する。\n"
 "ここにあるように、\n"
 "モジュールやクラスのようにオブジェクトを解析する時、\n"
@@ -3686,7 +3684,7 @@ msgstr ""
 "それに伴い異る種類のASTがあるのでハンドラーAPIに微妙な違いがある。\n"
 "最も重要なことだが、 `handles` メソッドは通常、\n"
 "単語のトークンやソースコード、文字列やRegExpオブジェクトと共に処理する。\n"
-"文のオブジェクトと同様、意味のある解析されるノードの代わりに、\n"
+"ステートメントのオブジェクトと同様、意味のある解析されるノードの代わりに、\n"
 "単語のトークンから構成される。\n"
 "(これは{file:docs/Parser.md パーサーのドキュメント}の中で記述される)"
 
@@ -3741,12 +3739,12 @@ msgid ""
 msgstr ""
 "  * 標準のRubyBaseハンドラークラスの代わりに `Legacy::Base` から継承する。\n"
 "  * ノードタイプ `:module` を `TkMODULE` へ交換する、\n"
-"    それは、命令文の中の最初のトークンを表す。\n"
+"    それは、ステートメントの中の最初のトークンを表す。\n"
 "  * モジュール名を取得する為に直接文字列操作を実行する。\n"
-"  * `parse_block`は命令文のリストを取得しない。\n"
+"  * `parse_block`はステートメントのリストを取得しない。\n"
 "    古いパーサーの中のAPIで、\n"
-"    それぞれの命令文は `block` 属性を持っていたら\n"
-"    命令文の中に命令文のリストを定義する、\n"
+"    それぞれのステートメントは `block` 属性を持っていたら\n"
+"    ステートメントの中にステートメントのリストを定義する、\n"
 "    従って、 `parse_block` は、 `statement.block` が存在すれば解析する。"
 
 # title
@@ -3943,7 +3941,7 @@ msgstr ""
 "パイプラインのデータ処理の中の最初の構成要素となる。\n"
 "パーサーはソースを、\n"
 "後ですぐ実行する{file:docs/Handlers.md Handlers}によって理解され\n"
-"文の設定の中へ変換するよう意図されている。"
+"ステートメントのグループの中へ変換するよう意図されている。"
 
 #: ../docs/Parser.md:10
 msgid ""
@@ -4449,8 +4447,8 @@ msgstr ""
 "レガシーパーサーは、特定のRuby構文と共に扱う事ができない。\n"
 "具体的にいうと、\n"
 "上の(\"hello if 1\")で見た`:if_mod`構文は、\n"
-"新しいパーサーを用いた二つの文と考えられる。\n"
-"しかし、レガシーパーサーを使うと、以下の一つの文だけになる。"
+"新しいパーサーを用いた二つのステートメントと考えられる。\n"
+"しかし、レガシーパーサーを使うと以下の一つのステートメントだけになる。"
 
 #: ../docs/Parser.md:185
 msgid ""
@@ -16211,7 +16209,7 @@ msgid ""
 "which case they should be registered by {#register}, a method that\n"
 "sets some basic attributes for the new objects."
 msgstr ""
-"一般的に、ハンドラークラスは文の設定を宣言する。\n"
+"一般的に、ハンドラークラスはステートメントのグループを宣言する。\n"
 "そして、それは {handles} クラス宣言によって処理する。\n"
 "それは、処理の為に {#process} メソッドを実装する。\n"
 "処理中は、通常 {#namespace} , {#owner} , {CodeObjects::Base code objects} や\n"
@@ -16245,10 +16243,10 @@ msgstr ""
 "ハンドラーはベースクラスからサブクラス化される時に、\n"
 "自動的に登録される。\n"
 "必要なその他のこととしては、\n"
-"ハンドラーがどの文を処理するかを指定する。\n"
+"ハンドラーがどのステートメントを処理するかを指定する。\n"
 "これは、 +handles+ の宣言と共に、\n"
 "{Parser::Ruby::Legacy::RubyToken} か {String} や `Regexp`が取得される。\n"
-"これは、モジュール文の処理の簡単な例です。"
+"これは、モジュールステートメントの処理の簡単な例です。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:47
@@ -16434,7 +16432,7 @@ msgstr ""
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:115
 msgid "== Parsing Blocks in Statements"
-msgstr "== 文の中のブロックを解析する"
+msgstr "== ステートメントの中のブロックを解析する"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:117
@@ -16445,11 +16443,11 @@ msgid ""
 "of any statement, be it class definition, module definition, if\n"
 "statement or classic 'Ruby block'."
 msgstr ""
-"文の解析や新しくオブジェクトを作成する事に加えて、\n"
-"いくつかのハンドラーは文のブロック(が一つでもある場合)の\n"
+"ステートメントの解析や新しくオブジェクトを作成する事に加えて、\n"
+"いくつかのハンドラーはステートメントのブロック(が一つでもある場合)の\n"
 "内部コードの解析処理を継続するかもしれない。\n"
-"このコンテキストでブロックとは、何らかの文の内部を意味する。\n"
-"それは文やRubyで使われるblockの場合、クラス定義、モジュール定義になる。"
+"このコンテキストでブロックとは、何らかのステートメントの内部を意味する。\n"
+"それはステートメントやRubyで使われるblockの場合、クラス定義、モジュール定義になる。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:123
@@ -16460,9 +16458,9 @@ msgid ""
 "{#parse_block} method to continue parsing code inside the block, with\n"
 "the +namespace+ now pointing to the class object the handler created."
 msgstr ""
-"例えば、文のクラスが\"class MyClass\"になるかもしれない\n"
+"例えば、ステートメントのクラスが\"class MyClass\"になるかもしれない\n"
 "そして、ブロックはクラスの内部でメソッドの定義を\n"
-"含んでいる文のリストになるかもしれない。\n"
+"含んでいるステートメントのリストになるかもしれない。\n"
 "ハンドラーのクラス用に、\n"
 "プログラマーは、{#parse_block} メソッドを実行する。\n"
 "ブロックの内部のコード解析を継続する為に、\n"
@@ -16475,7 +16473,7 @@ msgid ""
 "even if statements. For this reason, the block parsing method must be\n"
 "invoked explicitly out of efficiency sake."
 msgstr ""
-"YARDは何らかのブロックの中へ(クラス,モジュール,メソッド,文でさえ)\n"
+"YARDは何らかのブロックの中へ(クラス,モジュール,メソッド,ステートメントでさえ)\n"
 "継続する特性がある。\n"
 "従って、メソッドを解析するブロックは、\n"
 "効率良く処理する為、明示的に呼び出されるべきである。"
@@ -16544,7 +16542,7 @@ msgstr "ハンドラーのリスト"
 msgid ""
 "Declares the statement type which will be processed\n"
 "by this handler."
-msgstr "このハンドラーによって処理される文の型を宣言する。"
+msgstr "このハンドラーによって処理されるステートメントの型を宣言する。"
 
 # YARD::Handlers::Base.handles
 #: ../lib/yard/handlers/base.rb:171
@@ -16557,7 +16555,7 @@ msgid ""
 "multiple times and slow YARD down."
 msgstr ""
 "ハンドラーでマッチするものは、一つでなくてもよい。\n"
-"複数のハンドラーは同じ文を処理できる。\n"
+"複数のハンドラーは同じステートメントを処理できる。\n"
 "しかしながら、このケースの場合は、\n"
 "{#parse_block}がハンドラーの一つによって実行されるだけで、\n"
 "他の同じコードが複数回解析されYARDが遅くなる事に注意しなければならない。"
@@ -16572,10 +16570,10 @@ msgid ""
 "token matches match only the first token of the\n"
 "statement."
 msgstr ""
-"このハンドラーによって処理される宣言がマッチする文。\n"
+"このハンドラーによって処理される宣言がマッチするステートメント。\n"
 "A {String} のマッチは +/\\Astring/+ の正規表現と同様となる。\n"
 "(行の最初からマッチ)、\n"
-"そして全てのトークンのマッチは、文の最初のトークンにだけマッチする。"
+"そして全てのトークンのマッチは、ステートメントの最初のトークンにだけマッチする。"
 
 # @param [Parser::RubyToken, Symbol, String, Regexp]
 #: ../lib/yard/handlers/base.rb:185
@@ -16593,21 +16591,21 @@ msgid ""
 msgstr ""
 "このクラスは、 {Ruby::Base} や {Ruby::Legacy::Base} によって実装される。\n"
 "他の言語用のbase handlerクラスを実装する為には、\n"
-"ハンドラーが与えられた文オブジェクトを処理する場合、\n"
+"ハンドラーが与えられたステートメントオブジェクトを処理する場合、\n"
 "trueを返す為にこのメソッドを実装する。\n"
 "ハンドラークラス用のマッチする宣言を列挙するには、{handlers} を使用する。"
 
 # @param statement
 #: ../lib/yard/handlers/base.rb:198
 msgid "a statement object or node (depends on language type)"
-msgstr "オブジェクトやノードの文(言語タイプに左右される)"
+msgstr "オブジェクトやノードのステートメント(言語タイプに左右される)"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/base.rb:198
 msgid ""
 "whether or not this handler object should process\n"
 "the given statement"
-msgstr "いずれにせよ、このハンドラーオブジェクトは指定された文を処理するべき"
+msgstr "いずれにせよ、このハンドラーオブジェクトは指定されたステートメントを処理するべき"
 
 # @return [Array]
 #: ../lib/yard/handlers/base.rb:204
@@ -16749,7 +16747,7 @@ msgid ""
 "refers to one semantic language statement, though the strict definition\n"
 "depends on the parser used."
 msgstr ""
-"現在の処理される文オブジェクト。\n"
+"現在の処理されるステートメントオブジェクト。\n"
 "厳格な定義は使われるパーサー次第とはいえ、\n"
 "一般的には、一つの意味のある言語を参照する。"
 
@@ -17030,8 +17028,8 @@ msgid ""
 "statement. It should return an empty list if the statement is not a\n"
 "method call."
 msgstr ""
-"メソッド呼び出し文の中のパラメータを返す為にこのメソッドを実装する。\n"
-"文がメソッド呼び出しでない場合は空のリストを返すべき。"
+"メソッド呼び出しステートメントの中のパラメータを返す為にこのメソッドを実装する。\n"
+"ステートメントがメソッド呼び出しでない場合は空のリストを返すべき。"
 
 # YARD::Handlers::Base#call_params
 # YARD::Handlers::Base#caller_method
@@ -17055,12 +17053,12 @@ msgid ""
 msgstr ""
 "メソッド呼び出しの中で呼び出されるメソッドが返す為に\n"
 "このメソッドが実装する。\n"
-"文がメソッド呼び出しでない場合は、nilを返すべき。"
+"ステートメントがメソッド呼び出しでない場合はnilを返すべき。"
 
 # @return [nil]
 #: ../lib/yard/handlers/base.rb:576
 msgid "if the statement is not a method call"
-msgstr "文がメソッド呼び出しでない場合"
+msgstr "ステートメントがメソッド呼び出しでない場合"
 
 # @return [String]
 #: ../lib/yard/handlers/base.rb:576
@@ -17902,7 +17900,7 @@ msgid ""
 "statement has no block, nothing happens. A description of state\n"
 "values can be found at {Handlers::Base#push_state}"
 msgstr ""
-"値の状態のグループと共に、ブロックの文を解析する。\n"
+"値の状態のグループと共に、ブロックのステートメントを解析する。\n"
 "ステートメントがブロックを持たない場合、何も起こらない。\n"
 "値の状態の説明は、{Handlers::Base#push_state}で見つけられる。"
 
@@ -19819,7 +19817,7 @@ msgstr "comments_hash_flag属性を設定する。"
 #: ../lib/yard/parser/c/statement.rb:15
 #: ../lib/yard/parser/ruby/legacy/statement.rb:13
 msgid "a new instance of Statement"
-msgstr "文の新しいインスタンス"
+msgstr "ステートメントの新しいインスタンス"
 
 # @param value
 #: ../lib/yard/parser/c/statement.rb:39 ../lib/yard/parser/c/statement.rb:45
@@ -20257,7 +20255,7 @@ msgstr "ノードの型がASTの中に渡さない場合"
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:191
 msgid "tag|example|Returns first 'def' or 'class' statement"
-msgstr "最初の'def'や'class'文を返す。"
+msgstr "最初の'def'や'class'ステートメントを返す。"
 
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:191
@@ -20578,7 +20576,7 @@ msgstr "ブロックを表す"
 # YARD::Parser::Ruby::Legacy::RubyToken::TkStatementEnd
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:60
 msgid "Represents an end statement"
-msgstr "文の終りを表す。"
+msgstr "ステートメントの終りを表す。"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkNode#node
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:66
@@ -20881,7 +20879,7 @@ msgstr ""
 # YARD::Parser::Ruby::Legacy::StatementList#initialize
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:14
 msgid "Creates a new statement list"
-msgstr "新しい文のリストを作成する。"
+msgstr "新しいステートメントのリストを作成する。"
 
 # @return [StatementList]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:16
@@ -20901,7 +20899,7 @@ msgstr "処理するトークンの中の次の文を返す。"
 # @return [Statement]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:39
 msgid "the next statement"
-msgstr "次の文"
+msgstr "次のステートメント"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_token
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:117
@@ -20971,7 +20969,7 @@ msgstr ""
 # YARD::Parser::Ruby::Legacy::StatementList#process_statement_end
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:292
 msgid "Processes a token that closes a statement"
-msgstr "クラスの文トークンを処理する。"
+msgstr "ステートメントを閉じるトークンを処理する。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#balances?
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:345
@@ -20983,7 +20981,7 @@ msgstr "丸括弧とブロックの両立の為の処理する。"
 msgid ""
 "whether or not the current statement's parentheses and blocks\n"
 "are balanced after +tk+"
-msgstr "現在の文の丸括弧とブロックが +tk+ の後で両立するかどうか。"
+msgstr "現在のステートメントの丸括弧とブロックが +tk+ の後で両立するかどうか。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#push_token
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:364
@@ -20991,7 +20989,7 @@ msgid ""
 "Adds a token to the current statement,\n"
 "unless it's a newline, semicolon, or comment"
 msgstr ""
-"現在の文の為にトークンを追加する。\n"
+"現在のステートメントの為にトークンを追加する。\n"
 "ただし改行や、セミコロンや、コメントの場合を除く。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#peek_no_space
@@ -21129,7 +21127,7 @@ msgid ""
 "any code objects that may be recognized."
 msgstr ""
 "namespaceの中のソースファイルを解析する為の責任がある。\n"
-"そして解析する事は、解析される文や\n"
+"そして解析する事は、解析されるステートメントや\n"
 "認識されるかもしれないコードオブジェクトを生成する\n"
 "処理の為にハンドラーも起動する。"
 
@@ -21786,8 +21784,7 @@ msgstr "エンコーディング行を検索し、エンコーディングを強
 #: ../lib/yard/parser/source_parser.rb:489
 msgid ""
 "Runs a {Handlers::Processor} object to post process the parsed statements."
-msgstr ""
-"解析した文の後処理の為に、{Handlers::Processor}オブジェクトを起動する。"
+msgstr "解析したステートメントの後処理の為に、{Handlers::Processor}オブジェクトを起動する。"
 
 # YARD::Parser::SourceParser#parser_type_for_filename
 #: ../lib/yard/parser/source_parser.rb:502
