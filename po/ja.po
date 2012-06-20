@@ -4499,10 +4499,10 @@ msgid ""
 "two tag types would be used in the following way, respectively:"
 msgstr ""
 "タグは`@tag`スタイルの構文からドキュメントを\n"
-"作成するために追加されるデータの行動としてメタデータを表す。\n"
+"作成するために追加されるデータの行動(behavioural)としてメタデータを表す。\n"
 "上で述べた、\n"
 "YARDの中でタグには基本的な2つの方があり、\n"
-"\"メタデータタグ\"と\"行動タグ\"がある。\n"
+"\"メタデータタグ\"と\"行動(behavioural)タグ\"がある。\n"
 "後者は、\"ディレクティブ\"としてよく知られている。\n"
 "これらの2つのタグの型は\n"
 "これらのプレフィックス(接頭辞)によって視覚的に指定される。\n"
@@ -4609,13 +4609,13 @@ msgid ""
 "section."
 msgstr ""
 "カスタムメタデータタグはプログラムかYARDのコマンドラインで追加される。\n"
-"これは\"[Adding Custom Tags](#Adding_Custom_Tags)\"項の中で議論される。"
+"これは\"[カスタムタグの追加](#Adding_Custom_Tags)\"の項の中で議論される。"
 
 #: ../docs/Tags.md:48
 msgid ""
 "A list of built-in meta-data tags are found below in the [Tag List]"
 "(#Tag_List)."
-msgstr "組み込みのメタデータタグのリストは下の [Tag List](#Tag_List) で見つけられる。"
+msgstr "組み込みのメタデータタグのリストは下の [タグリスト](#Tag_List) で見つけられる。"
 
 #: ../docs/Tags.md:50
 msgid "## Directives"
@@ -4651,7 +4651,7 @@ msgid ""
 "(#Directive_List)."
 msgstr ""
 "組み込みのディレクティブのリストは\n"
-"以下の [Directive List](#Directive_List) メソッドの中で定義される。"
+"以下の [ディレクティブリスト](#Directive_List) メソッドの中で定義される。"
 
 #: ../docs/Tags.md:62
 msgid "## Tag Syntax"
@@ -4878,7 +4878,7 @@ msgstr ""
 
 #: ../docs/Tags.md:139
 msgid "### Type List Conventions"
-msgstr "### 型のリスト慣習"
+msgstr "### 型のリストの慣習"
 
 #: ../docs/Tags.md:141
 msgid ""
@@ -5188,7 +5188,7 @@ msgstr ""
 
 #: ../docs/Tags.md:249
 msgid "## Adding Custom Tags"
-msgstr "#### カスタムタグの追加する"
+msgstr "#### カスタムタグを追加する"
 
 #: ../docs/Tags.md:251
 msgid ""
