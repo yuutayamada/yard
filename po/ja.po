@@ -8001,7 +8001,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:435
 msgid "See the documentation for the following methods:"
-msgstr "次のメソッド用のドキュメントを参照"
+msgstr "次のメソッド用のドキュメントを参照:"
 
 #: ../docs/WhatsNew.md:437
 msgid ""
