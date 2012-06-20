@@ -3424,7 +3424,7 @@ msgid ""
 "section below."
 msgstr ""
 "このセクションは *新しいスタイル* Rubyハンドラー処理の基本をカバーする。\n"
-"レガシーなハンドラーの詳細は、\\\"API Differences\\\" セクション以下を参照。"
+"レガシーなハンドラーの詳細は、\"API Differences\" セクション以下を参照。"
 
 #: ../docs/Handlers.md:39
 msgid ""
