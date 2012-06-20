@@ -5893,9 +5893,7 @@ msgid ""
 "on disk. A standard template directory looks like the following tree:"
 msgstr ""
 "テンプレートは\n"
-"ディスク上の{YARD::Templates::Engine.template_paths}の中のディレクトリーに"
-"よって、\n"
-"表される。\n"
+"ディスク上の{YARD::Templates::Engine.template_paths}の中のディレクトリによって表される。\n"
 "標準的なテンプレートは次の木構造のようになる。"
 
 #: ../docs/Templates.md:95
@@ -5964,11 +5962,11 @@ msgid ""
 "`:type` (options hash key) for a template. The next directory refers to the\n"
 "output format being used defined by the `:format` template option."
 msgstr ""
-"パスの`default`はテンプレートスタイル(:template key in options hash)を参照し\n"
-"次の階層でディレクトリは(例えば`class`など)\n"
-"テンプレート用のテンプレートの`:type`(ハッシュのオプションキー)を参照する。\n"
+"パスの `default` はテンプレートスタイル(:template key in options hash)を参照し\n"
+"次の階層でディレクトリは(例えば `class` など)\n"
+"テンプレート用のテンプレートの `:type` (ハッシュのオプションキー)を参照する。\n"
 "次のディレクトリは\n"
-"`:format`テンプレートオプションによって定義され、\n"
+"`:format` テンプレートオプションによって定義され、\n"
 "利用される出力フォーマットを参照する。"
 
 #: ../docs/Templates.md:128
@@ -5980,9 +5978,9 @@ msgid ""
 "files are the sections that make up the template."
 msgstr ""
 "だれもが上の例で見た通り、\n"
-"フォーマットオプションは`:html`に設定でき、\n"
-"`text/`の代わりに`html/`ディレクトリを利用する。\n"
-"最終的に、個々の.erbファイルは、テンプレートを作り上げるセクションである。"
+"フォーマットオプションは `:html` に設定でき、\n"
+"`text/` の代わりに `html/` ディレクトリを利用する。\n"
+"最終的に個々の.erbファイルは、テンプレートを作り上げるセクションである。"
 
 #: ../docs/Templates.md:132
 msgid ""
@@ -5991,7 +5989,7 @@ msgid ""
 "from the parent directory. We will see more on this later."
 msgstr ""
 "次の事に留意する。\n"
-"`html/`サブディレクトリは\n"
+"`html/` サブディレクトリは\n"
 "それ自身が親ディレクトリから継承する\"template\"でもある。\n"
 "この後の項で詳細がされる。"
 
@@ -6013,7 +6011,7 @@ msgstr ""
 "常にテンプレートは少なくとも\n"
 "テンプレートによって利用した{YARD::Templates::Template#sections #sections}を設定するために\n"
 "{YARD::Templates::Template#init #init}メソッドを定義する\n"
-"`setup.rb`ファイルを持つ。\n"
+"`setup.rb` ファイルを持つ。\n"
 "setup.rbがテンプレートの中で未定義の場合は、\n"
 "新規に作成されたテンプレート上のセクションを設定し、\n"
 "継承される(親のディレクトリや明示的に)テンプレートになるべきである。"
@@ -6239,8 +6237,7 @@ msgid ""
 msgstr ""
 "挿入セクションの機能は上で述べた。\n"
 "テンプレートクラス、例えば、\n"
-"以下のクラスの特定のセクションを挿入する為に\n"
-"#initメソッドを変更する。"
+"以下のクラスの特定のセクションを挿入する為に#initメソッドを変更する:"
 
 #: ../docs/Templates.md:222
 msgid ""
@@ -6273,7 +6270,7 @@ msgid ""
 "another module)."
 msgstr ""
 "superメソッドが呼び出された後でセクションが変更されたか確認する。\n"
-"(superメソッドは`default/module/setup.rb`で定義されている)\n"
+"(superメソッドは `default/module/setup.rb` で定義されている)\n"
 "`sections`オブジェクトは{YARD::Templates::Section}クラスのであり、\n"
 "インデックスより与えられた名前によって\n"
 "{Array#place}を使う事によって\n"
@@ -6288,8 +6285,8 @@ msgid ""
 "name`.\n"
 "For instance, with the following sections declaration:"
 msgstr ""
-"あなたは、`:name`と名付けられた最初の子のセクション名を探す為に\n"
-"`sections[:name]`を利用できる。\n"
+"あなたは、 `:name` と名付けられた最初の子のセクション名を探す為に\n"
+"`sections[:name]` を利用できる。\n"
 "例えば、次のようなセクション宣言を用いる。"
 
 #: ../docs/Templates.md:240
@@ -6314,7 +6311,7 @@ msgstr ""
 "ネストした集合の内部の\n"
 "セクションを挿入する為に\n"
 "これを利用できる。<\n"
-"次のコマンドは`[:a, [:b, :c, [:d, :e]]]`の様な結果になる。"
+"次のコマンドは `[:a, [:b, :c, [:d, :e]]]` の様な結果になる。"
 
 #: ../docs/Templates.md:249
 msgid "    sections[:a][:c].place(:e).after(:d)"
@@ -6339,7 +6336,7 @@ msgstr "    sections.place(:e).after_any(:d)"
 
 #: ../docs/Templates.md:257
 msgid "## Overriding Templates by Registering a Template Path"
-msgstr "## テンプレートパスを記録し、テンプレートを上書きする。"
+msgstr "## テンプレートパスを記録しテンプレートを上書き"
 
 #: ../docs/Templates.md:259
 msgid ""
@@ -6352,7 +6349,7 @@ msgid ""
 msgstr ""
 "明示的に継承するテンプレートは、\n"
 "再利用したいコードのテンプレートを\n"
-"カスタマイズし、作成する時、便利である。\n"
+"カスタマイズし作成する時に便利である。\n"
 "しかしながら、一般的なYARDテンプレートをカスタマイズしたいユーザーは、\n"
 "下書きからテンプレートの作成無しで既存の挙動を上書きしたいだろう。"
 
@@ -6405,8 +6402,8 @@ msgid ""
 "template\n"
 "path:"
 msgstr ""
-"従って、組み込みのYARDのテンプレートとして同じディレクトリ構造体を使うことによって\n"
-"ユーザーはカスタマイズできたり、\n"
+"従って組み込みのYARDのテンプレートとして同じディレクトリ構造体を\n"
+"使うことによってユーザーはカスタマイズできたり、\n"
 "古いものが継承される場合など個々のテンプレートを上書きできる。\n"
 "実際の例は、\n"
 "更に例の'/path/to/mytemplates'のカスタムテンプレートパスの中のパスなど作成することによって\n"
@@ -6428,7 +6425,7 @@ msgstr ""
 
 #: ../docs/Templates.md:288
 msgid "The `setup.rb` file would look like:"
-msgstr "`setup.rb`ファイルは次の様になる。"
+msgstr "`setup.rb` ファイルは次の様になる。"
 
 #: ../docs/Templates.md:290
 msgid ""
@@ -6525,9 +6522,7 @@ msgstr ""
 
 #: ../docs/Templates.md:325
 msgid "YARD's `fulldoc` template defines three javascript files:"
-msgstr ""
-"YARDの`fulldoc`テンプレートは次の様に、ツリー上のjavascriptファイルを定義す"
-"る。"
+msgstr "YARDの `fulldoc` テンプレートは次の様にツリー上のjavascriptファイルを定義する。"
 
 #: ../docs/Templates.md:327
 msgid ""
@@ -6549,7 +6544,7 @@ msgstr ""
 
 #: ../docs/Templates.md:335
 msgid "The `app.js` is the primary javascript file for the HTML output."
-msgstr "`app.js`は、HTML出力用の主要なjavascriptファイルとなる。"
+msgstr "`app.js` はHTML出力用の主要なjavascriptファイルとなる。"
 
 #: ../docs/Templates.md:337
 msgid ""
@@ -6558,16 +6553,16 @@ msgid ""
 "search field menus (i.e. class list, method list, and file list)."
 msgstr ""
 "追加のjavascriptを定義する `full_list.js` は、\n"
-"厳密にいえば、検索フィールドメニュー用にロードされる。\n"
+"厳密にいえば検索フィールドメニュー用にロードされる。\n"
 "(すなわち、クラスリスト、メソッドリスト、ファイルリスト)"
 
 #: ../docs/Templates.md:340
 msgid "The `jquery.js` is copy of the jquery javascript library."
-msgstr "`jquery.js`はjquery javascriptライブラリをコピーする。"
+msgstr "`jquery.js` はjquery javascriptライブラリをコピーする。"
 
 #: ../docs/Templates.md:342
 msgid "### Adding a Custom Stylesheet or Javascript"
-msgstr "### カスタムすタイルシートとJavascritpを追加する"
+msgstr "### カスタムスタイルシートとJavascritpを追加する"
 
 #: ../docs/Templates.md:344
 msgid ""
@@ -6818,7 +6813,7 @@ msgid ""
 "the `fulldoc` template through a similarly named method."
 msgstr ""
 "これらは `layout` テンプレートメソッドの中の `menu_lists` を定義される。\n"
-"そして同様に名付けられたメソッドを通じて`fulldoc`テンプレートに置かれる。"
+"そして同様に名付けられたメソッドを通じて `fulldoc` テンプレートに置かれる。"
 
 #: ../docs/Templates.md:452
 msgid "To load an additional menu item:"
@@ -6835,9 +6830,9 @@ msgid ""
 "the page."
 msgstr ""
 "  1. `layout` テンプレートディレクトリの中で `setup.rb` を作成し `menu_lists` メソッドを上書きする。\n"
-"  `type` はファイルの検索フィールド名通知する。\n"
-"  `title` はフレームのなかで表示された時に上のセクションに登場する名前である。\n"
-"  `search_title` はページの検索フィールドタブの中で登場する名前である。"
+"   `type` はファイルの検索フィールド名通知する。\n"
+"   `title` はフレームのなかで表示された時に上のセクションに登場する名前である。\n"
+"   `search_title` はページの検索フィールドタブの中で登場する名前である。"
 
 #: ../docs/Templates.md:461
 msgid ""
@@ -6877,9 +6872,9 @@ msgid ""
 "display."
 msgstr ""
 "  2. `fulldoc` のテンプレートディレクトリの中で `setup.rb` を作成し、\n"
-"指定された `type` 用にメニューを生成するためのメソッドを作成する\n"
-"`generate_assets` メソッドは、 `generate` で始まり,間に固有の値,末尾が `list` のシグネチャを探す。\n"
-"メソッドの中をあなたが構成でき、表示するためにあなたが望む特定のオブジェクトをロードする。"
+"     指定された `type` 用にメニューを生成するためのメソッドを作成する\n"
+"     `generate_assets` メソッドは、 `generate` で始まり,間に固有の値,末尾が `list` のシグネチャを探す。\n"
+"     メソッドの中をあなたが構成でき、表示するためにあなたが望む特定のオブジェクトをロードする。"
 
 #: ../docs/Templates.md:482
 msgid "         def generate_feature_list"
