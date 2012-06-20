@@ -10777,7 +10777,7 @@ msgstr "引数のリスト"
 # YARD::CLI::Server
 #: ../lib/yard/cli/server.rb:4
 msgid "A local documentation server"
-msgstr "ローカルのドキュメント確認用サーバー"
+msgstr "ローカルドキュメントサーバー"
 
 # @return [Hash]
 #: ../lib/yard/cli/server.rb:7
