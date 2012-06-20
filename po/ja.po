@@ -3941,7 +3941,7 @@ msgstr ""
 "YARDのパーサーの構成要素は、\n"
 "何らかの処理がソース上で行われる前に実行され\n"
 "パイプラインのデータ処理の中の最初の構成要素となる。\n"
-"パーサーは、ソースを、\n"
+"パーサーはソースを、\n"
 "後ですぐ実行する{file:docs/Handlers.md Handlers}によって理解され\n"
 "文の設定の中へ変換するよう意図されている。"
 
@@ -16214,8 +16214,7 @@ msgstr ""
 "一般的に、ハンドラークラスは文の設定を宣言する。\n"
 "そして、それは {handles} クラス宣言によって処理する。\n"
 "それは、処理の為に {#process} メソッドを実装する。\n"
-"処理中は、通常 {#namespace} , {#owner} , {CodeObjects::Base code objects} "
-"や\n"
+"処理中は、通常 {#namespace} , {#owner} , {CodeObjects::Base code objects} や\n"
 "新規作成を含む場合に、それらは、 {#register} によって登録されるべき、\n"
 "メソッドは新しいオブジェクト用にいくつかの基本的属性を設定する。"
 
@@ -20993,7 +20992,7 @@ msgid ""
 "unless it's a newline, semicolon, or comment"
 msgstr ""
 "現在の文の為にトークンを追加する。\n"
-"ただし、改行や,セミコロンや,コメントの場合を除く。"
+"ただし改行や、セミコロンや、コメントの場合を除く。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#peek_no_space
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:373
