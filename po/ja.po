@@ -294,7 +294,7 @@ msgid ""
 "YARD will do all the work in re-generating the HTML. This makes writing\n"
 "documentation a much faster process."
 msgstr ""
-"**5. Local Documentation Server**:\n"
+"**5. ローカルドキュメントサーバー**:\n"
 "YARDは動的な検索も再ロードの利点も用い\n"
 "プロジェクトやインストール済みのgem( `gem server` と同様)用のドキュメント作成を提供する。\n"
 "live reload機能によって,あなたのコードを記述したり\n"
@@ -606,7 +606,7 @@ msgstr "    $ rake yard OPTS='--any --extra --opts'"
 
 #: ../README.md:225
 msgid "**3. `yri` RI Implementation**"
-msgstr "**3. `yri` RI を実装する**"
+msgstr "**3. `yri` RIの実装**"
 
 #: ../README.md:227
 msgid ""
@@ -742,7 +742,7 @@ msgstr ""
 
 #: ../README.md:273
 msgid "**5. `yard graph` Graphviz Generator**"
-msgstr "**5. `yard graph` Graphviz Generator**"
+msgstr "**5. `yard graph` はGraphvizのジェネレーター**"
 
 #: ../README.md:275
 msgid ""
