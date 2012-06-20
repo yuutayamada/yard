@@ -554,7 +554,7 @@ msgstr ""
 #: ../README.md:205
 msgid ""
 "For more information about the query syntax, see the {YARD::Verifier} class."
-msgstr "さらなるquery構文の情報については、 {YARD::Verifier} クラス参照"
+msgstr "さらなるquery構文の情報については、 {YARD::Verifier} クラスを参照する。"
 
 #: ../README.md:207
 msgid "**2. Rake Task**"
