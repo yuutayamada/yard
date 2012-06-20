@@ -5188,7 +5188,7 @@ msgstr ""
 
 #: ../docs/Tags.md:249
 msgid "## Adding Custom Tags"
-msgstr "#### カスタムタグを追加する"
+msgstr "## Adding Custom Tags"
 
 #: ../docs/Tags.md:251
 msgid ""
